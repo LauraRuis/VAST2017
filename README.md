@@ -7,7 +7,7 @@ Link | Content
 [Introduction to problem](#introduction-to-problem) | Introduction to problem, questions to be answered
 [Data](#data) | Description of available data
 [Proposed approach](#proposed-approach) | Approach to solving the problem
-[Related visualizations](#related-visualiations) | list of related visualizations and implementations
+[Related visualizations](#related-visualizations) | list of related visualizations and implementations
 [Minimum Viable Product](#minimum-viable-product) | MVP
 
 ## Introduction to problem
