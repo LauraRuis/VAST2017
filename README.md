@@ -8,7 +8,7 @@ Link | Content
 [Introduction to problem](#introduction-to-problem) | Introduction to problem, questions to be answered
 [Data](#data) | Description of available data, features to be extracted
 [Proposed approach](#proposed-approach) | Approach to solving the problem, three different visualizations, limitations and problems
-[List of necessary external components](#external-components) | List of libraries and programs that will be used.
+[List of necessary external components](#external-components) | List of libraries and programs that will be used
 [Related visualizations](#related-visualizations) | List of related visualizations and implementations
 [Minimum Viable Product](#minimum-viable-product) | Minimum requirements for viable product
 
@@ -27,7 +27,7 @@ The data is delivered by the VAST Challenge in a .csv file. It contains data fro
 - timestamp
 - car ID (unique per vehicle)
 - car type
-- sensor that measured the data
+- gate name (sensor that measured the data)
 
 Possible features to solve the problem to get from this data are:
 - Time spent by cars in the preserve (per ID, per car type)
