@@ -35,4 +35,12 @@ This project will consist of a partial solving of this problem and should solve 
 ### Graph representation of map
 One of the important issues in this challenge is the mapping of the nature preserve, which could be very well represented in a graph structure. The nodes of this graph would be the sensors, or gates. The edges would be the possible roadways between these gates. The size of the nodes would represent the amount of passing traffic (total number of entire dataset) and the color of the node would represent the gate type (e.g. entrances would be green, ranger stops would be yellow). Furthermore, the edge thickness would represent the amount of traffic that traveled over this road (total number). 
 
-###
+### Barchart per gate
+When clicking on a node in the graph (that represents a gate), a barchart will appear. This barchart contains information about the number of vehicles passing through that gate over time. A number of vehicles on a day (or other amount of time) will be represented by a single bar. The color of the bar will represent the car type, and it will be a stacked bar chart. Per car type that is selected the amount of cars will be stacked on top of each other. 
+
+### ..
+
+## Related visualizations
+
+
+## Minimum Viable Product
