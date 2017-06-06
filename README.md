@@ -7,6 +7,7 @@ Link | Content
 [Introduction to problem](#introduction-to-problem) | Introduction to problem, questions to be answered
 [Data](#data) | Description of available data, features to be extracted
 [Proposed approach](#proposed-approach) | Approach to solving the problem, three different visualizations, limitations and problems
+[List of necessary external components](#external-components) | List of libraries and programs that will be used.
 [Related visualizations](#related-visualizations) | List of related visualizations and implementations
 [Minimum Viable Product](#minimum-viable-product) | Minimum requirements for viable product
 
@@ -23,13 +24,14 @@ The data is delivered by the VAST Challenge in a .csv file. It contains data fro
 - car ID (unique per vehicle)
 - car type
 - sensor that measured the data
+
 Possible features to solve the problem to get from this data are:
 - Time spent by cars in the preserve (per ID, per car type)
 - Busy locations (sensors) over time
 - Travel speed of cars (per ID, per car type)
 - Type of cars at locations / over time
 - etc.
-These features should be extracted through data analysis, since the variables are not yet. 
+These features should be extracted through data analysis, since these variables are not immediately shown in the data set. Depending on the visualization and the format it requires, several different .csv files will be composed. This way the calculations can be done in python and the .csv files can be composed. The visualizations made with D3 in javascript will only use the final formatted .csv files.
 
 ## Proposed approach
 This project will consist of a partial solving of this problem and should solve the problem together with the projects of two project-partners (Sven van Dam en Peter van Twuijver). 
@@ -44,6 +46,14 @@ When clicking on a node in the graph (that represents a gate), a barchart will a
 
 ### Sankey diagram for daily paths per car type
 A possibility for showing the paths certain car types travel would be a sankey diagram. The first and last column of this diagram would contain the five possible entrances (exits) and between these a number of columns all containing every possible gate (except for the entrances). A line will start at an entrance and move through the columns through gates. The point of this visualization would be showing patterns of paths vehicle take. The possible problems with this visualization would be deciding to take daily data or 'entrace-to-entrace' data. In the latter the time period would not be specified, and in the daily data it is very possible that certain lines would not go from entrance to entrance, and thus only travel part of the sankey diagram. Another decision to be made in this visualization would be to take either different colored lines per car type of only 1 car type per sankey diagram. The final problem would be how to link this diagram with the bar chart and the graph visualization. 
+
+## External components
+For this project two programming languages will be used: python and javascript.
+In python several not yet known libraries will probably be used, in javascript D3 will be used.
+Summary of necessary external components:
+- Python
+- Javascript
+- D3
 
 ## Related visualizations
 This section contains some examples on related visualization. These show entirely different data but are visualized in a similar way. 
