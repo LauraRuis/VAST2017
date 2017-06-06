@@ -4,12 +4,16 @@ This document contains a project proposal for the VAST Challenge 2017, mini chal
 ## Contents
 Link | Content
 ------------ | ------------- 
+[Product summary](#product-summary) | Summary of goals of this project
 [Introduction to problem](#introduction-to-problem) | Introduction to problem, questions to be answered
 [Data](#data) | Description of available data, features to be extracted
 [Proposed approach](#proposed-approach) | Approach to solving the problem, three different visualizations, limitations and problems
 [List of necessary external components](#external-components) | List of libraries and programs that will be used.
 [Related visualizations](#related-visualizations) | List of related visualizations and implementations
 [Minimum Viable Product](#minimum-viable-product) | Minimum requirements for viable product
+
+## Product summary
+This product will consist of the combined work of three students. My part will be focused on a graph that represents the map of a nature preserve and a sankey diagram that represents daily travels of vehicles. For drilling down purposes the nodes of the graph will be clickable and a more detailed visualization will show up (perhaps a bar chart, as proposed below). Some insights I hope to show with these visualizations will be the frequently traveled paths by different car types and daily occuring patterns. The total product will aim to answer all questions asked by the VAST Challenge 2017 as specified in the introduction of the problem (see [introduction to problem](#introduction-to-problem)). 
 
 ## Introduction to problem
 Analyzing traffic movement in a nature preserve for a ornithologist that needs to examine the reason for a decline in nesting of a certain bird that has its habitat in the preserve. In summary, the questions to be answered are the following (for the full questions, again see: http://vacommunity.org/VAST+Challenge+2017+MC1):
