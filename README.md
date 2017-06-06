@@ -64,7 +64,7 @@ For now, the list of necessary external components is the following:
 This list will be expanded during the project.
 
 ## Related visualizations
-This section contains some examples on related visualization. These show entirely different data but are visualized in a similar way. 
+This section contains some examples of related visualization. These show entirely different data but are visualized in a similar way. 
 
 ### Related graph
 At the following link an example of a graph is shown: https://bl.ocks.org/mbostock/4062045. The graph in this project would not be draggable like this one, but the user would be able to click on nodes that represent certain gates and move to the stacked bar chart. 
