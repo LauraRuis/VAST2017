@@ -49,11 +49,14 @@ A possibility for showing the paths certain car types travel would be a sankey d
 
 ## External components
 For this project two programming languages will be used: python and javascript.
-In python several not yet known libraries will probably be used, in javascript D3 will be used.
-Summary of necessary external components:
+In python several yet to be determined libraries will be used, in javascript D3 will definitely be used.
+
+For now, the list of necessary external components is the following:
 - Python
 - Javascript
 - D3
+
+This list will be expanded during the project.
 
 ## Related visualizations
 This section contains some examples on related visualization. These show entirely different data but are visualized in a similar way. 
