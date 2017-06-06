@@ -9,7 +9,7 @@ When this is done we can all start on our own part of the project. I will focus 
 
 Also wrote proposal today in README.md.
 
-*Summary of day 1*:
+**Summary of day 1**:
 - Started on decision process on how to tackle challenge
 - Divided work to be done
 - Decided on stand-up meetings with Gosia every monday, tuesday and wednesday.
