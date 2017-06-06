@@ -22,11 +22,17 @@ The data is delivered by the VAST Challenge in a .csv file. It contains data fro
 - car type
 - sensor that measured the data
 Possible features to solve the problem to get from this data are:
-- Time spent by cars in the preserve
+- Time spent by cars in the preserve (per ID, per car type)
 - Busy locations (sensors) over time
-- Travel speed of cars
+- Travel speed of cars (per ID, per car type)
 - Type of cars at locations / over time
 - etc.
+These features should be extracted through data analysis, since the variables are not yet. 
 
 ## Proposed approach
-This project will consist of a partial solving of this problem and should solve the problem together with the projects of two project-partners. One of the important issues in this challenge is the mapping of the nature preserve, which could be very well represented in a graph structure. The nodes of this graph would be the sensors, or gates. The edges would be the possible roadways between these gates. 
+This project will consist of a partial solving of this problem and should solve the problem together with the projects of two project-partners. 
+
+### Graph representation of map
+One of the important issues in this challenge is the mapping of the nature preserve, which could be very well represented in a graph structure. The nodes of this graph would be the sensors, or gates. The edges would be the possible roadways between these gates. The size of the nodes would represent the amount of passing traffic (total number of entire dataset) and the color of the node would represent the gate type (e.g. entrances would be green, ranger stops would be yellow). Furthermore, the edge thickness would represent the amount of traffic that traveled over this road (total number). 
+
+###
