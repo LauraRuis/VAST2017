@@ -35,6 +35,7 @@ Possible features to solve the problem to get from this data are:
 - Travel speed of cars (per ID, per car type)
 - Type of cars at locations / over time
 - etc.
+
 These features should be extracted through data analysis, since these variables are not immediately shown in the data set. Depending on the visualization and the format it requires, several different .csv files will be composed. This way the calculations can be done in python and the .csv files can be composed. The visualizations made with D3 in javascript will only use the final formatted .csv files.
 
 ## Proposed approach
