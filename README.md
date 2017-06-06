@@ -5,6 +5,7 @@ This document contains a project proposal for the VAST Challenge 2017, mini chal
 Link | Content
 ------------ | ------------- 
 [Introduction to problem](#introduction-to-problem) | Introduction to problem, questions to be answered
+[Data](#data) | Description of available data
 [Proposed approach](#proposed-approach) | Approach to solving the problem
 
 ## Introduction to problem
@@ -14,4 +15,18 @@ Analyzing traffic movement in a nature preserve for a ornithologist that needs t
 3. Describe up to six unusual patterns and highlight why you find them unusual. Please limit your answer to six images and 500 words.
 4. What are the top 3 patterns you discovered that you suspect could be most impactful to bird life in the nature preserve?
 
+## Data
+The data is delivered by the VAST Challenge in a .csv file. It contains data from sensors around the nature preserve. A map with the locations of roadways and sensors is also supplied. The data in the .csv file specifies per row:
+- timestamp
+- car ID (unique per vehicle)
+- car type
+- sensor that measured the data
+Possible features to solve the problem to get from this data are:
+- Time spent by cars in the preserve
+- Busy locations (sensors) over time
+- Travel speed of cars
+- Type of cars at locations / over time
+- etc.
+
 ## Proposed approach
+This project will consist of a partial solving of this problem and should solve the problem together with the projects of two project-partners. One of the important issues in this challenge is the mapping of the nature preserve, which could be very well represented in a graph structure. The nodes of this graph would be the sensors, or gates. The edges would be the possible roadways between these gates. 
