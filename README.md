@@ -7,6 +7,8 @@ Link | Content
 [Introduction to problem](#introduction-to-problem) | Introduction to problem, questions to be answered
 [Data](#data) | Description of available data
 [Proposed approach](#proposed-approach) | Approach to solving the problem
+[Related visualizations](#related-visualiations) | list of related visualizations and implementations
+[Minimum Viable Product](#minimum-viable-product) | MVP
 
 ## Introduction to problem
 Analyzing traffic movement in a nature preserve for a ornithologist that needs to examine the reason for a decline in nesting of a certain bird that has its habitat in the preserve. In summary, the questions to be answered are the following (for the full questions, again see: http://vacommunity.org/VAST+Challenge+2017+MC1):
