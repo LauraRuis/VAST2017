@@ -13,3 +13,6 @@ Also wrote proposal today in README.md.
 - Started on decision process on how to tackle challenge
 - Divided work to be done
 - Decided on stand-up meetings with Gosia every monday, tuesday and wednesday.
+
+**Related images day 1**
+![Decisions day 1](https://github.com/LauraRuis/VAST2017/blob/master/Process/decisions_day_1.jpg)
