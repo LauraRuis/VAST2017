@@ -16,3 +16,11 @@ Also wrote proposal today in README.md.
 
 **Related images day 1**
 ![Decisions day 1](https://github.com/LauraRuis/VAST2017/blob/master/Process/decisions_day_1.jpg)
+
+# Day 2
+Started with stand-up meeting, discussed proposals. Decided to do some data analysis today.
+
+Made several python files for converting the sensor data to jsons with different formats. Also made some python files for calculating some variables from this json files. Calculated busyness on total preserve per day (number of unique vehicles totally and split up per car type), but also per gate (.json file with data per gate and .csv with busyness per gate; total 80 data files)
+
+**Summary of day 2**
+- data analysis of busyness per day per gate and totally
