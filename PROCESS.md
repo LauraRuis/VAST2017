@@ -24,3 +24,5 @@ Made several python files for converting the sensor data to jsons with different
 
 **Summary of day 2**
 - data analysis of busyness per day per gate and totally
+
+# Day 3
