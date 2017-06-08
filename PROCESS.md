@@ -26,3 +26,11 @@ Made several python files for converting the sensor data to jsons with different
 - data analysis of busyness per day per gate and totally
 
 # Day 3
+Started with stand-up meeting, discussed yesterdays work and decided to move forward with data analysis.
+
+Made design.md file and learned about how to implement a force directed graph in D3. Started on formatting the data from the bitmap of the nature preserve to a .json file that can be used for the force directed graph. 
+
+**Summary of day 3**
+- further data analysis
+- created design.md
+- started on force directed graph
