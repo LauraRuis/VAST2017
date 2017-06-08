@@ -1,0 +1,1786 @@
+{
+    "nodes": [
+        {
+            "id": "General gate0",
+            "group": 3
+        },
+        {
+            "id": "Entrance0",
+            "group": 1
+        },
+        {
+            "id": "Ranger stop0",
+            "group": 4
+        },
+        {
+            "id": "Ranger stop1",
+            "group": 4
+        },
+        {
+            "id": "General gate1",
+            "group": 3
+        },
+        {
+            "id": "General gate2",
+            "group": 3
+        },
+        {
+            "id": "Gate0",
+            "group": 2
+        },
+        {
+            "id": "Ranger stop2",
+            "group": 4
+        },
+        {
+            "id": "Camping0",
+            "group": 5
+        },
+        {
+            "id": "Gate1",
+            "group": 2
+        },
+        {
+            "id": "Ranger stop3",
+            "group": 4
+        },
+        {
+            "id": "Camping1",
+            "group": 5
+        },
+        {
+            "id": "Camping2",
+            "group": 5
+        },
+        {
+            "id": "Gate2",
+            "group": 2
+        },
+        {
+            "id": "General gate3",
+            "group": 3
+        },
+        {
+            "id": "Gate3",
+            "group": 2
+        },
+        {
+            "id": "Camping3",
+            "group": 5
+        },
+        {
+            "id": "Entrance1",
+            "group": 1
+        },
+        {
+            "id": "Camping4",
+            "group": 5
+        },
+        {
+            "id": "Entrance2",
+            "group": 1
+        },
+        {
+            "id": "Camping5",
+            "group": 5
+        },
+        {
+            "id": "Ranger stop4",
+            "group": 4
+        },
+        {
+            "id": "General gate4",
+            "group": 3
+        },
+        {
+            "id": "General gate5",
+            "group": 3
+        },
+        {
+            "id": "Gate4",
+            "group": 2
+        },
+        {
+            "id": "Ranger stop5",
+            "group": 4
+        },
+        {
+            "id": "Camping6",
+            "group": 5
+        },
+        {
+            "id": "General gate6",
+            "group": 3
+        },
+        {
+            "id": "General gate7",
+            "group": 3
+        },
+        {
+            "id": "Camping7",
+            "group": 5
+        },
+        {
+            "id": "Gate5",
+            "group": 2
+        },
+        {
+            "id": "Ranger stop6",
+            "group": 4
+        },
+        {
+            "id": "Gate6",
+            "group": 2
+        },
+        {
+            "id": "Ranger stop7",
+            "group": 4
+        },
+        {
+            "id": "Gate7",
+            "group": 2
+        },
+        {
+            "id": "Entrance3",
+            "group": 1
+        },
+        {
+            "id": "Ranger base0",
+            "group": 6
+        },
+        {
+            "id": "Camping8",
+            "group": 5
+        },
+        {
+            "id": "Gate8",
+            "group": 2
+        },
+        {
+            "id": "Entrance4",
+            "group": 1
+        }
+    ],
+    "links": [
+        {
+            "source": "General gate0",
+            "target": "General gate5",
+            "value": 144
+        },
+        {
+            "source": "General gate0",
+            "target": "Entrance2",
+            "value": 229
+        },
+        {
+            "source": "General gate0",
+            "target": "Gate5",
+            "value": 348
+        },
+        {
+            "source": "General gate0",
+            "target": "Entrance4",
+            "value": 395
+        },
+        {
+            "source": "General gate0",
+            "target": "Gate8",
+            "value": 394
+        },
+        {
+            "source": "General gate0",
+            "target": "Camping8",
+            "value": 400
+        },
+        {
+            "source": "General gate0",
+            "target": "General gate6",
+            "value": 340
+        },
+        {
+            "source": "General gate0",
+            "target": "Gate4",
+            "value": 277
+        },
+        {
+            "source": "General gate0",
+            "target": "General gate3",
+            "value": 244
+        },
+        {
+            "source": "General gate0",
+            "target": "Gate3",
+            "value": 182
+        },
+        {
+            "source": "General gate0",
+            "target": "Camping1",
+            "value": 230
+        },
+        {
+            "source": "General gate0",
+            "target": "General gate2",
+            "value": 37
+        },
+        {
+            "source": "General gate0",
+            "target": "Camping2",
+            "value": 74
+        },
+        {
+            "source": "Entrance0",
+            "target": "General gate1",
+            "value": 14
+        },
+        {
+            "source": "Entrance0",
+            "target": "Gate0",
+            "value": 23
+        },
+        {
+            "source": "Entrance0",
+            "target": "Gate6",
+            "value": 202
+        },
+        {
+            "source": "Entrance0",
+            "target": "Entrance3",
+            "value": 217
+        },
+        {
+            "source": "Entrance0",
+            "target": "General gate4",
+            "value": 126
+        },
+        {
+            "source": "Entrance0",
+            "target": "Gate7",
+            "value": 292
+        },
+        {
+            "source": "Entrance0",
+            "target": "General gate7",
+            "value": 256
+        },
+        {
+            "source": "Ranger stop0",
+            "target": "General gate2",
+            "value": 33
+        },
+        {
+            "source": "Ranger stop0",
+            "target": "Ranger stop2",
+            "value": 30
+        },
+        {
+            "source": "Ranger stop1",
+            "target": "Gate2",
+            "value": 51
+        },
+        {
+            "source": "General gate1",
+            "target": "Ranger stop2",
+            "value": 26
+        },
+        {
+            "source": "General gate1",
+            "target": "Gate0",
+            "value": 11
+        },
+        {
+            "source": "General gate1",
+            "target": "Gate6",
+            "value": 190
+        },
+        {
+            "source": "General gate1",
+            "target": "Entrance3",
+            "value": 205
+        },
+        {
+            "source": "General gate1",
+            "target": "General gate4",
+            "value": 114
+        },
+        {
+            "source": "General gate1",
+            "target": "Gate7",
+            "value": 280
+        },
+        {
+            "source": "General gate1",
+            "target": "General gate7",
+            "value": 244
+        },
+        {
+            "source": "General gate1",
+            "target": "Entrance0",
+            "value": 14
+        },
+        {
+            "source": "General gate2",
+            "target": "General gate0",
+            "value": 37
+        },
+        {
+            "source": "General gate2",
+            "target": "General gate5",
+            "value": 109
+        },
+        {
+            "source": "General gate2",
+            "target": "Entrance2",
+            "value": 194
+        },
+        {
+            "source": "General gate2",
+            "target": "Gate5",
+            "value": 313
+        },
+        {
+            "source": "General gate2",
+            "target": "Entrance4",
+            "value": 360
+        },
+        {
+            "source": "General gate2",
+            "target": "Gate8",
+            "value": 359
+        },
+        {
+            "source": "General gate2",
+            "target": "Camping8",
+            "value": 365
+        },
+        {
+            "source": "General gate2",
+            "target": "General gate6",
+            "value": 305
+        },
+        {
+            "source": "General gate2",
+            "target": "Gate4",
+            "value": 242
+        },
+        {
+            "source": "General gate2",
+            "target": "General gate3",
+            "value": 209
+        },
+        {
+            "source": "General gate2",
+            "target": "Gate3",
+            "value": 147
+        },
+        {
+            "source": "General gate2",
+            "target": "Camping1",
+            "value": 195
+        },
+        {
+            "source": "General gate2",
+            "target": "Camping2",
+            "value": 135
+        },
+        {
+            "source": "General gate2",
+            "target": "Ranger stop0",
+            "value": 33
+        },
+        {
+            "source": "Gate0",
+            "target": "Gate1",
+            "value": 16
+        },
+        {
+            "source": "Gate0",
+            "target": "General gate1",
+            "value": 11
+        },
+        {
+            "source": "Gate0",
+            "target": "Entrance0",
+            "value": 23
+        },
+        {
+            "source": "Gate0",
+            "target": "Gate6",
+            "value": 181
+        },
+        {
+            "source": "Gate0",
+            "target": "Entrance3",
+            "value": 196
+        },
+        {
+            "source": "Gate0",
+            "target": "General gate4",
+            "value": 105
+        },
+        {
+            "source": "Gate0",
+            "target": "Gate7",
+            "value": 271
+        },
+        {
+            "source": "Gate0",
+            "target": "General gate7",
+            "value": 235
+        },
+        {
+            "source": "Ranger stop2",
+            "target": "Ranger stop0",
+            "value": 30
+        },
+        {
+            "source": "Ranger stop2",
+            "target": "General gate1",
+            "value": 26
+        },
+        {
+            "source": "Camping0",
+            "target": "Gate1",
+            "value": 9
+        },
+        {
+            "source": "Camping0",
+            "target": "General gate7",
+            "value": 184
+        },
+        {
+            "source": "Camping0",
+            "target": "Gate2",
+            "value": 173
+        },
+        {
+            "source": "Camping0",
+            "target": "Camping3",
+            "value": 207
+        },
+        {
+            "source": "Camping0",
+            "target": "Entrance1",
+            "value": 159
+        },
+        {
+            "source": "Camping0",
+            "target": "Camping5",
+            "value": 92
+        },
+        {
+            "source": "Camping0",
+            "target": "Camping4",
+            "value": 84
+        },
+        {
+            "source": "Gate1",
+            "target": "Gate0",
+            "value": 16
+        },
+        {
+            "source": "Gate1",
+            "target": "General gate7",
+            "value": 177
+        },
+        {
+            "source": "Gate1",
+            "target": "Gate2",
+            "value": 166
+        },
+        {
+            "source": "Gate1",
+            "target": "Camping3",
+            "value": 200
+        },
+        {
+            "source": "Gate1",
+            "target": "Entrance1",
+            "value": 152
+        },
+        {
+            "source": "Gate1",
+            "target": "Camping5",
+            "value": 85
+        },
+        {
+            "source": "Gate1",
+            "target": "Camping4",
+            "value": 77
+        },
+        {
+            "source": "Gate1",
+            "target": "Camping0",
+            "value": 9
+        },
+        {
+            "source": "Ranger stop3",
+            "target": "Gate3",
+            "value": 16
+        },
+        {
+            "source": "Camping1",
+            "target": "General gate3",
+            "value": 10
+        },
+        {
+            "source": "Camping1",
+            "target": "General gate5",
+            "value": 128
+        },
+        {
+            "source": "Camping1",
+            "target": "Entrance2",
+            "value": 213
+        },
+        {
+            "source": "Camping1",
+            "target": "Gate5",
+            "value": 332
+        },
+        {
+            "source": "Camping1",
+            "target": "Entrance4",
+            "value": 379
+        },
+        {
+            "source": "Camping1",
+            "target": "Gate8",
+            "value": 378
+        },
+        {
+            "source": "Camping1",
+            "target": "Camping8",
+            "value": 384
+        },
+        {
+            "source": "Camping1",
+            "target": "General gate6",
+            "value": 324
+        },
+        {
+            "source": "Camping1",
+            "target": "Gate4",
+            "value": 261
+        },
+        {
+            "source": "Camping1",
+            "target": "General gate0",
+            "value": 230
+        },
+        {
+            "source": "Camping1",
+            "target": "Camping2",
+            "value": 164
+        },
+        {
+            "source": "Camping1",
+            "target": "General gate2",
+            "value": 195
+        },
+        {
+            "source": "Camping1",
+            "target": "Gate3",
+            "value": 52
+        },
+        {
+            "source": "Camping2",
+            "target": "General gate5",
+            "value": 78
+        },
+        {
+            "source": "Camping2",
+            "target": "Entrance2",
+            "value": 163
+        },
+        {
+            "source": "Camping2",
+            "target": "Gate5",
+            "value": 282
+        },
+        {
+            "source": "Camping2",
+            "target": "Entrance4",
+            "value": 329
+        },
+        {
+            "source": "Camping2",
+            "target": "Gate8",
+            "value": 328
+        },
+        {
+            "source": "Camping2",
+            "target": "Camping8",
+            "value": 334
+        },
+        {
+            "source": "Camping2",
+            "target": "General gate6",
+            "value": 274
+        },
+        {
+            "source": "Camping2",
+            "target": "Gate4",
+            "value": 211
+        },
+        {
+            "source": "Camping2",
+            "target": "General gate3",
+            "value": 178
+        },
+        {
+            "source": "Camping2",
+            "target": "Gate3",
+            "value": 116
+        },
+        {
+            "source": "Camping2",
+            "target": "Camping1",
+            "value": 164
+        },
+        {
+            "source": "Camping2",
+            "target": "General gate2",
+            "value": 135
+        },
+        {
+            "source": "Camping2",
+            "target": "General gate0",
+            "value": 74
+        },
+        {
+            "source": "Gate2",
+            "target": "General gate7",
+            "value": 145
+        },
+        {
+            "source": "Gate2",
+            "target": "Camping5",
+            "value": 87
+        },
+        {
+            "source": "Gate2",
+            "target": "Gate1",
+            "value": 166
+        },
+        {
+            "source": "Gate2",
+            "target": "Camping0",
+            "value": 173
+        },
+        {
+            "source": "Gate2",
+            "target": "Camping4",
+            "value": 127
+        },
+        {
+            "source": "Gate2",
+            "target": "Entrance1",
+            "value": 24
+        },
+        {
+            "source": "Gate2",
+            "target": "Camping3",
+            "value": 36
+        },
+        {
+            "source": "Gate2",
+            "target": "Ranger stop1",
+            "value": 51
+        },
+        {
+            "source": "General gate3",
+            "target": "Camping1",
+            "value": 10
+        },
+        {
+            "source": "General gate3",
+            "target": "Entrance2",
+            "value": 59
+        },
+        {
+            "source": "General gate3",
+            "target": "Gate5",
+            "value": 178
+        },
+        {
+            "source": "General gate3",
+            "target": "Entrance4",
+            "value": 225
+        },
+        {
+            "source": "General gate3",
+            "target": "Gate8",
+            "value": 224
+        },
+        {
+            "source": "General gate3",
+            "target": "Camping8",
+            "value": 230
+        },
+        {
+            "source": "General gate3",
+            "target": "General gate6",
+            "value": 170
+        },
+        {
+            "source": "General gate3",
+            "target": "General gate5",
+            "value": 120
+        },
+        {
+            "source": "General gate3",
+            "target": "Gate4",
+            "value": 107
+        },
+        {
+            "source": "General gate3",
+            "target": "General gate0",
+            "value": 244
+        },
+        {
+            "source": "General gate3",
+            "target": "Camping2",
+            "value": 178
+        },
+        {
+            "source": "General gate3",
+            "target": "General gate2",
+            "value": 209
+        },
+        {
+            "source": "General gate3",
+            "target": "Gate3",
+            "value": 180
+        },
+        {
+            "source": "Gate3",
+            "target": "General gate5",
+            "value": 80
+        },
+        {
+            "source": "Gate3",
+            "target": "Entrance2",
+            "value": 165
+        },
+        {
+            "source": "Gate3",
+            "target": "Gate5",
+            "value": 284
+        },
+        {
+            "source": "Gate3",
+            "target": "Entrance4",
+            "value": 331
+        },
+        {
+            "source": "Gate3",
+            "target": "Gate8",
+            "value": 330
+        },
+        {
+            "source": "Gate3",
+            "target": "Camping8",
+            "value": 336
+        },
+        {
+            "source": "Gate3",
+            "target": "General gate6",
+            "value": 276
+        },
+        {
+            "source": "Gate3",
+            "target": "Gate4",
+            "value": 213
+        },
+        {
+            "source": "Gate3",
+            "target": "General gate3",
+            "value": 180
+        },
+        {
+            "source": "Gate3",
+            "target": "General gate0",
+            "value": 182
+        },
+        {
+            "source": "Gate3",
+            "target": "Camping2",
+            "value": 116
+        },
+        {
+            "source": "Gate3",
+            "target": "General gate2",
+            "value": 147
+        },
+        {
+            "source": "Gate3",
+            "target": "Camping1",
+            "value": 52
+        },
+        {
+            "source": "Gate3",
+            "target": "Ranger stop3",
+            "value": 16
+        },
+        {
+            "source": "Camping3",
+            "target": "Gate2",
+            "value": 36
+        },
+        {
+            "source": "Camping3",
+            "target": "General gate7",
+            "value": 179
+        },
+        {
+            "source": "Camping3",
+            "target": "Camping5",
+            "value": 121
+        },
+        {
+            "source": "Camping3",
+            "target": "Gate1",
+            "value": 200
+        },
+        {
+            "source": "Camping3",
+            "target": "Camping0",
+            "value": 207
+        },
+        {
+            "source": "Camping3",
+            "target": "Camping4",
+            "value": 161
+        },
+        {
+            "source": "Camping3",
+            "target": "Entrance1",
+            "value": 58
+        },
+        {
+            "source": "Entrance1",
+            "target": "General gate7",
+            "value": 131
+        },
+        {
+            "source": "Entrance1",
+            "target": "Camping5",
+            "value": 73
+        },
+        {
+            "source": "Entrance1",
+            "target": "Gate1",
+            "value": 152
+        },
+        {
+            "source": "Entrance1",
+            "target": "Camping0",
+            "value": 159
+        },
+        {
+            "source": "Entrance1",
+            "target": "Camping4",
+            "value": 113
+        },
+        {
+            "source": "Entrance1",
+            "target": "Gate2",
+            "value": 24
+        },
+        {
+            "source": "Entrance1",
+            "target": "Camping3",
+            "value": 58
+        },
+        {
+            "source": "Camping4",
+            "target": "General gate7",
+            "value": 138
+        },
+        {
+            "source": "Camping4",
+            "target": "Gate2",
+            "value": 127
+        },
+        {
+            "source": "Camping4",
+            "target": "Camping3",
+            "value": 161
+        },
+        {
+            "source": "Camping4",
+            "target": "Entrance1",
+            "value": 113
+        },
+        {
+            "source": "Camping4",
+            "target": "Camping5",
+            "value": 46
+        },
+        {
+            "source": "Camping4",
+            "target": "Gate1",
+            "value": 77
+        },
+        {
+            "source": "Camping4",
+            "target": "Camping0",
+            "value": 84
+        },
+        {
+            "source": "Entrance2",
+            "target": "General gate3",
+            "value": 59
+        },
+        {
+            "source": "Entrance2",
+            "target": "General gate5",
+            "value": 105
+        },
+        {
+            "source": "Entrance2",
+            "target": "General gate0",
+            "value": 229
+        },
+        {
+            "source": "Entrance2",
+            "target": "Camping2",
+            "value": 163
+        },
+        {
+            "source": "Entrance2",
+            "target": "General gate2",
+            "value": 194
+        },
+        {
+            "source": "Entrance2",
+            "target": "Gate3",
+            "value": 165
+        },
+        {
+            "source": "Entrance2",
+            "target": "Camping1",
+            "value": 213
+        },
+        {
+            "source": "Entrance2",
+            "target": "Gate5",
+            "value": 141
+        },
+        {
+            "source": "Entrance2",
+            "target": "Entrance4",
+            "value": 188
+        },
+        {
+            "source": "Entrance2",
+            "target": "Gate8",
+            "value": 187
+        },
+        {
+            "source": "Entrance2",
+            "target": "Camping8",
+            "value": 193
+        },
+        {
+            "source": "Entrance2",
+            "target": "General gate6",
+            "value": 133
+        },
+        {
+            "source": "Entrance2",
+            "target": "Gate4",
+            "value": 70
+        },
+        {
+            "source": "Camping5",
+            "target": "General gate7",
+            "value": 98
+        },
+        {
+            "source": "Camping5",
+            "target": "Gate2",
+            "value": 87
+        },
+        {
+            "source": "Camping5",
+            "target": "Camping3",
+            "value": 121
+        },
+        {
+            "source": "Camping5",
+            "target": "Entrance1",
+            "value": 73
+        },
+        {
+            "source": "Camping5",
+            "target": "Gate1",
+            "value": 85
+        },
+        {
+            "source": "Camping5",
+            "target": "Camping0",
+            "value": 92
+        },
+        {
+            "source": "Camping5",
+            "target": "Camping4",
+            "value": 46
+        },
+        {
+            "source": "Ranger stop4",
+            "target": "Camping6",
+            "value": 36
+        },
+        {
+            "source": "Ranger stop4",
+            "target": "General gate7",
+            "value": 124
+        },
+        {
+            "source": "General gate4",
+            "target": "Gate0",
+            "value": 105
+        },
+        {
+            "source": "General gate4",
+            "target": "General gate1",
+            "value": 114
+        },
+        {
+            "source": "General gate4",
+            "target": "Entrance0",
+            "value": 126
+        },
+        {
+            "source": "General gate4",
+            "target": "Gate6",
+            "value": 114
+        },
+        {
+            "source": "General gate4",
+            "target": "Entrance3",
+            "value": 129
+        },
+        {
+            "source": "General gate4",
+            "target": "Gate7",
+            "value": 106
+        },
+        {
+            "source": "General gate4",
+            "target": "General gate7",
+            "value": 70
+        },
+        {
+            "source": "General gate5",
+            "target": "Gate5",
+            "value": 50
+        },
+        {
+            "source": "General gate5",
+            "target": "Entrance4",
+            "value": 97
+        },
+        {
+            "source": "General gate5",
+            "target": "Gate8",
+            "value": 96
+        },
+        {
+            "source": "General gate5",
+            "target": "Camping8",
+            "value": 102
+        },
+        {
+            "source": "General gate5",
+            "target": "General gate6",
+            "value": 42
+        },
+        {
+            "source": "General gate5",
+            "target": "General gate3",
+            "value": 120
+        },
+        {
+            "source": "General gate5",
+            "target": "General gate0",
+            "value": 144
+        },
+        {
+            "source": "General gate5",
+            "target": "Camping2",
+            "value": 78
+        },
+        {
+            "source": "General gate5",
+            "target": "General gate2",
+            "value": 109
+        },
+        {
+            "source": "General gate5",
+            "target": "Gate3",
+            "value": 80
+        },
+        {
+            "source": "General gate5",
+            "target": "Camping1",
+            "value": 128
+        },
+        {
+            "source": "General gate5",
+            "target": "Entrance2",
+            "value": 105
+        },
+        {
+            "source": "General gate5",
+            "target": "Gate4",
+            "value": 91
+        },
+        {
+            "source": "Gate4",
+            "target": "Gate5",
+            "value": 75
+        },
+        {
+            "source": "Gate4",
+            "target": "Entrance4",
+            "value": 122
+        },
+        {
+            "source": "Gate4",
+            "target": "Gate8",
+            "value": 121
+        },
+        {
+            "source": "Gate4",
+            "target": "Camping8",
+            "value": 127
+        },
+        {
+            "source": "Gate4",
+            "target": "General gate6",
+            "value": 67
+        },
+        {
+            "source": "Gate4",
+            "target": "General gate5",
+            "value": 91
+        },
+        {
+            "source": "Gate4",
+            "target": "General gate3",
+            "value": 107
+        },
+        {
+            "source": "Gate4",
+            "target": "General gate0",
+            "value": 277
+        },
+        {
+            "source": "Gate4",
+            "target": "Camping2",
+            "value": 211
+        },
+        {
+            "source": "Gate4",
+            "target": "General gate2",
+            "value": 242
+        },
+        {
+            "source": "Gate4",
+            "target": "Gate3",
+            "value": 213
+        },
+        {
+            "source": "Gate4",
+            "target": "Camping1",
+            "value": 261
+        },
+        {
+            "source": "Gate4",
+            "target": "Entrance2",
+            "value": 70
+        },
+        {
+            "source": "Gate4",
+            "target": "Ranger stop5",
+            "value": 17
+        },
+        {
+            "source": "Ranger stop5",
+            "target": "Gate4",
+            "value": 17
+        },
+        {
+            "source": "Camping6",
+            "target": "Ranger stop4",
+            "value": 36
+        },
+        {
+            "source": "Camping6",
+            "target": "General gate7",
+            "value": 100
+        },
+        {
+            "source": "General gate6",
+            "target": "Camping7",
+            "value": 85
+        },
+        {
+            "source": "General gate6",
+            "target": "Gate5",
+            "value": 14
+        },
+        {
+            "source": "General gate6",
+            "target": "Entrance4",
+            "value": 61
+        },
+        {
+            "source": "General gate6",
+            "target": "Gate8",
+            "value": 60
+        },
+        {
+            "source": "General gate6",
+            "target": "Camping8",
+            "value": 66
+        },
+        {
+            "source": "General gate6",
+            "target": "General gate3",
+            "value": 170
+        },
+        {
+            "source": "General gate6",
+            "target": "General gate5",
+            "value": 42
+        },
+        {
+            "source": "General gate6",
+            "target": "General gate0",
+            "value": 340
+        },
+        {
+            "source": "General gate6",
+            "target": "Camping2",
+            "value": 274
+        },
+        {
+            "source": "General gate6",
+            "target": "General gate2",
+            "value": 305
+        },
+        {
+            "source": "General gate6",
+            "target": "Gate3",
+            "value": 276
+        },
+        {
+            "source": "General gate6",
+            "target": "Camping1",
+            "value": 324
+        },
+        {
+            "source": "General gate6",
+            "target": "Entrance2",
+            "value": 133
+        },
+        {
+            "source": "General gate6",
+            "target": "Gate4",
+            "value": 67
+        },
+        {
+            "source": "General gate7",
+            "target": "Camping6",
+            "value": 100
+        },
+        {
+            "source": "General gate7",
+            "target": "Ranger stop4",
+            "value": 124
+        },
+        {
+            "source": "General gate7",
+            "target": "General gate4",
+            "value": 70
+        },
+        {
+            "source": "General gate7",
+            "target": "Gate0",
+            "value": 235
+        },
+        {
+            "source": "General gate7",
+            "target": "General gate1",
+            "value": 244
+        },
+        {
+            "source": "General gate7",
+            "target": "Entrance0",
+            "value": 256
+        },
+        {
+            "source": "General gate7",
+            "target": "Gate6",
+            "value": 130
+        },
+        {
+            "source": "General gate7",
+            "target": "Entrance3",
+            "value": 145
+        },
+        {
+            "source": "General gate7",
+            "target": "Gate7",
+            "value": 74
+        },
+        {
+            "source": "General gate7",
+            "target": "Gate2",
+            "value": 145
+        },
+        {
+            "source": "General gate7",
+            "target": "Camping3",
+            "value": 179
+        },
+        {
+            "source": "General gate7",
+            "target": "Entrance1",
+            "value": 131
+        },
+        {
+            "source": "General gate7",
+            "target": "Camping5",
+            "value": 98
+        },
+        {
+            "source": "General gate7",
+            "target": "Gate1",
+            "value": 177
+        },
+        {
+            "source": "General gate7",
+            "target": "Camping0",
+            "value": 184
+        },
+        {
+            "source": "General gate7",
+            "target": "Camping4",
+            "value": 138
+        },
+        {
+            "source": "Camping7",
+            "target": "General gate6",
+            "value": 85
+        },
+        {
+            "source": "Gate5",
+            "target": "Entrance4",
+            "value": 49
+        },
+        {
+            "source": "Gate5",
+            "target": "Gate8",
+            "value": 48
+        },
+        {
+            "source": "Gate5",
+            "target": "Camping8",
+            "value": 54
+        },
+        {
+            "source": "Gate5",
+            "target": "General gate6",
+            "value": 14
+        },
+        {
+            "source": "Gate5",
+            "target": "General gate3",
+            "value": 178
+        },
+        {
+            "source": "Gate5",
+            "target": "General gate5",
+            "value": 50
+        },
+        {
+            "source": "Gate5",
+            "target": "General gate0",
+            "value": 348
+        },
+        {
+            "source": "Gate5",
+            "target": "Camping2",
+            "value": 282
+        },
+        {
+            "source": "Gate5",
+            "target": "General gate2",
+            "value": 313
+        },
+        {
+            "source": "Gate5",
+            "target": "Gate3",
+            "value": 284
+        },
+        {
+            "source": "Gate5",
+            "target": "Camping1",
+            "value": 332
+        },
+        {
+            "source": "Gate5",
+            "target": "Entrance2",
+            "value": 141
+        },
+        {
+            "source": "Gate5",
+            "target": "Gate4",
+            "value": 75
+        },
+        {
+            "source": "Gate5",
+            "target": "Ranger stop6",
+            "value": 9
+        },
+        {
+            "source": "Ranger stop6",
+            "target": "Gate6",
+            "value": 11
+        },
+        {
+            "source": "Ranger stop6",
+            "target": "Gate5",
+            "value": 9
+        },
+        {
+            "source": "Gate6",
+            "target": "Ranger stop6",
+            "value": 11
+        },
+        {
+            "source": "Gate6",
+            "target": "Entrance3",
+            "value": 17
+        },
+        {
+            "source": "Gate6",
+            "target": "Gate0",
+            "value": 181
+        },
+        {
+            "source": "Gate6",
+            "target": "General gate1",
+            "value": 190
+        },
+        {
+            "source": "Gate6",
+            "target": "Entrance0",
+            "value": 202
+        },
+        {
+            "source": "Gate6",
+            "target": "General gate4",
+            "value": 114
+        },
+        {
+            "source": "Gate6",
+            "target": "Gate7",
+            "value": 166
+        },
+        {
+            "source": "Gate6",
+            "target": "General gate7",
+            "value": 130
+        },
+        {
+            "source": "Ranger stop7",
+            "target": "Gate7",
+            "value": 11
+        },
+        {
+            "source": "Gate7",
+            "target": "Ranger stop7",
+            "value": 11
+        },
+        {
+            "source": "Gate7",
+            "target": "General gate4",
+            "value": 106
+        },
+        {
+            "source": "Gate7",
+            "target": "Gate0",
+            "value": 271
+        },
+        {
+            "source": "Gate7",
+            "target": "General gate1",
+            "value": 280
+        },
+        {
+            "source": "Gate7",
+            "target": "Entrance0",
+            "value": 292
+        },
+        {
+            "source": "Gate7",
+            "target": "Gate6",
+            "value": 166
+        },
+        {
+            "source": "Gate7",
+            "target": "Entrance3",
+            "value": 181
+        },
+        {
+            "source": "Gate7",
+            "target": "General gate7",
+            "value": 74
+        },
+        {
+            "source": "Entrance3",
+            "target": "Gate6",
+            "value": 17
+        },
+        {
+            "source": "Entrance3",
+            "target": "Gate0",
+            "value": 196
+        },
+        {
+            "source": "Entrance3",
+            "target": "General gate1",
+            "value": 205
+        },
+        {
+            "source": "Entrance3",
+            "target": "Entrance0",
+            "value": 217
+        },
+        {
+            "source": "Entrance3",
+            "target": "General gate4",
+            "value": 129
+        },
+        {
+            "source": "Entrance3",
+            "target": "Gate7",
+            "value": 181
+        },
+        {
+            "source": "Entrance3",
+            "target": "General gate7",
+            "value": 145
+        },
+        {
+            "source": "Ranger base0",
+            "target": "Gate8",
+            "value": 16
+        },
+        {
+            "source": "Camping8",
+            "target": "Entrance4",
+            "value": 23
+        },
+        {
+            "source": "Camping8",
+            "target": "Gate8",
+            "value": 22
+        },
+        {
+            "source": "Camping8",
+            "target": "Gate5",
+            "value": 54
+        },
+        {
+            "source": "Camping8",
+            "target": "General gate6",
+            "value": 66
+        },
+        {
+            "source": "Camping8",
+            "target": "General gate3",
+            "value": 230
+        },
+        {
+            "source": "Camping8",
+            "target": "General gate5",
+            "value": 102
+        },
+        {
+            "source": "Camping8",
+            "target": "General gate0",
+            "value": 400
+        },
+        {
+            "source": "Camping8",
+            "target": "Camping2",
+            "value": 334
+        },
+        {
+            "source": "Camping8",
+            "target": "General gate2",
+            "value": 365
+        },
+        {
+            "source": "Camping8",
+            "target": "Gate3",
+            "value": 336
+        },
+        {
+            "source": "Camping8",
+            "target": "Camping1",
+            "value": 384
+        },
+        {
+            "source": "Camping8",
+            "target": "Entrance2",
+            "value": 193
+        },
+        {
+            "source": "Camping8",
+            "target": "Gate4",
+            "value": 127
+        },
+        {
+            "source": "Gate8",
+            "target": "Entrance4",
+            "value": 5
+        },
+        {
+            "source": "Gate8",
+            "target": "Gate5",
+            "value": 48
+        },
+        {
+            "source": "Gate8",
+            "target": "General gate6",
+            "value": 60
+        },
+        {
+            "source": "Gate8",
+            "target": "General gate3",
+            "value": 224
+        },
+        {
+            "source": "Gate8",
+            "target": "General gate5",
+            "value": 96
+        },
+        {
+            "source": "Gate8",
+            "target": "General gate0",
+            "value": 394
+        },
+        {
+            "source": "Gate8",
+            "target": "Camping2",
+            "value": 328
+        },
+        {
+            "source": "Gate8",
+            "target": "General gate2",
+            "value": 359
+        },
+        {
+            "source": "Gate8",
+            "target": "Gate3",
+            "value": 330
+        },
+        {
+            "source": "Gate8",
+            "target": "Camping1",
+            "value": 378
+        },
+        {
+            "source": "Gate8",
+            "target": "Entrance2",
+            "value": 187
+        },
+        {
+            "source": "Gate8",
+            "target": "Gate4",
+            "value": 121
+        },
+        {
+            "source": "Gate8",
+            "target": "Camping8",
+            "value": 22
+        },
+        {
+            "source": "Gate8",
+            "target": "Ranger base0",
+            "value": 16
+        },
+        {
+            "source": "Entrance4",
+            "target": "Gate5",
+            "value": 49
+        },
+        {
+            "source": "Entrance4",
+            "target": "General gate6",
+            "value": 61
+        },
+        {
+            "source": "Entrance4",
+            "target": "General gate3",
+            "value": 225
+        },
+        {
+            "source": "Entrance4",
+            "target": "General gate5",
+            "value": 97
+        },
+        {
+            "source": "Entrance4",
+            "target": "General gate0",
+            "value": 395
+        },
+        {
+            "source": "Entrance4",
+            "target": "Camping2",
+            "value": 329
+        },
+        {
+            "source": "Entrance4",
+            "target": "General gate2",
+            "value": 360
+        },
+        {
+            "source": "Entrance4",
+            "target": "Gate3",
+            "value": 331
+        },
+        {
+            "source": "Entrance4",
+            "target": "Camping1",
+            "value": 379
+        },
+        {
+            "source": "Entrance4",
+            "target": "Entrance2",
+            "value": 188
+        },
+        {
+            "source": "Entrance4",
+            "target": "Gate4",
+            "value": 122
+        },
+        {
+            "source": "Entrance4",
+            "target": "Camping8",
+            "value": 23
+        },
+        {
+            "source": "Entrance4",
+            "target": "Gate8",
+            "value": 5
+        }
+    ]
+}
