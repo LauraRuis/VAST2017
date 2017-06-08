@@ -23,3 +23,8 @@ See website for beta version of visualization: https://pvtwuyver.github.io/vast2
 - Lekagul Roadways labeled (JPG File)
 - Data Descriptions for MC1 (word file)
 All data available at http://vacommunity.org/VAST+Challenge+2017+MC1.
+
+## List of frameworks that provide functionality
+- D3
+- Bootstrap
+- ...
