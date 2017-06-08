@@ -10,7 +10,7 @@ When the user first opens the website, he will see a map of the nature preserve,
 - heatmap
 ![Heatmap](https://github.com/SvenvDam/programmeerproject/blob/master/doc/heatmap.JPG)
 - calender view
-![Calendar](https://pvtwuyver.github.io/vast2017/calendar.html)
+See website for beta version of visualization: https://pvtwuyver.github.io/vast2017/calendar.html
 - graph
 ![Graph](https://github.com/LauraRuis/VAST2017/blob/master/Doc/Graph.jpeg)
 - barchart
