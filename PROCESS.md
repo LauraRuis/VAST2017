@@ -30,6 +30,8 @@ Started with stand-up meeting, discussed yesterdays work and decided to move for
 
 Made design.md file and learned about how to implement a force directed graph in D3. Started on formatting the data from the bitmap of the nature preserve to a .json file that can be used for the force directed graph. 
 
+Made JSON file for force directed graph and made beta version of graph (even though bitmap is not correctly read yet). Nodes colored according to gate type and edges are roadways.
+
 **Summary of day 3**
 - further data analysis
 - created design.md
