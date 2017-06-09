@@ -21,14 +21,17 @@ window.onload = function() {
 
     var simulation = d3.forceSimulation()
         .force("link", d3.forceLink().id(function(d) { return d.id; }))
-        .force("charge", d3.forceManyBody().strength(-250).distanceMax([80]))
+        .force("charge", d3.forceManyBody())
         .force("center", d3.forceCenter(width / 2, height / 2));
 
-    //add zoom capabilities
+    // add zoom capabilities
     var zoom_handler = d3.zoom()
         .on("zoom", zoom_actions);
 
     zoom_handler(svg);
+
+    // set scale for nodes
+    var nodeScale = d3.scaleLog();
 
     d3.json("../Data/graph.json", function(error, graph) {
 
@@ -51,7 +54,9 @@ window.onload = function() {
                 .on("start", dragstarted)
                 .on("drag", dragged)
                 .on("end", dragended));
-
+        console.log(d3.extent(graph.nodes, function(d) { return d.check_ins }));
+        nodeScale
+            .domain(d3.extent(graph.nodes, function(d) { return d.check_ins }));
         node.append("title")
             .text(function(d) { return d.id; });
 
@@ -78,6 +83,7 @@ window.onload = function() {
                 });
 
             node
+                .attr("r", function(d) { console.log(nodeScale(d.check_ins)); return nodeScale(d.check_ins)*20;})
                 .attr("cx", function (d) {
                     return d.xpos * 4;
                 })
