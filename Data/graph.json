@@ -2,162 +2,242 @@
     "nodes": [
         {
             "id": "General gate0",
+            "xpos": 110,
+            "ypos": 9,
             "group": 3
         },
         {
             "id": "Entrance0",
+            "xpos": 62,
+            "ypos": 13,
             "group": 1
         },
         {
             "id": "Ranger stop0",
+            "xpos": 89,
+            "ypos": 16,
             "group": 4
         },
         {
             "id": "Ranger stop1",
+            "xpos": 19,
+            "ypos": 24,
             "group": 4
         },
         {
             "id": "General gate1",
+            "xpos": 64,
+            "ypos": 25,
             "group": 3
         },
         {
             "id": "General gate2",
+            "xpos": 104,
+            "ypos": 32,
             "group": 3
         },
         {
             "id": "Gate0",
+            "xpos": 63,
+            "ypos": 33,
             "group": 2
         },
         {
             "id": "Ranger stop2",
+            "xpos": 80,
+            "ypos": 35,
             "group": 4
         },
         {
             "id": "Camping0",
+            "xpos": 52,
+            "ypos": 41,
             "group": 5
         },
         {
             "id": "Gate1",
+            "xpos": 58,
+            "ypos": 44,
             "group": 2
         },
         {
             "id": "Ranger stop3",
+            "xpos": 148,
+            "ypos": 45,
             "group": 4
         },
         {
             "id": "Camping1",
+            "xpos": 183,
+            "ypos": 48,
             "group": 5
         },
         {
             "id": "Camping2",
+            "xpos": 129,
+            "ypos": 50,
             "group": 5
         },
         {
             "id": "Gate2",
+            "xpos": 24,
+            "ypos": 54,
             "group": 2
         },
         {
             "id": "General gate3",
+            "xpos": 186,
+            "ypos": 55,
             "group": 3
         },
         {
             "id": "Gate3",
+            "xpos": 149,
+            "ypos": 60,
             "group": 2
         },
         {
             "id": "Camping3",
+            "xpos": 44,
+            "ypos": 64,
             "group": 5
         },
         {
             "id": "Entrance1",
+            "xpos": 17,
+            "ypos": 67,
             "group": 1
         },
         {
             "id": "Camping4",
+            "xpos": 45,
+            "ypos": 68,
             "group": 5
         },
         {
             "id": "Entrance2",
+            "xpos": 183,
+            "ypos": 87,
             "group": 1
         },
         {
             "id": "Camping5",
+            "xpos": 48,
+            "ypos": 89,
             "group": 5
         },
         {
             "id": "Ranger stop4",
+            "xpos": 18,
+            "ypos": 95,
             "group": 4
         },
         {
             "id": "General gate4",
+            "xpos": 69,
+            "ypos": 98,
             "group": 3
         },
         {
             "id": "General gate5",
+            "xpos": 124,
+            "ypos": 111,
             "group": 3
         },
         {
             "id": "Gate4",
+            "xpos": 164,
+            "ypos": 114,
             "group": 2
         },
         {
             "id": "Ranger stop5",
+            "xpos": 151,
+            "ypos": 118,
             "group": 4
         },
         {
             "id": "Camping6",
+            "xpos": 20,
+            "ypos": 121,
             "group": 5
         },
         {
             "id": "General gate6",
+            "xpos": 136,
+            "ypos": 137,
             "group": 3
         },
         {
             "id": "General gate7",
+            "xpos": 65,
+            "ypos": 144,
             "group": 3
         },
         {
             "id": "Camping7",
+            "xpos": 181,
+            "ypos": 145,
             "group": 5
         },
         {
             "id": "Gate5",
+            "xpos": 131,
+            "ypos": 146,
             "group": 2
         },
         {
             "id": "Ranger stop6",
+            "xpos": 123,
+            "ypos": 147,
             "group": 4
         },
         {
             "id": "Gate6",
+            "xpos": 116,
+            "ypos": 151,
             "group": 2
         },
         {
             "id": "Ranger stop7",
+            "xpos": 100,
+            "ypos": 152,
             "group": 4
         },
         {
             "id": "Gate7",
+            "xpos": 97,
+            "ypos": 160,
             "group": 2
         },
         {
             "id": "Entrance3",
+            "xpos": 115,
+            "ypos": 167,
             "group": 1
         },
         {
             "id": "Ranger base0",
+            "xpos": 128,
+            "ypos": 175,
             "group": 6
         },
         {
             "id": "Camping8",
+            "xpos": 150,
+            "ypos": 177,
             "group": 5
         },
         {
             "id": "Gate8",
+            "xpos": 138,
+            "ypos": 181,
             "group": 2
         },
         {
             "id": "Entrance4",
+            "xpos": 140,
+            "ypos": 184,
             "group": 1
         }
     ],
@@ -209,6 +289,16 @@
         },
         {
             "source": "General gate0",
+            "target": "Camping2",
+            "value": 74
+        },
+        {
+            "source": "General gate0",
+            "target": "General gate2",
+            "value": 37
+        },
+        {
+            "source": "General gate0",
             "target": "Gate3",
             "value": 182
         },
@@ -219,13 +309,8 @@
         },
         {
             "source": "General gate0",
-            "target": "General gate2",
-            "value": 37
-        },
-        {
-            "source": "General gate0",
-            "target": "Camping2",
-            "value": 74
+            "target": "General gate0",
+            "value": 238
         },
         {
             "source": "Entrance0",
@@ -369,6 +454,16 @@
         },
         {
             "source": "General gate2",
+            "target": "Camping2",
+            "value": 135
+        },
+        {
+            "source": "General gate2",
+            "target": "General gate2",
+            "value": 654
+        },
+        {
+            "source": "General gate2",
             "target": "Gate3",
             "value": 147
         },
@@ -376,11 +471,6 @@
             "source": "General gate2",
             "target": "Camping1",
             "value": 195
-        },
-        {
-            "source": "General gate2",
-            "target": "Camping2",
-            "value": 135
         },
         {
             "source": "General gate2",
@@ -436,6 +526,11 @@
             "source": "Ranger stop2",
             "target": "General gate1",
             "value": 26
+        },
+        {
+            "source": "Camping0",
+            "target": "Camping0",
+            "value": 4
         },
         {
             "source": "Camping0",
@@ -583,6 +678,11 @@
             "value": 52
         },
         {
+            "source": "Camping1",
+            "target": "Camping1",
+            "value": 692
+        },
+        {
             "source": "Camping2",
             "target": "General gate5",
             "value": 78
@@ -629,13 +729,18 @@
         },
         {
             "source": "Camping2",
+            "target": "Camping2",
+            "value": 592
+        },
+        {
+            "source": "Camping2",
             "target": "Gate3",
             "value": 116
         },
         {
             "source": "Camping2",
-            "target": "Camping1",
-            "value": 164
+            "target": "General gate0",
+            "value": 74
         },
         {
             "source": "Camping2",
@@ -644,8 +749,8 @@
         },
         {
             "source": "Camping2",
-            "target": "General gate0",
-            "value": 74
+            "target": "Camping1",
+            "value": 164
         },
         {
             "source": "Gate2",
@@ -734,8 +839,8 @@
         },
         {
             "source": "General gate3",
-            "target": "General gate0",
-            "value": 244
+            "target": "General gate3",
+            "value": 384
         },
         {
             "source": "General gate3",
@@ -744,13 +849,18 @@
         },
         {
             "source": "General gate3",
-            "target": "General gate2",
-            "value": 209
+            "target": "Gate3",
+            "value": 180
         },
         {
             "source": "General gate3",
-            "target": "Gate3",
-            "value": 180
+            "target": "General gate0",
+            "value": 244
+        },
+        {
+            "source": "General gate3",
+            "target": "General gate2",
+            "value": 209
         },
         {
             "source": "Gate3",
@@ -799,13 +909,18 @@
         },
         {
             "source": "Gate3",
-            "target": "General gate0",
-            "value": 182
+            "target": "Camping2",
+            "value": 116
         },
         {
             "source": "Gate3",
-            "target": "Camping2",
-            "value": 116
+            "target": "Gate3",
+            "value": 596
+        },
+        {
+            "source": "Gate3",
+            "target": "General gate0",
+            "value": 182
         },
         {
             "source": "Gate3",
@@ -993,6 +1108,11 @@
             "value": 70
         },
         {
+            "source": "Entrance2",
+            "target": "Entrance2",
+            "value": 310
+        },
+        {
             "source": "Camping5",
             "target": "General gate7",
             "value": 98
@@ -1054,6 +1174,11 @@
         },
         {
             "source": "General gate4",
+            "target": "General gate4",
+            "value": 196
+        },
+        {
+            "source": "General gate4",
             "target": "Gate6",
             "value": 114
         },
@@ -1099,33 +1224,18 @@
         },
         {
             "source": "General gate5",
+            "target": "Gate4",
+            "value": 91
+        },
+        {
+            "source": "General gate5",
+            "target": "General gate5",
+            "value": 108
+        },
+        {
+            "source": "General gate5",
             "target": "General gate3",
             "value": 120
-        },
-        {
-            "source": "General gate5",
-            "target": "General gate0",
-            "value": 144
-        },
-        {
-            "source": "General gate5",
-            "target": "Camping2",
-            "value": 78
-        },
-        {
-            "source": "General gate5",
-            "target": "General gate2",
-            "value": 109
-        },
-        {
-            "source": "General gate5",
-            "target": "Gate3",
-            "value": 80
-        },
-        {
-            "source": "General gate5",
-            "target": "Camping1",
-            "value": 128
         },
         {
             "source": "General gate5",
@@ -1134,8 +1244,28 @@
         },
         {
             "source": "General gate5",
-            "target": "Gate4",
-            "value": 91
+            "target": "Camping2",
+            "value": 78
+        },
+        {
+            "source": "General gate5",
+            "target": "Gate3",
+            "value": 80
+        },
+        {
+            "source": "General gate5",
+            "target": "General gate0",
+            "value": 144
+        },
+        {
+            "source": "General gate5",
+            "target": "General gate2",
+            "value": 109
+        },
+        {
+            "source": "General gate5",
+            "target": "Camping1",
+            "value": 128
         },
         {
             "source": "Gate4",
@@ -1169,13 +1299,18 @@
         },
         {
             "source": "Gate4",
+            "target": "Gate4",
+            "value": 178
+        },
+        {
+            "source": "Gate4",
             "target": "General gate3",
             "value": 107
         },
         {
             "source": "Gate4",
-            "target": "General gate0",
-            "value": 277
+            "target": "Entrance2",
+            "value": 70
         },
         {
             "source": "Gate4",
@@ -1184,23 +1319,23 @@
         },
         {
             "source": "Gate4",
-            "target": "General gate2",
-            "value": 242
-        },
-        {
-            "source": "Gate4",
             "target": "Gate3",
             "value": 213
         },
         {
             "source": "Gate4",
-            "target": "Camping1",
-            "value": 261
+            "target": "General gate0",
+            "value": 277
         },
         {
             "source": "Gate4",
-            "target": "Entrance2",
-            "value": 70
+            "target": "General gate2",
+            "value": 242
+        },
+        {
+            "source": "Gate4",
+            "target": "Camping1",
+            "value": 261
         },
         {
             "source": "Gate4",
@@ -1249,13 +1384,28 @@
         },
         {
             "source": "General gate6",
-            "target": "General gate3",
-            "value": 170
+            "target": "General gate6",
+            "value": 118
         },
         {
             "source": "General gate6",
             "target": "General gate5",
             "value": 42
+        },
+        {
+            "source": "General gate6",
+            "target": "Entrance2",
+            "value": 133
+        },
+        {
+            "source": "General gate6",
+            "target": "Gate4",
+            "value": 67
+        },
+        {
+            "source": "General gate6",
+            "target": "General gate3",
+            "value": 170
         },
         {
             "source": "General gate6",
@@ -1281,16 +1431,6 @@
             "source": "General gate6",
             "target": "Camping1",
             "value": 324
-        },
-        {
-            "source": "General gate6",
-            "target": "Entrance2",
-            "value": 133
-        },
-        {
-            "source": "General gate6",
-            "target": "Gate4",
-            "value": 67
         },
         {
             "source": "General gate7",
@@ -1374,6 +1514,11 @@
         },
         {
             "source": "Camping7",
+            "target": "Camping7",
+            "value": 164
+        },
+        {
+            "source": "Camping7",
             "target": "General gate6",
             "value": 85
         },
@@ -1399,13 +1544,28 @@
         },
         {
             "source": "Gate5",
-            "target": "General gate3",
-            "value": 178
+            "target": "Gate5",
+            "value": 134
         },
         {
             "source": "Gate5",
             "target": "General gate5",
             "value": 50
+        },
+        {
+            "source": "Gate5",
+            "target": "Entrance2",
+            "value": 141
+        },
+        {
+            "source": "Gate5",
+            "target": "Gate4",
+            "value": 75
+        },
+        {
+            "source": "Gate5",
+            "target": "General gate3",
+            "value": 178
         },
         {
             "source": "Gate5",
@@ -1431,16 +1591,6 @@
             "source": "Gate5",
             "target": "Camping1",
             "value": 332
-        },
-        {
-            "source": "Gate5",
-            "target": "Entrance2",
-            "value": 141
-        },
-        {
-            "source": "Gate5",
-            "target": "Gate4",
-            "value": 75
         },
         {
             "source": "Gate5",
@@ -1604,8 +1754,8 @@
         },
         {
             "source": "Camping8",
-            "target": "General gate3",
-            "value": 230
+            "target": "Camping8",
+            "value": 238
         },
         {
             "source": "Camping8",
@@ -1614,28 +1764,13 @@
         },
         {
             "source": "Camping8",
-            "target": "General gate0",
-            "value": 400
+            "target": "Gate4",
+            "value": 127
         },
         {
             "source": "Camping8",
-            "target": "Camping2",
-            "value": 334
-        },
-        {
-            "source": "Camping8",
-            "target": "General gate2",
-            "value": 365
-        },
-        {
-            "source": "Camping8",
-            "target": "Gate3",
-            "value": 336
-        },
-        {
-            "source": "Camping8",
-            "target": "Camping1",
-            "value": 384
+            "target": "General gate3",
+            "value": 230
         },
         {
             "source": "Camping8",
@@ -1644,8 +1779,28 @@
         },
         {
             "source": "Camping8",
-            "target": "Gate4",
-            "value": 127
+            "target": "Camping2",
+            "value": 334
+        },
+        {
+            "source": "Camping8",
+            "target": "Gate3",
+            "value": 336
+        },
+        {
+            "source": "Camping8",
+            "target": "General gate0",
+            "value": 400
+        },
+        {
+            "source": "Camping8",
+            "target": "General gate2",
+            "value": 365
+        },
+        {
+            "source": "Camping8",
+            "target": "Camping1",
+            "value": 384
         },
         {
             "source": "Gate8",
@@ -1664,8 +1819,13 @@
         },
         {
             "source": "Gate8",
-            "target": "General gate3",
-            "value": 224
+            "target": "Gate8",
+            "value": 226
+        },
+        {
+            "source": "Gate8",
+            "target": "Camping8",
+            "value": 22
         },
         {
             "source": "Gate8",
@@ -1674,28 +1834,13 @@
         },
         {
             "source": "Gate8",
-            "target": "General gate0",
-            "value": 394
+            "target": "Gate4",
+            "value": 121
         },
         {
             "source": "Gate8",
-            "target": "Camping2",
-            "value": 328
-        },
-        {
-            "source": "Gate8",
-            "target": "General gate2",
-            "value": 359
-        },
-        {
-            "source": "Gate8",
-            "target": "Gate3",
-            "value": 330
-        },
-        {
-            "source": "Gate8",
-            "target": "Camping1",
-            "value": 378
+            "target": "General gate3",
+            "value": 224
         },
         {
             "source": "Gate8",
@@ -1704,13 +1849,28 @@
         },
         {
             "source": "Gate8",
-            "target": "Gate4",
-            "value": 121
+            "target": "Camping2",
+            "value": 328
         },
         {
             "source": "Gate8",
-            "target": "Camping8",
-            "value": 22
+            "target": "Gate3",
+            "value": 330
+        },
+        {
+            "source": "Gate8",
+            "target": "General gate0",
+            "value": 394
+        },
+        {
+            "source": "Gate8",
+            "target": "General gate2",
+            "value": 359
+        },
+        {
+            "source": "Gate8",
+            "target": "Camping1",
+            "value": 378
         },
         {
             "source": "Gate8",
@@ -1729,48 +1889,13 @@
         },
         {
             "source": "Entrance4",
-            "target": "General gate3",
-            "value": 225
+            "target": "Entrance4",
+            "value": 228
         },
         {
             "source": "Entrance4",
-            "target": "General gate5",
-            "value": 97
-        },
-        {
-            "source": "Entrance4",
-            "target": "General gate0",
-            "value": 395
-        },
-        {
-            "source": "Entrance4",
-            "target": "Camping2",
-            "value": 329
-        },
-        {
-            "source": "Entrance4",
-            "target": "General gate2",
-            "value": 360
-        },
-        {
-            "source": "Entrance4",
-            "target": "Gate3",
-            "value": 331
-        },
-        {
-            "source": "Entrance4",
-            "target": "Camping1",
-            "value": 379
-        },
-        {
-            "source": "Entrance4",
-            "target": "Entrance2",
-            "value": 188
-        },
-        {
-            "source": "Entrance4",
-            "target": "Gate4",
-            "value": 122
+            "target": "Gate8",
+            "value": 5
         },
         {
             "source": "Entrance4",
@@ -1779,8 +1904,48 @@
         },
         {
             "source": "Entrance4",
-            "target": "Gate8",
-            "value": 5
+            "target": "General gate5",
+            "value": 97
+        },
+        {
+            "source": "Entrance4",
+            "target": "Gate4",
+            "value": 122
+        },
+        {
+            "source": "Entrance4",
+            "target": "General gate3",
+            "value": 225
+        },
+        {
+            "source": "Entrance4",
+            "target": "Entrance2",
+            "value": 188
+        },
+        {
+            "source": "Entrance4",
+            "target": "Camping2",
+            "value": 329
+        },
+        {
+            "source": "Entrance4",
+            "target": "Gate3",
+            "value": 331
+        },
+        {
+            "source": "Entrance4",
+            "target": "General gate0",
+            "value": 395
+        },
+        {
+            "source": "Entrance4",
+            "target": "General gate2",
+            "value": 360
+        },
+        {
+            "source": "Entrance4",
+            "target": "Camping1",
+            "value": 379
         }
     ]
 }
