@@ -83,15 +83,25 @@ window.onload = function() {
                 });
 
             node
-                .attr("r", function(d) { console.log(nodeScale(d.check_ins)); return nodeScale(d.check_ins)*20;})
+                .attr("r", function(d) { return nodeScale(d.check_ins)*20;})
                 .attr("cx", function (d) {
                     return d.xpos * 4;
                 })
                 .attr("cy", function (d) {
                     return d.ypos * 4;
+                })
+                .on("mouseover", function(d) {
+                    link.style("stroke", function(l) {
+                        if (d === l.source || d === l.target)
+                            return "#b40009";
+                        else
+                            return "grey";
+                    });
+                })
+                .on('mouseout', function() {
+                    link.style('stroke', "grey");
                 });
         }
-
     });
 
     function dragstarted(d) {
