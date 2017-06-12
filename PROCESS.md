@@ -50,4 +50,12 @@ With the list of variables I will make a parallel coordinates graph to see some 
 # Day 5
 Discussed some problems at stand-up. Talked about ways to represent data in csv files. Talked about the possibility to link all of our graphs at the end of the project. Decided to try and do this in the last week. 
 
+Made some new variables from data and converted parallel coordinates graph from d3 v4 to d3 v3. Got a working version now, but too much data so viz is too slow. Thought of a way to speed this up, will implement tomorrow.
+
+Also made csv file per day per gate.
+
+**Summary of day 5**
+- Decided to try to link all of our visualizations in the last wek
+- Converted parallel coordinates from v4 to v3
+
 
