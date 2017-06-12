@@ -54,8 +54,11 @@ Made some new variables from data and converted parallel coordinates graph from 
 
 Also made csv file per day per gate.
 
+Made to do list with features to finish before end of project (see process folder)
+
 **Summary of day 5**
 - Decided to try to link all of our visualizations in the last wek
 - Converted parallel coordinates from v4 to v3
+- made features list (see process folder)
 
 
