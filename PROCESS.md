@@ -42,3 +42,12 @@ Gave presentation on progress.
 
 Decided on further design choices. Made questions.md in shared github with question we would like answered from the data. Made list of variables I will extract from data. Also decided I will try some initial clustering visualizations on the data.
 With the list of variables I will make a parallel coordinates graph to see some groups.
+
+**Summary of day 4**
+- Summarised questions to answer
+- Started on parallel coordinates
+
+# Day 5
+Discussed some problems at stand-up. Talked about ways to represent data in csv files. Talked about the possibility to link all of our graphs at the end of the project. Decided to try and do this in the last week. 
+
+
