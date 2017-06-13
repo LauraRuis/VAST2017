@@ -57,11 +57,16 @@ Also made csv file per day per gate.
 Made to do list with features to finish before end of project (see process folder)
 
 **Summary of day 5**
-- Decided to try to link all of our visualizations in the last wek
+- Decided to try to link all of our visualizations in the last week
 - Converted parallel coordinates from v4 to v3
 - made features list (see process folder)
 
 # Day 6
 Stand-up meeting discussed timeline. Goal is to finish working prototypes at the end of this or beginning of next week. Discussed possible links between our visualizations (with date's as only data possibly). Decided on goal to be finished by the end of the third week so the last week is reserved for filming and analysis of the visualizations for answering the answersheet of the challenge.
 
+Fixed parallel coordinates: made grouped lines (not one line per id but one line per combination), made brushes possible.
+Also made some new tsv files (41) for data per minute.
 
+**Summary of day 6**
+- Fixed parallel coordinates
+- Made tsv files
