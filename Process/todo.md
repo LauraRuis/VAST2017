@@ -12,7 +12,6 @@
 - prepare data for this in json file
 
 # parallel coordinates
-- group data (cause now visualization is too slow for brush event to work properly)
 - optional: link to brush slider ??
 - optional: make checkboxes for dummy vars that will color lines depending on their dummy var value
 
