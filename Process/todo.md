@@ -12,6 +12,7 @@
 - prepare data for this in json file
 
 # parallel coordinates
+- color or thickness of lines representing times travelled
 - on double click all lines blue again
 - link to ids
 - optional: link to brush slider ??
