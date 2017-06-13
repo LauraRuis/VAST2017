@@ -54,7 +54,7 @@ window.onload = function() {
                 .on("start", dragstarted)
                 .on("drag", dragged)
                 .on("end", dragended));
-        console.log(d3.extent(graph.nodes, function(d) { return d.check_ins }));
+
         nodeScale
             .domain(d3.extent(graph.nodes, function(d) { return d.check_ins }));
         node.append("title")
@@ -97,9 +97,18 @@ window.onload = function() {
                         else
                             return "grey";
                     });
+                    link.style("stroke-opacity", function(l) {
+                        if ((d === l.source || d === l.target) === false) {
+                            return 0.1;
+                        }
+                        else {
+                            return 1;
+                        }
+                    });
                 })
                 .on('mouseout', function() {
                     link.style('stroke', "grey");
+                    link.style("stroke-opacity", 1);
                 });
         }
     });
