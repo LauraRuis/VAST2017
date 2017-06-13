@@ -12,6 +12,8 @@
 - prepare data for this in json file
 
 # parallel coordinates
+- on double click all lines blue again
+- link to ids
 - optional: link to brush slider ??
 - optional: make checkboxes for dummy vars that will color lines depending on their dummy var value
 
