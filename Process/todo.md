@@ -6,12 +6,13 @@
 - link with graph and table (extra possibilty: link with parallel coordinates)
 
 # table
-- make it
+- put in function to be loaded in as library
 - link with graph and parallel coordinates
 - on row click show route in graph and vars of that ID in parallel coordinates
-- prepare data for this in json file
+- NB; period of stay is not yet correct (first and second entry of entrance instead of first and last)
 
 # parallel coordinates
+- put in function to be loaded in as library
 - color or thickness of lines representing times travelled
 - on double click all lines blue again
 - link to ids
@@ -19,5 +20,5 @@
 - optional: make checkboxes for dummy vars that will color lines depending on their dummy var value
 
 # line chart
-- make it
+- put in function to be loaded in as library
 - link to graph
