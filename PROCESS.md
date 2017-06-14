@@ -70,3 +70,6 @@ Also made some new tsv files (41) for data per minute.
 **Summary of day 6**
 - Fixed parallel coordinates
 - Made tsv files
+
+# Day 7
+
