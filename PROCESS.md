@@ -72,4 +72,11 @@ Also made some new tsv files (41) for data per minute.
 - Made tsv files
 
 # Day 7
-Discussed all three of our alpha versions that should be finished by friday. Discussed some problems we encountered. Decided what we willl try and finish today.
+Discussed all three of our alpha versions that should be finished by friday. Discussed some problems we encountered. Decided what we will try and finish today.
+
+Made two last visualizations: table and line chart. Also made some new python scripts for getting aggregated data files. Line chart and table functionally work, tomorrow will try to make functions of all visualizations and load them into another html file to show them all on one page.
+
+**Summary day 7**
+- Made table
+- Made linechart
+- Made some data files
