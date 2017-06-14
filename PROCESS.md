@@ -72,4 +72,4 @@ Also made some new tsv files (41) for data per minute.
 - Made tsv files
 
 # Day 7
-
+Discussed all three of our alpha versions that should be finished by friday. Discussed some problems we encountered. Decided what we willl try and finish today.
