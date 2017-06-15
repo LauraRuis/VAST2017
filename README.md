@@ -13,7 +13,7 @@ Link | Content
 [Minimum Viable Product](#minimum-viable-product) | Minimum requirements for viable product
 
 ## Product summary
-This product will consist of the combined work of three students. My part will be focused on a graph that represents the map of a nature preserve and a sankey diagram that represents daily travels of vehicles. For drilling down purposes the nodes of the graph will be clickable and a more detailed visualization will show up (perhaps a bar chart, as proposed below). Some insights I hope to show with these visualizations will be the frequently traveled paths by different car types and daily occuring patterns. The total product will aim to answer all questions asked by the VAST Challenge 2017 as specified in the introduction of the problem (see [introduction to problem](#introduction-to-problem)). 
+This product will consist of the combined work of three students. My part will be focused on a graph that represents the map of a nature preserve and a sankey diagram that represents daily travels of vehicles. For drilling down purposes the nodes of the graph will be clickable and a more detailed visualization will show up. Some insights I hope to show with these visualizations will be the frequently traveled paths by different car types and daily occuring patterns. The total product will aim to answer all questions asked by the VAST Challenge 2017 as specified in the introduction of the problem (see [introduction to problem](#introduction-to-problem)). 
 
 ## Introduction to problem
 Analyzing traffic movement in a nature preserve for a ornithologist that needs to examine the reason for a decline in nesting of a certain bird that has its habitat in the preserve. In summary, the questions to be answered are the following (for the full questions, again see: http://vacommunity.org/VAST+Challenge+2017+MC1):
@@ -44,13 +44,16 @@ This project will consist of a partial solving of this problem and should solve 
 In this proposed approach three visualizations with several interactive elements will be proposed. These should together solve part of the problem. It should be noted that the choices of visualizations could change at any time during the project. Before starting the visualization process, we will do some data analytics and explore the data. Based on insights we get from this we might decide on different visualizations than proposed here. For sketches of the visualizations, see folder 'doc' in this repository.
 
 ### Graph representation of map
-One of the important issues in this challenge is the mapping of the nature preserve, which could be very well represented in a graph structure. The nodes of this graph would be the sensors, or gates. The edges would be the possible roadways between these gates. The size of the nodes would represent the amount of passing traffic (total number of entire dataset) and the color of the node would represent the gate type (e.g. entrances would be green, ranger stops would be yellow). Furthermore, the edge thickness would represent the amount of traffic that traveled over this road (total number). This should immediately show possible paths between gates and also which paths are frequently traveled (busy). 
+One of the important issues in this challenge is the mapping of the nature preserve, which could be very well represented in a graph structure. The nodes of this graph would be the sensors, or gates. The edges would be the possible roadways between these gates. The size of the nodes would represent the amount of passing traffic (total number of entire dataset) and the color of the node would represent the gate type (e.g. entrances would be green, ranger stops would be yellow). Furthermore, the edge thickness would represent the amount of traffic that traveled over this road (total number). This should immediately show possible paths between gates and also which paths are frequently traveled (busy). When one clicks a node, the check-ins per day of that gate will show up in the line chart.
 
-### Barchart per gate
-When clicking on a node in the graph (that represents a gate), a barchart will appear. This barchart contains information about the number of vehicles passing through that gate over time. A number of vehicles on a day (or other amount of time) will be represented by a single bar. The color of the bar will represent the car type, and it will be a stacked bar chart. A user can select one or more car types. Per car type that is selected the amount of cars will be stacked on top of each other. This should show how many and what kind of vehicles show up at certain gates. A problem with this visualization could be that in this way it is not possible to compare the data of different gates directly. Nevertheless, it might still proof useful.
+### Linechart per gate
+When clicking on a node in the graph (that represents a gate), a line will appear in the linechart. This chart contains information about the number of vehicles passing through that gate over time. A user can select one or more car types. Per car type that is selected the amount of cars will be shown by a different line. This should show how many and what kind of vehicles show up at certain gates. A problem with this visualization could be that in this way it is not possible to compare the data of different gates directly. Nevertheless, it might still proof useful.
 
-### Sankey diagram for daily paths per car type
-A possibility for showing the paths certain car types travel would be a sankey diagram. The first and last column of this diagram would contain the five possible entrances (exits) and between these a number of columns all containing every possible gate (except for the entrances). A line will start at an entrance and move through the columns through gates. The point of this visualization would be showing patterns of paths vehicle take. The possible problems with this visualization would be deciding to take daily data or 'entrace-to-entrace' data. In the latter the time period would not be specified, and in the daily data it is very possible that certain lines would not go from entrance to entrance, and thus only travel part of the sankey diagram. Another decision to be made in this visualization would be to take either different colored lines per car type or only 1 car type per sankey diagram. The final problem would be how to link this diagram with the bar chart and the graph visualization. 
+### Parallel Coordinates diagram for daily paths per car type
+A possibility for showing clusters will be a parallel coordinates graph. Each column will represent a different variable that. Per car-id, all the variables that car-id has will be linked. This way it will be possible to show similarities between certain variables. Also, the user will be able to choose between some dummy variables. When clicking on for example the "weekend dummy" the car-id's that spent the weekend in the preserve will get a different color than those who did not spend the weekend.
+
+### Tables
+A table will show all the values of the variables of all the car-id's. Each row will be clickable, and the route that car-id took will be shown in the graph.
 
 ## External components
 For this project two programming languages will be used: python and javascript.
@@ -60,6 +63,8 @@ For now, the list of necessary external components is the following:
 - Python
 - Javascript
 - D3
+- Bootstrap 
+- DataTables
 
 This list will be expanded during the project.
 
