@@ -10,6 +10,9 @@ Vast Challenge 2017-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="table.css">
+    <link rel="stylesheet" type="text/css" href="linechart.css">
+    <link rel="stylesheet" type="text/css" href="fdgraph.css">
+    <link rel="stylesheet" type="text/css" href="pc.css">
     <!--<link rel="stylesheet" type="text/css" href="linechart.css">-->
     <link href="../Libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="../Libs/d3v4/d3.min.js" charset="utf-8"></script>
@@ -20,13 +23,21 @@ Vast Challenge 2017-->
     <script src="../Libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/js/dataTables.bootstrap4.min.js"></script>
+    <script src="linechart2.js" charset="utf-8"></script>
+    <script src="fdgraph.js" charset="utf-8"></script>
+    <script src="table2.js" charset="utf-8"></script>
+    <script src="pc2.js" charset="utf-8"></script>
     <script src="table.js" charset="utf-8"></script>
 </head>
 <body>
     <div id="titleContainer"></div>
-    <div id="container">
-        <div class="charts" id="linechart"></div>
+    <div id="chartsContainer">
+        <div class="col-xs-6 charts" id="graph"></div>
+        <div class="col-xs-6 charts" id="linechart"></div>
+    </div>
+    <div>
         <div class="table" id="table"></div>
+        <div class="charts" id="pc"></div>
     </div>
 </body>
 </html>
