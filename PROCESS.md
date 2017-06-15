@@ -83,3 +83,9 @@ Made two last visualizations: table and line chart. Also made some new python sc
 
 # Day 8
 Discussed some new problems at stand-up meeting. Decided to start with putting all my visualizations in a function and add them on one dashboard.
+
+Put all 4 visualizations in functions and loaded in a new html as libraries, made new javascript file to make the total dashboard. Table, Line chart and graph work and are visable together on a page. Parallel Coordinates is written in d3 v3, so does not work yet. Need to find solution for this.
+
+**Summary day 8**
+- Merged visualizations on a page
+- Encountered problem of usnig d3 v3 and v4 together
