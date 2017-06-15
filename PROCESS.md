@@ -80,3 +80,6 @@ Made two last visualizations: table and line chart. Also made some new python sc
 - Made table
 - Made linechart
 - Made some data files
+
+# Day 8
+Discussed some new problems at stand-up meeting. Decided to start with putting all my visualizations in a function and add them on one dashboard.
