@@ -95,7 +95,7 @@ function makegraph(graph, svg, g, width, height) {
             .on('mouseout', function() {
                 link.style('stroke', "grey");
                 link.style("stroke-opacity", 1);
-            });
+            })
     }
 
     function dragstarted(d) {
@@ -120,4 +120,5 @@ function makegraph(graph, svg, g, width, height) {
         g.attr("transform", d3.event.transform)
     }
 
+    return node;
 }

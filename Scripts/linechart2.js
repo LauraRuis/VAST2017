@@ -10,15 +10,6 @@
  * */
 function makeLineChart(data, lineContainer, xLine, yLine, height) {
 
-     // define the line
-     var line = d3.line()
-         .x(function (d, i) {
-             return xLine(i + 1998);
-         })
-         .y(function (d) {
-             return yLine(d.value);
-         });
-
     // set domain
     var format = d3.timeFormat("%b %Y");
     var period = d3.extent(data, function(d) {return d.key});
@@ -47,17 +38,33 @@ function makeLineChart(data, lineContainer, xLine, yLine, height) {
         .attr("y",  6)
         .attr("dy", ".71em")
         .text("Check-ins");
-}
+ }
 
 /**
  * Function that adds or deletes lines and legend rects according to array of selected country.
  * @param {object} data
  * */
-function updateLines(data, lineContainer, legendContainer, xLine, yLine, selected) {
+function updateLines(data, lineContainer, legendContainer, xLine, yLine, selected, width, titleContainer, gate) {
+
+    var title = titleContainer.selectAll("text")
+        .data(["Check-ins of " + gate]);
+
+    console.log(titleContainer);
+    title.attr("class", "update");
+    title.enter().append("text")
+        .attr("class", "enter")
+        .attr("x", function(d, i) { return i * 32; })
+        .attr("dy", ".35em")
+        .merge(title)
+        .text(function(d) { return d; });
+
+    // EXIT
+    // Remove old elements as needed.
+    title.exit().remove();
 
     var period = d3.extent(data, function(d) {return d.key});
     xLine.domain(period);
-    console.log(d3.extent(data, function(d) {return d.value.total}));
+
     yLine.domain(d3.extent(data, function(d) {return d.value.total}));
 
     // get current max value for y axis scaling and put data per line in dict of arrays
@@ -78,7 +85,7 @@ function updateLines(data, lineContainer, legendContainer, xLine, yLine, selecte
     var lineColor = d3.scaleOrdinal(d3["schemeDark2"]);
 
     // make new line
-    line = d3.line()
+    var line = d3.line()
         .x(function(d) { return xLine(d.date); })
         .y(function(d) { return yLine(d.value); });
 
