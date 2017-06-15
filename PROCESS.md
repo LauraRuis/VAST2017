@@ -86,6 +86,9 @@ Discussed some new problems at stand-up meeting. Decided to start with putting a
 
 Put all 4 visualizations in functions and loaded in a new html as libraries, made new javascript file to make the total dashboard. Table, Line chart and graph work and are visable together on a page. Parallel Coordinates is written in d3 v3, so does not work yet. Need to find solution for this.
 
+Added interactivity between graph nodes and line chart.
+
 **Summary day 8**
 - Merged visualizations on a page
-- Encountered problem of usnig d3 v3 and v4 together
+- Encountered problem of using d3 v3 and v4 together
+- Interactivity graph - line chart
