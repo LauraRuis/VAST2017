@@ -41,8 +41,12 @@ function makegraph(graph, svg, g, width, height) {
             .on("drag", dragged)
             .on("end", dragended));
 
+    var edgecolor = d3.scaleLinear()
+        .domain(d3.extent(graph.links, function(d) { return d.value }));
+
     nodeScale
         .domain(d3.extent(graph.nodes, function(d) { return d.check_ins }));
+
     node.append("title")
         .text(function(d) { return d.id; });
 
@@ -66,6 +70,10 @@ function makegraph(graph, svg, g, width, height) {
             })
             .attr("y2", function (d) {
                 return d.target.ypos * 4;
+            })
+            .style("stroke-width", function(d) {
+                console.log(d);
+                return edgecolor(d.value) * 5;
             });
 
         node
