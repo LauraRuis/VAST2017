@@ -92,3 +92,14 @@ Added interactivity between graph nodes and line chart.
 - Merged visualizations on a page
 - Encountered problem of using d3 v3 and v4 together
 - Interactivity graph - line chart
+
+# Day 9
+Worked on highlighting route in graph on click of row in table. Works now, but buggy. Also need to add some sort of tooltip showing the time of arrival at that node in the graph. 
+
+Decided on a plan for using the parallel coordinates visualization: let user decide if he wants graph or pc as center visualization, remove line chart if pc is chosen and make graph smaller to focus on pc. Before working on this I need to know how to use d3 v3 and v4 together.
+
+Did presentation.
+
+**Summary day 9**
+- Highlight route on click
+- Presentation
