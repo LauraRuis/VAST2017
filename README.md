@@ -44,7 +44,7 @@ These features should be extracted through data analysis, since these variables 
 ## Proposed approach
 This project will consist of a partial solving of this problem and should solve the problem together with the projects of two project-partners (Sven van Dam and Peter van Twuijver). 
 
-In this proposed approach three visualizations with several interactive elements will be proposed. These should together solve part of the problem. It should be noted that the choices of visualizations could change at any time during the project. Before starting the visualization process, we will do some data analytics and explore the data. Based on insights we get from this we might decide on different visualizations than proposed here. For sketches of the visualizations, see folder 'doc' in this repository.
+In this proposed approach three visualizations with several interactive elements will be proposed. These should together solve part of the problem. It should be noted that the choices of visualizations could change at any time during the project. Before starting the visualization process, we will do some data analytics and explore the data. Based on insights we get from this we might decide on different visualizations than proposed here.
 
 ### Graph representation of map
 One of the important issues in this challenge is the mapping of the nature preserve, which could be very well represented in a graph structure. The nodes of this graph would be the sensors, or gates. The edges would be the possible roadways between these gates. The size of the nodes would represent the amount of passing traffic (total number of entire dataset) and the color of the node would represent the gate type (e.g. entrances would be green, ranger stops would be yellow). Furthermore, the edge thickness would represent the amount of traffic that traveled over this road (total number). This should immediately show possible paths between gates and also which paths are frequently traveled (busy). When one clicks a node, the check-ins per day of that gate will show up in the line chart.
@@ -57,6 +57,9 @@ A possibility for showing clusters will be a parallel coordinates graph. Each co
 
 ### Tables
 A table will show all the values of the variables of all the car-id's. Each row will be clickable, and the route that car-id took will be shown in the graph.
+
+### Sketch of this proposal
+![Prototype Sketch](https://github.com/LauraRuis/VAST2017/blob/master/Process/prototype_sketch.jpeg.jpg)
 
 ## External components
 For this project two programming languages will be used: python and javascript.
