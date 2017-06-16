@@ -59,7 +59,7 @@ A possibility for showing clusters will be a parallel coordinates graph. Each co
 A table will show all the values of the variables of all the car-id's. Each row will be clickable, and the route that car-id took will be shown in the graph.
 
 ### Sketch of this proposal
-![Prototype Sketch](https://github.com/LauraRuis/VAST2017/blob/master/Process/prototype_sketch.jpeg.jpg)
+![Prototype Sketch](https://github.com/LauraRuis/VAST2017/blob/master/Process/prototype_sketch.jpeg)
 
 ## External components
 For this project two programming languages will be used: python and javascript.
