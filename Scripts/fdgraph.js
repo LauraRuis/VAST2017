@@ -72,11 +72,11 @@ function makegraph(graph, svg, g, width, height) {
                 return d.target.ypos * 4;
             })
             .style("stroke-width", function(d) {
-                console.log(d);
                 return edgecolor(d.value) * 5;
             });
 
         node
+            .attr("id", function(d) { return d.id; })
             .attr("r", function(d) { return nodeScale(d.check_ins)*20;})
             .attr("cx", function (d) {
                 return d.xpos * 4;
@@ -129,4 +129,47 @@ function makegraph(graph, svg, g, width, height) {
     }
 
     return node;
+}
+
+function highlightRoute(svg, id, dt) {
+
+    // var id = "20151305011343-613";
+    d3.json("../Data/route_per_id.json", function (error, data) {
+
+        if (error) throw error;
+        var route = data[id];
+        route.forEach(function(d, i) {
+            setTimeout(function () {
+
+                var node = svg.selectAll("#" + d.gate);
+                node
+                    .attr("stroke", "black")
+                    .attr("stroke-width", "5px");
+
+            }, 1000 * i);
+        });
+        // Add event listener for opening and closing details
+        $('#my_table tbody').on('click', 'td.details-control', function () {
+            var tr = $(this).closest('tr');
+            var row = dt.api().row( tr );
+
+            if ( row.child.isShown() ) {
+                row.child.hide();
+                tr.removeClass('shown');
+            }
+            else {
+                row.child(format(route)).show();
+                tr.addClass('shown');
+            }
+        } );
+    });
+}
+
+
+function format(route) {
+    var routestring = "";
+    route.forEach(function(d) {
+        routestring += d.gate + "      at      " + d.timestamp + " <br> "
+    });
+    return "<strong>Route</strong>" + "<br>" + routestring;
 }

@@ -13,7 +13,6 @@ function makeTable(data, table, thead, tbody) {
 
     // change format of data to array for d3's enter function
     var arrData = d3.entries(data);
-    console.log(arrData);
 
     // append the header row
     var columns = ["Car ID", "Period", "Car type", "Camping", "Number of check-ins", "Days of stay", "Month of stay"],
@@ -78,12 +77,40 @@ function makeTable(data, table, thead, tbody) {
             return d.value
         });
 
+    var nCloneTh = document.createElement( 'th' );
+    var nCloneTd = document.createElement( 'td' );
+    nCloneTd.innerHTML = '<img src="../details_open.png">';
+    nCloneTd.className = "center";
+
+    $('#my_table thead tr').each( function () {
+        this.insertBefore( nCloneTh, this.childNodes[0] );
+    } );
+
+    $('#my_table tbody tr').each( function () {
+        this.insertBefore(  nCloneTd.cloneNode( true ), this.childNodes[0] );
+    } );
+
     // make a datatable of it (with search bar and pages)
     var dataTable = $('#my_table');
-    dataTable.DataTable({
-
+    dataTable.dataTable({
         // remove option to change amount of shown entries
-        "bLengthChange": false
+        "bLengthChange": false,
+        "columns": [
+            {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": ''
+            },
+            { "data": "id" },
+            { "data": "entrance" },
+            { "data": "type" },
+            { "data": "camping" },
+            { "data": "check-ins" },
+            { "data": "days" },
+            { "data": "month" }
+        ],
+        "order": [[1, 'asc']]
     });
 
     // when next page or search event is fired, table is redrawn so selected countries have to be colored again

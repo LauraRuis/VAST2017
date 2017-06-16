@@ -17,8 +17,8 @@ window.onload = function() {
     // LINE CHART
     // initialize attributes of svg as constants
     const margins = {top: 20, right: 200, bottom: 75, left: 50},
-        height = 393 - margins.top - margins.bottom,
-        width = 800 - margins.left - margins.right;
+        height = 500 - margins.top - margins.bottom,
+        width = 1000 - margins.left - margins.right;
 
     // append svg element for line chart
     var lineContainer = d3.select("#linechart").append("svg")
@@ -127,11 +127,17 @@ window.onload = function() {
         thead = table.append("thead"),
         tbody = table.append("tbody");
 
-    d3.json("../Data/vars_per_id.json", function (error, data) {
+    d3.json("../Data/temp.json", function (error, data) {
 
         if (error) throw error;
 
-        makeTable(data, table, thead, tbody);
+        var dataTable = makeTable(data, table, thead, tbody);
+
+        // add click event to each row
+        dataTable.find('tbody').on('click', 'tr', function () {
+            var d = d3.select(this).data();
+            highlightRoute(svg, d[0].key, dataTable);
+        });
 
     });
 
@@ -152,7 +158,7 @@ window.onload = function() {
 
         if (error) throw error;
 
-        makePC(data, svgPC, widthPC)
+        // makePC(data, svgPC, widthPC)
 
     });
 };
