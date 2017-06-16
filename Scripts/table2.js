@@ -86,12 +86,6 @@ function makeTable(data, table, thead, tbody) {
         "bLengthChange": false
     });
 
-    // add click event to each row
-    dataTable.find('tbody').on('click', 'tr', function () {
-        var d = d3.select(this).data();
-        console.log(d)
-    });
-
     // when next page or search event is fired, table is redrawn so selected countries have to be colored again
     dataTable
         .on('draw.dt', function () {
@@ -102,6 +96,8 @@ function makeTable(data, table, thead, tbody) {
                     .css("background-color", "orange");
             });
         });
+
+    return dataTable;
 }
 
 /**
