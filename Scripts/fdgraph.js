@@ -134,7 +134,7 @@ function makegraph(graph, svg, g, width, height) {
 function highlightRoute(svg, id, dt) {
 
     // var id = "20151305011343-613";
-    d3.json("../Data/route_per_id.json", function (error, data) {
+    d3.json("../Data/route_per_ID.json", function (error, data) {
 
         if (error) throw error;
         var route = data[id];
