@@ -127,7 +127,7 @@ window.onload = function() {
         thead = table.append("thead"),
         tbody = table.append("tbody");
 
-    d3.json("../Data/temp.json", function (error, data) {
+    d3.json("../Data/vars_per_id.json", function (error, data) {
 
         if (error) throw error;
 
