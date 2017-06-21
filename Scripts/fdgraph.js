@@ -27,14 +27,6 @@ function makeGraph(graph) {
         .attr("class", "graphContainer")
         .attr("transform", "translate(" + margins.left + "," + margins.top + ")");
 
-    // global title
-    // version4.select("#graphSVG").append("text")
-    //     .attr("x", (width / 2))
-    //     .attr("y", 20)
-    //     .attr("text-anchor", "middle")
-    //     .style("font-size", "26px")
-    //     .text("Lekagul Roadways");
-
     // scale for coloring nodes
     var color = version4.scaleOrdinal(version4.schemeCategory20);
 
@@ -224,7 +216,7 @@ function highlightRoute(svg, dt, selected) {
      * @param {object} dt
      */
     var color = version4.scaleOrdinal(version4.schemeCategory20);
-    version4.json("../Data/route_per_id.json", function (error, data) {
+    version4.json("../Data/route_per_ID.json", function (error, data) {
 
         if (error) throw error;
         dt.find('tbody').unbind( "click" );
