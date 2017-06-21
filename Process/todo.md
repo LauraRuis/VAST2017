@@ -1,18 +1,13 @@
 # graph
-- legend for node color
-- title
-- legend for node size
-- data per week, night, day
-Optional:
-- get data for line thickness
+- legend for node size (buggy)
+- update connections
 
 # brush slider
-- make it for data per week
-- link with graph and table (extra possibilty: link with parallel coordinates)
+- add all the weeks (instead of only 1-22 of 2016)
 
 # table
-- link with graph and parallel coordinates
-- on row click show route in graph and vars of that ID in parallel coordinates (selected get colored)
+- link with parallel coordinates
+- on row click show vars of that ID in parallel coordinates (selected get colored) (NB; is this necessary? Also visable in table)
 - NB; period of stay is not yet correct (first and second entry of entrance instead of first and last)
 
 # parallel coordinates
@@ -20,9 +15,6 @@ Optional:
 - on double click all lines blue again (works, but buggy)
 - link to ids
 - add speed variable
-- optional: link to brush slider ??
-- optional: make checkboxes for dummy vars that will color lines depending on their dummy var value
 
 # line chart
-- add possibility of more than 1 line
-- add possiblity of choosing different car type
+- style checkboxes
