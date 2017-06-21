@@ -1,1 +1,9 @@
-
+exclude:
+- /Libs/.*
+- /Pythonfiles for data analysis/.*
+- /Pythonfiles/.*
+- /read_bitmap/load_bitmap.py
+component_depth: 1
+languages:
+- javascript
+- python
