@@ -59,17 +59,19 @@ window.onload = function() {
 
     // for now hardcoded selected
     var selected = ["total"];
+
     var lineObject,
         pcObject;
     d3.select("#formDiv").style("display", "none");
     d3.select('#pcPage').on("click", function() {
         if (d3.select("#pcSVG")[0][0] === null) {
             d3.select('#linechart img').remove();
-            d3.json("../Data/vars_per_id.json", function (error, data) {
+            d3.json("../Data/vars per week/vars_15-2016.json", function (error, data) {
                 if (error) throw error;
                 d3.select("#lineSVG").remove();
                 d3.select("#formDiv").style("display", "none");
                 pcObject = makePC(data)
+                highlightRoute(graphObject.svg, dataTable, selectedRows, pcObject.paths);
             });
         }
     });
@@ -123,7 +125,7 @@ window.onload = function() {
                 selectedRows = {};
                 drawPC(data, pcObject.svg, pcObject.height, pcObject.width);
                 fillTable(version4.entries(data), dataTable);
-                highlightRoute(graphObject.svg, dataTable, selectedRows);
+                highlightRoute(graphObject.svg, dataTable, selectedRows, pcObject.paths);
 
             });
         }
@@ -142,7 +144,7 @@ window.onload = function() {
                 if (error) throw error;
                 selectedRows = {};
                 fillTable(version4.entries(data), dataTable);
-                highlightRoute(graphObject.svg, dataTable, selectedRows);
+                highlightRoute(graphObject.svg, dataTable, selectedRows, false);
 
             });
         }
@@ -199,11 +201,11 @@ window.onload = function() {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // TABLE
     var dataTable;
-    version4.json("../Data/temp.json", function (error, data) {
+    version4.json("../Data/vars per week/vars_15-2016.json", function (error, data) {
 
         if (error) throw error;
         dataTable = makeTable(graphObject.svg, data);
-        highlightRoute(graphObject.svg, dataTable, selectedRows);
+        highlightRoute(graphObject.svg, dataTable, selectedRows, false);
 
     });
 

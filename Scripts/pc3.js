@@ -24,12 +24,16 @@ function makePC(data) {
         height = 800 - margins.top - margins.bottom,
         width = 800 - margins.left - margins.right;
 
-    drawPC(data, svg, height, width);
+    var pcVars = drawPC(data, svg, height, width);
+    var connections = pcVars[0],
+        paths = pcVars[1];
 
     return {
         svg: svg,
         height: height,
-        width: width
+        width: width,
+        connections: connections,
+        paths: paths
     }
 }
 
@@ -267,4 +271,6 @@ function drawPC(data, svg, height, width) {
             })
         });
     }
+
+    return [connections, pathsPerID];
 }

@@ -151,11 +151,11 @@ function makeGraph(graph) {
             .on('mouseout', function() {
                 var highlighted = version4.selectAll(".highlighted");
                 if (highlighted["_groups"][0].length > 0) {
-                    version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 0.1);
-                    version4.selectAll(".highlighted").style("stroke", "rgb(27, 158, 119)").style("stroke-opacity", 1);
+                    version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 0.1).style("stroke-width", "1px");
+                    version4.selectAll(".highlighted").style("stroke", "rgb(27, 158, 119)").style("stroke-opacity", 1).style("stroke-width", "3px");
                 }
                 else {
-                    version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 1);
+                    version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 1).style("stroke-width", "1px");
                 }
             })
     }
@@ -209,7 +209,7 @@ function restart(simulation, graph, nodeScale) {
     simulation.alpha(1).restart();
 }
 
-function highlightRoute(svg, dt, selected) {
+function highlightRoute(svg, dt, selected, paths) {
     /**
      * On row click in datatable, highlight corresponding route of car-id. Also open detailed info about route in table.
      * @param {object} svg
@@ -243,11 +243,19 @@ function highlightRoute(svg, dt, selected) {
                 });
                 var highlighted = version4.selectAll(".highlighted");
                 if (highlighted["_groups"][0].length > 0) {
-                    version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 0.1);
+                    version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 0.1).style("stroke-width", "1px");
                     version4.selectAll(".highlighted").style("stroke", "rgb(27, 158, 119)").style("stroke-opacity", 1);
                 }
                 else {
                     version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 1);
+                }
+                if (paths !== false) {
+                    console.log(paths[id])
+                    var path = paths[id];
+                    path.forEach(function(p) {
+                        console.log(d3.select("." + p))
+                        d3.select("." + p).style("stroke", "steelblue").style("stroke-width", "1px");
+                    })
                 }
             }
             else {
@@ -266,12 +274,20 @@ function highlightRoute(svg, dt, selected) {
                             selected[id].push(links);
                             links
                                 .style("stroke", "rgb(27, 158, 119)")
+                                .style("stroke-width", "3px")
                                 .attr("class", "highlighted")
                                 .style("stroke-opacity", 1);
                         }
                     }, 100 * i);
                 });
-
+                if (paths !== false) {
+                    console.log(paths[id])
+                    var path = paths[id];
+                    path.forEach(function(p) {
+                        console.log(d3.select("." + p));
+                        d3.select("." + p).style("stroke", "rgb(27, 158, 119)").style("stroke-width", "3px");
+                    })
+                }
                 row.child(format(route)).show();
                 tr.addClass('shown');
             }
