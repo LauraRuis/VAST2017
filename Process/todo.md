@@ -4,6 +4,7 @@
 # graph
 - legend for node size (buggy)
 - update connections
+- initialize smaller
 
 # brush slider
 - add all the weeks (instead of only 1-22 of 2016)
