@@ -103,3 +103,10 @@ Did presentation.
 **Summary day 9**
 - Highlight route on click
 - Presentation
+
+# Day 10
+Stand-up meeting discussed answering questions of VAST Challenge. Discussed 6 daily patterns (found 2 so far), 6 multiple day patterns (found more than 6), discussed unusual patterns (found 3). 
+
+Tried to merge v3 and v4 of d3 together, does not work. Decided to maybe make two websites, one with v3 and one with v4.
+
+
