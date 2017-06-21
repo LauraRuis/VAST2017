@@ -8,9 +8,55 @@
  /**
  * Function that draws empty line chart, ready to be filled with lines.
  * */
-function makeLineChart(data, lineContainer, xLine, yLine, height) {
+function makeLineChart(data) {
 
-    // set domain
+     // initialize attributes of svg as constants
+     const margins = {top: 20, right: 200, bottom: 75, left: 50},
+         height = 500 - margins.top - margins.bottom,
+         width = 1000 - margins.left - margins.right;
+
+     // append svg element for line chart
+     var lineContainer = d3.select("#linechart").append("svg")
+         .attr("id", "lineSVG")
+         .attr("height", height + margins.top + margins.bottom)
+         .attr("width", width + margins.left + margins.right).append("g")
+         .attr("id", "lineContainer")
+         .attr("transform", "translate(" + margins.left + "," + margins.top + ")");
+
+     // append svg for legend
+     var legendSvg = d3.select("#lineSVG").append("svg")
+         .attr("id", "legendSVG")
+         .attr("height", height + margins.top + margins.bottom)
+         .attr("width", width + margins.left + margins.right).append("g")
+         .attr("id", "legendContainer")
+         .attr("transform", "translate(" + width + "," + 0 + ")");
+
+     // make legend container
+     var legendContainer = legendSvg.append("g")
+         .attr("font-family", "sans-serif")
+         .attr("font-size", 10)
+         .attr("text-anchor", "front");
+
+     // make title for line chart
+     var titleContainer = lineContainer.append("g")
+         .attr("class", "titleContainer");
+
+     titleContainer
+         .append("text")
+         .attr("x", (width / 2))
+         .attr("y", top)
+         .attr("class", "title")
+         .attr("text-anchor", "middle")
+         .style("font-size", "16px")
+         .text("For check-ins per gate, click node on graph.");
+
+     // set scales for lines
+     var xLine = d3.scaleTime()
+             .range([0, width]),
+         yLine = d3.scaleLinear()
+             .range([height, 0]);
+
+     // set domain
     var format = d3.timeFormat("%b %Y");
     var period = d3.extent(data, function(d) {return d.key});
     xLine.domain(period);
@@ -38,18 +84,27 @@ function makeLineChart(data, lineContainer, xLine, yLine, height) {
         .attr("y",  6)
         .attr("dy", ".71em")
         .text("Check-ins");
+
+    return {"lineContainer": lineContainer, "legendContainer": legendContainer, "xLine": xLine, "yLine": yLine, "width": width, "titleContainer": titleContainer}
  }
 
 /**
  * Function that adds or deletes lines and legend rects according to array of selected country.
  * @param {object} data
  * */
-function updateLines(data, lineContainer, legendContainer, xLine, yLine, selected, width, titleContainer, gate) {
+function updateLines(data, lineObject, selected, gate) {
+
+    // get variables from lineObject
+    var lineContainer = lineObject.lineContainer,
+        legendContainer = lineObject.legendContainer,
+        xLine = lineObject.xLine,
+        yLine = lineObject.yLine,
+        width = lineObject.width,
+        titleContainer = lineObject.titleContainer;
 
     var title = titleContainer.selectAll("text")
         .data(["Check-ins of " + gate]);
 
-    console.log(titleContainer);
     title.attr("class", "update");
     title.enter().append("text")
         .attr("class", "enter")
@@ -96,6 +151,7 @@ function updateLines(data, lineContainer, legendContainer, xLine, yLine, selecte
         .call(d3.axisLeft(yLine));
 
     // update lines
+    lineContainer.selectAll(".line").data(selected).exit().remove();
     lineContainer.selectAll(".line")
         .data(selected)
         .attr("class", "line")
@@ -143,7 +199,7 @@ function updateLines(data, lineContainer, legendContainer, xLine, yLine, selecte
         .attr("x", 40)
         .attr("y", 18)
         .attr("dy", "0.32em")
-        .text(function(d) { return d; });
+        .text(function(d) { return d !== "total" ? "Car-type " + d : d; });
 
     // add event listener to lines that highlights lines and legend items
     lineContainer.selectAll(".line")

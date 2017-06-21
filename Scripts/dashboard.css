@@ -35,3 +35,11 @@ td {
     font: 10px Arial;
     fill: #656677;
 }
+
+#ex1Slider .slider-selection {
+    background: #BABABA;
+}
+
+.checkbox {
+    /*font: arial;*/
+}

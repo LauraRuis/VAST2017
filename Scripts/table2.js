@@ -9,7 +9,14 @@
  * Function that draws table with data.
  * @param {object} data
  * */
-function makeTable(data, table, thead, tbody) {
+function makeTable(svg, data) {
+
+    // bootstrap table
+    var table = d3.select("#table").append("table")
+            .attr("id", "my_table")
+            .attr("class", "table table-hover table-responsive col-xs-6"),
+        thead = table.append("thead"),
+        tbody = table.append("tbody");
 
     // change format of data to array for d3's enter function
     var arrData = d3.entries(data);
@@ -67,19 +74,13 @@ function makeTable(data, table, thead, tbody) {
         })
         .enter()
         .append("td")
-        .attr("class", function (d, i) {
-            return columns[i];
-        })
-        .attr("data", function (d) {
-            return d.value;
-        })
         .html(function (d) {
             return d.value
         });
 
     var nCloneTh = document.createElement( 'th' );
     var nCloneTd = document.createElement( 'td' );
-    nCloneTd.innerHTML = '<img src="../details_open.png">';
+    // nCloneTd.innerHTML = '<img src="../details_open.png">';
     nCloneTd.className = "center";
 
     $('#my_table thead tr').each( function () {
@@ -100,7 +101,7 @@ function makeTable(data, table, thead, tbody) {
                 "className":      'details-control',
                 "orderable":      false,
                 "data":           null,
-                "defaultContent": ''
+                "defaultContent": '<img src="../details_open.png">'
             },
             { "data": "id" },
             { "data": "entrance" },
@@ -116,12 +117,7 @@ function makeTable(data, table, thead, tbody) {
     // when next page or search event is fired, table is redrawn so selected countries have to be colored again
     dataTable
         .on('draw.dt', function () {
-            dataTable.find("tr")
-                .css("background-color", "white");
-            selected.forEach(function (d) {
-                $("#table" + d)
-                    .css("background-color", "orange");
-            });
+            highlightRoute(svg, dataTable)
         });
 
     return dataTable;
@@ -134,12 +130,22 @@ function makeTable(data, table, thead, tbody) {
 function fillTable(arrData) {
 
     var table = $("#my_table").DataTable();
-
-    // select rows on country code and fill with data (otherwise data gets placed wrongly when table is sorted)
-    table.rows().every(function () {
-        var data = this.data();
-        var className = this.node().className.split(" ")[0];
-        data[1] = Math.round(arrData[className].value * 100) / 100;
-        this.data(data);
+    table.clear();
+    arrData.forEach(function(d) {
+        var entrance = d.value.entrance !== undefined ? d.value.entrance[0].split(" ")[0] + " - " + d.value.entrance[1].split(" ")[0] : "Missing data";
+        var month = d.value.month !== undefined ? d.value.month : "Missing data";
+        var row = {
+            "DT_RowId": d.key,
+            "DT_RowClass": d.key,
+            "camping": d.value.camping,
+            "check-ins": d.value.number_stops,
+            "days": d.value.number_days,
+            "entrance": entrance,
+            "id": d.key,
+            "month": month,
+            "type": d.value.car_type
+        };
+        table.row.add(row)
     });
+    table.draw();
 }

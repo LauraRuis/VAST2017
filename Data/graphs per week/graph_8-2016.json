@@ -1,0 +1,3926 @@
+{
+    "nodes": [
+        {
+            "id": "general-gate0",
+            "xpos": 110,
+            "ypos": 9,
+            "group": "general-gate",
+            "check_ins": 0
+        },
+        {
+            "id": "entrance0",
+            "xpos": 62,
+            "ypos": 13,
+            "group": "entrance",
+            "check_ins": 41
+        },
+        {
+            "id": "ranger-stop0",
+            "xpos": 89,
+            "ypos": 16,
+            "group": "ranger-stop",
+            "check_ins": 95
+        },
+        {
+            "id": "ranger-stop1",
+            "xpos": 19,
+            "ypos": 24,
+            "group": "ranger-stop",
+            "check_ins": 8
+        },
+        {
+            "id": "general-gate1",
+            "xpos": 64,
+            "ypos": 25,
+            "group": "general-gate",
+            "check_ins": 87
+        },
+        {
+            "id": "general-gate2",
+            "xpos": 104,
+            "ypos": 32,
+            "group": "general-gate",
+            "check_ins": 87
+        },
+        {
+            "id": "gate0",
+            "xpos": 63,
+            "ypos": 33,
+            "group": "gate",
+            "check_ins": 2
+        },
+        {
+            "id": "ranger-stop2",
+            "xpos": 80,
+            "ypos": 35,
+            "group": "ranger-stop",
+            "check_ins": 94
+        },
+        {
+            "id": "camping0",
+            "xpos": 52,
+            "ypos": 41,
+            "group": "camping",
+            "check_ins": 4
+        },
+        {
+            "id": "gate1",
+            "xpos": 58,
+            "ypos": 44,
+            "group": "gate",
+            "check_ins": 2
+        },
+        {
+            "id": "ranger-stop3",
+            "xpos": 148,
+            "ypos": 45,
+            "group": "ranger-stop",
+            "check_ins": 24
+        },
+        {
+            "id": "camping8",
+            "xpos": 183,
+            "ypos": 48,
+            "group": "camping",
+            "check_ins": 12
+        },
+        {
+            "id": "camping1",
+            "xpos": 129,
+            "ypos": 50,
+            "group": "camping",
+            "check_ins": 0
+        },
+        {
+            "id": "gate2",
+            "xpos": 24,
+            "ypos": 54,
+            "group": "gate",
+            "check_ins": 8
+        },
+        {
+            "id": "general-gate3",
+            "xpos": 186,
+            "ypos": 55,
+            "group": "general-gate",
+            "check_ins": 8
+        },
+        {
+            "id": "gate3",
+            "xpos": 149,
+            "ypos": 60,
+            "group": "gate",
+            "check_ins": 24
+        },
+        {
+            "id": "camping2",
+            "xpos": 44,
+            "ypos": 64,
+            "group": "camping",
+            "check_ins": 0
+        },
+        {
+            "id": "entrance1",
+            "xpos": 17,
+            "ypos": 67,
+            "group": "entrance",
+            "check_ins": 34
+        },
+        {
+            "id": "camping3",
+            "xpos": 45,
+            "ypos": 68,
+            "group": "camping",
+            "check_ins": 2
+        },
+        {
+            "id": "entrance2",
+            "xpos": 183,
+            "ypos": 87,
+            "group": "entrance",
+            "check_ins": 45
+        },
+        {
+            "id": "camping4",
+            "xpos": 48,
+            "ypos": 89,
+            "group": "camping",
+            "check_ins": 4
+        },
+        {
+            "id": "ranger-stop4",
+            "xpos": 18,
+            "ypos": 95,
+            "group": "ranger-stop",
+            "check_ins": 16
+        },
+        {
+            "id": "general-gate4",
+            "xpos": 69,
+            "ypos": 98,
+            "group": "general-gate",
+            "check_ins": 45
+        },
+        {
+            "id": "general-gate5",
+            "xpos": 124,
+            "ypos": 111,
+            "group": "general-gate",
+            "check_ins": 68
+        },
+        {
+            "id": "gate4",
+            "xpos": 164,
+            "ypos": 114,
+            "group": "gate",
+            "check_ins": 18
+        },
+        {
+            "id": "ranger-stop5",
+            "xpos": 151,
+            "ypos": 118,
+            "group": "ranger-stop",
+            "check_ins": 18
+        },
+        {
+            "id": "camping5",
+            "xpos": 20,
+            "ypos": 121,
+            "group": "camping",
+            "check_ins": 4
+        },
+        {
+            "id": "general-gate6",
+            "xpos": 136,
+            "ypos": 137,
+            "group": "general-gate",
+            "check_ins": 2
+        },
+        {
+            "id": "general-gate7",
+            "xpos": 65,
+            "ypos": 144,
+            "group": "general-gate",
+            "check_ins": 64
+        },
+        {
+            "id": "camping7",
+            "xpos": 181,
+            "ypos": 145,
+            "group": "camping",
+            "check_ins": 2
+        },
+        {
+            "id": "gate5",
+            "xpos": 131,
+            "ypos": 146,
+            "group": "gate",
+            "check_ins": 26
+        },
+        {
+            "id": "ranger-stop6",
+            "xpos": 123,
+            "ypos": 147,
+            "group": "ranger-stop",
+            "check_ins": 30
+        },
+        {
+            "id": "gate6",
+            "xpos": 116,
+            "ypos": 151,
+            "group": "gate",
+            "check_ins": 16
+        },
+        {
+            "id": "ranger-stop7",
+            "xpos": 100,
+            "ypos": 152,
+            "group": "ranger-stop",
+            "check_ins": 12
+        },
+        {
+            "id": "gate7",
+            "xpos": 97,
+            "ypos": 160,
+            "group": "gate",
+            "check_ins": 12
+        },
+        {
+            "id": "entrance3",
+            "xpos": 115,
+            "ypos": 167,
+            "group": "entrance",
+            "check_ins": 48
+        },
+        {
+            "id": "ranger-base",
+            "xpos": 128,
+            "ypos": 175,
+            "group": "ranger-base",
+            "check_ins": 38
+        },
+        {
+            "id": "camping6",
+            "xpos": 150,
+            "ypos": 177,
+            "group": "camping",
+            "check_ins": 6
+        },
+        {
+            "id": "gate8",
+            "xpos": 138,
+            "ypos": 181,
+            "group": "gate",
+            "check_ins": 38
+        },
+        {
+            "id": "entrance4",
+            "xpos": 140,
+            "ypos": 184,
+            "group": "entrance",
+            "check_ins": 44
+        }
+    ],
+    "links": [
+        {
+            "source": "general-gate0",
+            "target": "general-gate5",
+            "value": {
+                "steps": 102.06601717798203,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate0",
+            "target": "entrance2",
+            "value": {
+                "steps": 158.36248173426384,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate0",
+            "target": "gate5",
+            "value": {
+                "steps": 239.28636328851576,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate0",
+            "target": "entrance4",
+            "value": {
+                "steps": 276.91378028648546,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate0",
+            "target": "gate8",
+            "value": {
+                "steps": 275.32799384885857,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate0",
+            "target": "camping6",
+            "value": {
+                "steps": 277.2274887854703,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate0",
+            "target": "general-gate6",
+            "value": {
+                "steps": 233.62950903902333,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate0",
+            "target": "gate4",
+            "value": {
+                "steps": 192.3036072312184,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate0",
+            "target": "general-gate3",
+            "value": {
+                "steps": 165.74725804511422,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate0",
+            "target": "camping1",
+            "value": {
+                "steps": 47.05382386916236,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate0",
+            "target": "general-gate2",
+            "value": {
+                "steps": 25.870057685088813,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate0",
+            "target": "gate3",
+            "value": {
+                "steps": 121.32085117392099,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate0",
+            "target": "camping8",
+            "value": {
+                "steps": 153.5046173579948,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate0",
+            "target": "general-gate0",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance0",
+            "target": "general-gate1",
+            "value": {
+                "steps": 12.82842712474619,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance0",
+            "target": "gate0",
+            "value": {
+                "steps": 20.656854249492383,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance0",
+            "target": "gate6",
+            "value": {
+                "steps": 132.87720036002497,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance0",
+            "target": "entrance3",
+            "value": {
+                "steps": 147.87720036002497,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance0",
+            "target": "general-gate4",
+            "value": {
+                "steps": 81.48023074035507,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance0",
+            "target": "gate7",
+            "value": {
+                "steps": 180.1147904132618,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance0",
+            "target": "general-gate7",
+            "value": {
+                "steps": 166.37467504308376,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance0",
+            "target": "entrance0",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop0",
+            "target": "general-gate2",
+            "value": {
+                "steps": 20.698484809835005,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop0",
+            "target": "ranger-stop2",
+            "value": {
+                "steps": 20.62741699796953,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop0",
+            "target": "ranger-stop0",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop1",
+            "target": "gate2",
+            "value": {
+                "steps": 29.325901807804534,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop1",
+            "target": "ranger-stop1",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate1",
+            "target": "ranger-stop2",
+            "value": {
+                "steps": 17.798989873223334,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate1",
+            "target": "gate0",
+            "value": {
+                "steps": 9.242640687119284,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate1",
+            "target": "gate6",
+            "value": {
+                "steps": 121.46298679765191,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate1",
+            "target": "entrance3",
+            "value": {
+                "steps": 136.46298679765192,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate1",
+            "target": "general-gate4",
+            "value": {
+                "steps": 70.06601717798203,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate1",
+            "target": "gate7",
+            "value": {
+                "steps": 168.70057685088847,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate1",
+            "target": "general-gate7",
+            "value": {
+                "steps": 154.96046148071042,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate1",
+            "target": "entrance0",
+            "value": {
+                "steps": 12.242640687119287,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate1",
+            "target": "general-gate1",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate2",
+            "target": "general-gate0",
+            "value": {
+                "steps": 25.870057685088817,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate2",
+            "target": "general-gate5",
+            "value": {
+                "steps": 84.98275605729683,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate2",
+            "target": "entrance2",
+            "value": {
+                "steps": 141.27922061357847,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate2",
+            "target": "gate5",
+            "value": {
+                "steps": 222.2031021678304,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate2",
+            "target": "entrance4",
+            "value": {
+                "steps": 259.83051916580007,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate2",
+            "target": "gate8",
+            "value": {
+                "steps": 258.2447327281732,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate2",
+            "target": "camping6",
+            "value": {
+                "steps": 260.1442276647849,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate2",
+            "target": "general-gate6",
+            "value": {
+                "steps": 216.54624791833797,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate2",
+            "target": "gate4",
+            "value": {
+                "steps": 175.22034611053303,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate2",
+            "target": "general-gate3",
+            "value": {
+                "steps": 148.66399692442883,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate2",
+            "target": "camping1",
+            "value": {
+                "steps": 101.0243866176394,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate2",
+            "target": "general-gate2",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate2",
+            "target": "gate3",
+            "value": {
+                "steps": 104.23759005323578,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate2",
+            "target": "camping8",
+            "value": {
+                "steps": 136.42135623730934,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate2",
+            "target": "ranger-stop0",
+            "value": {
+                "steps": 20.698484809835005,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate0",
+            "target": "gate1",
+            "value": {
+                "steps": 10.142135623730955,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate0",
+            "target": "general-gate1",
+            "value": {
+                "steps": 9.242640687119284,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate0",
+            "target": "entrance0",
+            "value": {
+                "steps": 20.071067811865476,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate0",
+            "target": "gate6",
+            "value": {
+                "steps": 114.80613254815955,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate0",
+            "target": "entrance3",
+            "value": {
+                "steps": 129.80613254815955,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate0",
+            "target": "general-gate4",
+            "value": {
+                "steps": 63.409162928489685,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate0",
+            "target": "gate7",
+            "value": {
+                "steps": 162.04372260139598,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate0",
+            "target": "general-gate7",
+            "value": {
+                "steps": 148.30360723121794,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate0",
+            "target": "gate0",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop2",
+            "target": "ranger-stop0",
+            "value": {
+                "steps": 21.21320343559643,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop2",
+            "target": "general-gate1",
+            "value": {
+                "steps": 18.384776310850246,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop2",
+            "target": "ranger-stop2",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping0",
+            "target": "camping0",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping0",
+            "target": "gate1",
+            "value": {
+                "steps": 6.65685424949238,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping0",
+            "target": "general-gate7",
+            "value": {
+                "steps": 118.97770542341334,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping0",
+            "target": "gate2",
+            "value": {
+                "steps": 110.32085117392097,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping0",
+            "target": "camping2",
+            "value": {
+                "steps": 132.60512242138293,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping0",
+            "target": "entrance1",
+            "value": {
+                "steps": 101.00714267493623,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping0",
+            "target": "camping4",
+            "value": {
+                "steps": 58.02438661763945,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping0",
+            "target": "camping3",
+            "value": {
+                "steps": 51.195959492893266,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate1",
+            "target": "gate0",
+            "value": {
+                "steps": 10.727922061357855,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate1",
+            "target": "general-gate7",
+            "value": {
+                "steps": 114.32085117392097,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate1",
+            "target": "gate2",
+            "value": {
+                "steps": 105.6639969244286,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate1",
+            "target": "camping2",
+            "value": {
+                "steps": 127.94826817189045,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate1",
+            "target": "entrance1",
+            "value": {
+                "steps": 96.35028842544386,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate1",
+            "target": "camping4",
+            "value": {
+                "steps": 53.36753236814708,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate1",
+            "target": "camping3",
+            "value": {
+                "steps": 46.5391052434009,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate1",
+            "target": "camping0",
+            "value": {
+                "steps": 6.65685424949238,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate1",
+            "target": "gate1",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop3",
+            "target": "gate3",
+            "value": {
+                "steps": 14.828427124746192,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop3",
+            "target": "ranger-stop3",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping8",
+            "target": "general-gate3",
+            "value": {
+                "steps": 7.071067811865475,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping8",
+            "target": "general-gate5",
+            "value": {
+                "steps": 88.75230867899727,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping8",
+            "target": "entrance2",
+            "value": {
+                "steps": 145.04877323527893,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping8",
+            "target": "gate5",
+            "value": {
+                "steps": 225.97265478953085,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping8",
+            "target": "entrance4",
+            "value": {
+                "steps": 263.60007178750055,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping8",
+            "target": "gate8",
+            "value": {
+                "steps": 262.01428534987366,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping8",
+            "target": "camping6",
+            "value": {
+                "steps": 263.9137802864854,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping8",
+            "target": "general-gate6",
+            "value": {
+                "steps": 220.31580054003842,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping8",
+            "target": "gate4",
+            "value": {
+                "steps": 178.98989873223348,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping8",
+            "target": "general-gate0",
+            "value": {
+                "steps": 153.50461735799485,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping8",
+            "target": "camping1",
+            "value": {
+                "steps": 112.4507934888322,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping8",
+            "target": "general-gate2",
+            "value": {
+                "steps": 136.42135623730934,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping8",
+            "target": "gate3",
+            "value": {
+                "steps": 36.18376618407358,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping8",
+            "target": "camping8",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping1",
+            "target": "general-gate5",
+            "value": {
+                "steps": 60.42640687119284,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping1",
+            "target": "entrance2",
+            "value": {
+                "steps": 116.72287142747436,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping1",
+            "target": "gate5",
+            "value": {
+                "steps": 197.6467529817262,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping1",
+            "target": "entrance4",
+            "value": {
+                "steps": 235.2741699796959,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping1",
+            "target": "gate8",
+            "value": {
+                "steps": 233.688383542069,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping1",
+            "target": "camping6",
+            "value": {
+                "steps": 235.58787847868075,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping1",
+            "target": "general-gate6",
+            "value": {
+                "steps": 191.98989873223377,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping1",
+            "target": "gate4",
+            "value": {
+                "steps": 150.66399692442883,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping1",
+            "target": "general-gate3",
+            "value": {
+                "steps": 124.10764773832456,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping1",
+            "target": "camping1",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping1",
+            "target": "gate3",
+            "value": {
+                "steps": 79.68124086713179,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping1",
+            "target": "general-gate0",
+            "value": {
+                "steps": 46.46803743153544,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping1",
+            "target": "general-gate2",
+            "value": {
+                "steps": 100.43860018001251,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping1",
+            "target": "camping8",
+            "value": {
+                "steps": 111.86500705120528,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate2",
+            "target": "general-gate7",
+            "value": {
+                "steps": 95.79393923933985,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate2",
+            "target": "camping4",
+            "value": {
+                "steps": 57.124891681027805,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate2",
+            "target": "gate1",
+            "value": {
+                "steps": 106.24978336205551,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate2",
+            "target": "camping0",
+            "value": {
+                "steps": 110.32085117392097,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate2",
+            "target": "camping3",
+            "value": {
+                "steps": 80.72287142747439,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate2",
+            "target": "entrance1",
+            "value": {
+                "steps": 16.970562748477143,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate2",
+            "target": "camping2",
+            "value": {
+                "steps": 24.284271247461913,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate2",
+            "target": "ranger-stop1",
+            "value": {
+                "steps": 29.32590180780454,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate2",
+            "target": "gate2",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate3",
+            "target": "camping8",
+            "value": {
+                "steps": 7.65685424949238,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate3",
+            "target": "entrance2",
+            "value": {
+                "steps": 40.254833995939045,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate3",
+            "target": "gate5",
+            "value": {
+                "steps": 121.17871555019005,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate3",
+            "target": "entrance4",
+            "value": {
+                "steps": 158.80613254815972,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate3",
+            "target": "gate8",
+            "value": {
+                "steps": 157.22034611053283,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate3",
+            "target": "camping6",
+            "value": {
+                "steps": 159.11984104714458,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate3",
+            "target": "general-gate6",
+            "value": {
+                "steps": 115.52186130069768,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate3",
+            "target": "general-gate5",
+            "value": {
+                "steps": 80.75230867899727,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate3",
+            "target": "gate4",
+            "value": {
+                "steps": 74.19595949289327,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate3",
+            "target": "general-gate3",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate3",
+            "target": "camping1",
+            "value": {
+                "steps": 124.10764773832457,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate3",
+            "target": "gate3",
+            "value": {
+                "steps": 119.66399692442859,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate3",
+            "target": "general-gate0",
+            "value": {
+                "steps": 165.16147160748739,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate3",
+            "target": "general-gate2",
+            "value": {
+                "steps": 148.07821048680182,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate3",
+            "target": "general-gate5",
+            "value": {
+                "steps": 56.56854249492379,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate3",
+            "target": "entrance2",
+            "value": {
+                "steps": 112.86500705120531,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate3",
+            "target": "gate5",
+            "value": {
+                "steps": 193.7888886054571,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate3",
+            "target": "entrance4",
+            "value": {
+                "steps": 231.4163056034268,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate3",
+            "target": "gate8",
+            "value": {
+                "steps": 229.8305191657999,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate3",
+            "target": "camping6",
+            "value": {
+                "steps": 231.73001410241164,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate3",
+            "target": "general-gate6",
+            "value": {
+                "steps": 188.13203435596466,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate3",
+            "target": "gate4",
+            "value": {
+                "steps": 146.80613254815972,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate3",
+            "target": "general-gate3",
+            "value": {
+                "steps": 120.24978336205551,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate3",
+            "target": "camping1",
+            "value": {
+                "steps": 80.26702730475873,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate3",
+            "target": "gate3",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate3",
+            "target": "general-gate0",
+            "value": {
+                "steps": 121.32085117392097,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate3",
+            "target": "general-gate2",
+            "value": {
+                "steps": 104.23759005323583,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate3",
+            "target": "camping8",
+            "value": {
+                "steps": 36.18376618407358,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate3",
+            "target": "ranger-stop3",
+            "value": {
+                "steps": 14.82842712474619,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping2",
+            "target": "gate2",
+            "value": {
+                "steps": 24.87005768508881,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping2",
+            "target": "general-gate7",
+            "value": {
+                "steps": 118.07821048680168,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping2",
+            "target": "camping4",
+            "value": {
+                "steps": 79.40916292848964,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping2",
+            "target": "gate1",
+            "value": {
+                "steps": 128.53405460951734,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping2",
+            "target": "camping0",
+            "value": {
+                "steps": 132.60512242138287,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping2",
+            "target": "camping3",
+            "value": {
+                "steps": 103.00714267493622,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping2",
+            "target": "entrance1",
+            "value": {
+                "steps": 39.25483399593904,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping2",
+            "target": "camping2",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance1",
+            "target": "general-gate7",
+            "value": {
+                "steps": 85.8944443027282,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance1",
+            "target": "camping4",
+            "value": {
+                "steps": 47.22539674441616,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance1",
+            "target": "gate1",
+            "value": {
+                "steps": 96.35028842544386,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance1",
+            "target": "camping0",
+            "value": {
+                "steps": 100.42135623730933,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance1",
+            "target": "camping3",
+            "value": {
+                "steps": 70.82337649086274,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance1",
+            "target": "gate2",
+            "value": {
+                "steps": 16.384776310850242,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance1",
+            "target": "camping2",
+            "value": {
+                "steps": 38.66904755831212,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance1",
+            "target": "entrance1",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping3",
+            "target": "general-gate7",
+            "value": {
+                "steps": 88.79393923933988,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping3",
+            "target": "gate2",
+            "value": {
+                "steps": 80.1370849898475,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping3",
+            "target": "camping2",
+            "value": {
+                "steps": 102.42135623730934,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping3",
+            "target": "entrance1",
+            "value": {
+                "steps": 70.82337649086276,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping3",
+            "target": "camping4",
+            "value": {
+                "steps": 27.84062043356596,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping3",
+            "target": "gate1",
+            "value": {
+                "steps": 46.539105243400925,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping3",
+            "target": "camping0",
+            "value": {
+                "steps": 50.61017305526639,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping3",
+            "target": "camping3",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance2",
+            "target": "general-gate3",
+            "value": {
+                "steps": 40.840620433565945,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance2",
+            "target": "general-gate5",
+            "value": {
+                "steps": 73.95331880577396,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance2",
+            "target": "general-gate0",
+            "value": {
+                "steps": 158.362481734264,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance2",
+            "target": "camping1",
+            "value": {
+                "steps": 117.30865786510127,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance2",
+            "target": "general-gate2",
+            "value": {
+                "steps": 141.27922061357845,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance2",
+            "target": "gate3",
+            "value": {
+                "steps": 112.86500705120528,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance2",
+            "target": "camping8",
+            "value": {
+                "steps": 145.04877323527904,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance2",
+            "target": "gate5",
+            "value": {
+                "steps": 98.23759005323579,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance2",
+            "target": "entrance4",
+            "value": {
+                "steps": 135.86500705120528,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance2",
+            "target": "gate8",
+            "value": {
+                "steps": 134.2792206135784,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance2",
+            "target": "camping6",
+            "value": {
+                "steps": 136.1787155501901,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance2",
+            "target": "general-gate6",
+            "value": {
+                "steps": 92.58073580374342,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance2",
+            "target": "gate4",
+            "value": {
+                "steps": 51.254833995939016,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance2",
+            "target": "entrance2",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping4",
+            "target": "general-gate7",
+            "value": {
+                "steps": 65.19595949289325,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping4",
+            "target": "gate2",
+            "value": {
+                "steps": 56.53910524340088,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping4",
+            "target": "camping2",
+            "value": {
+                "steps": 78.82337649086273,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping4",
+            "target": "entrance1",
+            "value": {
+                "steps": 47.225396744416145,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping4",
+            "target": "gate1",
+            "value": {
+                "steps": 53.367532368147096,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping4",
+            "target": "camping0",
+            "value": {
+                "steps": 57.43860018001256,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping4",
+            "target": "camping3",
+            "value": {
+                "steps": 27.84062043356596,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping4",
+            "target": "camping4",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop4",
+            "target": "camping5",
+            "value": {
+                "steps": 27.213203435596434,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop4",
+            "target": "general-gate7",
+            "value": {
+                "steps": 86.50966799187796,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop4",
+            "target": "ranger-stop4",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate4",
+            "target": "gate0",
+            "value": {
+                "steps": 63.40916292848965,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate4",
+            "target": "general-gate1",
+            "value": {
+                "steps": 70.65180361560893,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate4",
+            "target": "entrance0",
+            "value": {
+                "steps": 81.48023074035511,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate4",
+            "target": "general-gate4",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate4",
+            "target": "gate6",
+            "value": {
+                "steps": 74.1665222413704,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate4",
+            "target": "entrance3",
+            "value": {
+                "steps": 89.1665222413704,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate4",
+            "target": "gate7",
+            "value": {
+                "steps": 60.89444430272822,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate4",
+            "target": "general-gate7",
+            "value": {
+                "steps": 47.15432893255071,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate5",
+            "target": "gate5",
+            "value": {
+                "steps": 33.597979746446676,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate5",
+            "target": "entrance4",
+            "value": {
+                "steps": 71.22539674441614,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate5",
+            "target": "gate8",
+            "value": {
+                "steps": 69.63961030678924,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate5",
+            "target": "camping6",
+            "value": {
+                "steps": 71.5391052434009,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate5",
+            "target": "general-gate6",
+            "value": {
+                "steps": 27.941125496954292,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate5",
+            "target": "gate4",
+            "value": {
+                "steps": 58.438600180012564,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate5",
+            "target": "general-gate5",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate5",
+            "target": "general-gate3",
+            "value": {
+                "steps": 81.33809511662417,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate5",
+            "target": "entrance2",
+            "value": {
+                "steps": 73.95331880577397,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate5",
+            "target": "camping1",
+            "value": {
+                "steps": 61.012193308819704,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate5",
+            "target": "gate3",
+            "value": {
+                "steps": 56.56854249492373,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate5",
+            "target": "general-gate0",
+            "value": {
+                "steps": 102.06601717798195,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate5",
+            "target": "general-gate2",
+            "value": {
+                "steps": 84.98275605729683,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate5",
+            "target": "camping8",
+            "value": {
+                "steps": 88.75230867899722,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate4",
+            "target": "gate5",
+            "value": {
+                "steps": 49.81118318204306,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate4",
+            "target": "entrance4",
+            "value": {
+                "steps": 87.43860018001254,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate4",
+            "target": "gate8",
+            "value": {
+                "steps": 85.85281374238564,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate4",
+            "target": "camping6",
+            "value": {
+                "steps": 87.75230867899728,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate4",
+            "target": "general-gate6",
+            "value": {
+                "steps": 44.15432893255069,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate4",
+            "target": "general-gate5",
+            "value": {
+                "steps": 58.438600180012536,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate4",
+            "target": "gate4",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate4",
+            "target": "general-gate3",
+            "value": {
+                "steps": 74.78174593052016,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate4",
+            "target": "entrance2",
+            "value": {
+                "steps": 51.25483399593904,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate4",
+            "target": "camping1",
+            "value": {
+                "steps": 151.24978336205572,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate4",
+            "target": "gate3",
+            "value": {
+                "steps": 146.8061325481598,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate4",
+            "target": "general-gate0",
+            "value": {
+                "steps": 192.30360723121862,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate4",
+            "target": "general-gate2",
+            "value": {
+                "steps": 175.2203461105329,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate4",
+            "target": "camping8",
+            "value": {
+                "steps": 178.98989873223368,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate4",
+            "target": "ranger-stop5",
+            "value": {
+                "steps": 13.485281374238571,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop5",
+            "target": "gate4",
+            "value": {
+                "steps": 13.485281374238571,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop5",
+            "target": "ranger-stop5",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping5",
+            "target": "ranger-stop4",
+            "value": {
+                "steps": 27.213203435596434,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping5",
+            "target": "general-gate7",
+            "value": {
+                "steps": 67.78174593052017,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping5",
+            "target": "camping5",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate6",
+            "target": "camping7",
+            "value": {
+                "steps": 57.46803743153543,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate6",
+            "target": "gate5",
+            "value": {
+                "steps": 9.899494936611664,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate6",
+            "target": "entrance4",
+            "value": {
+                "steps": 47.52691193458119,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate6",
+            "target": "gate8",
+            "value": {
+                "steps": 45.941125496954285,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate6",
+            "target": "camping6",
+            "value": {
+                "steps": 47.84062043356593,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate6",
+            "target": "general-gate6",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate6",
+            "target": "general-gate5",
+            "value": {
+                "steps": 27.35533905932739,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate6",
+            "target": "entrance2",
+            "value": {
+                "steps": 91.99494936611656,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate6",
+            "target": "gate4",
+            "value": {
+                "steps": 43.56854249492379,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate6",
+            "target": "general-gate3",
+            "value": {
+                "steps": 115.52186130069768,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate6",
+            "target": "general-gate0",
+            "value": {
+                "steps": 233.0437226013965,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate6",
+            "target": "camping1",
+            "value": {
+                "steps": 191.9898987322336,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate6",
+            "target": "general-gate2",
+            "value": {
+                "steps": 215.96046148071088,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate6",
+            "target": "gate3",
+            "value": {
+                "steps": 187.54624791833777,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate6",
+            "target": "camping8",
+            "value": {
+                "steps": 219.73001410241164,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate7",
+            "target": "camping5",
+            "value": {
+                "steps": 67.78174593052013,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate7",
+            "target": "ranger-stop4",
+            "value": {
+                "steps": 86.50966799187796,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate7",
+            "target": "general-gate4",
+            "value": {
+                "steps": 47.15432893255068,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate7",
+            "target": "gate0",
+            "value": {
+                "steps": 148.30360723121805,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate7",
+            "target": "general-gate1",
+            "value": {
+                "steps": 155.54624791833737,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate7",
+            "target": "entrance0",
+            "value": {
+                "steps": 166.37467504308358,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate7",
+            "target": "gate6",
+            "value": {
+                "steps": 87.2375900532358,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate7",
+            "target": "entrance3",
+            "value": {
+                "steps": 102.2375900532358,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate7",
+            "target": "gate7",
+            "value": {
+                "steps": 44.71067811865473,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate7",
+            "target": "gate2",
+            "value": {
+                "steps": 95.20815280171294,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate7",
+            "target": "camping2",
+            "value": {
+                "steps": 117.49242404917479,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate7",
+            "target": "entrance1",
+            "value": {
+                "steps": 85.8944443027282,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate7",
+            "target": "camping4",
+            "value": {
+                "steps": 65.19595949289327,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate7",
+            "target": "gate1",
+            "value": {
+                "steps": 114.32085117392096,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate7",
+            "target": "camping0",
+            "value": {
+                "steps": 118.39191898578642,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate7",
+            "target": "camping3",
+            "value": {
+                "steps": 88.79393923933984,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "general-gate7",
+            "target": "general-gate7",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping7",
+            "target": "camping7",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping7",
+            "target": "general-gate6",
+            "value": {
+                "steps": 57.46803743153542,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate5",
+            "target": "entrance4",
+            "value": {
+                "steps": 39.041630560342625,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate5",
+            "target": "gate8",
+            "value": {
+                "steps": 37.45584412271572,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate5",
+            "target": "camping6",
+            "value": {
+                "steps": 39.35533905932736,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate5",
+            "target": "general-gate6",
+            "value": {
+                "steps": 9.899494936611667,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate5",
+            "target": "gate5",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate5",
+            "target": "general-gate5",
+            "value": {
+                "steps": 33.012193308819775,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate5",
+            "target": "entrance2",
+            "value": {
+                "steps": 97.65180361560893,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate5",
+            "target": "gate4",
+            "value": {
+                "steps": 49.22539674441616,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate5",
+            "target": "general-gate3",
+            "value": {
+                "steps": 121.17871555019005,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate5",
+            "target": "general-gate0",
+            "value": {
+                "steps": 238.70057685088892,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate5",
+            "target": "camping1",
+            "value": {
+                "steps": 197.64675298172602,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate5",
+            "target": "general-gate2",
+            "value": {
+                "steps": 221.6173157302033,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate5",
+            "target": "gate3",
+            "value": {
+                "steps": 193.2031021678302,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate5",
+            "target": "camping8",
+            "value": {
+                "steps": 225.38686835190407,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate5",
+            "target": "ranger-stop6",
+            "value": {
+                "steps": 7.82842712474619,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop6",
+            "target": "gate6",
+            "value": {
+                "steps": 6.8994949366116645,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop6",
+            "target": "gate5",
+            "value": {
+                "steps": 7.82842712474619,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop6",
+            "target": "ranger-stop6",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate6",
+            "target": "ranger-stop6",
+            "value": {
+                "steps": 7.4852813742385695,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate6",
+            "target": "entrance3",
+            "value": {
+                "steps": 16.414213562373096,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate6",
+            "target": "gate0",
+            "value": {
+                "steps": 114.2203461105326,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate6",
+            "target": "general-gate1",
+            "value": {
+                "steps": 121.46298679765188,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate6",
+            "target": "entrance0",
+            "value": {
+                "steps": 132.29141392239808,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate6",
+            "target": "general-gate4",
+            "value": {
+                "steps": 73.58073580374344,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate6",
+            "target": "gate7",
+            "value": {
+                "steps": 100.3919189857864,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate6",
+            "target": "general-gate7",
+            "value": {
+                "steps": 86.6518036156089,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate6",
+            "target": "gate6",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop7",
+            "target": "gate7",
+            "value": {
+                "steps": 7.4852813742385695,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-stop7",
+            "target": "ranger-stop7",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate7",
+            "target": "ranger-stop7",
+            "value": {
+                "steps": 7.4852813742385695,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate7",
+            "target": "general-gate4",
+            "value": {
+                "steps": 60.89444430272826,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate7",
+            "target": "gate0",
+            "value": {
+                "steps": 162.0437226013959,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate7",
+            "target": "general-gate1",
+            "value": {
+                "steps": 169.28636328851522,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate7",
+            "target": "entrance0",
+            "value": {
+                "steps": 180.11479041326143,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate7",
+            "target": "gate6",
+            "value": {
+                "steps": 100.9777054234134,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate7",
+            "target": "entrance3",
+            "value": {
+                "steps": 115.9777054234134,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate7",
+            "target": "general-gate7",
+            "value": {
+                "steps": 44.71067811865477,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate7",
+            "target": "gate7",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance3",
+            "target": "gate6",
+            "value": {
+                "steps": 17,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance3",
+            "target": "gate0",
+            "value": {
+                "steps": 129.80613254815944,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance3",
+            "target": "general-gate1",
+            "value": {
+                "steps": 137.04877323527876,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance3",
+            "target": "entrance0",
+            "value": {
+                "steps": 147.87720036002497,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance3",
+            "target": "general-gate4",
+            "value": {
+                "steps": 89.1665222413703,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance3",
+            "target": "gate7",
+            "value": {
+                "steps": 115.97770542341327,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance3",
+            "target": "general-gate7",
+            "value": {
+                "steps": 102.23759005323576,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance3",
+            "target": "entrance3",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-base",
+            "target": "gate8",
+            "value": {
+                "steps": 10.142135623730951,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "ranger-base",
+            "target": "ranger-base",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping6",
+            "target": "entrance4",
+            "value": {
+                "steps": 17.727922061357855,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping6",
+            "target": "gate8",
+            "value": {
+                "steps": 16.14213562373095,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping6",
+            "target": "gate5",
+            "value": {
+                "steps": 39.35533905932738,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping6",
+            "target": "general-gate6",
+            "value": {
+                "steps": 47.84062043356593,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping6",
+            "target": "camping6",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping6",
+            "target": "general-gate5",
+            "value": {
+                "steps": 70.95331880577396,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping6",
+            "target": "gate4",
+            "value": {
+                "steps": 87.16652224137034,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping6",
+            "target": "general-gate3",
+            "value": {
+                "steps": 159.1198410471446,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping6",
+            "target": "entrance2",
+            "value": {
+                "steps": 135.59292911256318,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping6",
+            "target": "camping1",
+            "value": {
+                "steps": 235.5878784786806,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping6",
+            "target": "gate3",
+            "value": {
+                "steps": 231.14422766478478,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping6",
+            "target": "general-gate0",
+            "value": {
+                "steps": 276.64170234784353,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping6",
+            "target": "general-gate2",
+            "value": {
+                "steps": 259.5584412271579,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "camping6",
+            "target": "camping8",
+            "value": {
+                "steps": 263.3279938488587,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate8",
+            "target": "entrance4",
+            "value": {
+                "steps": 4.414213562373095,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate8",
+            "target": "gate5",
+            "value": {
+                "steps": 38.041630560342625,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate8",
+            "target": "general-gate6",
+            "value": {
+                "steps": 46.52691193458118,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate8",
+            "target": "gate8",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate8",
+            "target": "camping6",
+            "value": {
+                "steps": 16.727922061357862,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate8",
+            "target": "general-gate5",
+            "value": {
+                "steps": 69.63961030678921,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate8",
+            "target": "gate4",
+            "value": {
+                "steps": 85.85281374238559,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate8",
+            "target": "general-gate3",
+            "value": {
+                "steps": 157.80613254815984,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate8",
+            "target": "entrance2",
+            "value": {
+                "steps": 134.27922061357842,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate8",
+            "target": "camping1",
+            "value": {
+                "steps": 234.27416997969584,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate8",
+            "target": "gate3",
+            "value": {
+                "steps": 229.8305191658,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate8",
+            "target": "general-gate0",
+            "value": {
+                "steps": 275.32799384885874,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate8",
+            "target": "general-gate2",
+            "value": {
+                "steps": 258.2447327281731,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate8",
+            "target": "camping8",
+            "value": {
+                "steps": 262.0142853498739,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "gate8",
+            "target": "ranger-base",
+            "value": {
+                "steps": 10.727922061357855,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance4",
+            "target": "gate5",
+            "value": {
+                "steps": 39.627416997969526,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance4",
+            "target": "general-gate6",
+            "value": {
+                "steps": 48.11269837220808,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance4",
+            "target": "entrance4",
+            "value": {
+                "steps": 0,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance4",
+            "target": "gate8",
+            "value": {
+                "steps": 4.414213562373095,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance4",
+            "target": "camping6",
+            "value": {
+                "steps": 18.313708498984766,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance4",
+            "target": "general-gate5",
+            "value": {
+                "steps": 71.22539674441612,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance4",
+            "target": "gate4",
+            "value": {
+                "steps": 87.43860018001249,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance4",
+            "target": "general-gate3",
+            "value": {
+                "steps": 159.39191898578673,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance4",
+            "target": "entrance2",
+            "value": {
+                "steps": 135.8650070512053,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance4",
+            "target": "camping1",
+            "value": {
+                "steps": 235.85995641732273,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance4",
+            "target": "gate3",
+            "value": {
+                "steps": 231.4163056034269,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance4",
+            "target": "general-gate0",
+            "value": {
+                "steps": 276.91378028648563,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance4",
+            "target": "general-gate2",
+            "value": {
+                "steps": 259.8305191658,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        },
+        {
+            "source": "entrance4",
+            "target": "camping8",
+            "value": {
+                "steps": 263.6000717875008,
+                "speed": [],
+                "speeders": [],
+                "visitors": []
+            }
+        }
+    ]
+}
