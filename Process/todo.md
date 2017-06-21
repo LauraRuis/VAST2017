@@ -1,3 +1,6 @@
+# Overall
+- Homepage picture of only preserve or something
+
 # graph
 - legend for node size (buggy)
 - update connections
