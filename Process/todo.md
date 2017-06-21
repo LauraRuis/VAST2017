@@ -1,5 +1,6 @@
 # Overall
 - Homepage picture of only preserve or something
+- Sometimes table doesnt load properly
 
 # graph
 - legend for node size (buggy)
