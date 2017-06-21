@@ -116,7 +116,8 @@ Stand-up meeting discussed answering questions of VAST Challenge. Discussed 6 da
 Tried to merge v3 and v4 of d3 together, does not work. Decided to maybe make two websites, one with v3 and one with v4.
 Made csv files of data of all types of gates together.
 Found a way to use d3 v3 and v4 together and made switch button for switching between two main visualizations (force directed graph as main and parallel coordinates as main on the other page).
-Put everything in a bootstrap css template.
+Put everything in a bootstrap css template. 
+Added final functionality of highlighting ID in parallel coordinates.
 
 **Summary day 12**
 - Started answering challenge questions
