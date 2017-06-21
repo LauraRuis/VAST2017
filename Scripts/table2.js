@@ -12,14 +12,14 @@
 function makeTable(svg, data) {
 
     // bootstrap table
-    var table = d3.select("#table").append("table")
+    var table = version4.select("#table").append("table")
             .attr("id", "my_table")
-            .attr("class", "table table-hover table-responsive col-xs-6"),
+            .attr("class", "table table-hover table-responsive"),
         thead = table.append("thead"),
         tbody = table.append("tbody");
 
     // change format of data to array for d3's enter function
-    var arrData = d3.entries(data);
+    var arrData = version4.entries(data);
 
     // append the header row
     var columns = ["Car ID", "Period", "Car type", "Camping", "Number of check-ins", "Days of stay", "Month of stay"],
@@ -113,7 +113,7 @@ function makeTable(svg, data) {
         ],
         "order": [[1, 'asc']]
     });
-
+    // d3.select("#my_table").style("width", "100%");
     // when next page or search event is fired, table is redrawn so selected countries have to be colored again
     dataTable
         .on('draw.dt', function () {

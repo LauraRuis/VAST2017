@@ -25,7 +25,7 @@ text {
 /* style table */
 #table {
     float: left;
-    width: 50%;
+    width: 100%;
     color: #656677;
 }
 td {
@@ -40,6 +40,6 @@ td {
     background: #BABABA;
 }
 
-.checkbox {
-    /*font: arial;*/
-}
+/*#form {*/
+    /*display: 900px;*/
+/*}*/

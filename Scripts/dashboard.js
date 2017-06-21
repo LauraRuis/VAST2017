@@ -13,14 +13,24 @@ window.onload = function() {
         .text("VAST 2017").append("h4")
         .text("MC1");
 
+    $('#toggle').bootstrapToggle({
+        on: 'Parallel Coordinates',
+        off: 'Line Chart',
+        width: 200
+    });
+
+    d3.select('#linechart').append("img")
+        .attr('width', 700)
+        .attr('height', 700).attr("src","../lekagul.jpg");
+
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // LINE CHART
     // parse the date / time
-    var parseTime = d3.timeParse("%d/%m/%Y");
+    var parseTime = version4.timeParse("%d/%m/%Y");
 
     var options  = ["total", "1", "2", "3", "4", "5", "6", "2P"];
 
-    var form = d3.select("#linechart").append("form");
+    var form = version4.select("#formDiv").append("form").attr("id", "form");
     var labels = form.selectAll("label")
         .attr("class", "checkbox-inline")
         .data(options)
@@ -36,7 +46,7 @@ window.onload = function() {
 
     labels.each(function(l) {
         if (l === "total") {
-            d3.select(this).attr("checked", "True")
+            version4.select(this).attr("checked", "True")
         }
     });
 
@@ -44,51 +54,121 @@ window.onload = function() {
         $("#" + d).bootstrapToggle();
     });
 
+    // make slider
+    var slider = makeSlider();
+
     // for now hardcoded selected
     var selected = ["total"];
+    var lineObject,
+        pcObject;
+    d3.select("#formDiv").style("display", "none");
+    d3.select('#pcPage').on("click", function() {
+        if (d3.select("#pcSVG")[0][0] === null) {
+            d3.select('#linechart img').remove();
+            d3.json("../Data/vars_per_id.json", function (error, data) {
+                if (error) throw error;
+                d3.select("#lineSVG").remove();
+                d3.select("#formDiv").style("display", "none");
+                pcObject = makePC(data)
+            });
+        }
+    });
+    d3.select('#linePage').on("click", function() {
+        if (d3.select("#lineSVG")[0][0] === null) {
+            d3.select('#linechart img').remove();
+            d3.select("#pcSVG").remove();
+            d3.select("#formDiv").style("margin-top", "100px");
+            d3.select("#formDiv").style("display", "block");
+            version4.json("../Data/data per gate/check-ins_day_camping8.json", function (error, data) {
 
-    var lineObject;
+                if (error) throw error;
 
-    d3.json("../Data/data per gate/check-ins_day_camping8.json", function (error, data) {
+                var arrData = version4.entries(data);
+                arrData.forEach(function (d) {
+                    d.key = parseTime(d.key);
+                });
+                lineObject = makeLineChart(arrData);
 
-        if (error) throw error;
+            });
+        }
+    });
+    d3.select('#parkPage').on("click", function() {
+        if (d3.select("#linechart img")[0][0] === null) {
+            d3.select("#pcSVG").remove();
+            d3.select("#lineSVG").remove();
+            d3.select("#formDiv").style("display", "none");
+            d3.select('#linechart').append("img")
+                .attr('width', 700)
+                .attr('height', 700).attr("src","../lekagul.jpg")
+        }
+    });
 
-        var arrData = d3.entries(data);
-        arrData.forEach(function (d) {
-            d.key = parseTime(d.key);
-        });
 
-        lineObject = makeLineChart(arrData);
+    $('#ex1').change( function() {
+        var filename;
 
+        // convert slider value to filename
+        if (this.value < 0) {
+            filename = 53 - (-this.value) + "-2015"
+        }
+        else {
+            filename = parseInt(this.value) + 1 + "-2016"
+        }
+        console.log(d3.select("#pcSVG")[0][0])
+        if (d3.select("#pcSVG")[0][0] !== null) {
+            var datastring = "../Data/vars per week/vars_" + filename + ".json";
+            version4.json(datastring, function (error, data) {
+
+                if (error) throw error;
+                selectedRows = {};
+                drawPC(data, pcObject.svg, pcObject.height, pcObject.width);
+                fillTable(version4.entries(data), dataTable);
+                highlightRoute(graphObject.svg, dataTable, selectedRows);
+
+            });
+        }
+        else {
+            var graphstring = "../Data/graphs per week/graph_" + filename + ".json";
+            version4.json(graphstring, function(error, graph) {
+                if (error) throw error;
+
+                // restart graph
+                restart(graphObject.simulation, graph, graphObject.scale)
+
+            });
+            var datastring = "../Data/vars per week/vars_" + filename + ".json";
+            version4.json(datastring, function (error, data) {
+
+                if (error) throw error;
+                selectedRows = {};
+                fillTable(version4.entries(data), dataTable);
+                highlightRoute(graphObject.svg, dataTable, selectedRows);
+
+            });
+        }
     });
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // GRAPH
-    var node,
-        svg,
-        simulation,
-        nodeScale,
+    var graphObject,
         currentData,
         currentID;
+
     var selectedRows = {};
-    d3.json("../Data/graph3.json", function(error, graph) {
+    version4.json("../Data/graph3.json", function(error, graph) {
 
         if (error) throw error;
-        var graphVars = makeGraph(graph);
-        node = graphVars[0];
-        svg = graphVars[1];
-        simulation = graphVars[2];
-        nodeScale = graphVars[3];
+        graphObject = makeGraph(graph);
 
-        node
+        graphObject.node
             .on("click", function(d) {
                 var fileString = "../Data/data per gate/check-ins_day_" + d.id + ".json";
 
-                d3.json(fileString, function (error, new_data) {
+                version4.json(fileString, function (error, new_data) {
 
                     if (error) throw error;
 
-                    var new_arrData = d3.entries(new_data);
+                    var new_arrData = version4.entries(new_data);
                     new_arrData.forEach(function (d) {
                         d.key = parseTime(d.key);
                     });
@@ -104,10 +184,10 @@ window.onload = function() {
     $('input:checkbox[name="mode"]').change(
         function(){
             if (this.checked) {
-                selected.push(d3.select(this).data()[0])
+                selected.push(version4.select(this).data()[0])
             }
             else {
-                var index = selected.indexOf(d3.select(this).data()[0]);
+                var index = selected.indexOf(version4.select(this).data()[0]);
                 if (index !== -1) {
                     selected.splice(index, 1)
                 }
@@ -119,48 +199,47 @@ window.onload = function() {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // TABLE
     var dataTable;
-    d3.json("../Data/temp.json", function (error, data) {
+    version4.json("../Data/temp.json", function (error, data) {
 
         if (error) throw error;
-        dataTable = makeTable(svg, data);
-        highlightRoute(svg, dataTable, selectedRows);
+        dataTable = makeTable(graphObject.svg, data);
+        highlightRoute(graphObject.svg, dataTable, selectedRows);
 
     });
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // PARALLEL COODINATES
-    // make slider
-    $('#ex1').slider({
-        formatter: function(value) {
-            return value;
-        }
-    });
-    $('#ex1').change( function() {
-        var datastring = "../Data/vars per week/vars_" + this.value + "-2016.json";
-        d3.json(datastring, function(error, data) {
-
-            if (error) throw error;
-            selectedRows = {};
-            // makePC(data);
-            fillTable(d3.entries(data), dataTable);
-            highlightRoute(svg, dataTable, selectedRows);
-
-        });
-        var graphstring = "../Data/graphs per week/graph_" + this.value + "-2016.json";
-        d3.json(graphstring, function(error, graph) {
-            if (error) throw error;
-            // scale nodes
-            // set scale for nodes
-            restart(simulation, graph, nodeScale)
-
-        });
-    });
-
-    // d3.json("../Data/vars_per_id.json", function(error, data) {
+    // // make slider
+    // var slider = makeSlider();
+    // $('#ex1').change( function() {
+    //     var filename;
     //
-    //     if (error) throw error;
+    //     // convert slider value to filename
+    //     if (this.value < 0) {
+    //         filename = 53 - (-this.value) + "-2015"
+    //     }
+    //     else {
+    //         filename = parseInt(this.value) + 1 + "-2016"
+    //     }
     //
-    //     makePC(data)
+    //     var datastring = "../Data/vars per week/vars_" + filename + ".json";
+    //     version4.json(datastring, function(error, data) {
     //
+    //         if (error) throw error;
+    //         selectedRows = {};
+    //         drawPC(data, pcObject.svg, pcObject.height, pcObject.width);
+    //         fillTable(version4.entries(data), dataTable);
+    //         highlightRoute(graphObject.svg, dataTable, selectedRows);
+    //
+    //     });
+    //
+    //     var graphstring = "../Data/graphs per week/graph_" + filename + ".json";
+    //     version4.json(graphstring, function(error, graph) {
+    //         if (error) throw error;
+    //
+    //         // restart graph
+    //         restart(graphObject.simulation, graph, graphObject.scale)
+    //
+    //     });
     // });
 };

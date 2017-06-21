@@ -15,10 +15,10 @@ function makeGraph(graph) {
 
     // append svg with g in it
     const margins = {top: 20, right: 200, bottom: 75, left: 50},
-        width = 1000,
-        height = 1000;
+        width = 700,
+        height = 700;
 
-    var svg = d3.select('#graph').append('svg')
+    var svg = version4.select('#graph').append('svg')
         .attr("id", "graphSVG")
         .attr('width', width)
         .attr('height', height);
@@ -28,29 +28,29 @@ function makeGraph(graph) {
         .attr("transform", "translate(" + margins.left + "," + margins.top + ")");
 
     // global title
-    d3.select("#graphSVG").append("text")
-        .attr("x", (width / 2))
-        .attr("y", 20)
-        .attr("text-anchor", "middle")
-        .style("font-size", "26px")
-        .text("Lekagul Roadways");
+    // version4.select("#graphSVG").append("text")
+    //     .attr("x", (width / 2))
+    //     .attr("y", 20)
+    //     .attr("text-anchor", "middle")
+    //     .style("font-size", "26px")
+    //     .text("Lekagul Roadways");
 
     // scale for coloring nodes
-    var color = d3.scaleOrdinal(d3.schemeCategory20);
+    var color = version4.scaleOrdinal(version4.schemeCategory20);
 
     // start force simulation with center in center of svg
-    var simulation = d3.forceSimulation()
-        .force("link", d3.forceLink().id(function(d) { return d.id; }))
-        // .force("charge", d3.forceManyBody());
-        .force("center", d3.forceCenter((width / 2 - 50), height / 2));
+    var simulation = version4.forceSimulation()
+        .force("link", version4.forceLink().id(function(d) { return d.id; }))
+        // .force("charge", version4.forceManyBody());
+        .force("center", version4.forceCenter((width / 2 - 50), height / 2));
 
     // add zoom capabilities
-    var zoom_handler = d3.zoom()
+    var zoom_handler = version4.zoom()
         .on("zoom", zoom_actions);
     zoom_handler(svg);
 
     // set scale for nodes
-    var nodeScale = d3.scaleLog();
+    var nodeScale = version4.scaleLog();
 
     // add links
     var link = g.append("g")
@@ -71,7 +71,7 @@ function makeGraph(graph) {
 
     // scale nodes
     nodeScale
-        .domain(d3.extent(graph.nodes, function(d) { return d.check_ins }));
+        .domain(version4.extent(graph.nodes, function(d) { return d.check_ins }));
 
     // add title for hovering
     node.append("title")
@@ -87,20 +87,20 @@ function makeGraph(graph) {
 
     svg.append("g")
         .attr("class", "legendOrdinal")
-        .attr("transform", "translate(" + (width - 150) + ",20)");
+        .attr("transform", "translate(" + (width - 80) + ",20)");
 
     svg.append("g")
         .attr("class", "legendSize")
-        .attr("transform", "translate(20, " + (20) + ")");
+        .attr("transform", "translate(20, " + (height - 50) + ")");
 
-    var legendSize = d3.legendSize()
+    var legendSize = version4.legendSize()
         .scale(nodeScale)
-        .labelFormat(d3.format(".0f"))
+        .labelFormat(version4.format(".0f"))
         .cells(5)
         .shape('circle')
         .shapePadding(40)
         .labelOffset(30)
-        .orient('vertical')
+        .orient('horizontal')
         .title("Number of check-ins");
 
     svg.select(".legendSize")
@@ -108,10 +108,10 @@ function makeGraph(graph) {
 
     svg.select(".legendSize").selectAll("circle")
         .attr("fill", "rgb(27, 158, 119)")
-        .attr("r", function() { return d3.select(this).attr("r") * 20; });
+        .attr("r", function() { return version4.select(this).attr("r") * 20; });
 
-    var legendOrdinal = d3.legendColor()
-        .shape("path", d3.symbol().type(d3.symbolCircle).size(150)())
+    var legendOrdinal = version4.legendColor()
+        .shape("path", version4.symbol().type(version4.symbolCircle).size(150)())
         .shapePadding(10)
         .scale(color);
 
@@ -157,36 +157,41 @@ function makeGraph(graph) {
                 });
             })
             .on('mouseout', function() {
-                var highlighted = d3.selectAll(".highlighted");
+                var highlighted = version4.selectAll(".highlighted");
                 if (highlighted["_groups"][0].length > 0) {
-                    d3.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 0.1);
-                    d3.selectAll(".highlighted").style("stroke", "rgb(27, 158, 119)").style("stroke-opacity", 1);
+                    version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 0.1);
+                    version4.selectAll(".highlighted").style("stroke", "rgb(27, 158, 119)").style("stroke-opacity", 1);
                 }
                 else {
-                    d3.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 1);
+                    version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 1);
                 }
             })
     }
 
     //Zoom functions
     function zoom_actions(){
-        g.attr("transform", d3.event.transform)
+        g.attr("transform", version4.event.transform)
     }
 
-    return [node, svg, simulation, nodeScale];
+    return {
+        node: node,
+        svg: svg,
+        simulation: simulation,
+        scale: nodeScale
+    };
 }
 
 function restart(simulation, graph, nodeScale) {
 
     // scale for coloring nodes
-    var color = d3.scaleOrdinal(d3.schemeCategory20);
+    var color = version4.scaleOrdinal(version4.schemeCategory20);
 
     // select nodes
-    var node = d3.selectAll(".nodes circle");
-    var link = d3.selectAll(".links line");
+    var node = version4.selectAll(".nodes circle");
+    var link = version4.selectAll(".links line");
 
     // re-scale nodes
-    var minmax = d3.extent(graph.nodes, function(d) { return d.check_ins });
+    var minmax = version4.extent(graph.nodes, function(d) { return d.check_ins });
     if (minmax[0] === 0) {
         minmax[0] = 1;
     }
@@ -218,12 +223,12 @@ function highlightRoute(svg, dt, selected) {
      * @param {object} svg
      * @param {object} dt
      */
-    var color = d3.scaleOrdinal(d3.schemeCategory20);
-    d3.json("../Data/route_per_id.json", function (error, data) {
+    var color = version4.scaleOrdinal(version4.schemeCategory20);
+    version4.json("../Data/route_per_id.json", function (error, data) {
 
         if (error) throw error;
         dt.find('tbody').unbind( "click" );
-        // d3.selectAll()
+        // version4.selectAll()
         // Add event listener for opening and closing details
         dt.find('tbody').on('click', 'tr td.details-control', function () {
             var id = this.parentNode.id;
@@ -231,11 +236,11 @@ function highlightRoute(svg, dt, selected) {
             var tr = $(this).closest('tr');
             var row = dt.api().row( tr );
             if ( row.child.isShown() ) {
-                d3.select(this)
+                version4.select(this)
                     .html('<img src="../details_open.png">');
                 row.child.hide();
                 tr.removeClass('shown');
-                var circles = d3.selectAll(".nodes circle");
+                var circles = version4.selectAll(".nodes circle");
                 circles
                     .style("stroke", function (d) {
                         return color(d.group);
@@ -244,17 +249,17 @@ function highlightRoute(svg, dt, selected) {
                 links.forEach(function(l) {
                     l.style("stroke", "grey").attr("class", "non")
                 });
-                var highlighted = d3.selectAll(".highlighted");
+                var highlighted = version4.selectAll(".highlighted");
                 if (highlighted["_groups"][0].length > 0) {
-                    d3.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 0.1);
-                    d3.selectAll(".highlighted").style("stroke", "rgb(27, 158, 119)").style("stroke-opacity", 1);
+                    version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 0.1);
+                    version4.selectAll(".highlighted").style("stroke", "rgb(27, 158, 119)").style("stroke-opacity", 1);
                 }
                 else {
-                    d3.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 1);
+                    version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 1);
                 }
             }
             else {
-                d3.select(this)
+                version4.select(this)
                     .html('<img src="../details_close.png">');
                 svg.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 0.1);
                 selected[id] = [];

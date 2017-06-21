@@ -13,10 +13,10 @@ function makeLineChart(data) {
      // initialize attributes of svg as constants
      const margins = {top: 20, right: 200, bottom: 75, left: 50},
          height = 500 - margins.top - margins.bottom,
-         width = 1000 - margins.left - margins.right;
+         width = 900 - margins.left - margins.right;
 
      // append svg element for line chart
-     var lineContainer = d3.select("#linechart").append("svg")
+     var lineContainer = version4.select("#linechart").append("svg")
          .attr("id", "lineSVG")
          .attr("height", height + margins.top + margins.bottom)
          .attr("width", width + margins.left + margins.right).append("g")
@@ -24,7 +24,7 @@ function makeLineChart(data) {
          .attr("transform", "translate(" + margins.left + "," + margins.top + ")");
 
      // append svg for legend
-     var legendSvg = d3.select("#lineSVG").append("svg")
+     var legendSvg = version4.select("#lineSVG").append("svg")
          .attr("id", "legendSVG")
          .attr("height", height + margins.top + margins.bottom)
          .attr("width", width + margins.left + margins.right).append("g")
@@ -51,22 +51,22 @@ function makeLineChart(data) {
          .text("For check-ins per gate, click node on graph.");
 
      // set scales for lines
-     var xLine = d3.scaleTime()
+     var xLine = version4.scaleTime()
              .range([0, width]),
-         yLine = d3.scaleLinear()
+         yLine = version4.scaleLinear()
              .range([height, 0]);
 
      // set domain
-    var format = d3.timeFormat("%b %Y");
-    var period = d3.extent(data, function(d) {return d.key});
+    var format = version4.timeFormat("%b %Y");
+    var period = version4.extent(data, function(d) {return d.key});
     xLine.domain(period);
-    yLine.domain(d3.extent(data, function(d) {return d.value.total}));
+    yLine.domain(version4.extent(data, function(d) {return d.value.total}));
 
     // Add the X Axis
     lineContainer.append("g")
         .attr("class", "axis x")
         .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(xLine)
+        .call(version4.axisBottom(xLine)
             .tickFormat(function(d) { return format(d); }))
         .selectAll("text")
         .style("text-anchor", "end")
@@ -77,7 +77,7 @@ function makeLineChart(data) {
     // Add the Y Axis
     lineContainer.append("g")
         .attr("class", "axis y")
-        .call(d3.axisLeft(yLine))
+        .call(version4.axisLeft(yLine))
         .append("text")
         .attr("class", "label")
         .attr("transform", "rotate(-90)")
@@ -117,10 +117,10 @@ function updateLines(data, lineObject, selected, gate) {
     // Remove old elements as needed.
     title.exit().remove();
 
-    var period = d3.extent(data, function(d) {return d.key});
+    var period = version4.extent(data, function(d) {return d.key});
     xLine.domain(period);
 
-    yLine.domain(d3.extent(data, function(d) {return d.value.total}));
+    yLine.domain(version4.extent(data, function(d) {return d.value.total}));
 
     // get current max value for y axis scaling and put data per line in dict of arrays
     var lineData = {};
@@ -137,10 +137,10 @@ function updateLines(data, lineObject, selected, gate) {
     yLine.domain([0, max]);
 
     // scale for color of lines
-    var lineColor = d3.scaleOrdinal(d3["schemeDark2"]);
+    var lineColor = version4.scaleOrdinal(version4["schemeDark2"]);
 
     // make new line
-    var line = d3.line()
+    var line = version4.line()
         .x(function(d) { return xLine(d.date); })
         .y(function(d) { return yLine(d.value); });
 
@@ -148,7 +148,7 @@ function updateLines(data, lineObject, selected, gate) {
     lineContainer.selectAll(".y.axis")
         .transition()
         .duration(750)
-        .call(d3.axisLeft(yLine));
+        .call(version4.axisLeft(yLine));
 
     // update lines
     lineContainer.selectAll(".line").data(selected).exit().remove();
@@ -204,11 +204,11 @@ function updateLines(data, lineObject, selected, gate) {
     // add event listener to lines that highlights lines and legend items
     lineContainer.selectAll(".line")
         .on("mouseover", function() {
-            d3.select(this)
+            version4.select(this)
                 .style("stroke-width", '4px');
         })
         .on("mouseout", function() {
-            d3.select(this)
+            version4.select(this)
                 .style("stroke-width", '2px');
         });
 }

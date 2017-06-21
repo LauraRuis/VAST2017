@@ -7,59 +7,46 @@
 
 function makePC(data) {
 
-    // d3.selectAll(".foreground").remove();
-    // d3.selectAll(".background").remove();
     // initialize attributes of svg as constants
     const marginsPC = {top: 40, right: 10, bottom: 75, left: 20},
         heightPC = 800 - marginsPC.top - marginsPC.bottom,
         widthPC = 800 - marginsPC.left - marginsPC.right;
 
-    var svg = version3.select('#pc').append('svg')
+    var svg = d3.select('#linechart').append('svg')
+        .attr("id", "pcSVG")
         .attr('width', widthPC + marginsPC.left + marginsPC.right)
         .attr('height', heightPC + marginsPC.top + marginsPC.bottom)
         .append("g")
+        .attr("id", "pcContainer")
         .attr("transform", "translate(" + marginsPC.left + "," + (marginsPC.top + 10) + ")");
 
     const margins = {top: 40, right: 10, bottom: 75, left: 20},
         height = 800 - margins.top - margins.bottom,
         width = 800 - margins.left - margins.right;
 
+    drawPC(data, svg, height, width);
+
+    return {
+        svg: svg,
+        height: height,
+        width: width
+    }
+}
+
+function drawPC(data, svg, height, width) {
+
+    d3.selectAll(".foreground").remove();
+    d3.selectAll(".background").remove();
     // set scales
-    var xScale = version3.scale.ordinal().rangePoints([0, width], 1),
+    var xScale = d3.scale.ordinal().rangePoints([0, width], 1),
         yScale = {},
         dragging = {};
 
     // initialize line, axis and containers for back- and foreground lines
-    var line = version3.svg.line(),
-        axis = version3.svg.axis().orient("left"),
+    var line = d3.svg.line(),
+        axis = d3.svg.axis().orient("left"),
         background,
         foreground;
-
-    // var dummies  = ["highseason", "weekend", "nightly_movement"];
-    //
-    // var form = version3.select("#pc").append("form");
-    // var j = 0;
-    // form.selectAll("label")
-    //     .data(dummies)
-    //     .enter()
-    //     .append("label")
-    //     .text(function(d) {return d;})
-    //     .insert("input")
-    //     .attr({
-    //         type: "radio",
-    //         class: "shape",
-    //         name: "mode",
-    //         value: function(d) {return d;}
-    //     })
-    //     .property("checked", function(d, i) {return i===j;});
-
-
-    // $('input:radio[name="mode"]').change(
-    //     function(){
-    //         if (this.checked) {
-    //             colorLines(this.value)
-    //         }
-    //     });
 
     // make some data-specific arrays
     var ordinals = ["car_type", "camping"],
@@ -71,14 +58,14 @@ function makePC(data) {
     var pathsPerID = {};
 
     var dimensions = ["car_type", "camping", "number_stops", "number_days", "month"];
-    version3.entries(data).forEach(function(d) {
+    d3.entries(data).forEach(function(d) {
         pathsPerID[d.key] = [];
         for (var i = 0; i < dimensions.length - 1; i++) {
             var new_key = dimensions[i] + "_" + d.value[dimensions[i]] + "_" + dimensions[i + 1] + "_" + d.value[dimensions[i + 1]];
             connections[new_key] = {"path": {}, "amount": 0, "ids": []}
         }
     });
-    version3.entries(data).forEach(function(d) {
+    d3.entries(data).forEach(function(d) {
         for (var i = 0; i < dimensions.length - 1; i++) {
             var new_key = dimensions[i] + "_" + d.value[dimensions[i]] + "_" + dimensions[i + 1] + "_" + d.value[dimensions[i + 1]];
             pathsPerID[d.key].push(new_key);
@@ -92,13 +79,13 @@ function makePC(data) {
     // Extract the list of dimensions and create a scale for each.
     xScale.domain(dimensions.filter(function(d) {
         if(d === "camping") {
-            yScale[d] = version3.scale.ordinal().domain(domains.camping).rangePoints([height, 0]);
+            yScale[d] = d3.scale.ordinal().domain(domains.camping).rangePoints([height, 0]);
         }
         else if (d === "car_type") {
-            yScale[d] = version3.scale.ordinal().domain(domains.car_type).rangePoints([height, 0]);
+            yScale[d] = d3.scale.ordinal().domain(domains.car_type).rangePoints([height, 0]);
         }
         else {
-            yScale[d] = version3.scale.linear().domain(version3.extent(version3.entries(data), function(p) {
+            yScale[d] = d3.scale.linear().domain(d3.extent(d3.entries(data), function(p) {
                 return p.value[d];
             })).range([height, 0]);
         }
@@ -109,7 +96,7 @@ function makePC(data) {
     background = svg.append("g")
         .attr("class", "background")
         .selectAll("path")
-        .data(version3.entries(connections))
+        .data(d3.entries(connections))
         .enter().append("path")
         // .attr("class", function(d) { return d.key; })
         .attr("d", path);
@@ -118,7 +105,7 @@ function makePC(data) {
     foreground = svg.append("g")
         .attr("class", "foreground")
         .selectAll("path")
-        .data(version3.entries(connections))
+        .data(d3.entries(connections))
         .enter().append("path")
         .attr("class", function(d) { return d.key; })
         .attr("d", path);
@@ -129,14 +116,14 @@ function makePC(data) {
         .enter().append("g")
         .attr("class", function(d) { return "dimension " + d; })
         .attr("transform", function(d) { return "translate(" + xScale(d) + ")"; })
-        .call(version3.behavior.drag()
+        .call(d3.behavior.drag()
             .origin(function(d) { return {x: xScale(d)}; })
             .on("dragstart", function(d) {
                 dragging[d] = xScale(d);
                 background.attr("visibility", "hidden");
             })
             .on("drag", function(d) {
-                dragging[d] = Math.min(width, Math.max(0, version3.event.x));
+                dragging[d] = Math.min(width, Math.max(0, d3.event.x));
                 foreground.attr("d", path);
                 dimensions.sort(function(a, b) { return position(a) - position(b); });
                 xScale.domain(dimensions);
@@ -144,7 +131,7 @@ function makePC(data) {
             })
             .on("dragend", function(d) {
                 delete dragging[d];
-                transition(version3.select(this)).attr("transform", "translate(" + xScale(d) + ")");
+                transition(d3.select(this)).attr("transform", "translate(" + xScale(d) + ")");
                 transition(foreground).attr("d", path);
                 background
                     .attr("d", path)
@@ -158,9 +145,9 @@ function makePC(data) {
     g.append("g")
         .attr("class", "axis")
         .each(function(d) {
-            version3.select(this).call(axis.scale(yScale[d]));
-            version3.select(this).on("dblclick", function() {
-                version3.selectAll("path").style("stroke", "steelblue");
+            d3.select(this).call(axis.scale(yScale[d]));
+            d3.select(this).on("dblclick", function() {
+                d3.selectAll("path").style("stroke", "steelblue");
             });})
         .append("text")
         .style("text-anchor", "middle")
@@ -171,7 +158,7 @@ function makePC(data) {
     g.append("g")
         .attr("class", "brush")
         .each(function(d) {
-            version3.select(this).call(yScale[d].brush = version3.svg.brush().y(yScale[d]).on("brushstart", brushstart).on("brush", brush));
+            d3.select(this).call(yScale[d].brush = d3.svg.brush().y(yScale[d]).on("brushstart", brushstart).on("brush", brush));
         })
         .selectAll("rect")
         .attr("x", -8)
@@ -182,20 +169,20 @@ function makePC(data) {
     ordinals.forEach(function(p) {
         inversDict[p] = {};
         domains[p].forEach(function(k) {
-            var ticks = version3.selectAll(".dimension." + p + " .tick")
+            var ticks = d3.selectAll(".dimension." + p + " .tick")
                 .filter(function(d){ return d===k;} );
-            inversDict[p][k] = version3.transform(ticks.attr("transform")).translate[1]
+            inversDict[p][k] = d3.transform(ticks.attr("transform")).translate[1]
         });
     });
 
     function colorLines(dim) {
-        version3.selectAll("path").style("stroke", "#772718");
+        d3.selectAll("path").style("stroke", "#772718");
         var actives = [];
         var non = [];
-        version3.entries(data).forEach(function(d) {
+        d3.entries(data).forEach(function(d) {
             // console.log(d);
             if (d.value[dim] === 1) {
-                actives.push(d.key)
+                actives.push(d.key);
                 var path = pathsPerID[d.key];
                 path.forEach(function(p) {
                     svg.select("path." + p).style("stroke", "steelblue");
@@ -205,7 +192,6 @@ function makePC(data) {
                 non.push(d.key)
             }
         });
-        console.log(non)
     }
 
     function position(d) {
@@ -219,14 +205,14 @@ function makePC(data) {
 
     // Returns the path for a given data point.
     function path(d) {
-        var dims = version3.keys(d.value.path);
+        var dims = d3.keys(d.value.path);
         return line(dims.map(function(p, i) {
             return [xScale(p), yScale[p](d.value.path[p])];
         }));
     }
 
     function brushstart() {
-        version3.event.sourceEvent.stopPropagation();
+        d3.event.sourceEvent.stopPropagation();
     }
 
     // Handles a brush event, toggling the display of foreground lines.
@@ -244,7 +230,7 @@ function makePC(data) {
             if (act === "camping" || act === "car_type") {
                 var temp1 = extents[i][0];
                 var temp2 = extents[i][1];
-                var invert = version3.entries(inversDict[act]);
+                var invert = d3.entries(inversDict[act]);
                 var key = [];
                 invert.forEach(function(d) {
                     if (temp1 <= d.value && d.value <= temp2) {
@@ -273,7 +259,7 @@ function makePC(data) {
         });
 
         var mergedActive = [].concat.apply([], active);
-        version3.selectAll("path").style("stroke", "#ddd");
+        d3.selectAll("path").style("stroke", "#ddd");
         mergedActive.forEach(function(d) {
             var path = pathsPerID[d];
             path.forEach(function(p) {
@@ -281,5 +267,4 @@ function makePC(data) {
             })
         });
     }
-
 }
