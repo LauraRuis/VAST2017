@@ -116,7 +116,7 @@ window.onload = function() {
         else {
             filename = parseInt(this.value) + 1 + "-2016"
         }
-        console.log(d3.select("#pcSVG")[0][0])
+
         if (d3.select("#pcSVG")[0][0] !== null) {
             var datastring = "../Data/vars per week/vars_" + filename + ".json";
             version4.json(datastring, function (error, data) {

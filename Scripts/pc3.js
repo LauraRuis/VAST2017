@@ -184,7 +184,6 @@ function drawPC(data, svg, height, width) {
         var actives = [];
         var non = [];
         d3.entries(data).forEach(function(d) {
-            // console.log(d);
             if (d.value[dim] === 1) {
                 actives.push(d.key);
                 var path = pathsPerID[d.key];

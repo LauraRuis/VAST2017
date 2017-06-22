@@ -33,16 +33,17 @@ function makeGraph(graph) {
     // start force simulation with center in center of svg
     var simulation = version4.forceSimulation()
         .force("link", version4.forceLink().id(function(d) { return d.id; }))
-        // .force("charge", version4.forceManyBody());
         .force("center", version4.forceCenter((width / 2 - 50), height / 2));
+
+    // set scale for nodes
+    var nodeScale = version4.scaleLog();
 
     // add zoom capabilities
     var zoom_handler = version4.zoom()
         .on("zoom", zoom_actions);
-    zoom_handler(svg);
 
-    // set scale for nodes
-    var nodeScale = version4.scaleLog();
+
+    zoom_handler(svg);
 
     // add links
     var link = g.append("g")
@@ -59,11 +60,11 @@ function makeGraph(graph) {
         .enter().append("circle")
         .attr("r", 5)
         .attr("fill", function(d) { return color(d.group); })
-        .attr("data-legend",function(d) { return d.group});
+        .attr("data-legend", function(d) { return d.group; });
 
     // scale nodes
     nodeScale
-        .domain(version4.extent(graph.nodes, function(d) { return d.check_ins }));
+        .domain(version4.extent(graph.nodes, function(d) { return d.check_ins; }));
 
     // add title for hovering
     node.append("title")
@@ -250,10 +251,8 @@ function highlightRoute(svg, dt, selected, paths) {
                     version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 1);
                 }
                 if (paths !== false) {
-                    console.log(paths[id])
                     var path = paths[id];
                     path.forEach(function(p) {
-                        console.log(d3.select("." + p))
                         d3.select("." + p).style("stroke", "steelblue").style("stroke-width", "1px");
                     })
                 }
@@ -281,10 +280,8 @@ function highlightRoute(svg, dt, selected, paths) {
                     }, 100 * i);
                 });
                 if (paths !== false) {
-                    console.log(paths[id])
                     var path = paths[id];
                     path.forEach(function(p) {
-                        console.log(d3.select("." + p));
                         d3.select("." + p).style("stroke", "rgb(27, 158, 119)").style("stroke-width", "3px");
                     })
                 }
