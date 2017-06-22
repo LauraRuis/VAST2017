@@ -4,7 +4,6 @@
 
 # graph
 - legend for node size (buggy)
-- update connections
 - initialize smaller
 
 # brush slider
