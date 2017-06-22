@@ -124,3 +124,15 @@ Added final functionality of highlighting ID in parallel coordinates.
 - Merged v3 and v4
 - Connected all visualizations
 - Put everything in bootstrap template
+
+# Day 13
+Stand-up meeting discussed usage of same template for all of our projects which will be nice for the movie. Also discussed some problems in implementing the bootstrap css template.
+
+Tried to change initial zoom of force directed graph, but cannot get it right for now. Maybe need d3-zoom.
+Cleaned template html file and fixed scroll bugs.
+Cleaned some code in fdgraph.js
+
+**Summary day 13**
+- Finished putting everything in bootstrap template
+- Finished beta version
+- Started on code cleaning
