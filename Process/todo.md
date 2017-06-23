@@ -1,26 +1,19 @@
 # Overall
-- Homepage picture of only preserve or something
-- Sometimes table doesnt load properly
+- ask for way to work around variable scope issues
+- ask about problem of on first click class does not get set but on second click it does (selection of route in graph)
 
 # graph
 - legend for node size (buggy)
-- initialize smaller
 
 # brush slider
-- add all the weeks (instead of only 1-22 of 2016)
 - doesnt work when scrolled down
 
 # table
-- link with parallel coordinates
-- on click for details automatically scroll up to see graph
-- on row click show vars of that ID in parallel coordinates (selected get colored) (NB; is this necessary? Also visable in table)
 - NB; period of stay is not yet correct (first and second entry of entrance instead of first and last)
+- selection of path in PC buggy
 
 # parallel coordinates
-- color or thickness of lines representing times travelled
 - on double click all lines blue again (works, but buggy)
-- link to ids
-- add speed variable
 
 # line chart
 - style checkboxes
