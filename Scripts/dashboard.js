@@ -7,205 +7,184 @@
 
 window.onload = function() {
 
-    // global title
-    d3.select("#titleContainer").append("div").append("h3")
-        .attr("class", "page-header text-center sub-header=")
-        .text("VAST 2017").append("h4")
-        .text("MC1");
-
-    // add image of Lekagul Preserve
-    d3.select('#linechart').append("img")
-        .attr('width', 700)
-        .attr('height', 700).attr("src","../lekagul.jpg");
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // LINE CHART
-    // parse the date / time
-    var parseTime = version4.timeParse("%d/%m/%Y");
-
-    // options for toggle buttons of line chart
-    var options  = ["total", "1", "2", "3", "4", "5", "6", "2P"];
-
-    // make form with toggle buttons for options
-    var form = version4.select("#formDiv").append("form").attr("id", "form");
-    var labels = form.selectAll("label")
-        .attr("class", "checkbox-inline")
-        .data(options)
-        .enter()
-        .append("label")
-        .text(function(d) {return d;})
-        .append("input")
-        .attr("id", function(d) {return d;})
-        .attr("type", "checkbox")
-        .attr("data-toggle", "toggle")
-        .attr("name", "mode");
-
-    // initialize total button as "on"
-    labels.each(function(l) {
-        if (l === "total") {
-            version4.select(this).attr("checked", "True")
-        }
-    });
-
-    // use bootstrap library on each button
-    options.forEach(function(d) {
-        $("#" + d).bootstrapToggle();
-    });
+    // draw toggles, not displayed at first page
+    var form = drawToggles();
+    form.style("display", "none");
 
     // make slider
-    var slider = makeSlider();
+    makeSlider();
 
-    // for now hardcoded selected
+    // default selected line is total
     var selected = ["total"];
 
+    // some global variables
     var lineObject,
         pcObject,
         dataTable;
-    d3.select("#formDiv").style("display", "none");
+
+    var graphObject,
+        currentData,
+        currentID;
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // TABLE
+    version4.json("../Data/vars per week/vars_15-2016.json", function (error, data) {
+
+        if (error) throw error;
+
+        dataTable = makeTable(data);
+
+    });
+
+    // add image
+    d3.select('#lineChart').append("img")
+        .attr('width', 700)
+        .attr('height', 700).attr("src","../lekagul.jpg");
+
+    // actions when user clicks on parallel coordinates link
     d3.select('#pcPage').on("click", function() {
+
         if (d3.select("#graphSVG")[0][0] === null) {
-            drawGraph();
-            drawTable();
-        }
-        if (d3.select("#pcSVG")[0][0] === null) {
-            d3.select('#linechart img').remove();
-            d3.json("../Data/vars per week/vars_15-2016.json", function (error, data) {
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            // GRAPH
+
+            version4.json("../Data/graphs per week/graph_15-2016.json", function(error, graph) {
+
                 if (error) throw error;
-                d3.select("#lineSVG").remove();
-                d3.select("#formDiv").style("display", "none");
-                pcObject = makePC(data);
-                highlightRoute(graphObject.svg, dataTable, selectedRows, pcObject.paths);
+                graphObject = makeGraph(graph);
+            });
+        }
+
+        // only initialize the first time a user clicks
+        if (d3.select("#pcSVG")[0][0] === null) {
+
+            // remove attributes from otherpages
+            d3.select('#lineChart img').remove();
+            d3.select("#lineSVG").remove();
+            form.style("display", "none");
+
+            // draw PC and option to choose ID in table (highlightRoute)
+            d3.json("../Data/vars per week2/vars_15-2016.json", function (error, data) {
+
+                if (error) throw error;
+
+                // draw PC
+                pcObject = makePC(data, dataTable);
+                fillTable(version4.entries(data), dataTable);
+
             });
         }
     });
+
+    // actions when user clicks on line chart link
     d3.select('#linePage').on("click", function() {
-        if (d3.select("#graphSVG")[0][0] === null) {
-            drawGraph();
-            drawTable();
-        }
+
+        // only initialize the first time a user clicks
         if (d3.select("#lineSVG")[0][0] === null) {
-            d3.select('#linechart img').remove();
+
+            // remove image of park and PC
+            d3.select('#lineChart img').remove();
             d3.select("#pcSVG").remove();
-            d3.select("#formDiv").style("margin-top", "100px");
-            d3.select("#formDiv").style("display", "block");
+
+            // show toggle buttons
+            form.style("margin-top", "100px");
+            form.style("display", "block");
+
             version4.json("../Data/data per gate/check-ins_day_camping8.json", function (error, data) {
 
                 if (error) throw error;
 
-                var arrData = version4.entries(data);
-                arrData.forEach(function (d) {
-                    d.key = parseTime(d.key);
-                });
-                lineObject = makeLineChart(arrData);
+                lineObject = makeLineChart(data);
 
+                if (d3.select("#graphSVG")[0][0] === null) {
+                    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                    // GRAPH
+
+                    version4.json("../Data/graphs per week/graph_15-2016.json", function(error, graph) {
+
+                        if (error) throw error;
+                        graphObject = makeGraph(graph);
+                        nodeListener(graphObject.node, lineObject, selected, currentData, currentID);
+                        highlightRoute(graphObject.svg, dataTable, false);
+                    });
+                }
             });
         }
     });
+
+    // actions when user clicks on lekagul preserve link
     d3.select('#parkPage').on("click", function() {
-        if (d3.select("#linechart img")[0][0] === null) {
+
+        // only initialize the first time a user clicks
+        if (d3.select("#lineChart img")[0][0] === null) {
+
+            // remove line chart, toggle buttons and PC
+            d3.select("#graphSVG").remove();
             d3.select("#pcSVG").remove();
             d3.select("#lineSVG").remove();
-            d3.select("#formDiv").style("display", "none");
-            d3.select('#linechart').append("img")
+            form.style("display", "none");
+
+            // add image
+            d3.select('#lineChart').append("img")
                 .attr('width', 700)
                 .attr('height', 700).attr("src","../lekagul.jpg")
         }
     });
 
+    // when user drags slider change data in graph, table and PC
+    $('#weekSlider').change( function() {
 
-    $('#ex1').change( function() {
-        var filename;
+        // variables for different filenames
+        var dataString;
+        var filename = sliderToFilename(this.value);
 
-        // convert slider value to filename
-        if (this.value < 0) {
-            filename = 53 - (-this.value) + "-2015"
-        }
-        else {
-            filename = parseInt(this.value) + 1 + "-2016"
-        }
+        var graphString = "../Data/graphs per week/graph_" + filename + ".json";
+        version4.json(graphString, function(error, graph) {
+
+            if (error) throw error;
+
+            // restart graph
+            restart(graphObject.simulation, graph, graphObject.scale)
+
+        });
 
         if (d3.select("#pcSVG")[0][0] !== null) {
-            var datastring = "../Data/vars per week/vars_" + filename + ".json";
-            version4.json(datastring, function (error, data) {
+            dataString = "../Data/vars per week2/vars_" + filename + ".json";
+            version4.json(dataString, function (error, data) {
 
                 if (error) throw error;
-                var selectedRows = {};
-                drawPC(data, pcObject.svg, pcObject.height, pcObject.width);
+                drawPC(data, pcObject.svg, pcObject.height, pcObject.width, dataTable);
                 fillTable(version4.entries(data), dataTable);
-                highlightRoute(graphObject.svg, dataTable, selectedRows, pcObject.paths);
             });
         }
         else {
-            var graphstring = "../Data/graphs per week/graph_" + filename + ".json";
-            version4.json(graphstring, function(error, graph) {
-                if (error) throw error;
 
-                // restart graph
-                restart(graphObject.simulation, graph, graphObject.scale)
-
-            });
-            var datastring = "../Data/vars per week/vars_" + filename + ".json";
-            version4.json(datastring, function (error, data) {
+            dataString = "../Data/vars per week2/vars_" + filename + ".json";
+            version4.json(dataString, function (error, data) {
 
                 if (error) throw error;
-                var selectedRows = {};
+
+                var date = dateFromWeekNumber(parseInt(filename.split("-")[1]), parseInt(filename.split("-")[0]));
                 fillTable(version4.entries(data), dataTable);
-                highlightRoute(graphObject.svg, dataTable, selectedRows, false);
+                highlightRoute(graphObject.svg, dataTable, false);
+                updateFocus(lineObject, date)
 
             });
         }
     });
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // GRAPH
-    var graphObject,
-        currentData,
-        currentID;
-    version4.json("../Data/graph3.json", function(error, graph) {
+    function dateFromWeekNumber(year, week) {
+        var d = new Date(year, 0, 1);
+        var dayNum = d.getDay();
+        var diff = --week * 7;
 
-        if (error) throw error;
-        graphObject = makeGraph(graph);
-        graphObject.node
-            .on("click", function(d) {
-                var fileString = "../Data/data per gate/check-ins_day_" + d.id + ".json";
+        // If 1 Jan is Friday to Sunday, go to next week
+        if (!dayNum || dayNum > 4) {
+            diff += 7;
+        }
 
-                version4.json(fileString, function (error, new_data) {
-
-                    if (error) throw error;
-
-                    var new_arrData = version4.entries(new_data);
-                    new_arrData.forEach(function (d) {
-                        d.key = parseTime(d.key);
-                    });
-                    currentData = new_arrData;
-                    currentID = d.id;
-                    updateLines(new_arrData, lineObject, selected, d.id)
-
-                });
-            });
-
-        $('input:checkbox[name="mode"]').change(
-            function(){
-                if (this.checked) {
-                    selected.push(version4.select(this).data()[0])
-                }
-                else {
-                    var index = selected.indexOf(version4.select(this).data()[0]);
-                    if (index !== -1) {
-                        selected.splice(index, 1)
-                    }
-                }
-                updateLines(currentData, lineObject, selected, currentID);
-            });
-    });
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // TABLE
-    var selectedRows = {};
-    version4.json("../Data/vars per week/vars_15-2016.json", function (error, data) {
-
-        if (error) throw error;
-        dataTable = makeTable(graphObject.svg, data);
-        highlightRoute(graphObject.svg, dataTable, selectedRows, false);
-    });
+        // Add required number of days
+        d.setDate(d.getDate() - d.getDay() + ++diff);
+        return d;
+    }
 };

@@ -5,31 +5,40 @@
  * VAST Challenge 2017
  */
 
-function makePC(data, dt) {
+function makePC(data) {
 
     // initialize attributes of svg as constants
+    const marginsPC = {top: 40, right: 10, bottom: 75, left: 20},
+        heightPC = 800 - marginsPC.top - marginsPC.bottom,
+        widthPC = 800 - marginsPC.left - marginsPC.right;
+
+    var svg = d3.select('#lineChart').append('svg')
+        .attr("id", "pcSVG")
+        .attr('width', widthPC + marginsPC.left + marginsPC.right)
+        .attr('height', heightPC + marginsPC.top + marginsPC.bottom)
+        .append("g")
+        .attr("id", "pcContainer")
+        .attr("transform", "translate(" + marginsPC.left + "," + (marginsPC.top + 10) + ")");
+
     const margins = {top: 40, right: 10, bottom: 75, left: 20},
         height = 800 - margins.top - margins.bottom,
         width = 800 - margins.left - margins.right;
 
-    var svg = d3.select('#lineChart').append('svg')
-        .attr("id", "pcSVG")
-        .attr('width', width + margins.left + margins.right)
-        .attr('height', height + margins.top + margins.bottom)
-        .append("g")
-        .attr("id", "pcContainer")
-        .attr("transform", "translate(" + margins.left + "," + (margins.top + 10) + ")");
-
-    drawPC(data, svg, height, width, dt);
+    var pcVars = drawPC(data, svg, height, width);
+    var connections = pcVars.connections,
+        paths = pcVars.paths;
 
     return {
         svg: svg,
         height: height,
-        width: width
+        width: width,
+        connections: connections,
+        paths: paths
     }
 }
 
-function drawPC(data, svg, height, width, dt) {
+function drawPC(data, svg, height, width) {
+
     d3.selectAll(".foreground").remove();
     d3.selectAll(".background").remove();
 
@@ -47,36 +56,24 @@ function drawPC(data, svg, height, width, dt) {
     // make some data-specific arrays
     var ordinals = ["car_type", "camping"],
         domains = {"car_type": ["1", "2", "3", "4", "5", "6", "2P"],
-            "camping": ["no_camping", "camping0", "camping1", "camping2",
-                "camping3", "camping4", "camping5", "camping6", "camping7", "camping8"]};
+            "camping": ["no_camping", "camping0", "camping1", "camping2", "camping3", "camping4", "camping5", "camping6", "camping7", "camping8"]};
 
     // initialize dicts for keeping track of connected variables and all the connections per ID
     var connections = {};
     var pathsPerID = {};
 
-    // dimensions used in parallel coordinates
-    var dimensions = ["car_type", "number_stops", "number_days", "speed", "camping"];
-
-    // because of large amount of data, only draw each possible connection once
-    // first initialize dicts for each ID in data
+    var dimensions = ["car_type", "camping", "number_stops", "number_days", "month"];
     d3.entries(data).forEach(function(d) {
         pathsPerID[d.key] = [];
         for (var i = 0; i < dimensions.length - 1; i++) {
-            var new_key = dimensions[i] + "_" + d.value[dimensions[i]] +
-                "_" + dimensions[i + 1] + "_" + d.value[dimensions[i + 1]];
+            var new_key = dimensions[i] + "_" + d.value[dimensions[i]] + "_" + dimensions[i + 1] + "_" + d.value[dimensions[i + 1]];
             connections[new_key] = {"path": {}, "amount": 0, "ids": []}
         }
     });
-
-    // fill dicts with path traveled by ID
     d3.entries(data).forEach(function(d) {
         for (var i = 0; i < dimensions.length - 1; i++) {
-            var new_key = dimensions[i] + "_" + d.value[dimensions[i]] +
-                "_" + dimensions[i + 1] + "_" + d.value[dimensions[i + 1]];
-
+            var new_key = dimensions[i] + "_" + d.value[dimensions[i]] + "_" + dimensions[i + 1] + "_" + d.value[dimensions[i + 1]];
             pathsPerID[d.key].push(new_key);
-
-            // keep track of how often a connection occurs
             connections[new_key]["amount"] += 1;
             connections[new_key]["path"][dimensions[i]] = d.value[dimensions[i]];
             connections[new_key]["path"][dimensions[i + 1]] = d.value[dimensions[i + 1]];
@@ -84,26 +81,14 @@ function drawPC(data, svg, height, width, dt) {
         }
     });
 
-    var minmax = d3.extent(d3.entries(connections), function(d) { return d.value.amount });
-    var colours = ["#a9e6fa", "#88c3fa", "#1E90FF", "#4169E1", "#0000CD", "#00008B"];
-
-    var testScale = d3.scale.linear().domain(minmax).range([0, 1]);
-    var colorScale = d3.scale.linear()
-        .range(colours)
-        .domain(d3.range(0, 1, 1.0 / (colours.length - 1)));
-
     // Extract the list of dimensions and create a scale for each.
     xScale.domain(dimensions.filter(function(d) {
-
-        // ordinal scales for camping and car type
         if(d === "camping") {
             yScale[d] = d3.scale.ordinal().domain(domains.camping).rangePoints([height, 0]);
         }
         else if (d === "car_type") {
             yScale[d] = d3.scale.ordinal().domain(domains.car_type).rangePoints([height, 0]);
         }
-
-        // linear for every other dimension
         else {
             yScale[d] = d3.scale.linear().domain(d3.extent(d3.entries(data), function(p) {
                 return p.value[d];
@@ -116,40 +101,19 @@ function drawPC(data, svg, height, width, dt) {
     background = svg.append("g")
         .attr("class", "background")
         .selectAll("path")
-        .data(d3.entries(connections))
+        .data(d3.entries(data))
         .enter().append("path")
-        .style("stroke", function(d) { return colorScale(testScale(d.value.amount)); })
+        // .attr("class", function(d) { return d.key; })
         .attr("d", path);
 
     // Add blue foreground lines for focus.
     foreground = svg.append("g")
         .attr("class", "foreground")
         .selectAll("path")
-        .data(d3.entries(connections))
+        .data(d3.entries(data))
         .enter().append("path")
         .attr("class", function(d) { return d.key; })
-        .style("stroke", function(d) { return colorScale(testScale(d.value.amount)); })
-        .attr("d", path)
-        .on("mouseover", function(d) {
-            if (d3.select(this).attr("class") !== "shown") {
-                d3.select(this).style("stroke-width", "3px")
-            }
-        })
-        .on("mouseout", function(d) {
-            if (d3.select(this).attr("class") !== "shown") {
-                d3.select(this).style("stroke-width", "1px")
-            }
-        })
-        .on("click", function(d) {
-            var ids = d.value.ids;
-            var amount = d.value.amount;
-            var arrData = [];
-            ids.forEach(function(id) {
-                arrData.push({key: id, value: data[id]})
-            });
-            fillTable(arrData)
-        });
-
+        .attr("d", path);
 
     // Add a group element for each dimension.
     var g = svg.selectAll(".dimension")
@@ -245,9 +209,10 @@ function drawPC(data, svg, height, width, dt) {
 
     // Returns the path for a given data point.
     function path(d) {
-        var dims = d3.keys(d.value.path);
-        return line(dims.map(function(p, i) {
-            return [xScale(p), yScale[p](d.value.path[p])];
+        var dims = dimensions
+        console.log(d)
+        return line(dims.map(function(p) {
+            return [xScale(p), yScale[p](d.value[p])];
         }));
     }
 
@@ -257,56 +222,20 @@ function drawPC(data, svg, height, width, dt) {
 
     // Handles a brush event, toggling the display of foreground lines.
     function brush() {
-        var actives = dimensions.filter(function (p) {
-                return !yScale[p].brush.empty();
-            }),
-            extents = actives.map(function (p) {
-                return yScale[p].brush.extent();
-            });
-
-        var active = [];
-
-        actives.forEach(function(act, i) {
-            if (act === "camping" || act === "car_type") {
-                var temp1 = extents[i][0];
-                var temp2 = extents[i][1];
-                var invert = d3.entries(inversDict[act]);
-                var key = [];
-                invert.forEach(function(d) {
-                    if (temp1 <= d.value && d.value <= temp2) {
-                        key.push(d.key)
-                    }
-                });
-                foreground.each(function(d) {
-                    if (d.key.indexOf(act) !== -1) {
-                        key.forEach(function(k) {
-                            if (k === d.value.path[act]) {
-                                active.push(d.value.ids)
-                            }
-                        })
-                    }
-                });
-            }
-            else {
-                foreground.each(function(d) {
-                    if (d.key.indexOf(act) !== -1) {
-                        if (extents[i][0] <= d.value.path[act] && d.value.path[act] <= extents[i][1]) {
-                            active.push(d.value.ids)
-                        }
-                    }
-                });
-            }
-        });
-
-        var mergedActive = [].concat.apply([], active);
-        d3.selectAll("path").style("stroke", "#ddd");
-        mergedActive.forEach(function(d) {
-            var path = pathsPerID[d];
-            path.forEach(function(p) {
-                svg.select("path." + p).style("stroke", "steelblue");
-            })
+        var actives = dimensions.filter(function(p) { return !yScale[p].brush.empty(); }),
+            extents = actives.map(function(p) { return yScale[p].brush.extent(); });
+        foreground.style("display", function(d) {
+            return actives.every(function(p, i) {
+                return extents[i][0] <= d.value[p] && d.value[p] <= extents[i][1];
+            }) ? null : "none";
         });
     }
 
-    return highlightRoute(d3.select("#graphSVG"), dt, pathsPerID)
+    return {
+        svg: svg,
+        height: height,
+        width: width,
+        connections: connections,
+        paths: pathsPerID
+    }
 }

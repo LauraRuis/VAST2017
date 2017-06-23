@@ -40,3 +40,13 @@ td {
 #ex1Slider .slider-selection {
     background: #BABABA;
 }
+
+.focusLine {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 0.5px;
+}
+
+.area {
+    fill: lightsteelblue;
+}

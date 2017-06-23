@@ -5,62 +5,65 @@
  * VAST Challenge 2017
  */
 
- /**
+/**
  * Function that draws empty line chart, ready to be filled with lines.
  * */
 function makeLineChart(data) {
 
-     // initialize attributes of svg as constants
-     const margins = {top: 20, right: 300, bottom: 75, left: 50},
-         height = (window.innerHeight / 2) - margins.top - margins.bottom,
-         width = (window.innerWidth / 2) - margins.left - margins.right;
+    // parse data
+    var arrData = dateParser(data);
 
-     // append svg element for line chart
-     var lineContainer = version4.select("#lineChart    ").append("svg")
-         .attr("id", "lineSVG")
-         .attr("height", height + margins.top + margins.bottom)
-         .attr("width", width + margins.left + margins.right).append("g")
-         .attr("id", "lineContainer")
-         .attr("transform", "translate(" + margins.left + "," + margins.top + ")");
+    // initialize attributes of svg as constants
+    const margins = {top: 20, right: 300, bottom: 75, left: 50},
+        height = (window.innerHeight / 2) - margins.top - margins.bottom,
+        width = (window.innerWidth / 2) - margins.left - margins.right;
 
-     // append svg for legend
-     var legendSvg = version4.select("#lineSVG").append("svg")
-         .attr("id", "legendSVG")
-         .attr("height", height + margins.top + margins.bottom)
-         .attr("width", width + margins.left + margins.right).append("g")
-         .attr("id", "legendContainer")
-         .attr("transform", "translate(" + width + "," + 0 + ")");
+    // append svg element for line chart
+    var lineContainer = version4.select("#lineChart    ").append("svg")
+        .attr("id", "lineSVG")
+        .attr("height", height + margins.top + margins.bottom)
+        .attr("width", width + margins.left + margins.right).append("g")
+        .attr("id", "lineContainer")
+        .attr("transform", "translate(" + margins.left + "," + margins.top + ")");
 
-     // make legend container
-     var legendContainer = legendSvg.append("g")
-         .attr("font-family", "sans-serif")
-         .attr("font-size", 10)
-         .attr("text-anchor", "front");
+    // append svg for legend
+    var legendSvg = version4.select("#lineSVG").append("svg")
+        .attr("id", "legendSVG")
+        .attr("height", height + margins.top + margins.bottom)
+        .attr("width", width + margins.left + margins.right).append("g")
+        .attr("id", "legendContainer")
+        .attr("transform", "translate(" + width + "," + 0 + ")");
 
-     // make title for line chart
-     var titleContainer = lineContainer.append("g")
-         .attr("class", "titleContainer");
+    // make legend container
+    var legendContainer = legendSvg.append("g")
+        .attr("font-family", "sans-serif")
+        .attr("font-size", 10)
+        .attr("text-anchor", "front");
 
-     titleContainer
-         .append("text")
-         .attr("x", (width / 2))
-         .attr("y", top)
-         .attr("class", "title")
-         .attr("text-anchor", "middle")
-         .style("font-size", "16px")
-         .text("For check-ins per gate, click node on graph.");
+    // make title for line chart
+    var titleContainer = lineContainer.append("g")
+        .attr("id", "titleContainer");
 
-     // set scales for lines
-     var xLine = version4.scaleTime()
-             .range([0, width]),
-         yLine = version4.scaleLinear()
-             .range([height, 0]);
+    titleContainer
+        .append("text")
+        .attr("x", (width / 2))
+        .attr("y", top)
+        .attr("class", "title")
+        .attr("text-anchor", "middle")
+        .style("font-size", "16px")
+        .text("For check-ins per gate, click node on graph.");
 
-     // set domain
+    // set scales for lines
+    var xLine = version4.scaleTime()
+            .range([0, width]),
+        yLine = version4.scaleLinear()
+            .range([height, 0]);
+
+    // set domain
     var format = version4.timeFormat("%b %Y");
-    var period = version4.extent(data, function(d) {return d.key});
+    var period = version4.extent(arrData, function(d) {return d.key});
     xLine.domain(period);
-    yLine.domain(version4.extent(data, function(d) {return d.value.total}));
+    yLine.domain(version4.extent(arrData, function(d) {return d.value.total}));
 
     // Add the X Axis
     lineContainer.append("g")
@@ -85,14 +88,11 @@ function makeLineChart(data) {
         .attr("dy", ".71em")
         .text("Check-ins");
 
-     return {"lineContainer": lineContainer,
-         "legendContainer": legendContainer,
-         "xLine": xLine,
-         "yLine": yLine,
-         "width": width,
-         "titleContainer": titleContainer
-     }
- }
+    return {
+        "xLine": xLine,
+        "yLine": yLine
+    }
+}
 
 /**
  * Function that adds or deletes lines and legend rects according to array of selected country.
@@ -100,13 +100,14 @@ function makeLineChart(data) {
  * */
 function updateLines(data, lineObject, selected, gate) {
 
+    var arrData = dateParser(data);
+
     // get variables from lineObject
-    var lineContainer = lineObject.lineContainer,
-        legendContainer = lineObject.legendContainer,
+    var lineContainer = version4.select("#lineContainer"),
+        legendContainer = version4.select("#legendContainer"),
         xLine = lineObject.xLine,
         yLine = lineObject.yLine,
-        width = lineObject.width,
-        titleContainer = lineObject.titleContainer;
+        titleContainer = version4.select("#titleContainer");
 
     var title = titleContainer.selectAll("text")
         .data(["Check-ins of " + gate]);
@@ -123,17 +124,17 @@ function updateLines(data, lineObject, selected, gate) {
     // Remove old elements as needed.
     title.exit().remove();
 
-    var period = version4.extent(data, function(d) {return d.key});
+    var period = version4.extent(arrData, function(d) {return d.key});
     xLine.domain(period);
 
-    yLine.domain(version4.extent(data, function(d) {return d.value.total}));
+    yLine.domain(version4.extent(arrData, function(d) {return d.value.total}));
 
     // get current max value for y axis scaling and put data per line in dict of arrays
     var lineData = {};
     var max = 0;
     selected.forEach(function(s) {
         lineData[s] = [];
-        data.forEach(function(item) {
+        arrData.forEach(function(item) {
             lineData[s].push({date: item.key, value: item.value[s]});
             if (item.value[s] > max) {
                 max = item.value[s]
@@ -239,7 +240,7 @@ function updateFocus(lineObject, date) {
         .y0( function(d) { return d.y0 } )
         .y1(  function(d) { return d.y1 } );
 
-    var test = lineObject.lineContainer;
+    var test = version4.select("#lineContainer");
 
     test.selectAll(".area").remove();
 
@@ -249,4 +250,87 @@ function updateFocus(lineObject, date) {
         .style('fill', 'red')
         .style("stroke", "red")
         .attr('d', area);
+}
+
+
+function drawToggles() {
+
+    // options for toggle buttons of line chart
+    var options  = ["total", "1", "2", "3", "4", "5", "6", "2P"];
+
+    // make form with toggle buttons for options
+    var form = version4.select("#formDiv").append("form").attr("id", "form");
+    var labels = form.selectAll("label")
+        .attr("class", "checkbox-inline")
+        .data(options)
+        .enter()
+        .append("label")
+        .text(function(d) {return d;})
+        .append("input")
+        .attr("id", function(d) {return d;})
+        .attr("type", "checkbox")
+        .attr("data-toggle", "toggle")
+        .attr("name", "mode");
+
+    // initialize total button checked
+    labels.each(function(l) {
+        if (l === "total") {
+            version4.select(this).attr("checked", "True")
+        }
+    });
+
+    // use bootstrap library on each button
+    options.forEach(function(d) {
+        $("#" + d).bootstrapToggle();
+    });
+
+    return form;
+}
+
+
+function dateParser(data) {
+
+    // time parser
+    var parseTime = version4.timeParse("%d/%m/%Y");
+
+    // parse dates
+    var arrData = version4.entries(data);
+    arrData.forEach(function (d) {
+        d.key = parseTime(d.key);
+    });
+
+    return arrData;
+}
+
+
+function nodeListener(node, lineObject, selected, currentData, currentID) {
+
+    node
+        .on("click", function(d) {
+            var fileString = "../Data/data per gate/check-ins_day_" + d.id + ".json";
+
+            version4.json(fileString, function (error, new_data) {
+
+                if (error) throw error;
+
+                currentData = new_data;
+                currentID = d.id;
+                updateLines(new_data, lineObject, selected, d.id)
+
+            });
+        });
+
+    $('input:checkbox[name="mode"]').change(
+        function(){
+            if (this.checked) {
+                selected.push(version4.select(this).data()[0])
+            }
+            else {
+                var index = selected.indexOf(version4.select(this).data()[0]);
+                if (index !== -1) {
+                    selected.splice(index, 1)
+                }
+            }
+            updateLines(currentData, lineObject, selected, currentID);
+        });
 }

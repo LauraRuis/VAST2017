@@ -13,7 +13,7 @@ function makeGraph(graph) {
      * @param {object} graph
      */
 
-    // append svg with g in it
+        // append svg with g in it
     const margins = {top: 200, right: 200, bottom: 75, left: 50},
         width = (window.innerWidth / 2) - margins.right - margins.left,
         height = (window.innerHeight - margins.top - margins.bottom) ;
@@ -33,7 +33,7 @@ function makeGraph(graph) {
     // start force simulation with center in center of svg
     var simulation = version4.forceSimulation()
         .force("link", version4.forceLink().id(function(d) { return d.id; }))
-        .force("center", version4.forceCenter((width / 2 - 50), height / 2));
+        .force("center", version4.forceCenter());
 
     // set scale for nodes
     var nodeScale = version4.scaleLog();
@@ -63,8 +63,12 @@ function makeGraph(graph) {
         .attr("data-legend", function(d) { return d.group; });
 
     // scale nodes
+    var minmax = version4.extent(graph.nodes, function(d) { return d.check_ins });
+    if (minmax[0] === 0) {
+        minmax[0] = 1;
+    }
     nodeScale
-        .domain(version4.extent(graph.nodes, function(d) { return d.check_ins; }));
+        .domain(minmax);
 
     // add title for hovering
     node.append("title")
@@ -120,18 +124,20 @@ function makeGraph(graph) {
         link
             .attr("id", function(d) { return d.source.id + "-" + d.target.id; })
             .attr("class", "non")
-            .attr("x1", function (d) { return d.source.xpos * 4; })
-            .attr("y1", function (d) { return d.source.ypos * 4; })
-            .attr("x2", function (d) { return d.target.xpos * 4; })
-            .attr("y2", function (d) { return d.target.ypos * 4; });
+            .attr("x1", function (d) { return d.source.xpos * 4 - 100; })
+            .attr("y1", function (d) { return d.source.ypos * 4 - 100; })
+            .attr("x2", function (d) { return d.target.xpos * 4 - 100; })
+            .attr("y2", function (d) { return d.target.ypos * 4 - 100; });
 
+        var highlighted;
         // draw node on position specified in data and highlight connections on mouseover
         node
             .attr("id", function(d) { return d.id; })
             .attr("r", function(d) { return d.check_ins !== 0 ? nodeScale(d.check_ins) * 20 : nodeScale(1); })
-            .attr("cx", function (d) { return d.xpos * 4; })
-            .attr("cy", function (d) { return d.ypos * 4; })
+            .attr("cx", function (d) { return d.xpos * 4 - 100; })
+            .attr("cy", function (d) { return d.ypos * 4 - 100; })
             .on("mouseover", function(d) {
+                highlighted = svg.selectAll(".highlightedLink");
                 link.style("stroke", function(l) {
                     if (d === l.source || d === l.target) {
                         return "#772718";
@@ -150,10 +156,10 @@ function makeGraph(graph) {
                 });
             })
             .on('mouseout', function() {
-                var highlighted = version4.selectAll(".highlighted");
+                highlighted = svg.selectAll(".highlightedLink");
                 if (highlighted["_groups"][0].length > 0) {
                     version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 0.1).style("stroke-width", "1px");
-                    version4.selectAll(".highlighted").style("stroke", "rgb(27, 158, 119)").style("stroke-opacity", 1).style("stroke-width", "3px");
+                    version4.selectAll(".highlightedLink").style("stroke", "rgb(27, 158, 119)").style("stroke-opacity", 1).style("stroke-width", "3px");
                 }
                 else {
                     version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 1).style("stroke-width", "1px");
@@ -163,7 +169,7 @@ function makeGraph(graph) {
 
     //Zoom functions
     function zoom_actions(){
-        g.attr("transform", version4.event.transform)
+        g.attr("transform", version4.event.transform);
     }
 
     return {
@@ -210,18 +216,20 @@ function restart(simulation, graph, nodeScale) {
     simulation.alpha(1).restart();
 }
 
-function highlightRoute(svg, dt, selected, paths) {
+
+function highlightRoute(svg, dt, paths) {
     /**
      * On row click in datatable, highlight corresponding route of car-id. Also open detailed info about route in table.
      * @param {object} svg
      * @param {object} dt
      */
+    // var svg = d3.select("#graphSVG");
     var color = version4.scaleOrdinal(version4.schemeCategory20);
     version4.json("../Data/route_per_ID.json", function (error, data) {
 
         if (error) throw error;
         dt.find('tbody').unbind( "click" );
-        // version4.selectAll()
+
         // Add event listener for opening and closing details
         dt.find('tbody').on('click', 'tr td.details-control', function () {
             var id = this.parentNode.id;
@@ -238,22 +246,27 @@ function highlightRoute(svg, dt, selected, paths) {
                     .style("stroke", function (d) {
                         return color(d.group);
                     });
-                var links = selected[id];
-                links.forEach(function(l) {
-                    l.style("stroke", "grey").attr("class", "non")
+                route.forEach(function(d, i) {
+                    if (i !== route.length - 1) { {
+                        svg.selectAll("#" + d.gate + "-" + route[i + 1].gate).style("stroke", "grey").attr("class", "non");
+                    }}
                 });
-                var highlighted = version4.selectAll(".highlighted");
+                var highlighted = version4.selectAll(".highlightedLink");
                 if (highlighted["_groups"][0].length > 0) {
                     version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 0.1).style("stroke-width", "1px");
-                    version4.selectAll(".highlighted").style("stroke", "rgb(27, 158, 119)").style("stroke-opacity", 1);
+                    version4.selectAll(".highlightedLink").style("stroke", "rgb(27, 158, 119)").style("stroke-opacity", 1);
                 }
                 else {
                     version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 1);
                 }
-                if (paths !== false) {
+                if (paths !== undefined && paths !== false) {
+                    console.log(id)
                     var path = paths[id];
                     path.forEach(function(p) {
-                        d3.select("." + p).style("stroke", "steelblue").style("stroke-width", "1px");
+                        d3.select("." + p)
+                            .attr("class", "notShown")
+                            .style("stroke", "steelblue")
+                            .style("stroke-width", "1px");
                     })
                 }
             }
@@ -261,36 +274,38 @@ function highlightRoute(svg, dt, selected, paths) {
                 version4.select(this)
                     .html('<img src="../details_close.png">');
                 svg.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 0.1);
-                selected[id] = [];
                 route.forEach(function(d, i) {
                     setTimeout(function () {
                         var node = svg.selectAll("#" + d.gate);
                         node
+                            .attr("class", "highlightedNode")
                             .style("stroke", "black")
                             .style("stroke-width", "5px");
                         if (i !== route.length - 1) {
                             var links = svg.selectAll("#" + d.gate + "-" + route[i + 1].gate);
-                            selected[id].push(links);
                             links
+                                .attr("class", "highlightedLink")
                                 .style("stroke", "rgb(27, 158, 119)")
                                 .style("stroke-width", "3px")
-                                .attr("class", "highlighted")
                                 .style("stroke-opacity", 1);
                         }
                     }, 100 * i);
                 });
-                if (paths !== false) {
+                if (paths !== undefined && paths !== false) {
                     var path = paths[id];
                     path.forEach(function(p) {
-                        d3.select("." + p).style("stroke", "rgb(27, 158, 119)").style("stroke-width", "3px");
+                        d3.select("." + p)
+                            .attr("class", "shown")
+                            .style("stroke", "rgb(27, 158, 119)")
+                            .style("stroke-width", "3px");
                     })
                 }
                 row.child(format(route)).show();
                 tr.addClass('shown');
+                window.scrollTo(0, 0);
             }
         } );
     });
-    return selected;
 }
 
 

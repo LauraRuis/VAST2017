@@ -9,7 +9,7 @@
  * Function that draws table with data.
  * @param {object} data
  * */
-function makeTable(svg, data) {
+function makeTable(data) {
 
     // bootstrap table
     var table = version4.select("#table").append("table")
@@ -22,8 +22,8 @@ function makeTable(svg, data) {
     var arrData = version4.entries(data);
 
     // append the header row
-    var columns = ["Car ID", "Period", "Car type", "Camping", "Number of check-ins", "Days of stay", "Month of stay"],
-        keys = ["entrance", "car_type", "camping", "number_stops", "number_days", "month"];
+    var columns = ["Car ID", "Period", "Car type", "Camping", "Number of check-ins", "Days of stay", "Speed (mph)", "Month of stay"],
+        keys = ["entrance", "car_type", "camping", "number_stops", "number_days", "speed" ,"month"];
 
     thead.append("tr")
         .selectAll("th")
@@ -109,17 +109,19 @@ function makeTable(svg, data) {
             { "data": "camping" },
             { "data": "check-ins" },
             { "data": "days" },
+            { "data": "speed" },
             { "data": "month" }
         ],
         "order": [[1, 'asc']]
     });
-    // d3.select("#my_table").style("width", "100%");
-    // when next page or search event is fired, table is redrawn so selected countries have to be colored again
-    dataTable
-        .on('draw.dt', function () {
-            highlightRoute(svg, dataTable)
-        });
 
+    dataTable.on("draw.dt", function() {
+
+        // unhighlight everything
+        d3.selectAll(".highlightedLink").attr("class", "non");
+        d3.selectAll(".highlightedNode").attr("class", "non");
+        d3.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 1).style("stroke-width", "1px");
+    });
     return dataTable;
 }
 
@@ -128,7 +130,6 @@ function makeTable(svg, data) {
  * @param {object} arrData
  * */
 function fillTable(arrData) {
-
     var table = $("#my_table").DataTable();
     table.clear();
     arrData.forEach(function(d) {
@@ -143,6 +144,7 @@ function fillTable(arrData) {
             "entrance": entrance,
             "id": d.key,
             "month": month,
+            "speed": parseInt(d.value.speed),
             "type": d.value.car_type
         };
         table.row.add(row)
