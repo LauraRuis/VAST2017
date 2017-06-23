@@ -136,3 +136,16 @@ Cleaned some code in fdgraph.js
 - Finished putting everything in bootstrap template
 - Finished beta version
 - Started on code cleaning
+
+# Day 14
+Presentations.
+
+Removed some of the bugs occuring when clicking on row in table. Now use callback function that sets event listeners when other visualizations are done.
+Tried to clean some code, but encountered problems with variable scopes, need help with this.
+Added functionality of clicking on path in parallel coordinates, then table gets redrawn with ID's that have this path.
+Added functionality of the more a path in parallel coordinates is traveled, the darker the color of the path.
+
+**Summary day 14**
+- code cleaning
+- fixed major bugs
+- added functionalities to parallel coordinates
