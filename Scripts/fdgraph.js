@@ -14,9 +14,9 @@ function makeGraph(graph) {
      */
 
     // append svg with g in it
-    const margins = {top: 20, right: 200, bottom: 75, left: 50},
-        width = 700,
-        height = 700;
+    const margins = {top: 200, right: 200, bottom: 75, left: 50},
+        width = (window.innerWidth / 2) - margins.right - margins.left,
+        height = (window.innerHeight - margins.top - margins.bottom) ;
 
     var svg = version4.select('#graph').append('svg')
         .attr("id", "graphSVG")
@@ -42,8 +42,8 @@ function makeGraph(graph) {
     var zoom_handler = version4.zoom()
         .on("zoom", zoom_actions);
 
-
     zoom_handler(svg);
+    zoom_handler.scaleTo(svg, 0.8);
 
     // add links
     var link = g.append("g")

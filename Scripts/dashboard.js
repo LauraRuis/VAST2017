@@ -13,12 +13,7 @@ window.onload = function() {
         .text("VAST 2017").append("h4")
         .text("MC1");
 
-    $('#toggle').bootstrapToggle({
-        on: 'Parallel Coordinates',
-        off: 'Line Chart',
-        width: 200
-    });
-
+    // add image of Lekagul Preserve
     d3.select('#linechart').append("img")
         .attr('width', 700)
         .attr('height', 700).attr("src","../lekagul.jpg");
@@ -28,8 +23,10 @@ window.onload = function() {
     // parse the date / time
     var parseTime = version4.timeParse("%d/%m/%Y");
 
+    // options for toggle buttons of line chart
     var options  = ["total", "1", "2", "3", "4", "5", "6", "2P"];
 
+    // make form with toggle buttons for options
     var form = version4.select("#formDiv").append("form").attr("id", "form");
     var labels = form.selectAll("label")
         .attr("class", "checkbox-inline")
@@ -38,18 +35,19 @@ window.onload = function() {
         .append("label")
         .text(function(d) {return d;})
         .append("input")
-        .text(function(d) {return d;})
         .attr("id", function(d) {return d;})
         .attr("type", "checkbox")
         .attr("data-toggle", "toggle")
         .attr("name", "mode");
 
+    // initialize total button as "on"
     labels.each(function(l) {
         if (l === "total") {
             version4.select(this).attr("checked", "True")
         }
     });
 
+    // use bootstrap library on each button
     options.forEach(function(d) {
         $("#" + d).bootstrapToggle();
     });
@@ -61,21 +59,30 @@ window.onload = function() {
     var selected = ["total"];
 
     var lineObject,
-        pcObject;
+        pcObject,
+        dataTable;
     d3.select("#formDiv").style("display", "none");
     d3.select('#pcPage').on("click", function() {
+        if (d3.select("#graphSVG")[0][0] === null) {
+            drawGraph();
+            drawTable();
+        }
         if (d3.select("#pcSVG")[0][0] === null) {
             d3.select('#linechart img').remove();
             d3.json("../Data/vars per week/vars_15-2016.json", function (error, data) {
                 if (error) throw error;
                 d3.select("#lineSVG").remove();
                 d3.select("#formDiv").style("display", "none");
-                pcObject = makePC(data)
+                pcObject = makePC(data);
                 highlightRoute(graphObject.svg, dataTable, selectedRows, pcObject.paths);
             });
         }
     });
     d3.select('#linePage').on("click", function() {
+        if (d3.select("#graphSVG")[0][0] === null) {
+            drawGraph();
+            drawTable();
+        }
         if (d3.select("#lineSVG")[0][0] === null) {
             d3.select('#linechart img').remove();
             d3.select("#pcSVG").remove();
@@ -122,11 +129,10 @@ window.onload = function() {
             version4.json(datastring, function (error, data) {
 
                 if (error) throw error;
-                selectedRows = {};
+                var selectedRows = {};
                 drawPC(data, pcObject.svg, pcObject.height, pcObject.width);
                 fillTable(version4.entries(data), dataTable);
                 highlightRoute(graphObject.svg, dataTable, selectedRows, pcObject.paths);
-
             });
         }
         else {
@@ -142,7 +148,7 @@ window.onload = function() {
             version4.json(datastring, function (error, data) {
 
                 if (error) throw error;
-                selectedRows = {};
+                var selectedRows = {};
                 fillTable(version4.entries(data), dataTable);
                 highlightRoute(graphObject.svg, dataTable, selectedRows, false);
 
@@ -155,13 +161,10 @@ window.onload = function() {
     var graphObject,
         currentData,
         currentID;
-
-    var selectedRows = {};
     version4.json("../Data/graph3.json", function(error, graph) {
 
         if (error) throw error;
         graphObject = makeGraph(graph);
-
         graphObject.node
             .on("click", function(d) {
                 var fileString = "../Data/data per gate/check-ins_day_" + d.id + ".json";
@@ -181,67 +184,28 @@ window.onload = function() {
                 });
             });
 
-    });
-
-    $('input:checkbox[name="mode"]').change(
-        function(){
-            if (this.checked) {
-                selected.push(version4.select(this).data()[0])
-            }
-            else {
-                var index = selected.indexOf(version4.select(this).data()[0]);
-                if (index !== -1) {
-                    selected.splice(index, 1)
+        $('input:checkbox[name="mode"]').change(
+            function(){
+                if (this.checked) {
+                    selected.push(version4.select(this).data()[0])
                 }
-            }
-            updateLines(currentData, lineObject, selected, currentID);
-        });
-
+                else {
+                    var index = selected.indexOf(version4.select(this).data()[0]);
+                    if (index !== -1) {
+                        selected.splice(index, 1)
+                    }
+                }
+                updateLines(currentData, lineObject, selected, currentID);
+            });
+    });
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // TABLE
-    var dataTable;
+    var selectedRows = {};
     version4.json("../Data/vars per week/vars_15-2016.json", function (error, data) {
 
         if (error) throw error;
         dataTable = makeTable(graphObject.svg, data);
         highlightRoute(graphObject.svg, dataTable, selectedRows, false);
-
     });
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // PARALLEL COODINATES
-    // // make slider
-    // var slider = makeSlider();
-    // $('#ex1').change( function() {
-    //     var filename;
-    //
-    //     // convert slider value to filename
-    //     if (this.value < 0) {
-    //         filename = 53 - (-this.value) + "-2015"
-    //     }
-    //     else {
-    //         filename = parseInt(this.value) + 1 + "-2016"
-    //     }
-    //
-    //     var datastring = "../Data/vars per week/vars_" + filename + ".json";
-    //     version4.json(datastring, function(error, data) {
-    //
-    //         if (error) throw error;
-    //         selectedRows = {};
-    //         drawPC(data, pcObject.svg, pcObject.height, pcObject.width);
-    //         fillTable(version4.entries(data), dataTable);
-    //         highlightRoute(graphObject.svg, dataTable, selectedRows);
-    //
-    //     });
-    //
-    //     var graphstring = "../Data/graphs per week/graph_" + filename + ".json";
-    //     version4.json(graphstring, function(error, graph) {
-    //         if (error) throw error;
-    //
-    //         // restart graph
-    //         restart(graphObject.simulation, graph, graphObject.scale)
-    //
-    //     });
-    // });
 };

@@ -11,9 +11,9 @@
 function makeLineChart(data) {
 
      // initialize attributes of svg as constants
-     const margins = {top: 20, right: 200, bottom: 75, left: 50},
-         height = 500 - margins.top - margins.bottom,
-         width = 900 - margins.left - margins.right;
+     const margins = {top: 20, right: 250, bottom: 75, left: 50},
+         height = (window.innerHeight / 2) - margins.top - margins.bottom,
+         width = (window.innerWidth / 2) - margins.left - margins.right;
 
      // append svg element for line chart
      var lineContainer = version4.select("#linechart").append("svg")

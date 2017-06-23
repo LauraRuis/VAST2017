@@ -28,6 +28,7 @@ text {
     width: 100%;
     color: #656677;
 }
+
 td {
     width: 10%;
 }
@@ -39,7 +40,3 @@ td {
 #ex1Slider .slider-selection {
     background: #BABABA;
 }
-
-/*#form {*/
-    /*display: 900px;*/
-/*}*/
