@@ -253,56 +253,6 @@ function updateFocus(lineObject, date) {
 }
 
 
-function drawToggles() {
-
-    // options for toggle buttons of line chart
-    var options  = ["total", "1", "2", "3", "4", "5", "6", "2P"];
-
-    // make form with toggle buttons for options
-    var form = version4.select("#formDiv").append("form").attr("id", "form");
-    var labels = form.selectAll("label")
-        .attr("class", "checkbox-inline")
-        .data(options)
-        .enter()
-        .append("label")
-        .text(function(d) {return d;})
-        .append("input")
-        .attr("id", function(d) {return d;})
-        .attr("type", "checkbox")
-        .attr("data-toggle", "toggle")
-        .attr("name", "mode");
-
-    // initialize total button checked
-    labels.each(function(l) {
-        if (l === "total") {
-            version4.select(this).attr("checked", "True")
-        }
-    });
-
-    // use bootstrap library on each button
-    options.forEach(function(d) {
-        $("#" + d).bootstrapToggle();
-    });
-
-    return form;
-}
-
-
-function dateParser(data) {
-
-    // time parser
-    var parseTime = version4.timeParse("%d/%m/%Y");
-
-    // parse dates
-    var arrData = version4.entries(data);
-    arrData.forEach(function (d) {
-        d.key = parseTime(d.key);
-    });
-
-    return arrData;
-}
-
-
 function nodeListener(node, lineObject, selected, currentData, currentID) {
 
     node

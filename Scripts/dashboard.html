@@ -4,36 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="dashboard.css">
-<link rel="stylesheet" type="text/css" href="linechart.css">
-<link rel="stylesheet" type="text/css" href="fdgraph.css">
-<link rel="stylesheet" type="text/css" href="pc.css">
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" rel="stylesheet">
+<script src="../Libs/jquery-3.2.1.min.js"></script>
 <link href="../Libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="../Libs/d3v4/d3.min.js" charset="utf-8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.min.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
 <script src="../Libs/noconflictd3.js"></script>
-<script src="../Libs/jquery-3.2.1.min.js"></script>
 <script src="../Libs/d3/d3.min.js" charset="utf-8"></script>
 <script src="../Libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script src="../Libs/jquery-3.2.1.min.js"></script>
+<script src="../Libs/d3-queue/d3-queue.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.13/js/dataTables.bootstrap4.min.js"></script>
-<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-<script src="slider.js" charset="utf-8"></script>
-<script src="sliderToFile.js" charset="utf-8"></script>
+<script src="helpers.js" charset="utf-8"></script>
 <script src="linechart.js" charset="utf-8"></script>
 <script src="fdgraph.js" charset="utf-8"></script>
 <script src="table2.js" charset="utf-8"></script>
-<script src="pc3.js" charset="utf-8"></script>
+<script src="pc.js" charset="utf-8"></script>
 <script src="dashboard.js" charset="utf-8"></script>
-<script src="test.js" charset="utf-8"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -67,7 +58,7 @@
         <br><br>
         <h5 class="w3-bar-item w3-padding w3-center"> Slider for changing week:</h5>
         <div id="slider" class="w3-center">
-            <input id="weekSlider" data-slider-id='ex1Slider' type="text" data-slider-min="-35" data-slider-max="21" data-slider-step="1" data-slider-value="14" data-slider-orientation="vertical"/>
+            <input id="weekSlider" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="57" data-slider-step="1" data-slider-value="14" data-slider-orientation="vertical"/>
         </div>
     </div>
 </nav>

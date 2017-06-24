@@ -7,12 +7,58 @@
 
 window.onload = function() {
 
-    // draw toggles, not displayed at first page
-    var form = drawToggles();
-    form.style("display", "none");
+    // add image
+    d3.select('#lineChart').append("img")
+        .attr('width', 700)
+        .attr('height', 700).attr("src","../lekagul.jpg");
 
     // make slider
-    makeSlider();
+    makeSlider("#weekSlider");
+
+    // generate filenames
+    var filenames = {};
+    for (var i = 0; i < 57; i++) {
+        var key = sliderToFilename(i);
+        filenames[key] = i;
+    }
+
+    // get 106 json files and draw dashboard as callback
+    var varJSONS,
+        graphJSONS;
+    var count = 0;
+    getQueue(filenames, "../Data/graphs per week/graph_");
+    function getQueue(filenames, filestring) {
+        if (count < 2) {
+            var queue = d3.queue();
+            d3.entries(filenames).forEach(function(filename) {
+                var file = filename.key;
+                queue.defer(d3.json, filestring + file + ".json");
+            });
+            queue.awaitAll(getVarData);
+
+            function getVarData(error, jsons) {
+
+                if (error) throw error;
+
+                if (count === 1) varJSONS = jsons;
+                else graphJSONS = jsons;
+                count += 1;
+                return getQueue(filenames, "../Data/vars per week2/vars_")
+            }
+        }
+        else {
+            return dashboard(filenames, varJSONS, graphJSONS);
+        }
+    }
+};
+
+function dashboard(filenames, varJSONS, graphJSONS) {
+
+    // options for toggle buttons of line chart
+    var options  = ["total", "1", "2", "3", "4", "5", "6", "2P"];
+    // draw toggles, not displayed at first page
+    var form = drawToggles(options, "total");
+    form.style("display", "none");
 
     // default selected line is total
     var selected = ["total"];
@@ -20,39 +66,43 @@ window.onload = function() {
     // some global variables
     var lineObject,
         pcObject,
-        dataTable;
-
-    var graphObject,
+        dataTable,
+        graphObject,
         currentData,
         currentID;
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // TABLE
-    version4.json("../Data/vars per week/vars_15-2016.json", function (error, data) {
+    // when user drags slider change data in graph, table and PC
+    $('#weekSlider').change( function() {
 
-        if (error) throw error;
+        var filename = sliderToFilename(this.value);
+        var dataIndex = filenames[filename];
+        var graph = graphJSONS[dataIndex];
+        var varsPerID = varJSONS[dataIndex];
+        restart(graphObject.simulation, graph, graphObject.scale);
 
-        dataTable = makeTable(data);
+        if (d3.select("#pcSVG")[0][0] !== null) {
+            drawPC(varsPerID, pcObject.svg, pcObject.height, pcObject.width, dataTable);
+            fillTable(version4.entries(varsPerID), dataTable);
+        }
+        else {
+            var date = dateFromWeekNumber(parseInt(filename.split("-")[1]), parseInt(filename.split("-")[0]));
+            fillTable(version4.entries(varsPerID), dataTable);
+            highlightRoute(graphObject.svg, dataTable, false);
+            updateFocus(lineObject, date)
+        }
 
     });
 
-    // add image
-    d3.select('#lineChart').append("img")
-        .attr('width', 700)
-        .attr('height', 700).attr("src","../lekagul.jpg");
+    var initIndex = filenames["32-2015"];
+    var initDataTable = varJSONS[initIndex];
+    var initDataGraph = graphJSONS[initIndex];
+    dataTable = makeTable(initDataTable);
 
     // actions when user clicks on parallel coordinates link
     d3.select('#pcPage').on("click", function() {
 
         if (d3.select("#graphSVG")[0][0] === null) {
-            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            // GRAPH
-
-            version4.json("../Data/graphs per week/graph_15-2016.json", function(error, graph) {
-
-                if (error) throw error;
-                graphObject = makeGraph(graph);
-            });
+            graphObject = makeGraph(initDataGraph);
         }
 
         // only initialize the first time a user clicks
@@ -63,16 +113,8 @@ window.onload = function() {
             d3.select("#lineSVG").remove();
             form.style("display", "none");
 
-            // draw PC and option to choose ID in table (highlightRoute)
-            d3.json("../Data/vars per week2/vars_15-2016.json", function (error, data) {
-
-                if (error) throw error;
-
-                // draw PC
-                pcObject = makePC(data, dataTable);
-                fillTable(version4.entries(data), dataTable);
-
-            });
+            pcObject = makePC(initDataTable, dataTable);
+            fillTable(version4.entries(initDataTable), dataTable);
         }
     });
 
@@ -97,16 +139,9 @@ window.onload = function() {
                 lineObject = makeLineChart(data);
 
                 if (d3.select("#graphSVG")[0][0] === null) {
-                    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                    // GRAPH
-
-                    version4.json("../Data/graphs per week/graph_15-2016.json", function(error, graph) {
-
-                        if (error) throw error;
-                        graphObject = makeGraph(graph);
-                        nodeListener(graphObject.node, lineObject, selected, currentData, currentID);
-                        highlightRoute(graphObject.svg, dataTable, false);
-                    });
+                    graphObject = makeGraph(initDataGraph);
+                    nodeListener(graphObject.node, lineObject, selected, currentData, currentID);
+                    highlightRoute(graphObject.svg, dataTable, false);
                 }
             });
         }
@@ -130,61 +165,4 @@ window.onload = function() {
                 .attr('height', 700).attr("src","../lekagul.jpg")
         }
     });
-
-    // when user drags slider change data in graph, table and PC
-    $('#weekSlider').change( function() {
-
-        // variables for different filenames
-        var dataString;
-        var filename = sliderToFilename(this.value);
-
-        var graphString = "../Data/graphs per week/graph_" + filename + ".json";
-        version4.json(graphString, function(error, graph) {
-
-            if (error) throw error;
-
-            // restart graph
-            restart(graphObject.simulation, graph, graphObject.scale)
-
-        });
-
-        if (d3.select("#pcSVG")[0][0] !== null) {
-            dataString = "../Data/vars per week2/vars_" + filename + ".json";
-            version4.json(dataString, function (error, data) {
-
-                if (error) throw error;
-                drawPC(data, pcObject.svg, pcObject.height, pcObject.width, dataTable);
-                fillTable(version4.entries(data), dataTable);
-            });
-        }
-        else {
-
-            dataString = "../Data/vars per week2/vars_" + filename + ".json";
-            version4.json(dataString, function (error, data) {
-
-                if (error) throw error;
-
-                var date = dateFromWeekNumber(parseInt(filename.split("-")[1]), parseInt(filename.split("-")[0]));
-                fillTable(version4.entries(data), dataTable);
-                highlightRoute(graphObject.svg, dataTable, false);
-                updateFocus(lineObject, date)
-
-            });
-        }
-    });
-
-    function dateFromWeekNumber(year, week) {
-        var d = new Date(year, 0, 1);
-        var dayNum = d.getDay();
-        var diff = --week * 7;
-
-        // If 1 Jan is Friday to Sunday, go to next week
-        if (!dayNum || dayNum > 4) {
-            diff += 7;
-        }
-
-        // Add required number of days
-        d.setDate(d.getDate() - d.getDay() + ++diff);
-        return d;
-    }
-};
+}

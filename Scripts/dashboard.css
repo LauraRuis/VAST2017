@@ -1,25 +1,12 @@
 /**
  * Name: Laura Ruis
  * Student number: 10158006
- * Assignment: Linked Views, week 6/7
+ * Assignment: VAST Challenge 2017
  */
 
 /* style all text elements on page */
 text {
     fill: #656677;
-}
-
-/* style title */
-.page-header {
-    float: top;
-    color: #656677;
-}
-
-/* style titles */
-.page-header.text-center.sub-header {
-    font: 24px sans-serif;
-    border-width: 3px;
-    border-color: #d3d3d3;
 }
 
 /* style table */
@@ -32,15 +19,13 @@ text {
 td {
     width: 10%;
 }
-#smallLabel {
-    font: 10px Arial;
-    fill: #656677;
-}
 
+/* style slider */
 #ex1Slider .slider-selection {
     background: #BABABA;
 }
 
+/* style focus area */
 .focusLine {
     fill: none;
     stroke: steelblue;
@@ -49,4 +34,63 @@ td {
 
 .area {
     fill: lightsteelblue;
+}
+
+/* style force directed graph */
+.nodes {
+    fill: #ccc;
+    stroke: #fff;
+    stroke-width: 1px;
+}
+
+.links {
+    stroke: #777;
+    stroke-width: 2px;
+}
+
+/* style line chart */
+.axis text {
+    font: 10px sans-serif;
+}
+.axis line,
+.axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.line {
+    fill: none;
+    /*stroke: steelblue;*/
+    stroke-width: 2px;
+}
+
+/* style parallel coordinates */
+.background path {
+    fill: none;
+    stroke: #ddd;
+    shape-rendering: crispEdges;
+}
+
+.foreground path {
+    fill: none;
+    stroke: steelblue;
+}
+
+.brush .extent {
+    fill-opacity: .3;
+    stroke: #fff;
+    shape-rendering: crispEdges;
+}
+
+.axis line,
+.axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+    cursor: move;
 }
