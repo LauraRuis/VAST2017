@@ -308,5 +308,15 @@ function drawPC(data, svg, height, width, dt) {
         });
     }
 
+    function radioListener() {
+        $('input[type=radio][name="optradio"]').change(
+            function(){
+                console.log(this.value)
+                console.log(this.id)
+                colorLines(this.id)
+            });
+    }
+    radioListener()
+
     return highlightRoute(d3.select("#graphSVG"), dt, pathsPerID)
 }

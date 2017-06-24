@@ -55,10 +55,12 @@ window.onload = function() {
 function dashboard(filenames, varJSONS, graphJSONS) {
 
     // options for toggle buttons of line chart
-    var options  = ["total", "1", "2", "3", "4", "5", "6", "2P"];
-    // draw toggles, not displayed at first page
-    var form = drawToggles(options, "total");
-    form.style("display", "none");
+    var optionsLine  = ["total", "1", "2", "3", "4", "5", "6", "2P"];
+    var optionsPC = ["weekend", "highseason", "nightly_movement"];
+    drawButtons("#formDiv2", optionsPC, false, false);
+    drawButtons("#formDiv", optionsLine, "total", true);
+    d3.select("#formDiv").style("display", "none");
+    d3.select("#formDiv2").style("display", "none");
 
     // default selected line is total
     var selected = ["total"];
@@ -108,10 +110,13 @@ function dashboard(filenames, varJSONS, graphJSONS) {
         // only initialize the first time a user clicks
         if (d3.select("#pcSVG")[0][0] === null) {
 
+            // draw toggles, not displayed at first page
+            d3.select("#formDiv").style("display", "none");
+            d3.select("#formDiv2").style("display", "block");
+
             // remove attributes from otherpages
             d3.select('#lineChart img').remove();
             d3.select("#lineSVG").remove();
-            form.style("display", "none");
 
             pcObject = makePC(initDataTable, dataTable);
             fillTable(version4.entries(initDataTable), dataTable);
@@ -129,8 +134,8 @@ function dashboard(filenames, varJSONS, graphJSONS) {
             d3.select("#pcSVG").remove();
 
             // show toggle buttons
-            form.style("margin-top", "100px");
-            form.style("display", "block");
+            d3.select("#formDiv2").style("display", "none");
+            d3.select("#formDiv").style("display", "block");
 
             version4.json("../Data/data per gate/check-ins_day_camping8.json", function (error, data) {
 
@@ -157,7 +162,8 @@ function dashboard(filenames, varJSONS, graphJSONS) {
             d3.select("#graphSVG").remove();
             d3.select("#pcSVG").remove();
             d3.select("#lineSVG").remove();
-            form.style("display", "none");
+            d3.select("#formDiv2").style("display", "none");
+            d3.select("#formDiv").style("display", "none");
 
             // add image
             d3.select('#lineChart').append("img")

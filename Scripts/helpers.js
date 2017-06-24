@@ -92,3 +92,49 @@ function drawToggles(options, defaultChecked) {
 
     return form;
 }
+
+function drawButtons(divID, options, defaultChecked, toggle) {
+
+    var className,
+        type,
+        name;
+    if (toggle === true) {
+        className = "checkbox-inline";
+        type = "checkbox";
+        name = "mode"
+    }
+    else {
+        className = "radio-inline";
+        type = "radio";
+        name = "optradio"
+    }
+    // make form with toggle buttons for options
+    var form = version4.select(divID).append("form").attr("id", "form");
+    var labels = form.selectAll("label")
+        .attr("class", className)
+        .data(options)
+        .enter()
+        .append("label")
+        .text(function(d) {return d;})
+        .append("input")
+        .attr("id", function(d) {return d;})
+        .attr("type", type)
+        .attr("data-toggle", "toggle")
+        .attr("name", name);
+
+    // initialize total button checked
+    labels.each(function(l) {
+        if (l === defaultChecked) {
+            version4.select(this).attr("checked", "True")
+        }
+    });
+
+    if (toggle === true) {
+        // use bootstrap library on each button
+        options.forEach(function(d) {
+            $("#" + d).bootstrapToggle();
+        });
+    }
+
+    return form;
+}

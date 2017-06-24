@@ -272,6 +272,7 @@ function nodeListener(node, lineObject, selected, currentData, currentID) {
 
     $('input:checkbox[name="mode"]').change(
         function(){
+            console.log("hoi")
             if (this.checked) {
                 selected.push(version4.select(this).data()[0])
             }
