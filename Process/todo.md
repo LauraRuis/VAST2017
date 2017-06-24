@@ -1,6 +1,7 @@
 # Overall
 - ask for way to work around variable scope issues
 - ask about problem of on first click class does not get set but on second click it does (selection of route in graph)
+- make everything fit for every computer
 
 # graph
 - legend for node size (buggy)
