@@ -149,3 +149,8 @@ Added functionality of the more a path in parallel coordinates is traveled, the 
 - code cleaning
 - fixed major bugs
 - added functionalities to parallel coordinates
+
+# Day 15
+Cleaned main dashboard.js a lot and put all datafiles in a queue (since there are more than 100).
+
+Started on clustering with scikit learn. Made python program for plotting t-SNE plots of the data.
