@@ -4,9 +4,36 @@
  * Assignment: VAST Challenge 2017
  */
 
+* {
+    font-size: 12px;
+}
 /* style all text elements on page */
 text {
     fill: #656677;
+}
+
+/* override font sizes w3 template */
+h1 {
+    font-size:64px;
+}
+h2 {
+    font-size:48px;
+}
+h3 {
+    font-size:30px;
+}
+h4 {
+    font-size:20px;
+}
+a {
+    font-size: 12px;
+}
+h5 {
+    font-size: 15px;
+}
+
+h6 {
+    font-size: 15px;
 }
 
 /* style table */
@@ -14,6 +41,7 @@ text {
     float: left;
     width: 100%;
     color: #656677;
+    font-size: 12px;
 }
 
 td {
@@ -61,8 +89,7 @@ td {
 
 .line {
     fill: none;
-    /*stroke: steelblue;*/
-    stroke-width: 2px;
+    stroke-width: 1px;
 }
 
 /* style parallel coordinates */

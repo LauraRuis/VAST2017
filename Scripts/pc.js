@@ -9,8 +9,8 @@ function makePC(data, dt) {
 
     // initialize attributes of svg as constants
     const margins = {top: 40, right: 10, bottom: 75, left: 20},
-        height = 800 - margins.top - margins.bottom,
-        width = 800 - margins.left - margins.right;
+        height = (window.innerHeight - 150) - margins.top - margins.bottom,
+        width = (window.innerWidth / 2 - 150) - margins.left - margins.right;
 
     var svg = d3.select('#lineChart').append('svg')
         .attr("id", "pcSVG")
@@ -217,7 +217,9 @@ function drawPC(data, svg, height, width, dt) {
     });
 
     function colorLines(dim) {
-        d3.selectAll("path").style("stroke", "#772718");
+        d3.selectAll("path")
+            .style("stroke", "#772718");
+
         var actives = [];
         var non = [];
         d3.entries(data).forEach(function(d) {
@@ -225,7 +227,8 @@ function drawPC(data, svg, height, width, dt) {
                 actives.push(d.key);
                 var path = pathsPerID[d.key];
                 path.forEach(function(p) {
-                    svg.select("path." + p).style("stroke", "steelblue");
+                    svg.select("path." + p)
+                        .style("stroke", function(d) { return colorScale(testScale(d.value.amount)); });
                 })
             }
             else {

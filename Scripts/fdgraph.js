@@ -5,7 +5,6 @@
  * VAST Challenge 2017
  */
 
-
 function makeGraph(graph) {
     /**
      *  Takes an object of data (with nodes and links) and draws a force directed graph with d3-force.
@@ -43,7 +42,7 @@ function makeGraph(graph) {
         .on("zoom", zoom_actions);
 
     zoom_handler(svg);
-    zoom_handler.scaleTo(svg, 0.8);
+    zoom_handler.scaleTo(svg, 0.6);
 
     // add links
     var link = g.append("g")
@@ -124,18 +123,18 @@ function makeGraph(graph) {
         link
             .attr("id", function(d) { return d.source.id + "-" + d.target.id; })
             .attr("class", "non")
-            .attr("x1", function (d) { return d.source.xpos * 4 - 100; })
-            .attr("y1", function (d) { return d.source.ypos * 4 - 100; })
-            .attr("x2", function (d) { return d.target.xpos * 4 - 100; })
-            .attr("y2", function (d) { return d.target.ypos * 4 - 100; });
+            .attr("x1", function (d) { return d.source.xpos * 4 - 200; })
+            .attr("y1", function (d) { return d.source.ypos * 4 - 200; })
+            .attr("x2", function (d) { return d.target.xpos * 4 - 200; })
+            .attr("y2", function (d) { return d.target.ypos * 4 - 200; });
 
         var highlighted;
         // draw node on position specified in data and highlight connections on mouseover
         node
             .attr("id", function(d) { return d.id; })
             .attr("r", function(d) { return d.check_ins !== 0 ? nodeScale(d.check_ins) * 20 : nodeScale(1); })
-            .attr("cx", function (d) { return d.xpos * 4 - 100; })
-            .attr("cy", function (d) { return d.ypos * 4 - 100; })
+            .attr("cx", function (d) { return d.xpos * 4 - 200; })
+            .attr("cy", function (d) { return d.ypos * 4 - 200; })
             .on("mouseover", function(d) {
                 highlighted = svg.selectAll(".highlightedLink");
                 link.style("stroke", function(l) {
@@ -228,6 +227,7 @@ function highlightRoute(svg, dt, paths) {
     version4.json("../Data/route_per_ID.json", function (error, data) {
 
         if (error) throw error;
+
         dt.find('tbody').unbind( "click" );
 
         // Add event listener for opening and closing details
@@ -238,7 +238,7 @@ function highlightRoute(svg, dt, paths) {
             var row = dt.api().row( tr );
             if ( row.child.isShown() ) {
                 version4.select(this)
-                    .html('<img src="../details_open.png">');
+                    .html('<img height="15" width="15" src="../details_open.png">');
                 row.child.hide();
                 tr.removeClass('shown');
                 var circles = version4.selectAll(".nodes circle");
@@ -260,7 +260,6 @@ function highlightRoute(svg, dt, paths) {
                     version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 1);
                 }
                 if (paths !== undefined && paths !== false) {
-                    console.log(id)
                     var path = paths[id];
                     path.forEach(function(p) {
                         d3.select("." + p)
@@ -272,7 +271,7 @@ function highlightRoute(svg, dt, paths) {
             }
             else {
                 version4.select(this)
-                    .html('<img src="../details_close.png">');
+                    .html('<img height="15" width="15" src="../details_close.png">');
                 svg.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 0.1);
                 route.forEach(function(d, i) {
                     setTimeout(function () {
@@ -294,11 +293,16 @@ function highlightRoute(svg, dt, paths) {
                 if (paths !== undefined && paths !== false) {
                     var path = paths[id];
                     path.forEach(function(p) {
-                        d3.select("." + p)
-                            .attr("class", "shown")
+                        var pathSelection = d3.select("." + p);
+                        pathSelection
+                            .attr("class", p + " shown")
                             .style("stroke", "rgb(27, 158, 119)")
                             .style("stroke-width", "3px");
-                    })
+
+                        pathSelection.each(function () {
+                            this.parentNode.appendChild(this);
+                        });
+                    });
                 }
                 row.child(format(route)).show();
                 tr.addClass('shown');

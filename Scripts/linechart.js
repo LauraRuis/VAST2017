@@ -50,7 +50,7 @@ function makeLineChart(data) {
         .attr("y", top)
         .attr("class", "title")
         .attr("text-anchor", "middle")
-        .style("font-size", "16px")
+        .style("font-size", "12px")
         .text("For check-ins per gate, click node on graph.");
 
     // set scales for lines
@@ -212,11 +212,11 @@ function updateLines(data, lineObject, selected, gate) {
     lineContainer.selectAll(".line")
         .on("mouseover", function() {
             version4.select(this)
-                .style("stroke-width", '4px');
+                .style("stroke-width", '3px');
         })
         .on("mouseout", function() {
             version4.select(this)
-                .style("stroke-width", '2px');
+                .style("stroke-width", '1px');
         });
 }
 
@@ -272,8 +272,9 @@ function nodeListener(node, lineObject, selected, currentData, currentID) {
 
     $('input:checkbox[name="mode"]').change(
         function(){
-            console.log("hoi")
-            if (this.checked) {
+            console.log(this.parentNode.className)
+            if (selected.indexOf(version4.select(this).data()[0]) === -1 && this.checked) {
+                console.log(selected.indexOf(version4.select(this).data()[0]));
                 selected.push(version4.select(this).data()[0])
             }
             else {
