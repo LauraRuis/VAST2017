@@ -5,6 +5,7 @@
 
 # graph
 - legend for node size (buggy)
+- linear scale node size instead of logarithmic
 
 # brush slider
 - doesnt work when scrolled down
