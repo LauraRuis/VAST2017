@@ -154,3 +154,16 @@ Added functionality of the more a path in parallel coordinates is traveled, the 
 Cleaned main dashboard.js a lot and put all datafiles in a queue (since there are more than 100).
 
 Started on clustering with scikit learn. Made python program for plotting t-SNE plots of the data.
+
+**Summary day 15**
+- tsne visualization
+- code cleaning
+
+# Day 16
+Standup meeting discussed schedule for this week; today finish tsne visualizations, wednesday be ready for answering questions and scripting film. Tuesday final code cleaning. Friday filming.
+
+Worked on tsne visualizations per month in python with scikit-learn. Put these in scatter plot in d3 with lasso option for selecting dots. Data of selected dots appears in table. This funtionality is intended for exploring some possible clusters.
+
+**Summary day 16**
+- tsne visualization in d3
+- instead of on click links on dashboard, now use hash anchors in URL
