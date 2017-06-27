@@ -167,3 +167,15 @@ Worked on tsne visualizations per month in python with scikit-learn. Put these i
 **Summary day 16**
 - tsne visualization in d3
 - instead of on click links on dashboard, now use hash anchors in URL
+
+# Day 17
+Standup meeting discussed some bugs and problems with data. New problem with data is that speed was not calculated correctly, need to generate all data files again with new speed.
+
+Fixed most of bugs, finished tsne visualization, made update function for PC instead of redrawing on slide.
+
+**Sumary day 17**
+- Speed variable problem
+- Fixed most bugs
+- Finished tsne
+- Update function for PC
+
