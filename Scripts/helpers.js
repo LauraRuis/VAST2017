@@ -62,37 +62,6 @@ function dateParser(data) {
     return arrData;
 }
 
-function drawToggles(options, defaultChecked) {
-
-    // make form with toggle buttons for options
-    var form = version4.select("#formDiv").append("form").attr("id", "form");
-    var labels = form.selectAll("label")
-        .attr("class", "checkbox-inline")
-        .data(options)
-        .enter()
-        .append("label")
-        .text(function(d) {return d;})
-        .append("input")
-        .attr("id", function(d) {return d;})
-        .attr("type", "checkbox")
-        .attr("data-toggle", "toggle")
-        .attr("name", "mode");
-
-    // initialize total button checked
-    labels.each(function(l) {
-        if (l === defaultChecked) {
-            version4.select(this).attr("checked", "True")
-        }
-    });
-
-    // use bootstrap library on each button
-    options.forEach(function(d) {
-        $("#" + d).bootstrapToggle();
-    });
-
-    return form;
-}
-
 function drawButtons(divID, options, defaultChecked, toggle) {
 
     var className,
@@ -137,4 +106,156 @@ function drawButtons(divID, options, defaultChecked, toggle) {
     }
 
     return form;
+}
+
+
+function highlightRoute(svg, dt, paths) {
+    /**
+     * On row click in datatable, highlight corresponding route of car-id. Also open detailed info about route in table.
+     * @param {object} svg
+     * @param {object} dt
+     */
+
+    var color = version4.scaleOrdinal(version4.schemeCategory20);
+    version4.json("../Data/route_per_ID.json", function (error, data) {
+
+        if (error) throw error;
+
+        dt.find('tbody').unbind( "click" );
+
+        // add event listener for opening and closing details
+        dt.find('tbody').on('click', 'tr td.details-control', function () {
+
+            var id = this.parentNode.id;
+            var route = data[id];
+            var tr = $(this).closest('tr');
+            var row = dt.api().row(tr);
+
+            // if details row is opened and user clicks on it
+            if (row.child.isShown()) {
+
+                // change button image and update class
+                version4.select(this)
+                    .html('<img height="15" width="15" src="../details_open.png">');
+                row.child.hide();
+                tr.removeClass('shown');
+
+                // change color of circles back
+                var circles = version4.selectAll(".nodes circle");
+                circles
+                    .style("stroke", function (d) {
+                        return color(d.group);
+                    });
+
+                // change color of links back
+                route.forEach(function(d, i) {
+                    if (i !== route.length - 1) { {
+                        svg.selectAll("#" + d.gate + "-" + route[i + 1].gate)
+                            .style("stroke", "grey")
+                            .attr("class", "non");
+                    }}
+                });
+
+                // except for the still highlighted ones (if user clicked more rows)
+                var highlighted = version4.selectAll(".highlightedLink");
+                if (highlighted["_groups"][0].length > 0) {
+                    version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 0.1).style("stroke-width", "1px");
+                    version4.selectAll(".highlightedLink").style("stroke", "rgb(27, 158, 119)").style("stroke-opacity", 1);
+                }
+                else {
+                    version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 1);
+                }
+
+                // if parallel coordinates available, also unhighlight ID in PC
+                if (paths !== undefined && paths !== false) {
+                    var path = paths[id];
+                    path.forEach(function(p) {
+                        d3.select("." + p)
+                            .attr("class", "notShown")
+                            .style("stroke", "steelblue")
+                            .style("stroke-width", "1px");
+                    })
+                }
+            }
+            else {
+                $.blockUI({
+                    message: null,
+                    overlayCSS: {opacity: 0}
+                });
+                version4.select(this)
+                    .html('<img height="15" width="15" src="../details_close.png">');
+                svg.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 0.1);
+                route.forEach(function(d, i) {
+                    setTimeout(function () {
+                        var node = svg.selectAll("#" + d.gate);
+                        node
+                            .attr("class", "highlightedNode")
+                            .style("stroke", "black")
+                            .style("stroke-width", "5px");
+                        if (i !== route.length - 1) {
+                            var links = svg.selectAll("#" + d.gate + "-" + route[i + 1].gate);
+                            links
+                                .attr("class", "highlightedLink")
+                                .style("stroke", "rgb(27, 158, 119)")
+                                .style("stroke-width", "3px")
+                                .style("stroke-opacity", 1);
+                            console.log(links.attr("class"))
+                        }
+                        else {
+                            $.unblockUI();
+                        }
+                    }, 100 * i);
+                });
+                if (paths !== undefined && paths !== false) {
+                    var path = paths[id];
+                    path.forEach(function(p) {
+                        var pathSelection = d3.select("." + p);
+                        pathSelection
+                            .attr("class", p + " shown")
+                            .style("stroke", "rgb(27, 158, 119)")
+                            .style("stroke-width", "3px");
+
+                        pathSelection.each(function () {
+                            this.parentNode.appendChild(this);
+                        });
+                    });
+                }
+                row.child(format(route)).show();
+                tr.addClass('shown');
+                window.scrollTo(0, 0);
+            }
+        });
+    });
+}
+
+
+function format(route) {
+    /**
+     * Takes array of gates and formats it into a string for showing detailed info in table.
+     * @param {object} route
+     */
+    var routestring = "";
+    route.forEach(function(d) {
+        routestring += d.gate + " at " + d.timestamp + " <br> "
+    });
+    return "<strong>Route</strong>" + "<br>" + routestring;
+}
+
+
+function carTypeColors(d3version) {
+
+    var color = d3version.scaleOrdinal(d3version.schemeCategory20);
+
+    var legendDict = {
+        "total": color(0),
+        "1": color(1),
+        "2": color(2),
+        "3": color(3),
+        "4": color(4),
+        "5": color(5),
+        "6": color(6),
+        "2P": color("2P")
+    };
+
+    return [color, legendDict]
 }

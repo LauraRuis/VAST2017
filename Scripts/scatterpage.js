@@ -14,6 +14,7 @@ window.onload = function() {
         "vars_42-2015_vars_45-2015.json", "vars_46-2015_vars_49-2015.json", "vars_50-2015_vars_52-2015.json",
         "vars_1-2016_vars_4-2016.json", "vars_5-2016_vars_8-2016.json", "vars_9-2016_vars_12-2016.json",
         "vars_13-2016_vars_16-2016.json", "vars_17-2016_vars_20-2016.json", "vars_21-2016_vars_22-2016.json"];
+
     for (var i = 0; i < files.length; i++) {
         var key = files[i];
         filenames[key] = i;
@@ -49,6 +50,23 @@ window.onload = function() {
 
 function dashboard(filenames, varJSONS) {
 
+    var monthDict = {
+        0: "May 2015",
+        1: "June 2015",
+        2: "July 2015",
+        3: "August 2015",
+        4: "September 2015",
+        5: "October 2015",
+        6: "November 2015",
+        7: "December 2015 - week 1/2",
+        8: "December 2015 - week 3/4",
+        9: "January 2016",
+        10: "February 2016",
+        11: "March 2016",
+        12: "April 2016",
+        13: "May 2016 - week 1/2",
+        14: "May 2016 - week 3/4"
+    };
 
     var initIndex = filenames["vars_18-2015_vars_21-2015.json"];
     var initDataTable = varJSONS[initIndex];
@@ -69,7 +87,7 @@ function dashboard(filenames, varJSONS) {
         .data(d3.entries(filenames))
         .enter().append("li")
         .attr("class", function(d) {return d.key;})
-        .text(function(d) {return d.key;});
+        .text(function(d) {return monthDict[d.value];});
 
     $('#dropdownScatter').find('li').on('click', function(){
 

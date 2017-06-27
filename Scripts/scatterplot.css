@@ -1,3 +1,7 @@
+svg {
+    cursor: pointer;
+}
+
 .line {
     fill: none;
     stroke: steelblue;
@@ -33,4 +37,8 @@
 
 .selected {
     fill: steelblue;
+}
+
+.axis {
+    display: none;
 }

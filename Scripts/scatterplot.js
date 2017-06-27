@@ -1,19 +1,21 @@
-var start,
-    draw,
-    end;
-
+var tableDataGlobal;
 
 drawScatter = function(tableData) {
 
+    tableDataGlobal = tableData;
+
     // set the dimensions and margins of the graph
-    var margin = {top: 20, right: 60, bottom: 30, left: 50},
+    var margin = {top: 20, right: 100, bottom: 30, left: 50},
         width = 960 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
 
     // set the ranges
     var x = d3.scaleLinear().range([0, width]);
     var y = d3.scaleLinear().range([height, 0]);
-    var color = d3.scaleOrdinal(d3.schemeCategory10);
+
+    var legendArray = carTypeColors(d3);
+    var color = legendArray[0];
+    var legendDict = legendArray[1];
 
     var legendOrdinal = d3.legendColor()
         .shape("path", d3.symbol().type(d3.symbolCircle).size(150)())
@@ -49,7 +51,7 @@ drawScatter = function(tableData) {
             .attr("r", 5)
             .attr("cx", function(d) { return x(d.value.x); })
             .attr("cy", function(d) { return y(d.value.y); })
-            .style("fill", function(d) { return color(d.value.car_type); });
+            .style("fill", function(d) { return legendDict[d.value.car_type]; });
 
         // Add the X Axis
         svg.append("g")
@@ -64,70 +66,29 @@ drawScatter = function(tableData) {
 
         var legendOrdinal = d3.legendColor()
             .shape("path", d3.symbol().type(d3.symbolCircle).size(150)())
+            .title("Car-type")
             .shapePadding(10)
             .scale(color);
 
         svg.select(".legendOrdinal")
             .call(legendOrdinal);
 
-        // Lasso functions
-        var lasso_start = function() {
-            lasso.items()
-                .attr("r",3.5) // reset size
-                .classed("not_possible",true)
-                .classed("selected",false);
-        };
-
-        start = lasso_start;
-
-        var lasso_draw = function() {
-
-            // Style the possible dots
-            lasso.possibleItems()
-                .classed("not_possible",false)
-                .classed("possible",true);
-
-            // Style the not possible dot
-            lasso.notPossibleItems()
-                .classed("not_possible",true)
-                .classed("possible",false);
-        };
-
-        draw = lasso_draw;
-
-        var lasso_end = function() {
-            // Reset the color of all dots
-            lasso.items()
-                .classed("not_possible",false)
-                .classed("possible",false);
-
-            // Style the selected dots
-            lasso.selectedItems()
-                .classed("selected",true)
-                .attr("r",7);
-
-            // fill table with selected dots data
-            var selected = lasso.items().filter(function(d){
-                return d3.select(this).attr("class") === "selected"
-            });
-            var newTableData = [];
-            selected.each(function(s) {
-                newTableData.push({key: s.key, value: tableData[s.key]})
-            });
-            fillTable(newTableData);
-
-            // Reset the style of the not selected dots
-            lasso.notSelectedItems()
-                .attr("r",3.5);
-        };
-
-        end = lasso_end;
+        svg.selectAll(".cell")
+            .filter(function(d) { console.log(d); return d === 0 })
+                .style("display", "none");
 
         var lasso = d3.lasso()
             .closePathSelect(true)
             .closePathDistance(100)
             .items(circles)
-            .targetArea(svg)
+            .targetArea(svg);
+
+        var lassos = lassoFunctions(tableData, lasso);
+        var lasso_start = lassos[0];
+        var lasso_draw = lassos[1];
+        var lasso_end = lassos[2];
+
+        lasso
             .on("start",lasso_start)
             .on("draw",lasso_draw)
             .on("end",lasso_end);
@@ -136,6 +97,58 @@ drawScatter = function(tableData) {
     });
 
 };
+
+function lassoFunctions(tableData, lasso) {
+
+    // Lasso functions
+    var lasso_start = function() {
+        lasso.items()
+            .attr("r", 5) // reset size
+            .classed("not_possible",true)
+            .classed("selected",false);
+    };
+
+    var lasso_draw = function() {
+
+        // Style the possible dots
+        lasso.possibleItems()
+            .classed("not_possible",false)
+            .classed("possible",true);
+
+        // Style the not possible dot
+        lasso.notPossibleItems()
+            .classed("not_possible",true)
+            .classed("possible",false);
+    };
+
+    var lasso_end = function() {
+        // Reset the color of all dots
+        lasso.items()
+            .classed("not_possible",false)
+            .classed("possible",false);
+
+        // Style the selected dots
+        lasso.selectedItems()
+            .classed("selected",true)
+            .attr("r", 10);
+
+        // fill table with selected dots data
+        var selected = lasso.items().filter(function(){
+            return d3.select(this).attr("class") === "selected"
+        });
+        var newTableData = [];
+        selected.each(function(s) {
+            newTableData.push({key: s.key, value: tableData[s.key]})
+        });
+        fillTable(newTableData);
+
+        // Reset the style of the not selected dots
+        lasso.notSelectedItems()
+            .attr("r", 5);
+    };
+
+    return [lasso_start, lasso_draw, lasso_end]
+}
 
 function updateScatter(data) {
 
@@ -147,7 +160,8 @@ function updateScatter(data) {
     // set the ranges
     var x = d3.scaleLinear().range([0, width]);
     var y = d3.scaleLinear().range([height, 0]);
-    var color = d3.scaleOrdinal(d3.schemeCategory10);
+    var legendArray = carTypeColors(d3);
+    var legendDict = legendArray[1];
 
     // Scale the range of the data
     x.domain(d3.extent((data), function(d) { return d.value.x; }));
@@ -175,7 +189,7 @@ function updateScatter(data) {
         .attr("r", 5)
         .attr("cx", function(d) { return x(d.value.x); })
         .attr("cy", function(d) { return y(d.value.y); })
-        .style("fill", function(d) { return color(d.value.car_type); });
+        .style("fill", function(d) { return legendDict[d.value.car_type]; });
 
     // draw new circles
     circles
@@ -186,20 +200,26 @@ function updateScatter(data) {
         .attr("r", 5)
         .attr("cx", function(d) { return x(d.value.x); })
         .attr("cy", function(d) { return y(d.value.y); })
-        .style("fill", function(d) { return color(d.value.car_type); });
+        .style("fill", function(d) { return legendDict[d.value.car_type]; });
 
     circles.exit().remove();
-
+    console.log(d3.selectAll("circle"))
     // update lasso function
     var lasso = d3.lasso()
         .closePathSelect(true)
         .closePathDistance(100)
-        .items(circles)
-        .targetArea(svg)
-        .on("start", start)
-        .on("draw", draw)
-        .on("end", end);
+        .items(d3.selectAll("circle"))
+        .targetArea(svg);
+
+    var lassos = lassoFunctions(tableDataGlobal, lasso);
+    var lasso_start = lassos[0];
+    var lasso_draw = lassos[1];
+    var lasso_end = lassos[2];
+
+    lasso
+        .on("start", lasso_start)
+        .on("draw", lasso_draw)
+        .on("end", lasso_end);
 
     svg.call(lasso);
-
 }

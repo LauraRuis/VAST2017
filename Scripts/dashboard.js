@@ -5,6 +5,8 @@
  * VAST Challenge 2017
  */
 
+var graphObject;
+
 window.onload = function() {
 
     // make slider
@@ -50,6 +52,13 @@ window.onload = function() {
 
 function dashboard(filenames, varJSONS, graphJSONS, currentHash) {
 
+    // some global variables
+    var lineObject,
+        pcObject,
+        dataTable,
+        currentData,
+        currentID;
+
     // options for toggle buttons of line chart
     var optionsLine  = ["total", "1", "2", "3", "4", "5", "6", "2P"];
     var optionsPC = ["weekend", "highseason", "nightly_movement"];
@@ -70,15 +79,7 @@ function dashboard(filenames, varJSONS, graphJSONS, currentHash) {
         dashboard(filenames, varJSONS, graphJSONS, currentHash)
     };
 
-    // some global variables
-    var lineObject,
-        pcObject,
-        dataTable,
-        graphObject,
-        currentData,
-        currentID;
-
-    var initIndex = filenames["32-2015"];
+    var initIndex = filenames["30-2015"];
     var initDataTable = varJSONS[initIndex];
     var initDataGraph = graphJSONS[initIndex];
     if (d3.select("#my_table")[0][0] === null) {
@@ -91,7 +92,6 @@ function dashboard(filenames, varJSONS, graphJSONS, currentHash) {
     // actions when user clicks on parallel coordinates link
     if (currentHash === "#pc") {
 
-        var graphObject;
         if (d3.select("#graphSVG")[0][0] === null) {
             graphObject = makeGraph(initDataGraph);
         }
@@ -107,27 +107,24 @@ function dashboard(filenames, varJSONS, graphJSONS, currentHash) {
             // remove attributes from otherpages
             d3.select('#lineChart img').remove();
             d3.select("#lineSVG").remove();
-
             pcObject = makePC(initDataTable, dataTable);
             fillTable(version4.entries(initDataTable), dataTable);
         }
 
         // when user drags slider change data in graph, table and PC
         $('#weekSlider').change( function() {
-
             var filename = sliderToFilename(this.value);
             var dataIndex = filenames[filename];
             var graph = graphJSONS[dataIndex];
             var varsPerID = varJSONS[dataIndex];
             restart(graphObject.simulation, graph, graphObject.scale);
-            drawPC(varsPerID, pcObject.svg, pcObject.height, pcObject.width, dataTable);
+            updatePC(varsPerID, dataTable);
             fillTable(version4.entries(varsPerID), dataTable);
-
         });
     }
 
     else if (currentHash === "#line") {
-        console.log(currentHash);
+
         // only initialize the first time a user clicks
         if (d3.select("#lineSVG")[0][0] === null) {
             // remove image of park and PC

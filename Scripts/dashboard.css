@@ -48,6 +48,10 @@ td {
     width: 10%;
 }
 
+.details-control {
+    cursor: pointer;
+}
+
 /* style slider */
 #ex1Slider .slider-selection {
     background: #BABABA;
@@ -60,15 +64,16 @@ td {
     stroke-width: 0.5px;
 }
 
-.area {
-    fill: lightsteelblue;
-}
+/*.area {*/
+    /*fill: lightsteelblue;*/
+/*}*/
 
 /* style force directed graph */
 .nodes {
     fill: #ccc;
     stroke: #fff;
     stroke-width: 1px;
+    cursor: pointer;
 }
 
 .links {
@@ -102,18 +107,12 @@ td {
 .foreground path {
     fill: none;
     stroke: steelblue;
+    cursor: pointer;
 }
 
 .brush .extent {
     fill-opacity: .3;
     stroke: #fff;
-    shape-rendering: crispEdges;
-}
-
-.axis line,
-.axis path {
-    fill: none;
-    stroke: #000;
     shape-rendering: crispEdges;
 }
 

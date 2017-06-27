@@ -15,8 +15,8 @@ function makeLineChart(data) {
 
     // initialize attributes of svg as constants
     const margins = {top: 20, right: 300, bottom: 75, left: 50},
-        height = (window.innerHeight / 2) - margins.top - margins.bottom,
-        width = (window.innerWidth / 2) - margins.left - margins.right;
+        height = (window.innerHeight / 2 + 80) - margins.top - margins.bottom,
+        width = (window.innerWidth / 2 + 100) - margins.left - margins.right;
 
     // append svg element for line chart
     var lineContainer = version4.select("#lineChart    ").append("svg")
@@ -51,7 +51,7 @@ function makeLineChart(data) {
         .attr("class", "title")
         .attr("text-anchor", "middle")
         .style("font-size", "12px")
-        .text("For check-ins per gate, click node on graph.");
+        .text("For number of cars per gate per day, click node on graph.");
 
     // set scales for lines
     var xLine = version4.scaleTime()
@@ -110,7 +110,7 @@ function updateLines(data, lineObject, selected, gate) {
         titleContainer = version4.select("#titleContainer");
 
     var title = titleContainer.selectAll("text")
-        .data(["Check-ins of " + gate]);
+        .data(["Number of cars per day of " + gate]);
 
     title.attr("class", "update");
     title.enter().append("text")
@@ -144,7 +144,8 @@ function updateLines(data, lineObject, selected, gate) {
     yLine.domain([0, max]);
 
     // scale for color of lines
-    var lineColor = version4.scaleOrdinal(version4["schemeDark2"]);
+    var legendArray = carTypeColors(version4);
+    var legendDict = legendArray[1];
 
     // make new line
     var line = version4.line()
@@ -165,7 +166,7 @@ function updateLines(data, lineObject, selected, gate) {
         .transition()
         .duration(650)
         .attr("id", function(d) { return "line" + d; })
-        .style("stroke", function(d) { return lineColor(d); })
+        .style("stroke", function(d) { return legendDict[d]; })
         .attr("d", function(d) { return line(lineData[d]); });
 
     lineContainer.selectAll(".line")
@@ -175,7 +176,7 @@ function updateLines(data, lineObject, selected, gate) {
         .attr("id", function(d) { return "line" + d; })
         .transition()
         .duration(650)
-        .style("stroke", function(d, i) {  return lineColor(d); })
+        .style("stroke", function(d, i) {  return legendDict[d]; })
         .attr("d", function(d) { return line(lineData[d]); });
 
     // draw (and update) legend
@@ -198,7 +199,7 @@ function updateLines(data, lineObject, selected, gate) {
         .attr("y", 15)
         .attr("width", 20)
         .attr("height", 5)
-        .attr("fill", function(d) { return lineColor(d); });
+        .attr("fill", function(d) { return legendDict[d]; });
 
     // add text to legend
     legendContainer.selectAll("g").append("text")
@@ -216,7 +217,7 @@ function updateLines(data, lineObject, selected, gate) {
         })
         .on("mouseout", function() {
             version4.select(this)
-                .style("stroke-width", '1px');
+                .style("stroke-width", "1px");
         });
 }
 
@@ -240,16 +241,15 @@ function updateFocus(lineObject, date) {
         .y0( function(d) { return d.y0 } )
         .y1(  function(d) { return d.y1 } );
 
-    var test = version4.select("#lineContainer");
+    var lineContainer = version4.select("#lineContainer");
 
-    test.selectAll(".area").remove();
+    lineContainer.selectAll(".area").remove();
 
-    test.append('path')
+    lineContainer.append("path")
         .datum([areas])
-        .attr('class', 'area')
-        .style('fill', 'red')
-        .style("stroke", "red")
-        .attr('d', area);
+        .attr("class", "area")
+        .attr("stroke", "red")
+        .attr("d", area);
 }
 
 
@@ -272,9 +272,7 @@ function nodeListener(node, lineObject, selected, currentData, currentID) {
 
     $('input:checkbox[name="mode"]').change(
         function(){
-            console.log(this.parentNode.className)
             if (selected.indexOf(version4.select(this).data()[0]) === -1 && this.checked) {
-                console.log(selected.indexOf(version4.select(this).data()[0]));
                 selected.push(version4.select(this).data()[0])
             }
             else {
