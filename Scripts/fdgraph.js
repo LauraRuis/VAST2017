@@ -34,10 +34,6 @@ function makeGraph(graph) {
         .force("link", version4.forceLink().id(function(d) { return d.id; }))
         .force("center", version4.forceCenter());
 
-    // set scale for nodes
-    var nodeScale = version4.scaleLinear()
-        .range([1, 30]);
-
     // add zoom capabilities
     var zoom_handler = version4.zoom()
         .on("zoom", zoom_actions);
@@ -59,15 +55,9 @@ function makeGraph(graph) {
         .selectAll("circle")
         .data(graph.nodes)
         .enter().append("circle")
-        .attr("r", 5)
+        .attr("r", 15)
         .attr("fill", function(d) { return color(d.group); })
         .attr("data-legend", function(d) { return d.group; });
-
-    // scale nodes
-    var minmax = version4.extent(graph.nodes, function(d) { return d.check_ins });
-
-    nodeScale
-        .domain(minmax);
 
     // add title for hovering
     node.append("title")
@@ -85,27 +75,6 @@ function makeGraph(graph) {
     svg.append("g")
         .attr("class", "legendOrdinal")
         .attr("transform", "translate(" + (width - 80) + ",20)");
-
-    svg.append("g")
-        .attr("class", "legendSize")
-        .attr("transform", "translate(20, " + (height - 100) + ")");
-
-    var legendSize = version4.legendSize()
-        .scale(nodeScale)
-        .labelFormat(version4.format(".0f"))
-        .cells(5)
-        .shape('circle')
-        .shapePadding(15)
-        .labelOffset(5)
-        .orient('horizontal')
-        .title("Number of check-ins");
-
-    svg.select(".legendSize")
-        .call(legendSize);
-
-    svg.select(".legendSize").selectAll("circle")
-        .attr("fill", "rgb(27, 158, 119)")
-        .attr("r", function() { return version4.select(this).attr("r") * graphScale; });
 
     var legendOrdinal = version4.legendColor()
         .shape("path", version4.symbol().type(version4.symbolCircle).size(150)())
@@ -138,7 +107,7 @@ function makeGraph(graph) {
         // draw node on position specified in data and highlight connections on mouseover
         node
             .attr("id", function(d) { return d.id; })
-            .attr("r", function(d) { return nodeScale(d.check_ins); })
+            .attr("r", 15)
             .attr("cx", function (d) { return d.xpos * 4 - 150; })
             .attr("cy", function (d) { return d.ypos * 4 - 150; })
             .on("mouseover", function(d) {
@@ -178,7 +147,7 @@ function makeGraph(graph) {
                         .style("stroke-opacity", 1)
                         .style("stroke-width", "1px");
                 }
-            })
+            });
 
         return $("#table").unblock();
     }
@@ -191,12 +160,17 @@ function makeGraph(graph) {
     return {
         node: node,
         svg: svg,
-        simulation: simulation,
-        scale: nodeScale
+        simulation: simulation
     };
 }
 
-function restart(simulation, graph, nodeScale) {
+function restart(simulation, graph) {
+
+    // append svg with g in it
+    const margins = {top: 200, right: 200, bottom: 75, left: 50},
+        width = (window.innerWidth / 2 + 100) - margins.right - margins.left,
+        height = (window.innerHeight - margins.top) ;
+
 
     // scale for coloring nodes
     var color = version4.scaleOrdinal(version4.schemeCategory20);
@@ -205,17 +179,12 @@ function restart(simulation, graph, nodeScale) {
     var node = version4.selectAll(".nodes circle");
     var link = version4.selectAll(".links line");
 
-    // re-scale nodes
-    var minmax = version4.extent(graph.nodes, function(d) { return d.check_ins });
-    nodeScale
-        .domain(minmax);
-
     // update nodes
     node = node.data(graph.nodes);
     node.exit().remove();
     node.enter().append("circle")
         .attr("fill", function(d) { return color(d.group); })
-        .attr("r", function(d) { return nodeScale(d.check_ins); })
+        .attr("r", 15)
         .merge(node);
 
     // Apply the general update pattern to the links.

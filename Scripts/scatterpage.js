@@ -39,7 +39,7 @@ window.onload = function() {
 
                 varJSONS = jsons;
                 count += 1;
-                return getQueue(filenames, "../Data/vars per week2/vars_")
+                return getQueue(filenames, "../Data/vars per week for tsne/vars_")
             }
         }
         else {

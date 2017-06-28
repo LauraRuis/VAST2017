@@ -2,7 +2,7 @@
     "20161809121841-250": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 24,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "09/05/2016 00:18",
@@ -19,7 +19,7 @@
     "20163409013407-472": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "09/05/2016 01:34",
@@ -36,7 +36,7 @@
     "20165609015607-9": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 22,
+        "speed": 19,
         "number_days": 0,
         "entrance": [
             "09/05/2016 01:56",
@@ -53,7 +53,7 @@
     "20160209020236-593": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "09/05/2016 02:02",
@@ -70,7 +70,7 @@
     "20162509052502-211": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "09/05/2016 05:25",
@@ -87,7 +87,7 @@
     "20164609054658-864": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "09/05/2016 05:46",
@@ -104,7 +104,7 @@
     "20160709060739-448": {
         "car_type": "1",
         "camping": "camping7",
-        "speed": 31,
+        "speed": 27,
         "number_days": 2,
         "entrance": [
             "09/05/2016 06:07",
@@ -121,7 +121,7 @@
     "20161609061622-696": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 92,
+        "speed": 30,
         "number_days": 0,
         "entrance": [
             "09/05/2016 06:16",
@@ -138,7 +138,7 @@
     "20163209063235-838": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 27,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "09/05/2016 06:32",
@@ -155,7 +155,7 @@
     "20163409063415-743": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "09/05/2016 06:34",
@@ -172,7 +172,7 @@
     "20164309064338-413": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "09/05/2016 06:43",
@@ -189,7 +189,7 @@
     "20161008061012-639": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 26,
         "number_days": 1,
         "entrance": [
             "08/05/2016 18:10",
@@ -206,7 +206,7 @@
     "20164909064918-425": {
         "car_type": "2P",
         "camping": "no_camping",
-        "speed": 97,
+        "speed": 32,
         "number_days": 0,
         "entrance": [
             "09/05/2016 06:49",
@@ -223,7 +223,7 @@
     "20165809065806-734": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "09/05/2016 06:58",
@@ -240,7 +240,7 @@
     "20161706051756-373": {
         "car_type": "2",
         "camping": "camping4",
-        "speed": 29,
+        "speed": 27,
         "number_days": 3,
         "entrance": [
             "06/05/2016 17:17",
@@ -257,7 +257,7 @@
     "20162809072855-661": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 88,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "09/05/2016 07:28",
@@ -274,7 +274,7 @@
     "20163309073335-602": {
         "car_type": "2",
         "camping": "camping6",
-        "speed": 29,
+        "speed": 22,
         "number_days": 3,
         "entrance": [
             "09/05/2016 07:33",
@@ -291,7 +291,7 @@
     "20163707033759-413": {
         "car_type": "1",
         "camping": "camping0",
-        "speed": 50,
+        "speed": 30,
         "number_days": 2,
         "entrance": [
             "07/05/2016 15:37",
@@ -308,7 +308,7 @@
     "20164109074136-68": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "09/05/2016 07:41",
@@ -325,7 +325,7 @@
     "20163909083952-107": {
         "car_type": "3",
         "camping": "camping7",
-        "speed": 44,
+        "speed": 29,
         "number_days": 5,
         "entrance": [
             "09/05/2016 08:39",
@@ -342,7 +342,7 @@
     "20160709090715-818": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 21,
+        "speed": 20,
         "number_days": 0,
         "entrance": [
             "09/05/2016 09:07",
@@ -359,7 +359,7 @@
     "20160902060942-509": {
         "car_type": "2",
         "camping": "camping6",
-        "speed": 50,
+        "speed": 30,
         "number_days": 7,
         "entrance": [
             "02/05/2016 06:09",
@@ -376,7 +376,7 @@
     "20160809090856-701": {
         "car_type": "1",
         "camping": "camping4",
-        "speed": 44,
+        "speed": 27,
         "number_days": 3,
         "entrance": [
             "09/05/2016 09:08",
@@ -393,7 +393,7 @@
     "20162309092308-732": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "09/05/2016 09:23",
@@ -410,7 +410,7 @@
     "20163009093036-894": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "09/05/2016 09:30",
@@ -427,7 +427,7 @@
     "20163909093927-432": {
         "car_type": "1",
         "camping": "camping0",
-        "speed": 27,
+        "speed": 25,
         "number_days": 4,
         "entrance": [
             "09/05/2016 09:39",
@@ -444,7 +444,7 @@
     "20164708074730-603": {
         "car_type": "2",
         "camping": "camping4",
-        "speed": 27,
+        "speed": 25,
         "number_days": 1,
         "entrance": [
             "08/05/2016 07:47",
@@ -461,7 +461,7 @@
     "20165709095721-17": {
         "car_type": "1",
         "camping": "camping5",
-        "speed": 23,
+        "speed": 21,
         "number_days": 13,
         "entrance": [
             "09/05/2016 09:57",
@@ -478,7 +478,7 @@
     "20162809102817-777": {
         "car_type": "1",
         "camping": "camping5",
-        "speed": 23,
+        "speed": 21,
         "number_days": 3,
         "entrance": [
             "09/05/2016 10:28",
@@ -495,7 +495,7 @@
     "20165109105131-919": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "09/05/2016 10:51",
@@ -512,7 +512,7 @@
     "20160009110016-790": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 25,
+        "speed": 21,
         "number_days": 0,
         "entrance": [
             "09/05/2016 11:00",
@@ -529,7 +529,7 @@
     "20162701092754-587": {
         "car_type": "1",
         "camping": "camping8",
-        "speed": 30,
+        "speed": 21,
         "number_days": 8,
         "entrance": [
             "01/05/2016 09:27",
@@ -546,7 +546,7 @@
     "20161609111603-182": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 27,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "09/05/2016 11:16",
@@ -563,7 +563,7 @@
     "20162909112952-990": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "09/05/2016 11:29",
@@ -580,7 +580,7 @@
     "20161103061131-806": {
         "car_type": "1",
         "camping": "camping5",
-        "speed": 30,
+        "speed": 27,
         "number_days": 6,
         "entrance": [
             "03/05/2016 06:11",
@@ -597,7 +597,7 @@
     "20162807032803-741": {
         "car_type": "2",
         "camping": "camping6",
-        "speed": 29,
+        "speed": 22,
         "number_days": 2,
         "entrance": [
             "07/05/2016 15:28",
@@ -614,7 +614,7 @@
     "20160109120154-984": {
         "car_type": "3",
         "camping": "camping0",
-        "speed": 27,
+        "speed": 25,
         "number_days": 6,
         "entrance": [
             "09/05/2016 12:01",
@@ -631,7 +631,7 @@
     "20161109121152-659": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 55,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "09/05/2016 12:11",
@@ -648,7 +648,7 @@
     "20164709124719-876": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "09/05/2016 12:47",
@@ -665,7 +665,7 @@
     "20165704055721-696": {
         "car_type": "1",
         "camping": "camping3",
-        "speed": 23,
+        "speed": 21,
         "number_days": 5,
         "entrance": [
             "04/05/2016 17:57",
@@ -682,7 +682,7 @@
     "20161409011426-561": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "09/05/2016 13:14",
@@ -699,7 +699,7 @@
     "20161809011803-986": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 27,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "09/05/2016 13:18",
@@ -716,7 +716,7 @@
     "20161205051258-519": {
         "car_type": "3",
         "camping": "camping5",
-        "speed": 25,
+        "speed": 23,
         "number_days": 4,
         "entrance": [
             "05/05/2016 17:12",
@@ -733,7 +733,7 @@
     "20161508121511-970": {
         "car_type": "2",
         "camping": "camping6",
-        "speed": 50,
+        "speed": 30,
         "number_days": 1,
         "entrance": [
             "08/05/2016 12:15",
@@ -750,7 +750,7 @@
     "20164909014939-171": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "09/05/2016 13:49",
@@ -767,7 +767,7 @@
     "20164508064519-442": {
         "car_type": "1",
         "camping": "camping3",
-        "speed": 27,
+        "speed": 25,
         "number_days": 1,
         "entrance": [
             "08/05/2016 06:45",
@@ -784,7 +784,7 @@
     "20163508033551-791": {
         "car_type": "1",
         "camping": "camping4",
-        "speed": 29,
+        "speed": 22,
         "number_days": 1,
         "entrance": [
             "08/05/2016 15:35",
@@ -801,7 +801,7 @@
     "20160909040905-953": {
         "car_type": "1",
         "camping": "camping8",
-        "speed": 44,
+        "speed": 26,
         "number_days": 1,
         "entrance": [
             "09/05/2016 16:09",
@@ -818,7 +818,7 @@
     "20165509045552-790": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "09/05/2016 16:55",
@@ -835,7 +835,7 @@
     "20165909055944-478": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 88,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "09/05/2016 17:59",
@@ -852,7 +852,7 @@
     "20164809074810-439": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 92,
+        "speed": 30,
         "number_days": 0,
         "entrance": [
             "09/05/2016 19:48",
@@ -869,7 +869,7 @@
     "20165209075243-964": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 27,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "09/05/2016 19:52",
@@ -886,7 +886,7 @@
     "20165609075614-36": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 27,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "09/05/2016 19:56",
@@ -903,7 +903,7 @@
     "20163207073234-8": {
         "car_type": "2",
         "camping": "camping0",
-        "speed": 26,
+        "speed": 22,
         "number_days": 2,
         "entrance": [
             "07/05/2016 07:32",
@@ -920,7 +920,7 @@
     "20162209082222-370": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 21,
         "number_days": 0,
         "entrance": [
             "09/05/2016 20:22",
@@ -937,7 +937,7 @@
     "20163806093805-983": {
         "car_type": "1",
         "camping": "camping0",
-        "speed": 27,
+        "speed": 25,
         "number_days": 3,
         "entrance": [
             "06/05/2016 09:38",
@@ -954,7 +954,7 @@
     "20160909090904-648": {
         "car_type": "6",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 27,
         "number_days": 0,
         "entrance": [
             "09/05/2016 21:09",
@@ -971,7 +971,7 @@
     "20163209093216-635": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 21,
         "number_days": 0,
         "entrance": [
             "09/05/2016 21:32",
@@ -988,7 +988,7 @@
     "20165005045015-818": {
         "car_type": "1",
         "camping": "camping5",
-        "speed": 30,
+        "speed": 24,
         "number_days": 4,
         "entrance": [
             "05/05/2016 16:50",
@@ -1005,7 +1005,7 @@
     "20160309110344-985": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "09/05/2016 23:03",
@@ -1022,7 +1022,7 @@
     "20160909110951-610": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 21,
         "number_days": 0,
         "entrance": [
             "09/05/2016 23:09",
@@ -1039,7 +1039,7 @@
     "20165609115633-560": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 27,
         "number_days": 1,
         "entrance": [
             "09/05/2016 23:56",
@@ -1056,7 +1056,7 @@
     "20162710012716-783": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "10/05/2016 01:27",
@@ -1073,7 +1073,7 @@
     "20162510022553-31": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "10/05/2016 02:25",
@@ -1090,7 +1090,7 @@
     "20164610024657-476": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "10/05/2016 02:46",
@@ -1107,7 +1107,7 @@
     "20160410030451-212": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 88,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "10/05/2016 03:04",
@@ -1124,7 +1124,7 @@
     "20160010050004-234": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 92,
+        "speed": 30,
         "number_days": 0,
         "entrance": [
             "10/05/2016 05:00",
@@ -1141,7 +1141,7 @@
     "20161310061335-543": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 22,
+        "speed": 21,
         "number_days": 0,
         "entrance": [
             "10/05/2016 06:13",
@@ -1158,7 +1158,7 @@
     "20161507051513-138": {
         "car_type": "2",
         "camping": "camping4",
-        "speed": 44,
+        "speed": 26,
         "number_days": 3,
         "entrance": [
             "07/05/2016 17:15",
@@ -1175,7 +1175,7 @@
     "20162810062841-436": {
         "car_type": "2P",
         "camping": "no_camping",
-        "speed": 106,
+        "speed": 35,
         "number_days": 0,
         "entrance": [
             "10/05/2016 06:28",
@@ -1192,7 +1192,7 @@
     "20162308022340-411": {
         "car_type": "3",
         "camping": "camping4",
-        "speed": 22,
+        "speed": 20,
         "number_days": 2,
         "entrance": [
             "08/05/2016 14:23",
@@ -1209,7 +1209,7 @@
     "20165910065910-19": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "10/05/2016 06:59",
@@ -1226,7 +1226,7 @@
     "20164810074837-368": {
         "car_type": "2",
         "camping": "camping8",
-        "speed": 30,
+        "speed": 22,
         "number_days": 2,
         "entrance": [
             "10/05/2016 07:48",
@@ -1243,7 +1243,7 @@
     "20165710075759-354": {
         "car_type": "1",
         "camping": "camping5",
-        "speed": 25,
+        "speed": 23,
         "number_days": 5,
         "entrance": [
             "10/05/2016 07:57",
@@ -1260,7 +1260,7 @@
     "20160310080321-754": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 27,
         "number_days": 0,
         "entrance": [
             "10/05/2016 08:03",
@@ -1277,7 +1277,7 @@
     "20160710080757-157": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "10/05/2016 08:07",
@@ -1294,7 +1294,7 @@
     "20161210081211-622": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "10/05/2016 08:12",
@@ -1311,7 +1311,7 @@
     "20162010082038-745": {
         "car_type": "2P",
         "camping": "no_camping",
-        "speed": 77,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "10/05/2016 08:20",
@@ -1328,7 +1328,7 @@
     "20160710090713-197": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "10/05/2016 09:07",
@@ -1345,7 +1345,7 @@
     "20161010091000-835": {
         "car_type": "3",
         "camping": "camping7",
-        "speed": 30,
+        "speed": 24,
         "number_days": 3,
         "entrance": [
             "10/05/2016 09:10",
@@ -1362,7 +1362,7 @@
     "20165610095639-193": {
         "car_type": "6",
         "camping": "no_camping",
-        "speed": 50,
+        "speed": 30,
         "number_days": 0,
         "entrance": [
             "10/05/2016 09:56",
@@ -1379,7 +1379,7 @@
     "20160410100449-506": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 27,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "10/05/2016 10:04",
@@ -1396,7 +1396,7 @@
     "20161410101407-777": {
         "car_type": "3",
         "camping": "camping5",
-        "speed": 49,
+        "speed": 29,
         "number_days": 3,
         "entrance": [
             "10/05/2016 10:14",
@@ -1413,7 +1413,7 @@
     "20160306010354-831": {
         "car_type": "2",
         "camping": "camping2",
-        "speed": 25,
+        "speed": 23,
         "number_days": 4,
         "entrance": [
             "06/05/2016 13:03",
@@ -1430,7 +1430,7 @@
     "20162406112415-657": {
         "car_type": "1",
         "camping": "camping6",
-        "speed": 43,
+        "speed": 26,
         "number_days": 4,
         "entrance": [
             "06/05/2016 11:24",
@@ -1447,7 +1447,7 @@
     "20165410105442-547": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "10/05/2016 10:54",
@@ -1464,7 +1464,7 @@
     "20160010110039-895": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "10/05/2016 11:00",
@@ -1481,7 +1481,7 @@
     "20161310111311-164": {
         "car_type": "6",
         "camping": "no_camping",
-        "speed": 49,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "10/05/2016 11:13",
@@ -1498,7 +1498,7 @@
     "20162810112840-896": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "10/05/2016 11:28",
@@ -1515,7 +1515,7 @@
     "20164510114557-225": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "10/05/2016 11:45",
@@ -1532,7 +1532,7 @@
     "20164910114936-80": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "10/05/2016 11:49",
@@ -1549,7 +1549,7 @@
     "20165210115200-412": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 88,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "10/05/2016 11:52",
@@ -1566,7 +1566,7 @@
     "20165510115511-114": {
         "car_type": "2",
         "camping": "camping4",
-        "speed": 24,
+        "speed": 22,
         "number_days": 3,
         "entrance": [
             "10/05/2016 11:55",
@@ -1583,7 +1583,7 @@
     "20160210120236-74": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "10/05/2016 12:02",
@@ -1600,7 +1600,7 @@
     "20163810123804-747": {
         "car_type": "2P",
         "camping": "no_camping",
-        "speed": 106,
+        "speed": 55,
         "number_days": 0,
         "entrance": [
             "10/05/2016 12:38",
@@ -1617,7 +1617,7 @@
     "20163910123930-871": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "10/05/2016 12:39",
@@ -1634,7 +1634,7 @@
     "20164210124256-142": {
         "car_type": "2P",
         "camping": "no_camping",
-        "speed": 77,
+        "speed": 27,
         "number_days": 0,
         "entrance": [
             "10/05/2016 12:42",
@@ -1651,7 +1651,7 @@
     "20162706052712-821": {
         "car_type": "2",
         "camping": "camping5",
-        "speed": 30,
+        "speed": 24,
         "number_days": 4,
         "entrance": [
             "06/05/2016 17:27",
@@ -1668,7 +1668,7 @@
     "20163010013041-841": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "10/05/2016 13:30",
@@ -1685,7 +1685,7 @@
     "20163110013100-889": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 23,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "10/05/2016 13:31",
@@ -1702,7 +1702,7 @@
     "20163310013309-503": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "10/05/2016 13:33",
@@ -1719,7 +1719,7 @@
     "20163108043103-996": {
         "car_type": "3",
         "camping": "camping0",
-        "speed": 23,
+        "speed": 22,
         "number_days": 2,
         "entrance": [
             "08/05/2016 16:31",
@@ -1736,7 +1736,7 @@
     "20165710015727-667": {
         "car_type": "2",
         "camping": "camping3",
-        "speed": 22,
+        "speed": 21,
         "number_days": 2,
         "entrance": [
             "10/05/2016 13:57",
@@ -1753,7 +1753,7 @@
     "20160010030056-381": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "10/05/2016 15:00",
@@ -1770,7 +1770,7 @@
     "20161006051036-393": {
         "car_type": "2",
         "camping": "camping7",
-        "speed": 44,
+        "speed": 26,
         "number_days": 4,
         "entrance": [
             "06/05/2016 17:10",
@@ -1787,7 +1787,7 @@
     "20160910040923-196": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 25,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "10/05/2016 16:09",
@@ -1804,7 +1804,7 @@
     "20162210042238-659": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 21,
         "number_days": 0,
         "entrance": [
             "10/05/2016 16:22",
@@ -1821,7 +1821,7 @@
     "20162310042305-75": {
         "car_type": "1",
         "camping": "camping7",
-        "speed": 30,
+        "speed": 22,
         "number_days": 5,
         "entrance": [
             "10/05/2016 16:23",
@@ -1838,7 +1838,7 @@
     "20163810043842-166": {
         "car_type": "2",
         "camping": "camping7",
-        "speed": 30,
+        "speed": 22,
         "number_days": 1,
         "entrance": [
             "10/05/2016 16:38",
@@ -1855,7 +1855,7 @@
     "20164710044728-26": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "10/05/2016 16:47",
@@ -1872,7 +1872,7 @@
     "20163410053456-4": {
         "car_type": "2",
         "camping": "camping4",
-        "speed": 30,
+        "speed": 22,
         "number_days": 4,
         "entrance": [
             "10/05/2016 17:34",
@@ -1889,7 +1889,7 @@
     "20161210061216-515": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 27,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "10/05/2016 18:12",
@@ -1906,7 +1906,7 @@
     "20163904013912-769": {
         "car_type": "2",
         "camping": "camping2",
-        "speed": 30,
+        "speed": 23,
         "number_days": 6,
         "entrance": [
             "04/05/2016 13:39",
@@ -1923,7 +1923,7 @@
     "20164110064123-32": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "10/05/2016 18:41",
@@ -1940,7 +1940,7 @@
     "20161110071127-653": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 23,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "10/05/2016 19:11",
@@ -1957,7 +1957,7 @@
     "20161210071215-600": {
         "car_type": "6",
         "camping": "no_camping",
-        "speed": 92,
+        "speed": 30,
         "number_days": 0,
         "entrance": [
             "10/05/2016 19:12",
@@ -1974,7 +1974,7 @@
     "20163310073310-801": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "10/05/2016 19:33",
@@ -1991,7 +1991,7 @@
     "20163410073406-446": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "10/05/2016 19:34",
@@ -2008,7 +2008,7 @@
     "20164101114139-473": {
         "car_type": "3",
         "camping": "camping3",
-        "speed": 29,
+        "speed": 23,
         "number_days": 9,
         "entrance": [
             "01/05/2016 11:41",
@@ -2025,7 +2025,7 @@
     "20160510080552-765": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 24,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "10/05/2016 20:05",
@@ -2042,7 +2042,7 @@
     "20160604020620-396": {
         "car_type": "1",
         "camping": "camping7",
-        "speed": 29,
+        "speed": 24,
         "number_days": 6,
         "entrance": [
             "04/05/2016 14:06",
@@ -2059,7 +2059,7 @@
     "20162510092557-624": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "10/05/2016 21:25",
@@ -2076,7 +2076,7 @@
     "20160210100239-919": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "10/05/2016 22:02",
@@ -2093,7 +2093,7 @@
     "20161810111803-307": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 27,
         "number_days": 0,
         "entrance": [
             "10/05/2016 23:18",
@@ -2110,7 +2110,7 @@
     "20162011032012-975": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 27,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "11/05/2016 03:20",
@@ -2127,7 +2127,7 @@
     "20164911034925-82": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 23,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "11/05/2016 03:49",
@@ -2144,7 +2144,7 @@
     "20162011042035-568": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "11/05/2016 04:20",
@@ -2161,7 +2161,7 @@
     "20164011054052-771": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "11/05/2016 05:40",
@@ -2178,7 +2178,7 @@
     "20165611055631-575": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 92,
+        "speed": 30,
         "number_days": 0,
         "entrance": [
             "11/05/2016 05:56",
@@ -2195,7 +2195,7 @@
     "20161211061224-16": {
         "car_type": "1",
         "camping": "camping8",
-        "speed": 27,
+        "speed": 25,
         "number_days": 3,
         "entrance": [
             "11/05/2016 06:12",
@@ -2212,7 +2212,7 @@
     "20161711061704-241": {
         "car_type": "1",
         "camping": "camping6",
-        "speed": 30,
+        "speed": 22,
         "number_days": 3,
         "entrance": [
             "11/05/2016 06:17",
@@ -2229,7 +2229,7 @@
     "20164011064018-261": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "11/05/2016 06:40",
@@ -2246,7 +2246,7 @@
     "20165911075945-393": {
         "car_type": "1",
         "camping": "camping4",
-        "speed": 44,
+        "speed": 26,
         "number_days": 1,
         "entrance": [
             "11/05/2016 07:59",
@@ -2263,7 +2263,7 @@
     "20162411082452-983": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "11/05/2016 08:24",
@@ -2280,7 +2280,7 @@
     "20162511082549-862": {
         "car_type": "2",
         "camping": "camping7",
-        "speed": 42,
+        "speed": 28,
         "number_days": 2,
         "entrance": [
             "11/05/2016 08:25",
@@ -2297,7 +2297,7 @@
     "20160311090327-223": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "11/05/2016 09:03",
@@ -2314,7 +2314,7 @@
     "20161511091553-767": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "11/05/2016 09:15",
@@ -2331,7 +2331,7 @@
     "20162911092915-817": {
         "car_type": "2",
         "camping": "camping4",
-        "speed": 27,
+        "speed": 24,
         "number_days": 3,
         "entrance": [
             "11/05/2016 09:29",
@@ -2348,7 +2348,7 @@
     "20160311100356-945": {
         "car_type": "2P",
         "camping": "no_camping",
-        "speed": 66,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "11/05/2016 10:03",
@@ -2365,7 +2365,7 @@
     "20161211101251-483": {
         "car_type": "2P",
         "camping": "no_camping",
-        "speed": 106,
+        "speed": 35,
         "number_days": 0,
         "entrance": [
             "11/05/2016 10:12",
@@ -2382,7 +2382,7 @@
     "20160711110708-553": {
         "car_type": "2",
         "camping": "camping0",
-        "speed": 23,
+        "speed": 22,
         "number_days": 6,
         "entrance": [
             "11/05/2016 11:07",
@@ -2399,7 +2399,7 @@
     "20162311112351-695": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "11/05/2016 11:23",
@@ -2416,7 +2416,7 @@
     "20163411113412-187": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "11/05/2016 11:34",
@@ -2433,7 +2433,7 @@
     "20161611011606-516": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "11/05/2016 13:16",
@@ -2450,7 +2450,7 @@
     "20162911012944-380": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 88,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "11/05/2016 13:29",
@@ -2467,7 +2467,7 @@
     "20160311020339-85": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 50,
+        "speed": 30,
         "number_days": 0,
         "entrance": [
             "11/05/2016 14:03",
@@ -2484,7 +2484,7 @@
     "20162611022632-833": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 25,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "11/05/2016 14:26",
@@ -2501,7 +2501,7 @@
     "20165911025927-470": {
         "car_type": "1",
         "camping": "camping4",
-        "speed": 30,
+        "speed": 26,
         "number_days": 3,
         "entrance": [
             "11/05/2016 14:59",
@@ -2518,7 +2518,7 @@
     "20160811030822-939": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "11/05/2016 15:08",
@@ -2535,7 +2535,7 @@
     "20165411035403-543": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "11/05/2016 15:54",
@@ -2552,7 +2552,7 @@
     "20160011040054-612": {
         "car_type": "1",
         "camping": "camping5",
-        "speed": 30,
+        "speed": 26,
         "number_days": 5,
         "entrance": [
             "11/05/2016 16:00",
@@ -2569,7 +2569,7 @@
     "20160311040325-917": {
         "car_type": "2P",
         "camping": "no_camping",
-        "speed": 97,
+        "speed": 32,
         "number_days": 0,
         "entrance": [
             "11/05/2016 16:03",
@@ -2586,7 +2586,7 @@
     "20161911041933-904": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 32,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "11/05/2016 16:19",
@@ -2603,7 +2603,7 @@
     "20162011042014-946": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 49,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "11/05/2016 16:20",
@@ -2620,7 +2620,7 @@
     "20163511043549-538": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 21,
+        "speed": 20,
         "number_days": 0,
         "entrance": [
             "11/05/2016 16:35",
@@ -2637,7 +2637,7 @@
     "20160311050306-89": {
         "car_type": "1",
         "camping": "camping4",
-        "speed": 30,
+        "speed": 24,
         "number_days": 3,
         "entrance": [
             "11/05/2016 17:03",
@@ -2654,7 +2654,7 @@
     "20160311050309-656": {
         "car_type": "2",
         "camping": "camping4",
-        "speed": 30,
+        "speed": 26,
         "number_days": 1,
         "entrance": [
             "11/05/2016 17:03",
@@ -2671,7 +2671,7 @@
     "20162711052703-91": {
         "car_type": "2P",
         "camping": "no_camping",
-        "speed": 73,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "11/05/2016 17:27",
@@ -2688,7 +2688,7 @@
     "20160311060339-0": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 27,
         "number_days": 0,
         "entrance": [
             "11/05/2016 18:03",
@@ -2705,7 +2705,7 @@
     "20161507081502-674": {
         "car_type": "2",
         "camping": "camping4",
-        "speed": 22,
+        "speed": 21,
         "number_days": 4,
         "entrance": [
             "07/05/2016 08:15",
@@ -2722,7 +2722,7 @@
     "20164711074753-145": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "11/05/2016 19:47",
@@ -2739,7 +2739,7 @@
     "20160508120500-362": {
         "car_type": "1",
         "camping": "camping8",
-        "speed": 44,
+        "speed": 26,
         "number_days": 3,
         "entrance": [
             "08/05/2016 12:05",
@@ -2756,7 +2756,7 @@
     "20161907081910-516": {
         "car_type": "1",
         "camping": "camping7",
-        "speed": 30,
+        "speed": 24,
         "number_days": 4,
         "entrance": [
             "07/05/2016 08:19",
@@ -2773,7 +2773,7 @@
     "20165911075923-340": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 49,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "11/05/2016 19:59",
@@ -2790,7 +2790,7 @@
     "20162011082018-763": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "11/05/2016 20:20",
@@ -2807,7 +2807,7 @@
     "20163111083112-950": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 88,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "11/05/2016 20:31",
@@ -2824,7 +2824,7 @@
     "20165111085140-53": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 49,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "11/05/2016 20:51",
@@ -2841,7 +2841,7 @@
     "20161911091908-884": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "11/05/2016 21:19",
@@ -2858,7 +2858,7 @@
     "20162106052135-91": {
         "car_type": "1",
         "camping": "camping5",
-        "speed": 30,
+        "speed": 24,
         "number_days": 5,
         "entrance": [
             "06/05/2016 17:21",
@@ -2875,7 +2875,7 @@
     "20161812011805-403": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 88,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "12/05/2016 01:18",
@@ -2892,7 +2892,7 @@
     "20161812011828-753": {
         "car_type": "6",
         "camping": "no_camping",
-        "speed": 49,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "12/05/2016 01:18",
@@ -2909,7 +2909,7 @@
     "20162812022803-293": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "12/05/2016 02:28",
@@ -2926,7 +2926,7 @@
     "20163112023142-103": {
         "car_type": "6",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 27,
         "number_days": 0,
         "entrance": [
             "12/05/2016 02:31",
@@ -2943,7 +2943,7 @@
     "20163412023438-667": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 92,
+        "speed": 30,
         "number_days": 0,
         "entrance": [
             "12/05/2016 02:34",
@@ -2960,7 +2960,7 @@
     "20160212030208-123": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "12/05/2016 03:02",
@@ -2977,7 +2977,7 @@
     "20162412032458-466": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "12/05/2016 03:24",
@@ -2994,7 +2994,7 @@
     "20161212041255-176": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 27,
         "number_days": 0,
         "entrance": [
             "12/05/2016 04:12",
@@ -3011,7 +3011,7 @@
     "20162812042818-533": {
         "car_type": "6",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "12/05/2016 04:28",
@@ -3028,7 +3028,7 @@
     "20160512050520-463": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 24,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "12/05/2016 05:05",
@@ -3045,7 +3045,7 @@
     "20164912064928-813": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "12/05/2016 06:49",
@@ -3062,7 +3062,7 @@
     "20165012065039-583": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 27,
         "number_days": 0,
         "entrance": [
             "12/05/2016 06:50",
@@ -3079,7 +3079,7 @@
     "20161612071621-912": {
         "car_type": "1",
         "camping": "camping7",
-        "speed": 30,
+        "speed": 24,
         "number_days": 2,
         "entrance": [
             "12/05/2016 07:16",
@@ -3096,7 +3096,7 @@
     "20162612072638-753": {
         "car_type": "1",
         "camping": "camping5",
-        "speed": 42,
+        "speed": 26,
         "number_days": 2,
         "entrance": [
             "12/05/2016 07:26",
@@ -3113,7 +3113,7 @@
     "20165408055453-259": {
         "car_type": "3",
         "camping": "camping2",
-        "speed": 22,
+        "speed": 20,
         "number_days": 4,
         "entrance": [
             "08/05/2016 17:54",
@@ -3130,7 +3130,7 @@
     "20162612082614-132": {
         "car_type": "2",
         "camping": "camping8",
-        "speed": 50,
+        "speed": 30,
         "number_days": 2,
         "entrance": [
             "12/05/2016 08:26",
@@ -3147,7 +3147,7 @@
     "20162706102701-37": {
         "car_type": "3",
         "camping": "camping4",
-        "speed": 24,
+        "speed": 22,
         "number_days": 6,
         "entrance": [
             "06/05/2016 10:27",
@@ -3164,7 +3164,7 @@
     "20161012091023-643": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 50,
+        "speed": 30,
         "number_days": 0,
         "entrance": [
             "12/05/2016 09:10",
@@ -3181,7 +3181,7 @@
     "20160012100010-326": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 92,
+        "speed": 30,
         "number_days": 0,
         "entrance": [
             "12/05/2016 10:00",
@@ -3198,7 +3198,7 @@
     "20160312100343-941": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "12/05/2016 10:03",
@@ -3215,7 +3215,7 @@
     "20160412100403-624": {
         "car_type": "1",
         "camping": "camping0",
-        "speed": 20,
+        "speed": 19,
         "number_days": 7,
         "entrance": [
             "12/05/2016 10:04",
@@ -3232,7 +3232,7 @@
     "20161412101451-978": {
         "car_type": "1",
         "camping": "camping0",
-        "speed": 20,
+        "speed": 19,
         "number_days": 3,
         "entrance": [
             "12/05/2016 10:14",
@@ -3249,7 +3249,7 @@
     "20165907125955-871": {
         "car_type": "2",
         "camping": "camping5",
-        "speed": 26,
+        "speed": 23,
         "number_days": 5,
         "entrance": [
             "07/05/2016 12:59",
@@ -3266,7 +3266,7 @@
     "20165112105109-897": {
         "car_type": "2",
         "camping": "camping3",
-        "speed": 42,
+        "speed": 25,
         "number_days": 2,
         "entrance": [
             "12/05/2016 10:51",
@@ -3283,7 +3283,7 @@
     "20161212111209-517": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "12/05/2016 11:12",
@@ -3300,7 +3300,7 @@
     "20165105115138-773": {
         "car_type": "1",
         "camping": "camping7",
-        "speed": 88,
+        "speed": 29,
         "number_days": 7,
         "entrance": [
             "05/05/2016 11:51",
@@ -3317,7 +3317,7 @@
     "20161912121924-319": {
         "car_type": "1",
         "camping": "camping7",
-        "speed": 44,
+        "speed": 26,
         "number_days": 3,
         "entrance": [
             "12/05/2016 12:19",
@@ -3334,7 +3334,7 @@
     "20163712123721-105": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 27,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "12/05/2016 12:37",
@@ -3351,7 +3351,7 @@
     "20163712023718-192": {
         "car_type": "2P",
         "camping": "no_camping",
-        "speed": 97,
+        "speed": 32,
         "number_days": 0,
         "entrance": [
             "12/05/2016 14:37",
@@ -3368,7 +3368,7 @@
     "20164012024030-921": {
         "car_type": "2P",
         "camping": "no_camping",
-        "speed": 77,
+        "speed": 25,
         "number_days": 1,
         "entrance": [
             "12/05/2016 14:40",
@@ -3385,7 +3385,7 @@
     "20161112031156-198": {
         "car_type": "2",
         "camping": "camping0",
-        "speed": 30,
+        "speed": 21,
         "number_days": 3,
         "entrance": [
             "12/05/2016 15:11",
@@ -3402,7 +3402,7 @@
     "20162712032759-779": {
         "car_type": "2P",
         "camping": "no_camping",
-        "speed": 97,
+        "speed": 32,
         "number_days": 0,
         "entrance": [
             "12/05/2016 15:27",
@@ -3419,7 +3419,7 @@
     "20162912032954-106": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "12/05/2016 15:29",
@@ -3436,7 +3436,7 @@
     "20163312033343-964": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "12/05/2016 15:33",
@@ -3453,7 +3453,7 @@
     "20165712035713-404": {
         "car_type": "3",
         "camping": "camping2",
-        "speed": 42,
+        "speed": 25,
         "number_days": 1,
         "entrance": [
             "12/05/2016 15:57",
@@ -3470,7 +3470,7 @@
     "20163612043603-890": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "12/05/2016 16:36",
@@ -3487,7 +3487,7 @@
     "20164912044955-331": {
         "car_type": "1",
         "camping": "camping7",
-        "speed": 42,
+        "speed": 26,
         "number_days": 2,
         "entrance": [
             "12/05/2016 16:49",
@@ -3504,7 +3504,7 @@
     "20164212054245-135": {
         "car_type": "1",
         "camping": "camping5",
-        "speed": 42,
+        "speed": 26,
         "number_days": 1,
         "entrance": [
             "12/05/2016 17:42",
@@ -3521,7 +3521,7 @@
     "20160712070723-898": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 27,
         "number_days": 0,
         "entrance": [
             "12/05/2016 19:07",
@@ -3538,7 +3538,7 @@
     "20162612082654-995": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "12/05/2016 20:26",
@@ -3555,7 +3555,7 @@
     "20164312084302-787": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "12/05/2016 20:43",
@@ -3572,7 +3572,7 @@
     "20164712084701-558": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "12/05/2016 20:47",
@@ -3589,7 +3589,7 @@
     "20165212085240-663": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "12/05/2016 20:52",
@@ -3606,7 +3606,7 @@
     "20164006084004-327": {
         "car_type": "2",
         "camping": "camping4",
-        "speed": 30,
+        "speed": 26,
         "number_days": 6,
         "entrance": [
             "06/05/2016 08:40",
@@ -3623,7 +3623,7 @@
     "20162212092245-187": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 27,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "12/05/2016 21:22",
@@ -3640,7 +3640,7 @@
     "20165512095516-61": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "12/05/2016 21:55",
@@ -3657,7 +3657,7 @@
     "20162212102211-875": {
         "car_type": "6",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 27,
         "number_days": 0,
         "entrance": [
             "12/05/2016 22:22",
@@ -3674,7 +3674,7 @@
     "20162412102416-949": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 22,
+        "speed": 21,
         "number_days": 0,
         "entrance": [
             "12/05/2016 22:24",
@@ -3691,7 +3691,7 @@
     "20161812111848-219": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "12/05/2016 23:18",
@@ -3708,7 +3708,7 @@
     "20161613121650-344": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "13/05/2016 00:16",
@@ -3725,7 +3725,7 @@
     "20163913123947-546": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 25,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "13/05/2016 00:39",
@@ -3742,7 +3742,7 @@
     "20163913013931-37": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "13/05/2016 01:39",
@@ -3759,7 +3759,7 @@
     "20160613020654-242": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 27,
         "number_days": 0,
         "entrance": [
             "13/05/2016 02:06",
@@ -3776,7 +3776,7 @@
     "20164713044724-404": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 25,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "13/05/2016 04:47",
@@ -3793,7 +3793,7 @@
     "20162513052553-297": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 27,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "13/05/2016 05:25",
@@ -3810,7 +3810,7 @@
     "20161613061644-444": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "13/05/2016 06:16",
@@ -3827,7 +3827,7 @@
     "20162213062252-766": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 22,
+        "speed": 21,
         "number_days": 0,
         "entrance": [
             "13/05/2016 06:22",
@@ -3844,7 +3844,7 @@
     "20162613062634-226": {
         "car_type": "2P",
         "camping": "no_camping",
-        "speed": 106,
+        "speed": 35,
         "number_days": 0,
         "entrance": [
             "13/05/2016 06:26",
@@ -3861,7 +3861,7 @@
     "20165713065701-600": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "13/05/2016 06:57",
@@ -3878,7 +3878,7 @@
     "20160913070929-21": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 27,
         "number_days": 0,
         "entrance": [
             "13/05/2016 07:09",
@@ -3895,7 +3895,7 @@
     "20161013081040-429": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "13/05/2016 08:10",
@@ -3912,7 +3912,7 @@
     "20161013081055-181": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "13/05/2016 08:10",
@@ -3929,7 +3929,7 @@
     "20164013084042-356": {
         "car_type": "2P",
         "camping": "no_camping",
-        "speed": 97,
+        "speed": 32,
         "number_days": 0,
         "entrance": [
             "13/05/2016 08:40",
@@ -3946,7 +3946,7 @@
     "20165513085559-67": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "13/05/2016 08:55",
@@ -3963,7 +3963,7 @@
     "20160213090212-918": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 50,
+        "speed": 30,
         "number_days": 0,
         "entrance": [
             "13/05/2016 09:02",
@@ -3980,7 +3980,7 @@
     "20164613094630-461": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 23,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "13/05/2016 09:46",
@@ -3997,7 +3997,7 @@
     "20165313095326-823": {
         "car_type": "1",
         "camping": "camping5",
-        "speed": 29,
+        "speed": 22,
         "number_days": 3,
         "entrance": [
             "13/05/2016 09:53",
@@ -4014,7 +4014,7 @@
     "20165813095855-515": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "13/05/2016 09:58",
@@ -4031,7 +4031,7 @@
     "20161213101216-677": {
         "car_type": "1",
         "camping": "camping2",
-        "speed": 30,
+        "speed": 27,
         "number_days": 4,
         "entrance": [
             "13/05/2016 10:12",
@@ -4048,7 +4048,7 @@
     "20163113103132-54": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 23,
+        "speed": 21,
         "number_days": 0,
         "entrance": [
             "13/05/2016 10:31",
@@ -4065,7 +4065,7 @@
     "20165213105244-282": {
         "car_type": "3",
         "camping": "camping7",
-        "speed": 32,
+        "speed": 29,
         "number_days": 6,
         "entrance": [
             "13/05/2016 10:52",
@@ -4082,7 +4082,7 @@
     "20164813114822-432": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "13/05/2016 11:48",
@@ -4099,7 +4099,7 @@
     "20164308024330-236": {
         "car_type": "3",
         "camping": "camping7",
-        "speed": 27,
+        "speed": 24,
         "number_days": 5,
         "entrance": [
             "08/05/2016 14:43",
@@ -4116,7 +4116,7 @@
     "20161106011142-596": {
         "car_type": "2",
         "camping": "camping7",
-        "speed": 88,
+        "speed": 29,
         "number_days": 7,
         "entrance": [
             "06/05/2016 13:11",
@@ -4133,7 +4133,7 @@
     "20161013011043-215": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 27,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "13/05/2016 13:10",
@@ -4150,7 +4150,7 @@
     "20161513011505-693": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 92,
+        "speed": 30,
         "number_days": 0,
         "entrance": [
             "13/05/2016 13:15",
@@ -4167,7 +4167,7 @@
     "20162213012243-861": {
         "car_type": "1",
         "camping": "camping5",
-        "speed": 29,
+        "speed": 24,
         "number_days": 11,
         "entrance": [
             "13/05/2016 13:22",
@@ -4184,7 +4184,7 @@
     "20163213013208-976": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "13/05/2016 13:32",
@@ -4201,7 +4201,7 @@
     "20164713014745-616": {
         "car_type": "1",
         "camping": "camping5",
-        "speed": 23,
+        "speed": 22,
         "number_days": 2,
         "entrance": [
             "13/05/2016 13:47",
@@ -4218,7 +4218,7 @@
     "20165813015832-479": {
         "car_type": "2",
         "camping": "camping8",
-        "speed": 42,
+        "speed": 25,
         "number_days": 1,
         "entrance": [
             "13/05/2016 13:58",
@@ -4235,7 +4235,7 @@
     "20160013020053-566": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 21,
         "number_days": 0,
         "entrance": [
             "13/05/2016 14:00",
@@ -4252,7 +4252,7 @@
     "20160813020801-597": {
         "car_type": "2",
         "camping": "camping6",
-        "speed": 92,
+        "speed": 30,
         "number_days": 1,
         "entrance": [
             "13/05/2016 14:08",
@@ -4269,7 +4269,7 @@
     "20162513022506-280": {
         "car_type": "2P",
         "camping": "no_camping",
-        "speed": 106,
+        "speed": 56,
         "number_days": 0,
         "entrance": [
             "13/05/2016 14:25",
@@ -4286,7 +4286,7 @@
     "20163413023412-159": {
         "car_type": "1",
         "camping": "camping7",
-        "speed": 31,
+        "speed": 26,
         "number_days": 2,
         "entrance": [
             "13/05/2016 14:34",
@@ -4303,7 +4303,7 @@
     "20165813025810-922": {
         "car_type": "2P",
         "camping": "no_camping",
-        "speed": 97,
+        "speed": 32,
         "number_days": 0,
         "entrance": [
             "13/05/2016 14:58",
@@ -4320,7 +4320,7 @@
     "20160313030310-950": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "13/05/2016 15:03",
@@ -4337,7 +4337,7 @@
     "20161613031621-889": {
         "car_type": "1",
         "camping": "camping4",
-        "speed": 29,
+        "speed": 23,
         "number_days": 3,
         "entrance": [
             "13/05/2016 15:16",
@@ -4354,7 +4354,7 @@
     "20161213041243-309": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "13/05/2016 16:12",
@@ -4371,7 +4371,7 @@
     "20162913042948-361": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 21,
+        "speed": 20,
         "number_days": 0,
         "entrance": [
             "13/05/2016 16:29",
@@ -4388,7 +4388,7 @@
     "20162613052646-236": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 22,
+        "speed": 21,
         "number_days": 0,
         "entrance": [
             "13/05/2016 17:26",
@@ -4405,7 +4405,7 @@
     "20162913062957-364": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "13/05/2016 18:29",
@@ -4422,7 +4422,7 @@
     "20163813073818-563": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 23,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "13/05/2016 19:38",
@@ -4439,7 +4439,7 @@
     "20164013074059-659": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 24,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "13/05/2016 19:40",
@@ -4456,7 +4456,7 @@
     "20164013094055-764": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 25,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "13/05/2016 21:40",
@@ -4473,7 +4473,7 @@
     "20165613115609-574": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 22,
+        "speed": 21,
         "number_days": 1,
         "entrance": [
             "13/05/2016 23:56",
@@ -4490,7 +4490,7 @@
     "20164914124922-816": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "14/05/2016 00:49",
@@ -4507,7 +4507,7 @@
     "20165814125853-635": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "14/05/2016 00:58",
@@ -4524,7 +4524,7 @@
     "20161914011922-702": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "14/05/2016 01:19",
@@ -4541,7 +4541,7 @@
     "20164014014005-279": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 32,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "14/05/2016 01:40",
@@ -4558,7 +4558,7 @@
     "20160514030537-832": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "14/05/2016 03:05",
@@ -4575,7 +4575,7 @@
     "20162014032003-759": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "14/05/2016 03:20",
@@ -4592,7 +4592,7 @@
     "20164514054508-845": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 43,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "14/05/2016 05:45",
@@ -4609,7 +4609,7 @@
     "20160414060432-270": {
         "car_type": "1",
         "camping": "camping2",
-        "speed": 25,
+        "speed": 23,
         "number_days": 1,
         "entrance": [
             "14/05/2016 06:04",
@@ -4626,7 +4626,7 @@
     "20160514060557-416": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 27,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "14/05/2016 06:05",
@@ -4643,7 +4643,7 @@
     "20164114064118-408": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 88,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "14/05/2016 06:41",
@@ -4660,7 +4660,7 @@
     "20165114065109-854": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "14/05/2016 06:51",
@@ -4677,7 +4677,7 @@
     "20165914065923-440": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 22,
+        "speed": 21,
         "number_days": 0,
         "entrance": [
             "14/05/2016 06:59",
@@ -4694,7 +4694,7 @@
     "20160114070136-829": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "14/05/2016 07:01",
@@ -4711,7 +4711,7 @@
     "20162014082012-197": {
         "car_type": "1",
         "camping": "camping4",
-        "speed": 42,
+        "speed": 27,
         "number_days": 5,
         "entrance": [
             "14/05/2016 08:20",
@@ -4728,7 +4728,7 @@
     "20162114082157-230": {
         "car_type": "1",
         "camping": "camping2",
-        "speed": 29,
+        "speed": 23,
         "number_days": 2,
         "entrance": [
             "14/05/2016 08:21",
@@ -4745,7 +4745,7 @@
     "20165314085348-318": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 50,
+        "speed": 20,
         "number_days": 0,
         "entrance": [
             "14/05/2016 08:53",
@@ -4762,7 +4762,7 @@
     "20164614094608-783": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "14/05/2016 09:46",
@@ -4779,7 +4779,7 @@
     "20165814095833-724": {
         "car_type": "2",
         "camping": "camping0",
-        "speed": 29,
+        "speed": 27,
         "number_days": 3,
         "entrance": [
             "14/05/2016 09:58",
@@ -4796,7 +4796,7 @@
     "20165614105601-86": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 27,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "14/05/2016 10:56",
@@ -4813,7 +4813,7 @@
     "20160214120214-935": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 92,
+        "speed": 30,
         "number_days": 0,
         "entrance": [
             "14/05/2016 12:02",
@@ -4830,7 +4830,7 @@
     "20160014010045-726": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 27,
         "number_days": 0,
         "entrance": [
             "14/05/2016 13:00",
@@ -4847,7 +4847,7 @@
     "20161214011208-135": {
         "car_type": "1",
         "camping": "camping0",
-        "speed": 44,
+        "speed": 26,
         "number_days": 1,
         "entrance": [
             "14/05/2016 13:12",
@@ -4864,7 +4864,7 @@
     "20163514013507-488": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 21,
+        "speed": 20,
         "number_days": 0,
         "entrance": [
             "14/05/2016 13:35",
@@ -4881,7 +4881,7 @@
     "20163514013550-581": {
         "car_type": "2P",
         "camping": "no_camping",
-        "speed": 77,
+        "speed": 56,
         "number_days": 0,
         "entrance": [
             "14/05/2016 13:35",
@@ -4898,7 +4898,7 @@
     "20164314014307-622": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 23,
+        "speed": 21,
         "number_days": 0,
         "entrance": [
             "14/05/2016 13:43",
@@ -4915,7 +4915,7 @@
     "20164614014653-188": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 55,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "14/05/2016 13:46",
@@ -4932,7 +4932,7 @@
     "20164714014713-377": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "14/05/2016 13:47",
@@ -4949,7 +4949,7 @@
     "20164314024337-465": {
         "car_type": "1",
         "camping": "camping6",
-        "speed": 88,
+        "speed": 29,
         "number_days": 4,
         "entrance": [
             "14/05/2016 14:43",
@@ -4966,7 +4966,7 @@
     "20162114032150-510": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "14/05/2016 15:21",
@@ -4983,7 +4983,7 @@
     "20162914032934-345": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 25,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "14/05/2016 15:29",
@@ -5000,7 +5000,7 @@
     "20163414033416-878": {
         "car_type": "3",
         "camping": "camping2",
-        "speed": 49,
+        "speed": 29,
         "number_days": 2,
         "entrance": [
             "14/05/2016 15:34",
@@ -5017,7 +5017,7 @@
     "20163514033517-872": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "14/05/2016 15:35",
@@ -5034,7 +5034,7 @@
     "20161414041441-290": {
         "car_type": "3",
         "camping": "camping0",
-        "speed": 30,
+        "speed": 27,
         "number_days": 5,
         "entrance": [
             "14/05/2016 16:14",
@@ -5051,7 +5051,7 @@
     "20162214052214-931": {
         "car_type": "2",
         "camping": "camping8",
-        "speed": 42,
+        "speed": 25,
         "number_days": 6,
         "entrance": [
             "14/05/2016 17:22",
@@ -5068,7 +5068,7 @@
     "20163314053328-67": {
         "car_type": "3",
         "camping": "camping2",
-        "speed": 42,
+        "speed": 29,
         "number_days": 6,
         "entrance": [
             "14/05/2016 17:33",
@@ -5085,7 +5085,7 @@
     "20163314053345-713": {
         "car_type": "3",
         "camping": "camping8",
-        "speed": 30,
+        "speed": 21,
         "number_days": 1,
         "entrance": [
             "14/05/2016 17:33",
@@ -5102,7 +5102,7 @@
     "20165114055100-271": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "14/05/2016 17:51",
@@ -5119,7 +5119,7 @@
     "20163214073248-489": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "14/05/2016 19:32",
@@ -5136,7 +5136,7 @@
     "20161714091745-540": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "14/05/2016 21:17",
@@ -5153,7 +5153,7 @@
     "20160014100002-954": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 23,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "14/05/2016 22:00",
@@ -5170,7 +5170,7 @@
     "20160614100633-116": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "14/05/2016 22:06",
@@ -5187,7 +5187,7 @@
     "20164614104657-614": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "14/05/2016 22:46",
@@ -5204,7 +5204,7 @@
     "20160615010624-175": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "15/05/2016 01:06",
@@ -5221,7 +5221,7 @@
     "20161115011152-441": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "15/05/2016 01:11",
@@ -5238,7 +5238,7 @@
     "20164215014229-769": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "15/05/2016 01:42",
@@ -5255,7 +5255,7 @@
     "20160115020144-576": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "15/05/2016 02:01",
@@ -5272,7 +5272,7 @@
     "20161815031816-761": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 23,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "15/05/2016 03:18",
@@ -5289,7 +5289,7 @@
     "20164915034953-622": {
         "car_type": "6",
         "camping": "no_camping",
-        "speed": 88,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "15/05/2016 03:49",
@@ -5306,7 +5306,7 @@
     "20161615051650-275": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 25,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "15/05/2016 05:16",
@@ -5323,7 +5323,7 @@
     "20160215060210-374": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 49,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "15/05/2016 06:02",
@@ -5340,7 +5340,7 @@
     "20162815062824-811": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "15/05/2016 06:28",
@@ -5357,7 +5357,7 @@
     "20163415063443-571": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 25,
+        "speed": 23,
         "number_days": 0,
         "entrance": [
             "15/05/2016 06:34",
@@ -5374,7 +5374,7 @@
     "20165315075322-923": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "15/05/2016 07:53",
@@ -5391,7 +5391,7 @@
     "20160015080024-444": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 27,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "15/05/2016 08:00",
@@ -5408,7 +5408,7 @@
     "20161915081940-66": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 32,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "15/05/2016 08:19",
@@ -5425,7 +5425,7 @@
     "20163515083507-414": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 28,
         "number_days": 0,
         "entrance": [
             "15/05/2016 08:35",
@@ -5442,7 +5442,7 @@
     "20165115085103-814": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 24,
         "number_days": 0,
         "entrance": [
             "15/05/2016 08:51",
@@ -5459,7 +5459,7 @@
     "20160615090601-72": {
         "car_type": "2",
         "camping": "camping8",
-        "speed": 44,
+        "speed": 26,
         "number_days": 1,
         "entrance": [
             "15/05/2016 09:06",
@@ -5476,7 +5476,7 @@
     "20161915091936-967": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 27,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "15/05/2016 09:19",
@@ -5493,7 +5493,7 @@
     "20161515101514-592": {
         "car_type": "1",
         "camping": "camping2",
-        "speed": 42,
+        "speed": 25,
         "number_days": 3,
         "entrance": [
             "15/05/2016 10:15",
@@ -5510,7 +5510,7 @@
     "20164715104741-924": {
         "car_type": "1",
         "camping": "camping8",
-        "speed": 30,
+        "speed": 24,
         "number_days": 3,
         "entrance": [
             "15/05/2016 10:47",
@@ -5527,7 +5527,7 @@
     "20165515105556-469": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 88,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "15/05/2016 10:55",
@@ -5544,7 +5544,7 @@
     "20162506102549-845": {
         "car_type": "1",
         "camping": "camping5",
-        "speed": 44,
+        "speed": 27,
         "number_days": 9,
         "entrance": [
             "06/05/2016 10:25",
@@ -5578,7 +5578,7 @@
     "20163515113511-19": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "15/05/2016 11:35",
@@ -5595,7 +5595,7 @@
     "20164315114355-578": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 22,
         "number_days": 0,
         "entrance": [
             "15/05/2016 11:43",
@@ -5612,7 +5612,7 @@
     "20165815125818-188": {
         "car_type": "1",
         "camping": "camping3",
-        "speed": 30,
+        "speed": 24,
         "number_days": 2,
         "entrance": [
             "15/05/2016 12:58",
@@ -5629,7 +5629,7 @@
     "20160115020108-603": {
         "car_type": "3",
         "camping": "no_camping",
-        "speed": 30,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "15/05/2016 14:01",
@@ -5646,7 +5646,7 @@
     "20161615021657-872": {
         "car_type": "3",
         "camping": "camping5",
-        "speed": 29,
+        "speed": 22,
         "number_days": 1,
         "entrance": [
             "15/05/2016 14:16",
@@ -5663,7 +5663,7 @@
     "20162515022503-709": {
         "car_type": "1",
         "camping": "camping8",
-        "speed": 29,
+        "speed": 21,
         "number_days": 3,
         "entrance": [
             "15/05/2016 14:25",
@@ -5680,7 +5680,7 @@
     "20164115024151-5": {
         "car_type": "1",
         "camping": "camping7",
-        "speed": 88,
+        "speed": 29,
         "number_days": 2,
         "entrance": [
             "15/05/2016 14:41",
@@ -5697,7 +5697,7 @@
     "20164715024726-270": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 27,
         "number_days": 0,
         "entrance": [
             "15/05/2016 14:47",
@@ -5714,7 +5714,7 @@
     "20162015032049-971": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 26,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "15/05/2016 15:20",
@@ -5748,7 +5748,7 @@
     "20160715040757-420": {
         "car_type": "2",
         "camping": "camping8",
-        "speed": 30,
+        "speed": 22,
         "number_days": 2,
         "entrance": [
             "15/05/2016 16:07",
@@ -5765,7 +5765,7 @@
     "20162015042050-853": {
         "car_type": "1",
         "camping": "camping7",
-        "speed": 44,
+        "speed": 26,
         "number_days": 9,
         "entrance": [
             "15/05/2016 16:20",
@@ -5782,7 +5782,7 @@
     "20163815043824-609": {
         "car_type": "2P",
         "camping": "no_camping",
-        "speed": 29,
+        "speed": 21,
         "number_days": 0,
         "entrance": [
             "15/05/2016 16:38",
@@ -5799,7 +5799,7 @@
     "20165415045417-118": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "15/05/2016 16:54",
@@ -5816,7 +5816,7 @@
     "20163015053019-83": {
         "car_type": "2",
         "camping": "camping5",
-        "speed": 42,
+        "speed": 27,
         "number_days": 6,
         "entrance": [
             "15/05/2016 17:30",
@@ -5833,7 +5833,7 @@
     "20164115054120-679": {
         "car_type": "1",
         "camping": "camping6",
-        "speed": 92,
+        "speed": 30,
         "number_days": 3,
         "entrance": [
             "15/05/2016 17:41",
@@ -5850,7 +5850,7 @@
     "20164515054529-415": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 92,
+        "speed": 30,
         "number_days": 0,
         "entrance": [
             "15/05/2016 17:45",
@@ -5867,7 +5867,7 @@
     "20164815074804-525": {
         "car_type": "5",
         "camping": "no_camping",
-        "speed": 32,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "15/05/2016 19:48",
@@ -5884,7 +5884,7 @@
     "20163108093145-941": {
         "car_type": "1",
         "camping": "camping7",
-        "speed": 42,
+        "speed": 26,
         "number_days": 7,
         "entrance": [
             "08/05/2016 09:31",
@@ -5901,7 +5901,7 @@
     "20164615094622-553": {
         "car_type": "2",
         "camping": "no_camping",
-        "speed": 42,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "15/05/2016 21:46",
@@ -5918,7 +5918,7 @@
     "20165815095800-936": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 26,
         "number_days": 0,
         "entrance": [
             "15/05/2016 21:58",
@@ -5935,7 +5935,7 @@
     "20163215103206-501": {
         "car_type": "4",
         "camping": "no_camping",
-        "speed": 44,
+        "speed": 29,
         "number_days": 0,
         "entrance": [
             "15/05/2016 22:32",
@@ -5952,7 +5952,7 @@
     "20165115105125-20": {
         "car_type": "1",
         "camping": "no_camping",
-        "speed": 27,
+        "speed": 25,
         "number_days": 0,
         "entrance": [
             "15/05/2016 22:51",

@@ -61,7 +61,7 @@ function dashboard(filenames, varJSONS, graphJSONS, currentHash) {
 
     // options for toggle buttons of line chart
     var optionsLine  = ["total", "1", "2", "3", "4", "5", "6", "2P"];
-    var optionsPC = ["weekend", "highseason", "nightly_movement"];
+    var optionsPC = ["without outliers", "with outliers"];
     if (d3.select("#formDiv2").selectAll("form")[0].length === 0) {
         drawButtons("#formDiv2", optionsPC, false, false);
     }
@@ -79,7 +79,7 @@ function dashboard(filenames, varJSONS, graphJSONS, currentHash) {
         dashboard(filenames, varJSONS, graphJSONS, currentHash)
     };
 
-    var initIndex = filenames["30-2015"];
+    var initIndex = filenames["34-2015"];
     var initDataTable = varJSONS[initIndex];
     var initDataGraph = graphJSONS[initIndex];
     if (d3.select("#my_table")[0][0] === null) {
@@ -185,7 +185,8 @@ function dashboard(filenames, varJSONS, graphJSONS, currentHash) {
             // add image
             d3.select('#lineChart').append("img")
                 .attr('width', window.innerWidth / 2 - 250)
-                .attr('height', window.innerHeight / 2).attr("src","../lekagul.jpg")
+                .attr('height', window.innerHeight / 2)
+                .attr("src","../lekagul.jpg")
         }
     }
 }

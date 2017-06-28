@@ -14,7 +14,7 @@ function makeLineChart(data) {
     var arrData = dateParser(data);
 
     // initialize attributes of svg as constants
-    const margins = {top: 20, right: 300, bottom: 75, left: 50},
+    const margins = {top: 20, right: 350, bottom: 75, left: 50},
         height = (window.innerHeight / 2 + 80) - margins.top - margins.bottom,
         width = (window.innerWidth / 2 + 100) - margins.left - margins.right;
 

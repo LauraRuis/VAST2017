@@ -1,0 +1,2076 @@
+{
+    "20154301124328-262": {
+        "car_type": "4",
+        "camping": "no_camping",
+        "speed": 26.99,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 00:43",
+            "01/05/2015 01:33"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20153101013141-937": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 24.48,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 01:31",
+            "01/05/2015 02:25"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20155201025212-846": {
+        "car_type": "4",
+        "camping": "no_camping",
+        "speed": 24.81,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 02:52",
+            "01/05/2015 03:54"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 8
+    },
+    "20155301025312-741": {
+        "car_type": "4",
+        "camping": "no_camping",
+        "speed": 22.66,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 02:53",
+            "01/05/2015 03:52"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20150101030146-497": {
+        "car_type": "3",
+        "camping": "no_camping",
+        "speed": 23.86,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 03:01",
+            "01/05/2015 03:21"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 2
+    },
+    "20153701033700-323": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 23.75,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 03:37",
+            "01/05/2015 04:06"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 3
+    },
+    "20154001034019-109": {
+        "car_type": "5",
+        "camping": "no_camping",
+        "speed": 22.66,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 03:40",
+            "01/05/2015 04:36"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20152901052958-57": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 24.33,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 05:29",
+            "01/05/2015 11:54"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 9
+    },
+    "20154201054201-550": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 27.95,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 05:42",
+            "01/05/2015 05:59"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 2
+    },
+    "20154901054932-304": {
+        "car_type": "3",
+        "camping": "no_camping",
+        "speed": 25.38,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 05:49",
+            "01/05/2015 06:26"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 5
+    },
+    "20151701061719-611": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 22.66,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 06:17",
+            "01/05/2015 08:00"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 12
+    },
+    "20155101065139-549": {
+        "car_type": "1",
+        "camping": "camping0",
+        "speed": 24.81,
+        "number_days": 1,
+        "entrance": [
+            "01/05/2015 06:51",
+            "02/05/2015 08:16"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 17
+    },
+    "20152001072049-523": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 26.6,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 07:20",
+            "01/05/2015 09:15"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 16
+    },
+    "20153601073650-751": {
+        "car_type": "3",
+        "camping": "camping2",
+        "speed": 26.99,
+        "number_days": 4,
+        "entrance": [
+            "01/05/2015 07:36",
+            "05/05/2015 12:56"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 17
+    },
+    "20155201075209-669": {
+        "car_type": "2P",
+        "camping": "no_camping",
+        "speed": 35.59,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 07:52",
+            "01/05/2015 09:58"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 19
+    },
+    "20151001081035-840": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 24.48,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 08:10",
+            "01/05/2015 09:01"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20151301081324-366": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 21.03,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 08:13",
+            "01/05/2015 08:45"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 3
+    },
+    "20152101082156-552": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 29.7,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 08:21",
+            "01/05/2015 12:32"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 11
+    },
+    "20152701082731-176": {
+        "car_type": "3",
+        "camping": "no_camping",
+        "speed": 21.74,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 08:27",
+            "01/05/2015 08:49"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 2
+    },
+    "20153601093644-33": {
+        "car_type": "1",
+        "camping": "camping3",
+        "speed": 23.66,
+        "number_days": 1,
+        "entrance": [
+            "01/05/2015 09:36",
+            "02/05/2015 19:14"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 12
+    },
+    "20155201095259-137": {
+        "car_type": "1",
+        "camping": "camping8",
+        "speed": 29.38,
+        "number_days": 3,
+        "entrance": [
+            "01/05/2015 09:52",
+            "04/05/2015 23:00"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 9
+    },
+    "20153201103200-582": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 24.74,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 10:32",
+            "01/05/2015 11:03"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 4
+    },
+    "20153501103520-243": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 22.3,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 10:35",
+            "01/05/2015 11:12"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20153601103632-930": {
+        "car_type": "3",
+        "camping": "no_camping",
+        "speed": 29.38,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 10:36",
+            "01/05/2015 11:06"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 6
+    },
+    "20154401104416-538": {
+        "car_type": "3",
+        "camping": "camping2",
+        "speed": 26.99,
+        "number_days": 1,
+        "entrance": [
+            "01/05/2015 10:44",
+            "02/05/2015 07:09"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 13
+    },
+    "20155701105733-580": {
+        "car_type": "1",
+        "camping": "camping5",
+        "speed": 23.75,
+        "number_days": 4,
+        "entrance": [
+            "01/05/2015 10:57",
+            "05/05/2015 12:04"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 6
+    },
+    "20155801105820-248": {
+        "car_type": "2",
+        "camping": "camping5",
+        "speed": 23.66,
+        "number_days": 2,
+        "entrance": [
+            "01/05/2015 10:58",
+            "03/05/2015 06:34"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 12
+    },
+    "20151301111352-990": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 26.12,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 11:13",
+            "01/05/2015 12:13"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20152401012401-945": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 26.99,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 13:24",
+            "01/05/2015 14:21"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 9
+    },
+    "20152501012546-952": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 30.55,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 13:25",
+            "01/05/2015 15:16"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 17
+    },
+    "20152501012557-10": {
+        "car_type": "2P",
+        "camping": "no_camping",
+        "speed": 29.14,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 13:25",
+            "01/05/2015 16:34"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 22
+    },
+    "20153601013616-849": {
+        "car_type": "5",
+        "camping": "no_camping",
+        "speed": 21.33,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 13:36",
+            "01/05/2015 14:07"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 3
+    },
+    "20150801020850-865": {
+        "car_type": "2P",
+        "camping": "no_camping",
+        "speed": 21.99,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 14:08",
+            "01/05/2015 16:06"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 16
+    },
+    "20153401033430-345": {
+        "car_type": "2P",
+        "camping": "no_camping",
+        "speed": 25.75,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 15:34",
+            "01/05/2015 17:47"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 14
+    },
+    "20154101034146-410": {
+        "car_type": "4",
+        "camping": "no_camping",
+        "speed": 23.86,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 15:41",
+            "01/05/2015 16:01"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 2
+    },
+    "20154801034809-529": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 26.44,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 15:48",
+            "01/05/2015 16:06"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 2
+    },
+    "20150101040141-397": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 23.66,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 16:01",
+            "01/05/2015 17:05"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 8
+    },
+    "20154001044056-714": {
+        "car_type": "3",
+        "camping": "camping0",
+        "speed": 24.81,
+        "number_days": 3,
+        "entrance": [
+            "01/05/2015 16:40",
+            "04/05/2015 15:32"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 11
+    },
+    "20155401045441-227": {
+        "car_type": "2",
+        "camping": "camping3",
+        "speed": 22.66,
+        "number_days": 1,
+        "entrance": [
+            "01/05/2015 16:54",
+            "02/05/2015 12:52"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 18
+    },
+    "20150101060136-731": {
+        "car_type": "4",
+        "camping": "no_camping",
+        "speed": 29.14,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 18:01",
+            "01/05/2015 18:56"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 9
+    },
+    "20152601072603-870": {
+        "car_type": "4",
+        "camping": "no_camping",
+        "speed": 22.3,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 19:26",
+            "01/05/2015 20:25"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20155201075206-349": {
+        "car_type": "5",
+        "camping": "no_camping",
+        "speed": 27.95,
+        "number_days": 0,
+        "entrance": [
+            "01/05/2015 19:52",
+            "01/05/2015 20:09"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 2
+    },
+    "20154301114306-910": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 26.47,
+        "number_days": 1,
+        "entrance": [
+            "01/05/2015 23:43",
+            "02/05/2015 00:41"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 1,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 1,
+        "month": 5,
+        "number_stops": 8
+    },
+    "20151302121334-985": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 26.47,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 00:13",
+            "02/05/2015 00:42"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 6
+    },
+    "20155502025544-979": {
+        "car_type": "3",
+        "camping": "no_camping",
+        "speed": 23.66,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 02:55",
+            "02/05/2015 03:57"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 8
+    },
+    "20150502040512-565": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 25.38,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 04:05",
+            "02/05/2015 04:31"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 3
+    },
+    "20152802052806-928": {
+        "car_type": "3",
+        "camping": "no_camping",
+        "speed": 26.99,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 05:28",
+            "02/05/2015 06:55"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 12
+    },
+    "20152102062100-389": {
+        "car_type": "2",
+        "camping": "camping7",
+        "speed": 22.66,
+        "number_days": 4,
+        "entrance": [
+            "02/05/2015 06:21",
+            "06/05/2015 13:50"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 18
+    },
+    "20155202065206-711": {
+        "car_type": "2P",
+        "camping": "no_camping",
+        "speed": 24.9,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 06:52",
+            "02/05/2015 08:50"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 15
+    },
+    "20150602070649-231": {
+        "car_type": "6",
+        "camping": "no_camping",
+        "speed": 21.33,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 07:06",
+            "02/05/2015 07:37"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 3
+    },
+    "20151402071449-545": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 26.08,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 07:14",
+            "02/05/2015 07:43"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 6
+    },
+    "20151602071621-654": {
+        "car_type": "5",
+        "camping": "no_camping",
+        "speed": 23.47,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 07:16",
+            "02/05/2015 07:49"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 4
+    },
+    "20154002074031-133": {
+        "car_type": "1",
+        "camping": "camping6",
+        "speed": 29.81,
+        "number_days": 2,
+        "entrance": [
+            "02/05/2015 07:40",
+            "04/05/2015 16:42"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 16
+    },
+    "20155202075207-398": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 22.66,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 07:52",
+            "02/05/2015 09:26"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 12
+    },
+    "20155502075522-491": {
+        "car_type": "5",
+        "camping": "no_camping",
+        "speed": 26.44,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 07:55",
+            "02/05/2015 08:13"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 2
+    },
+    "20151202081232-209": {
+        "car_type": "5",
+        "camping": "no_camping",
+        "speed": 30.55,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 08:12",
+            "02/05/2015 08:59"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20154302084310-559": {
+        "car_type": "3",
+        "camping": "no_camping",
+        "speed": 26.99,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 08:43",
+            "02/05/2015 09:31"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20154702084758-168": {
+        "car_type": "1",
+        "camping": "camping5",
+        "speed": 26.12,
+        "number_days": 5,
+        "entrance": [
+            "02/05/2015 08:47",
+            "07/05/2015 22:30"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20150502090541-904": {
+        "car_type": "3",
+        "camping": "no_camping",
+        "speed": 26.12,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 09:05",
+            "02/05/2015 09:34"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 4
+    },
+    "20151902111913-640": {
+        "car_type": "3",
+        "camping": "camping8",
+        "speed": 25.63,
+        "number_days": 7,
+        "entrance": [
+            "02/05/2015 11:19",
+            "09/05/2015 11:53"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 9
+    },
+    "20155602115634-803": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 22.66,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 11:56",
+            "02/05/2015 12:52"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20150302010312-760": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 22.31,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 13:03",
+            "02/05/2015 13:44"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 5
+    },
+    "20152602012639-340": {
+        "car_type": "3",
+        "camping": "camping0",
+        "speed": 22.31,
+        "number_days": 4,
+        "entrance": [
+            "02/05/2015 13:26",
+            "06/05/2015 22:13"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20153002013028-298": {
+        "car_type": "3",
+        "camping": "camping4",
+        "speed": 26.16,
+        "number_days": 1,
+        "entrance": [
+            "02/05/2015 13:30",
+            "03/05/2015 11:03"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 6
+    },
+    "20151202021230-956": {
+        "car_type": "2",
+        "camping": "camping4",
+        "speed": 25.38,
+        "number_days": 5,
+        "entrance": [
+            "02/05/2015 14:12",
+            "07/05/2015 18:44"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20153602023647-120": {
+        "car_type": "2",
+        "camping": "camping3",
+        "speed": 22.6,
+        "number_days": 2,
+        "entrance": [
+            "02/05/2015 14:36",
+            "04/05/2015 17:14"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 16
+    },
+    "20155302025352-365": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 21.33,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 14:53",
+            "02/05/2015 15:29"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 4
+    },
+    "20152002042015-193": {
+        "car_type": "3",
+        "camping": "camping8",
+        "speed": 24.42,
+        "number_days": 1,
+        "entrance": [
+            "02/05/2015 16:20",
+            "03/05/2015 15:36"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 11
+    },
+    "20154102044113-988": {
+        "car_type": "2P",
+        "camping": "no_camping",
+        "speed": 25.75,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 16:41",
+            "02/05/2015 19:05"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 20
+    },
+    "20154602044612-82": {
+        "car_type": "2P",
+        "camping": "no_camping",
+        "speed": 35.59,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 16:46",
+            "02/05/2015 23:12"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 49
+    },
+    "20154802044825-624": {
+        "car_type": "3",
+        "camping": "no_camping",
+        "speed": 30.55,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 16:48",
+            "02/05/2015 18:20"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 14
+    },
+    "20151602071627-36": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 24.76,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 19:16",
+            "02/05/2015 19:37"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 2
+    },
+    "20151902071923-16": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 26.47,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 19:19",
+            "02/05/2015 20:15"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 6
+    },
+    "20150002080040-921": {
+        "car_type": "5",
+        "camping": "no_camping",
+        "speed": 29.14,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 20:00",
+            "02/05/2015 20:48"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20152102082141-406": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 25.08,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 20:21",
+            "02/05/2015 20:40"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 2
+    },
+    "20153002083021-292": {
+        "car_type": "5",
+        "camping": "no_camping",
+        "speed": 21.74,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 20:30",
+            "02/05/2015 20:52"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 2
+    },
+    "20150802110852-346": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 20.23,
+        "number_days": 0,
+        "entrance": [
+            "02/05/2015 23:08",
+            "02/05/2015 23:45"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 4
+    },
+    "20151003121025-950": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 25.63,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 00:10",
+            "03/05/2015 00:44"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20151703121720-618": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 22.31,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 00:17",
+            "03/05/2015 00:47"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 3
+    },
+    "20152503012502-560": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 29.38,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 01:25",
+            "03/05/2015 01:53"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 6
+    },
+    "20150903020928-497": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 21.73,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 02:09",
+            "03/05/2015 02:33"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 2
+    },
+    "20154003044005-17": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 26.08,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 04:40",
+            "03/05/2015 05:27"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 6
+    },
+    "20155003055049-24": {
+        "car_type": "3",
+        "camping": "no_camping",
+        "speed": 24.74,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 05:50",
+            "03/05/2015 06:17"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 3
+    },
+    "20155403055443-412": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 24.48,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 05:54",
+            "03/05/2015 06:59"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 9
+    },
+    "20155703055759-583": {
+        "car_type": "3",
+        "camping": "no_camping",
+        "speed": 22.75,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 05:57",
+            "03/05/2015 06:18"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 2
+    },
+    "20151403061425-243": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 21.03,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 06:14",
+            "03/05/2015 06:46"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 3
+    },
+    "20154003064055-201": {
+        "car_type": "3",
+        "camping": "no_camping",
+        "speed": 26.44,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 06:40",
+            "03/05/2015 06:58"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 2
+    },
+    "20155103065157-254": {
+        "car_type": "5",
+        "camping": "no_camping",
+        "speed": 23.75,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 06:51",
+            "03/05/2015 07:19"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 3
+    },
+    "20155803065823-477": {
+        "car_type": "3",
+        "camping": "no_camping",
+        "speed": 23.47,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 06:58",
+            "03/05/2015 07:30"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 4
+    },
+    "20151903071934-939": {
+        "car_type": "1",
+        "camping": "camping3",
+        "speed": 26.6,
+        "number_days": 9,
+        "entrance": [
+            "03/05/2015 07:19",
+            "12/05/2015 09:46"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 11
+    },
+    "20153603073614-148": {
+        "car_type": "1",
+        "camping": "camping5",
+        "speed": 29.06,
+        "number_days": 3,
+        "entrance": [
+            "03/05/2015 07:36",
+            "06/05/2015 08:23"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 11
+    },
+    "20154003074050-280": {
+        "car_type": "1",
+        "camping": "camping0",
+        "speed": 22.63,
+        "number_days": 11,
+        "entrance": [
+            "03/05/2015 07:40",
+            "14/05/2015 08:27"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 16
+    },
+    "20150903080915-957": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 24.81,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 08:09",
+            "03/05/2015 08:59"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 6
+    },
+    "20154303084322-126": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 29.38,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 08:43",
+            "03/05/2015 09:12"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 6
+    },
+    "20151503091545-22": {
+        "car_type": "1",
+        "camping": "camping8",
+        "speed": 26.55,
+        "number_days": 8,
+        "entrance": [
+            "03/05/2015 09:15",
+            "11/05/2015 06:59"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 9
+    },
+    "20150303100343-74": {
+        "car_type": "2P",
+        "camping": "no_camping",
+        "speed": 21.77,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 10:03",
+            "03/05/2015 14:25"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 28
+    },
+    "20153203103200-611": {
+        "car_type": "2P",
+        "camping": "no_camping",
+        "speed": 32.36,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 10:32",
+            "03/05/2015 12:31"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 19
+    },
+    "20153703103702-660": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 23.66,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 10:37",
+            "03/05/2015 10:59"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 2
+    },
+    "20153903103918-43": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 25.69,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 10:39",
+            "03/05/2015 11:17"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 5
+    },
+    "20155303105327-375": {
+        "car_type": "4",
+        "camping": "no_camping",
+        "speed": 22.63,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 10:53",
+            "03/05/2015 11:27"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 4
+    },
+    "20155803105858-900": {
+        "car_type": "2",
+        "camping": "camping2",
+        "speed": 22.98,
+        "number_days": 2,
+        "entrance": [
+            "03/05/2015 10:58",
+            "05/05/2015 20:10"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20150703110736-237": {
+        "car_type": "1",
+        "camping": "camping5",
+        "speed": 27.26,
+        "number_days": 3,
+        "entrance": [
+            "03/05/2015 11:07",
+            "06/05/2015 07:09"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20151803121817-229": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 26.47,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 12:18",
+            "03/05/2015 13:20"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 9
+    },
+    "20150403020416-490": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 26.6,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 14:04",
+            "03/05/2015 15:29"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 12
+    },
+    "20153003023054-91": {
+        "car_type": "3",
+        "camping": "camping0",
+        "speed": 26.6,
+        "number_days": 1,
+        "entrance": [
+            "03/05/2015 14:30",
+            "04/05/2015 15:58"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 18
+    },
+    "20152503032527-873": {
+        "car_type": "1",
+        "camping": "camping0",
+        "speed": 25.63,
+        "number_days": 3,
+        "entrance": [
+            "03/05/2015 15:25",
+            "06/05/2015 12:28"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 16
+    },
+    "20153103033157-551": {
+        "car_type": "4",
+        "camping": "no_camping",
+        "speed": 22.65,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 15:31",
+            "03/05/2015 15:54"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 2
+    },
+    "20153203033246-681": {
+        "car_type": "1",
+        "camping": "camping0",
+        "speed": 22.31,
+        "number_days": 1,
+        "entrance": [
+            "03/05/2015 15:32",
+            "04/05/2015 13:44"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20153203033255-977": {
+        "car_type": "1",
+        "camping": "camping4",
+        "speed": 30.55,
+        "number_days": 2,
+        "entrance": [
+            "03/05/2015 15:32",
+            "05/05/2015 21:46"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 12
+    },
+    "20155003035017-260": {
+        "car_type": "1",
+        "camping": "camping5",
+        "speed": 22.31,
+        "number_days": 1,
+        "entrance": [
+            "03/05/2015 15:50",
+            "04/05/2015 18:21"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20155103035116-592": {
+        "car_type": "1",
+        "camping": "camping4",
+        "speed": 21.82,
+        "number_days": 11,
+        "entrance": [
+            "03/05/2015 15:51",
+            "14/05/2015 22:54"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 11
+    },
+    "20155803035851-140": {
+        "car_type": "3",
+        "camping": "no_camping",
+        "speed": 24.48,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 15:58",
+            "03/05/2015 17:08"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 11
+    },
+    "20150803050829-770": {
+        "car_type": "2P",
+        "camping": "no_camping",
+        "speed": 25.75,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 17:08",
+            "03/05/2015 19:48"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 20
+    },
+    "20151103051105-693": {
+        "car_type": "5",
+        "camping": "no_camping",
+        "speed": 22.31,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 17:11",
+            "03/05/2015 17:41"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 3
+    },
+    "20154803054807-805": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 24.48,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 17:48",
+            "03/05/2015 18:44"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20155403055431-257": {
+        "car_type": "3",
+        "camping": "camping7",
+        "speed": 29.14,
+        "number_days": 1,
+        "entrance": [
+            "03/05/2015 17:54",
+            "04/05/2015 16:12"
+        ],
+        "stayed_night": 1,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 16
+    },
+    "20154803064813-28": {
+        "car_type": "1",
+        "camping": "no_camping",
+        "speed": 26.99,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 18:48",
+            "03/05/2015 19:45"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 9
+    },
+    "20155203065209-82": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 30.79,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 18:52",
+            "03/05/2015 19:28"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20151203081248-820": {
+        "car_type": "4",
+        "camping": "no_camping",
+        "speed": 26.47,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 20:12",
+            "03/05/2015 20:43"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 6
+    },
+    "20152803082805-619": {
+        "car_type": "4",
+        "camping": "no_camping",
+        "speed": 29.38,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 20:28",
+            "03/05/2015 20:59"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 7
+    },
+    "20154403084410-270": {
+        "car_type": "3",
+        "camping": "no_camping",
+        "speed": 25.08,
+        "number_days": 0,
+        "entrance": [
+            "03/05/2015 20:44",
+            "03/05/2015 21:03"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 0,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 2
+    },
+    "20155903115957-556": {
+        "car_type": "2",
+        "camping": "no_camping",
+        "speed": 20.88,
+        "number_days": 1,
+        "entrance": [
+            "03/05/2015 23:59",
+            "04/05/2015 00:24"
+        ],
+        "stayed_night": 0,
+        "stayed_outside": 1,
+        "nightly_movement": 0,
+        "highseason": 0,
+        "weekend": 0,
+        "month": 5,
+        "number_stops": 2
+    }
+}

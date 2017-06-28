@@ -8,7 +8,8 @@
 var pathFunction,
     xScale,
     yScale,
-    globalHeight;
+    globalHeight,
+    axis;
 
 function makePC(data, dt) {
 
@@ -49,9 +50,10 @@ function drawPC(data, svg, width, dt) {
 
     // initialize line, axis and containers for back- and foreground lines
     var line = d3.svg.line(),
-        axis = d3.svg.axis().orient("left"),
         background,
         foreground;
+
+    axis = d3.svg.axis().orient("left");
 
     // make some data-specific arrays
     var ordinals = ["car_type", "camping"],
@@ -96,12 +98,13 @@ function drawPC(data, svg, width, dt) {
         .attr("d", path)
         .on("mouseover", function() {
             if (d3.select(this).attr("class").split(" ")[1] !== "shown") {
-                d3.select(this).style("stroke-width", "3px")
+                d3.select(this).style("stroke-width", "3px");
+                d3.select(this).moveToFront();
             }
         })
         .on("mouseout", function() {
             if (d3.select(this).attr("class").split(" ")[1] !== "shown") {
-                d3.select(this).style("stroke-width", "1px")
+                d3.select(this).style("stroke-width", "1px");
             }
         })
         .on("click", function(d) {
@@ -150,7 +153,9 @@ function drawPC(data, svg, width, dt) {
         .each(function(d) {
             d3.select(this).call(axis.scale(yScale[d]));
             d3.select(this).on("dblclick", function() {
-                svg.select(".foreground").selectAll("path").style("stroke", function(d) { return colorScale(binScale(d.value.amount)); });
+                svg.select(".foreground")
+                    .selectAll("path")
+                    .style("stroke", function(d) { return colorScale(binScale(d.value.amount)); });
             });})
         .append("text")
         .style("text-anchor", "middle")
@@ -181,27 +186,6 @@ function drawPC(data, svg, width, dt) {
         return v === undefined ? xScale(d) : v;
     }
 
-    function colorLines(dim) {
-        svg.selectAll("path")
-            .style("stroke", "#772718");
-
-        var actives = [];
-        var non = [];
-        d3.entries(data).forEach(function(d) {
-            if (d.value[dim] === 1) {
-                actives.push(d.key);
-                var path = pathsPerID[d.key];
-                path.forEach(function(p) {
-                    svg.select("path." + p)
-                        .style("stroke", function(d) { return colorScale(binScale(d.value.amount)); });
-                })
-            }
-            else {
-                non.push(d.key)
-            }
-        });
-    }
-
     // Returns the path for a given data point.
     function path(d) {
         var dims = d3.keys(d.value.path);
@@ -212,13 +196,31 @@ function drawPC(data, svg, width, dt) {
 
     pathFunction = path;
 
-    function radioListener() {
-        $('input[type=radio][name="optradio"]').change(
-            function(){
-                colorLines(this.id)
-            });
+    function colorLines(dim, data, pathsPerID, colorScale, binScale) {
+        var actives = [];
+        var non = [];
+        d3.entries(data).forEach(function(d) {
+            var path = pathsPerID[d.key];
+            if (d.value[dim] === 1) {
+                actives.push(d.key);
+                path.forEach(function(p) {
+                    d3.select("#pcSVG").select("path." + p)
+                        .attr("class", d3.select("#pcSVG").select("path." + p).attr("class") + " colored -#772718")
+                        .style("stroke", "#772718");
+                })
+            }
+            else {
+                path.forEach(function(p) {
+                    d3.select("#pcSVG").select("path." + p)
+                        .style("stroke", function(d) { return colorScale(binScale(d.value.amount)); });
+                });
+                non.push(d.key)
+            }
+        });
     }
-    radioListener();
+
+    var radioFunction = radioFunctions(data, dimensions, domains, colorScale, binScale, dt)
+    radioFunction();
 
     return highlightRoute(d3.select("#graphSVG"), dt, pathsPerID)
 }
@@ -287,14 +289,15 @@ function brushFunctions(svg, foreground, dimensions, ordinals, domains, yScale, 
         mergedActive.forEach(function(d) {
             var path = pathsPerID[d];
             path.forEach(function(p) {
-                console.log(svg.select("path." + p))
                 svg.select("path." + p).style("stroke", function(d) { return colorScale(binScale(d.value.amount)); });
+                svg.select("path." + p).moveToFront()
             })
         });
     }
 
     return [brushstart, brush]
 }
+
 
 function groupData(dataToGroup, dimensions) {
 
@@ -345,6 +348,16 @@ function updatePC(newData, dt) {
             "camping": ["no_camping", "camping0", "camping1", "camping2",
                 "camping3", "camping4", "camping5", "camping6", "camping7", "camping8"]};
 
+    $('input[type=radio][name="optradio"]').each(function(i, opt) {
+        var ax = d3.select("#pcSVG").selectAll(".axis").transition();
+        if (opt.checked && i === 0) {
+            var outliers = ["20154519024544-322", "20154112014114-381", "20155705025759-63", "20162904122951-717"];
+            outliers.forEach(function(o) {
+                delete newData[o];
+            });
+        }
+    });
+
     var groupedData = groupData(d3.entries(newData), dimensions);
     var connections = groupedData[0];
     var pathsPerID = groupedData[1];
@@ -355,6 +368,8 @@ function updatePC(newData, dt) {
     var colorScale = d3.scale.linear()
         .range(colours)
         .domain(d3.range(0, 1, 1.0 / (colours.length - 1)));
+
+    radioFunctions(newData, dimensions, domains, colorScale, binScale, dt);
 
     d3.select("#pcSVG")
         .select("g.foreground")
@@ -413,6 +428,7 @@ function updatePC(newData, dt) {
     return highlightRoute(d3.select("#graphSVG"), dt, pathsPerID)
 }
 
+
 function scalePC(data, dimensions, domains) {
 
     // Extract the list of dimensions and create a scale for each.
@@ -434,5 +450,50 @@ function scalePC(data, dimensions, domains) {
         }
         return true;
     }));
+}
 
+
+function radioFunctions(data, dimensions, domains, colorScale, binScale, dt) {
+
+    function radioListener() {
+        $('input[type=radio][name="optradio"]').change(
+            function(){
+                var dataMinOutlier = jQuery.extend(true, {}, data);
+                var ax = d3.select("#pcSVG").selectAll(".axis").transition();
+                if (this.id === "without outliers") {
+                    var outliers = ["20154519024544-322", "20154112014114-381", "20155705025759-63", "20162904122951-717"];
+                    outliers.forEach(function(o) {
+                        delete dataMinOutlier[o];
+                    });
+                    scalePC(d3.entries(dataMinOutlier), dimensions, domains);
+                    // update axis
+                    ax
+                        .each(function(d) {
+                            d3.select(this).call(axis.scale(yScale[d]));
+                            d3.select(this).on("dblclick", function() {
+                                d3.select("#pcSVG").select(".foreground")
+                                    .selectAll("path")
+                                    .style("stroke", function(d) { return colorScale(binScale(d.value.amount)); });
+                            });
+                        });
+                    updatePC(dataMinOutlier, dt);
+                }
+                else {
+                    scalePC(d3.entries(data), dimensions, domains);
+                    // update axis
+                    ax
+                        .each(function(d) {
+                            d3.select(this).call(axis.scale(yScale[d]));
+                            d3.select(this).on("dblclick", function() {
+                                d3.select("#pcSVG").select(".foreground")
+                                    .selectAll("path")
+                                    .style("stroke", function(d) { return colorScale(binScale(d.value.amount)); });
+                            });
+                        });
+                    updatePC(data, dt);
+                }
+            });
+    }
+
+    return radioListener;
 }

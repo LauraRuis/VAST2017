@@ -12,6 +12,7 @@ function sliderToFilename(value) {
     return filename;
 }
 
+
 function dateFromWeekNumber(year, week) {
     var d = new Date(year, 0, 1);
     var dayNum = d.getDay();
@@ -26,6 +27,7 @@ function dateFromWeekNumber(year, week) {
     d.setDate(d.getDate() - d.getDay() + ++diff);
     return d;
 }
+
 
 function makeSlider(id) {
     var slider = $(id).slider({
@@ -48,6 +50,7 @@ function makeSlider(id) {
     return slider;
 }
 
+
 function dateParser(data) {
 
     // time parser
@@ -61,6 +64,7 @@ function dateParser(data) {
 
     return arrData;
 }
+
 
 function drawButtons(divID, options, defaultChecked, toggle) {
 
@@ -140,13 +144,6 @@ function highlightRoute(svg, dt, paths) {
                 row.child.hide();
                 tr.removeClass('shown');
 
-                // change color of circles back
-                var circles = version4.selectAll(".nodes circle");
-                circles
-                    .style("stroke", function (d) {
-                        return color(d.group);
-                    });
-
                 // change color of links back
                 route.forEach(function(d, i) {
                     if (i !== route.length - 1) { {
@@ -156,7 +153,7 @@ function highlightRoute(svg, dt, paths) {
                     }}
                 });
 
-                // except for the still highlighted ones (if user clicked more rows)
+                // except for the still highlighted ones (if user has clicked more rows)
                 var highlighted = version4.selectAll(".highlightedLink");
                 if (highlighted["_groups"][0].length > 0) {
                     version4.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 0.1).style("stroke-width", "1px");
@@ -177,21 +174,29 @@ function highlightRoute(svg, dt, paths) {
                     })
                 }
             }
+
+            // if details row is closed and user clicks on it
             else {
+
+                // block screen until animation of route is finished
                 $.blockUI({
                     message: null,
                     overlayCSS: {opacity: 0}
                 });
+
+                // change button image
                 version4.select(this)
                     .html('<img height="15" width="15" src="../details_close.png">');
-                svg.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 0.1);
+
+                // set all strokes to grey and animate route in graph
+                svg.selectAll(".non")
+                    .style("stroke", "grey")
+                    .style("stroke-opacity", 0.1);
+
                 route.forEach(function(d, i) {
                     setTimeout(function () {
-                        var node = svg.selectAll("#" + d.gate);
-                        node
-                            .attr("class", "highlightedNode")
-                            .style("stroke", "black")
-                            .style("stroke-width", "5px");
+
+                        // select links and highlight
                         if (i !== route.length - 1) {
                             var links = svg.selectAll("#" + d.gate + "-" + route[i + 1].gate);
                             links
@@ -199,34 +204,54 @@ function highlightRoute(svg, dt, paths) {
                                 .style("stroke", "rgb(27, 158, 119)")
                                 .style("stroke-width", "3px")
                                 .style("stroke-opacity", 1);
-                            console.log(links.attr("class"))
                         }
+
+                        // if animation done unblock screen
                         else {
                             $.unblockUI();
                         }
                     }, 100 * i);
                 });
+
+                // if parallel coordinates available also highlight ID here
                 if (paths !== undefined && paths !== false) {
+
                     var path = paths[id];
+
                     path.forEach(function(p) {
+
+                        // select path of clicked ID
                         var pathSelection = d3.select("." + p);
+                        var currentColor = pathSelection.style("stroke");
+
+                        // highlight selected
                         pathSelection
-                            .attr("class", p + " shown")
+                            .attr("class", p + " shown -" + currentColor)
                             .style("stroke", "rgb(27, 158, 119)")
                             .style("stroke-width", "3px");
 
-                        pathSelection.each(function () {
-                            this.parentNode.appendChild(this);
-                        });
+                        // move selected to front
+                        pathSelection.moveToFront();
                     });
                 }
+
+                // show details row and add class shown
                 row.child(format(route)).show();
                 tr.addClass('shown');
+
+                // scroll to graph to show animation
                 window.scrollTo(0, 0);
             }
         });
     });
 }
+
+
+d3.selection.prototype.moveToFront = function() {
+    return this.each(function(){
+        this.parentNode.appendChild(this);
+    });
+};
 
 
 function format(route) {
@@ -258,4 +283,10 @@ function carTypeColors(d3version) {
     };
 
     return [color, legendDict]
+}
+
+
+function zoom(svg) {
+    svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+    console.log("translate: " + d3.event.translate + ", scale: " + d3.event.scale);
 }

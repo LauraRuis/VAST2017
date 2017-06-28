@@ -118,13 +118,23 @@ function makeTable(data) {
     dataTable.on("draw.dt", function() {
 
         // unhighlight everything when table gets redrawn
-        d3.selectAll(".highlightedLink").attr("class", "non");
-        d3.selectAll(".highlightedNode").attr("class", "non");
-        d3.selectAll(".non").style("stroke", "grey").style("stroke-opacity", 1).style("stroke-width", "1px");
-        d3.selectAll(".shown")
-            .attr("class", "notShown")
-            .style("stroke", "steelblue")
+        d3.selectAll(".highlightedLink")
+            .attr("class", "non");
+        d3.selectAll(".highlightedNode")
+            .attr("class", "non");
+        d3.selectAll(".non")
+            .style("stroke", "grey")
+            .style("stroke-opacity", 1)
             .style("stroke-width", "1px");
+
+        // set all paths in PC back to original scaled color
+        var shownPath = d3.selectAll(".shown");
+        shownPath.each(function() {
+            d3.select(this)
+                .style("stroke", function() { return d3.select(this).attr("class").split("-")[1]; })
+                .style("stroke-width", "1px")
+                .attr("class", "notShown");
+        })
     });
 
     return dataTable;
