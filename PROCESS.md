@@ -179,3 +179,8 @@ Fixed most of bugs, finished tsne visualization, made update function for PC ins
 - Finished tsne
 - Update function for PC
 
+# Day 18
+Standup meeting discussed bugs and anwering of question for VAST MC1.
+
+Updaten all speeds, answered questions for MC1, finished PC (with option to remove outliers).
+
