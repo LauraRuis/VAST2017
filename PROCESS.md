@@ -184,3 +184,10 @@ Standup meeting discussed bugs and anwering of question for VAST MC1.
 
 Updaten all speeds, answered questions for MC1, finished PC (with option to remove outliers).
 
+Also did all tsne calculations again with newly calculated speed variables.
+
+**Summary day 18**
+- Fixed speed problem
+- Finished PC
+- Answered MC1 questions with screenshots
+
