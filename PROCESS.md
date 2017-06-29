@@ -191,3 +191,15 @@ Also did all tsne calculations again with newly calculated speed variables.
 - Finished PC
 - Answered MC1 questions with screenshots
 
+# Day 19
+Removed all bugs, added comments in all files, added functionality of showing routes in details section of table on tsne page. Made screenshots for answers of MC1 and wrote textual answers. 
+
+Created a script for film. 
+
+Wrote report and readme.
+
+**Summary day 19**
+- finished all code
+- wrote report and reade
+- created script
+- answered questions for MC1
