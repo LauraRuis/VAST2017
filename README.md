@@ -15,7 +15,7 @@ This section contains screenshots of the product with a short functional descrip
 ![Homepage](https://github.com/LauraRuis/VAST2017/blob/master/Doc/homepage.png)
 
 ### Line Chart
-![Graph](https://github.com/LauraRuis/VAST2017/blob/master/Doc/Graph.jpeg)
+![Line](https://github.com/LauraRuis/VAST2017/blob/master/Doc/line%20page.png)
 
 ### Parallel Coordinates
 ![PC](https://github.com/LauraRuis/VAST2017/blob/master/Doc/pc%20page.png)
