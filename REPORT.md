@@ -1,5 +1,5 @@
 # Technical Report
-
+![Homepage](https://github.com/LauraRuis/VAST2017/blob/master/Doc/homepage.png)
 ## Contents
 Link | Content
 ------------ | ------------- 
