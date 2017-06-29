@@ -6,9 +6,9 @@ https://lauraruis.github.io/VAST2017/js/dashboard.html#home
 ## Contents
 Link | Content
 ------------ | ------------- 
-[Product summary](#product-summary) | Summary of product
+[Product](#product) | Product
 
-## Product summary
+## Product
 This section contains screenshots of the product with a short functional description.
 
 ### Homepage
@@ -23,3 +23,4 @@ This section contains screenshots of the product with a short functional descrip
 ### t-SNE Visualization
 ![t-SNE](https://github.com/LauraRuis/VAST2017/blob/master/Doc/tsne%20page.png)
 
+## 
