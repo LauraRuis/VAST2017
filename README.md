@@ -1,5 +1,5 @@
-# LINK TO BETA VERSION
-https://lauraruis.github.io/VAST2017/Scripts/dashboard.html
+# LINK TO FINAL VERSION
+https://lauraruis.github.io/VAST2017/js/dashboard.html#home
 
 # VAST Challenge 2017, MC 1
 This document contains a project proposal for the VAST Challenge 2017, mini challenge 1 (for details, see: http://vacommunity.org/VAST+Challenge+2017+MC1).
