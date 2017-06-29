@@ -12,5 +12,14 @@ Link | Content
 This section contains screenshots of the product with a short functional description.
 
 ### Homepage
+![Homepage](https://github.com/LauraRuis/VAST2017/blob/master/Doc/homepage.png)
 
+### Line Chart
+![Graph](https://github.com/LauraRuis/VAST2017/blob/master/Doc/Graph.jpeg)
+
+### Parallel Coordinates
+![PC](https://github.com/LauraRuis/VAST2017/blob/master/Doc/pc%20page.png)
+
+### t-SNE Visualization
+![t-SNE](https://github.com/LauraRuis/VAST2017/blob/master/Doc/tsne%20page.png)
 
