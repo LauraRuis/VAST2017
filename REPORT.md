@@ -6,6 +6,10 @@ Link | Content
 [dashboard](#dashboardjs) | dashboard.js
 [fdgraph](#fdgraphjs) | fdgraph.js
 [linechart](#linechartjs) | linechart.js
+[pc](#pcjs) | pc.js
+[helpers](#helpersjs) | helpers.js
+[scatterpage](#scatterpagejs) | scatterpage.js
+[scatterplot](#scatterplotjs) | scatterplot.js
 
 ## dashboard.js
 The main file of the product. This file has a window.onload function that reads all jsons per week for the graph and for the parallel coordinates and table recursively. This recursive function loads two different queues in different variables and the calls the function dashboard while passing all the data as parameters. This dashboard function draws the entire dashboard, depending on which hash is passed (currentHash). The hash determines which page the user loads. Home for homepage, pc for parallel coordinates, line for the line chart. The tsne visualization is in a different html with a different main javascript file, since this is written in d3 v3 which causes conflict if put together in one html.
