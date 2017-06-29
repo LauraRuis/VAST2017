@@ -88,7 +88,9 @@ function dashboard(filenames, varJSONS, graphJSONS, currentHash) {
     var optionsPC = ["without outliers", "with outliers"];
 
     // only draw if not already available on page
-    if (d3.select("#formDiv2").selectAll("form")[0].length === 0) {
+    var formDiv1 = d3.select("#formDiv");
+    var formDiv2 = d3.select("#formDiv2");
+    if (formDiv2.selectAll("form")[0].length === 0) {
         drawButtons("#formDiv2", optionsPC, false, false);
     }
     if (d3.select("#formDiv").selectAll("form")[0].length === 0) {
@@ -96,8 +98,8 @@ function dashboard(filenames, varJSONS, graphJSONS, currentHash) {
     }
 
     // initial visibility is none
-    d3.select("#formDiv").style("display", "none");
-    d3.select("#formDiv2").style("display", "none");
+    formDiv1.style("display", "none");
+    formDiv2.style("display", "none");
 
     // default selected line in line chart is total
     var selected = ["total"];
@@ -123,7 +125,11 @@ function dashboard(filenames, varJSONS, graphJSONS, currentHash) {
     }
 
     // only draw graph if not already initialized
-    if (d3.select("#graphSVG")[0][0] === null) {
+    var graphSVG = d3.select("#graphSVG");
+    var pcSVG = d3.select("#pcSVG");
+    var scatterSVG = d3.select("#scatterSVG");
+    var lineSVG = d3.select("#lineSVG");
+    if (graphSVG[0][0] === null) {
         graphObject = makeGraph(initDataGraph);
     }
 
@@ -131,21 +137,21 @@ function dashboard(filenames, varJSONS, graphJSONS, currentHash) {
     if (currentHash === "#pc") {
 
         // only draw graph if not already available on page
-        if (d3.select("#graphSVG")[0][0] === null) {
+        if (graphSVG[0][0] === null) {
             graphObject = makeGraph(initDataGraph);
         }
 
         // only initialize the first time a user clicks
-        if (d3.select("#pcSVG")[0][0] === null) {
+        if (pcSVG[0][0] === null) {
 
             // show radio buttons for parallel coordinates, hide toggles for line chart, remove scatter plot
-            d3.select("#formDiv").style("display", "none");
-            d3.select("#formDiv2").style("display", "block");
-            d3.select("#scatterSVG").remove();
+            formDiv1.style("display", "none");
+            formDiv1.style("display", "block");
+            scatterSVG.remove();
 
             // remove attributes from other pages and draw PC, fill table
             d3.select('#lineChart img').remove();
-            d3.select("#lineSVG").remove();
+            lineSVG.remove();
             makePC(initDataTable, dataTable);
             fillTable(version4.entries(initDataTable), dataTable);
         }
@@ -170,16 +176,16 @@ function dashboard(filenames, varJSONS, graphJSONS, currentHash) {
     else if (currentHash === "#line") {
 
         // only initialize the first time a user clicks
-        if (d3.select("#lineSVG")[0][0] === null) {
+        if (lineSVG[0][0] === null) {
 
             // remove image of park and PC
             d3.select('#lineChart img').remove();
-            d3.select("#pcSVG").remove();
-            d3.select("#scatterSVG").remove();
+            pcSVG.remove();
+            scatterSVG.remove();
 
             // show toggle buttons, hide radio buttons
-            d3.select("#formDiv2").style("display", "none");
-            d3.select("#formDiv").style("display", "block");
+            formDiv2.style("display", "none");
+            formDiv1.style("display", "block");
 
             // get initial data for line chart
             version4.json("../Data/data per gate/check-ins_day_camping8.json", function (error, data) {
@@ -189,7 +195,7 @@ function dashboard(filenames, varJSONS, graphJSONS, currentHash) {
                 lineObject = makeLineChart(data);
 
                 // only draw graph if not already initialized
-                if (d3.select("#graphSVG")[0][0] === null) {
+                if (graphSVG[0][0] === null) {
                     graphObject = makeGraph(initDataGraph);
                 }
 
@@ -228,21 +234,21 @@ function dashboard(filenames, varJSONS, graphJSONS, currentHash) {
         if (d3.select("#lineChart img")[0][0] === null) {
 
             // remove line chart, toggle and radio buttons and PC
-            d3.select("#graphSVG").remove();
-            d3.select("#pcSVG").remove();
-            d3.select("#lineSVG").remove();
-            d3.select("#scatterSVG").remove();
-            d3.select("#formDiv2").style("display", "none");
-            d3.select("#formDiv").style("display", "none");
+            graphSVG.remove();
+            pcSVG.remove();
+            lineSVG.remove();
+            scatterSVG.remove();
+            formDiv2.style("display", "none");
+            formDiv1.style("display", "none");
 
             // add image
             d3.select('#lineChart').append("img")
                 .attr('width', window.innerWidth / 2 - 250)
                 .attr('height', window.innerHeight / 2)
-                .attr("src","../lekagul.jpg")
+                .attr("src","../lekagul.jpg");
 
             // only draw graph if not already initialized
-            if (d3.select("#graphSVG")[0][0] === null) {
+            if (graphSVG[0][0] === null) {
                 graphObject = makeGraph(initDataGraph);
             }
         }

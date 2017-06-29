@@ -166,7 +166,10 @@ function updateLines(data, lineObject, selected, gate) {
         .call(version4.axisLeft(yLine));
 
     // update lines
-    lineContainer.selectAll(".line").data(selected).exit().remove();
+    lineContainer.selectAll(".line")
+        .data(selected)
+        .exit().remove();
+
     lineContainer.selectAll(".line")
         .data(selected)
         .attr("class", "line")

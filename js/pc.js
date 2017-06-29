@@ -398,6 +398,8 @@ function updatePC(newData, dt) {
     var foreground,
         background;
 
+    var pcSVG = d3.select("#pcSVG");
+
     // dimensions used in parallel coordinates with domains per ordinal dimension
     var ordinals = ["car_type", "camping"],
         dimensions = ["car_type", "number_stops", "number_days", "speed", "camping"],
@@ -406,11 +408,11 @@ function updatePC(newData, dt) {
                 "camping3", "camping4", "camping5", "camping6", "camping7", "camping8"]};
 
     // remove old brushes
-    d3.select("#pcSVG").selectAll(".extent").remove();
+    pcSVG.selectAll(".extent").remove();
 
     // delete outliers if radio button 'without outliers' is checked
     $('input[type=radio][name="optradio"]').each(function(i, opt) {
-        d3.select("#pcSVG").selectAll(".axis").transition();
+        pcSVG.selectAll(".axis").transition();
         if (opt.checked && i === 0) {
             var outliers = ["20154519024544-322", "20154112014114-381", "20155705025759-63", "20162904122951-717"];
             outliers.forEach(function(o) {
@@ -436,12 +438,12 @@ function updatePC(newData, dt) {
     radioFunctions(newData, dimensions, domains, colorScale, binScale, dt);
 
     // remove fore- and background lines
-    d3.select("#pcSVG")
+    pcSVG
         .select("g.foreground")
         .selectAll("path")
         .data(d3.entries(connections)).exit().remove();
 
-    d3.select("#pcSVG")
+    pcSVG
         .select("g.background")
         .selectAll("path")
         .data(d3.entries(connections)).exit().remove();
@@ -450,7 +452,7 @@ function updatePC(newData, dt) {
     d3.select(".background").selectAll("path").style("stroke", "lightgrey");
 
     // update old lines
-    foreground = d3.select("#pcSVG")
+    foreground = pcSVG
         .select("g.foreground")
         .selectAll("path")
         .data(d3.entries(connections))
@@ -459,7 +461,7 @@ function updatePC(newData, dt) {
         .attr("d", pathFunction);
 
     // draw new lines
-    foreground = d3.select("#pcSVG")
+    foreground = pcSVG
         .select("g.foreground")
         .selectAll("path")
         .data(d3.entries(connections))
@@ -469,7 +471,7 @@ function updatePC(newData, dt) {
         .attr("d", pathFunction);
 
     // update event listener for clicking on lines with new data
-    d3.select("#pcSVG").select(".foreground").selectAll("path")
+    pcSVG.select(".foreground").selectAll("path")
         .on("click", function(d) {
             var ids = d.value.ids;
             var arrData = [];
@@ -480,14 +482,14 @@ function updatePC(newData, dt) {
     });
 
     // get brush functions
-    var pcFunctions = brushFunctions(d3.select("#pcSVG"),
-        d3.select("#pcSVG").select(".foreground").selectAll("path"),
+    var pcFunctions = brushFunctions(pcSVG,
+        pcSVG.select(".foreground").selectAll("path"),
         dimensions, ordinals, domains, yScale, pathsPerID, colorScale, binScale);
     var brushStart = pcFunctions[0];
     var brush = pcFunctions[1];
 
     // Add and store a brush for each axis.
-    d3.select("#pcSVG").selectAll(".dimension").append("g")
+    pcSVG.selectAll(".dimension").append("g")
         .attr("class", "brush")
         .each(function(d) {
             d3.select(this).call(yScale[d].brush = d3.svg.brush().y(yScale[d]).on("brushstart", brushStart).on("brush", brush));

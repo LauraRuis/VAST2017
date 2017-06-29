@@ -5,11 +5,12 @@
  * VAST Challenge 2017
  */
 
-/**
- * Function that draws table with data.
- * @param {object} data
- * */
+
 function makeTable(data) {
+    /**
+     * Function that draws table with data.
+     * @param {object} data
+     * */
 
     // bootstrap table
     var table = d3.select("#table").append("table")
@@ -22,7 +23,8 @@ function makeTable(data) {
     var arrData = d3.entries(data);
 
     // append the header row
-    var columns = ["Car ID", "Period", "Car type", "Camping", "Number of check-ins", "Days of stay", "Speed (mph)", "Month of stay"],
+    var columns = ["Car ID", "Period", "Car type", "Camping", "Number of check-ins",
+            "Days of stay", "Speed (mph)", "Month of stay"],
         keys = ["entrance", "car_type", "camping", "number_stops", "number_days", "speed" ,"month"];
 
     thead.append("tr")
@@ -140,15 +142,18 @@ function makeTable(data) {
     return dataTable;
 }
 
-/**
- * Function that fills table with new data.
- * @param {object} arrData
- * */
+
 function fillTable(arrData) {
+    /**
+     * Function that fills table with new data.
+     * @param {object} arrData
+     * */
+
     var table = $("#my_table").DataTable();
     table.clear();
     arrData.forEach(function(d) {
-        var entrance = d.value.entrance !== undefined ? d.value.entrance[0].split(" ")[0] + " - " + d.value.entrance[1].split(" ")[0] : "Missing data";
+        var entrance = d.value.entrance !== undefined ?
+            d.value.entrance[0].split(" ")[0] + " - " + d.value.entrance[1].split(" ")[0] : "Missing data";
         var month = d.value.month !== undefined ? d.value.month : "Missing data";
         var row = {
             "DT_RowId": d.key,

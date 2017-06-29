@@ -109,7 +109,9 @@ function drawButtons(divID, options, defaultChecked, toggle) {
     }
 
     // make form with buttons for options
-    var form = version4.select(divID).append("form").attr("id", "form");
+    var form = version4.select(divID).append("form")
+        .attr("id", "form");
+
     var labels = form.selectAll("label")
         .attr("class", className)
         .data(options)
@@ -266,17 +268,14 @@ function highlightRoute(svg, dt, paths, vers4) {
 
 
                 // if parallel coordinates available also highlight ID here
-                console.log(paths)
                 if (paths !== undefined && paths !== false) {
 
                     var path = paths[id];
-                    console.log("path: ", path)
                     if (path !== undefined && path !== null) {
                         path.forEach(function(p) {
 
                             // select path of clicked ID
                             var pathSelection = d3.select("." + p);
-                            console.log(d3.select("." + p))
                             var currentColor = pathSelection.style("stroke");
 
                             // highlight selected

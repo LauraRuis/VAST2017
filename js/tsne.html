@@ -1,3 +1,10 @@
+<!--/*
+* Name: Laura Ruis
+* Student number: 10158006
+* Programmeerproject
+* VAST Challenge 2017*
+-->
+
 <!DOCTYPE html>
 <html>
 <title>Lekagul Preserve - Traffic Analysis</title>
@@ -96,13 +103,13 @@
 </div>
 
 <script>
-    // Get the Sidebar
+    // get the Sidebar
     var mySidebar = document.getElementById("mySidebar");
 
-    // Get the DIV with overlay effect
+    // get the DIV with overlay effect
     var overlayBg = document.getElementById("myOverlay");
 
-    // Toggle between showing and hiding the sidebar, and add overlay effect
+    // toggle between showing and hiding the sidebar, and add overlay effect
     function w3_open() {
         if (mySidebar.style.display === 'block') {
             mySidebar.style.display = 'none';
@@ -113,17 +120,10 @@
         }
     }
 
-    // Close the sidebar with the close button
+    // close the sidebar with the close button
     function w3_close() {
         mySidebar.style.display = "none";
         overlayBg.style.display = "none";
-    }
-
-    function addURL(element, text)
-    {
-        $(element).attr('href', function() {
-            return this.href + text;
-        });
     }
 </script>
 
