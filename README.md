@@ -42,5 +42,6 @@ This visualization shows a t-SNE plot for each month of the data (sometimes 2 or
 
 ### External data
 - VAST MC1 data
+- .jpg image of preserve by VAST
 
 *Publiced open source under Unilicense*
