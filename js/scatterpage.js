@@ -20,7 +20,7 @@ window.onload = function() {
         filenames[key] = i;
     }
 
-    // get json files and draw dashboard as callback
+    // put all (more than 60) json files in a queue recursively and draw dashboard when done
     var varJSONS;
     var count = 0;
     getQueue(filenames, "../Data/tsne/");
@@ -48,8 +48,15 @@ window.onload = function() {
     }
 };
 
-function dashboard(filenames, varJSONS) {
 
+function dashboard(filenames, varJSONS) {
+    /**
+     * Draw dashboard for tsne visualization.
+     * @param {object} filenames
+     * @param {object} varJSONS
+     */
+
+    // dict for converting dropdown value to month
     var monthDict = {
         0: "May 2015",
         1: "June 2015",
@@ -68,9 +75,10 @@ function dashboard(filenames, varJSONS) {
         14: "May 2016 - week 3/4"
     };
 
+    // initial data
     var initIndex = filenames["vars_18-2015_vars_21-2015.json"];
     var initDataTable = varJSONS[initIndex];
-    makeTable(initDataTable);
+    var dataTable = makeTable(initDataTable);
 
     // only initialize the first time a user clicks
     if (d3.select("#scatterSVG")["_groups"][0][0] === null) {
@@ -79,16 +87,19 @@ function dashboard(filenames, varJSONS) {
 
             if (error) throw error;
 
-            drawScatter(data)
+            drawScatter(data);
+            highlightRoute(false, dataTable, false, d3)
         })
     }
 
+    // make dropdown meny
     d3.select(".dropdown-menu").selectAll("li")
         .data(d3.entries(filenames))
         .enter().append("li")
         .attr("class", function(d) {return d.key;})
         .text(function(d) {return monthDict[d.value];});
 
+    // on click update scatter
     $('#dropdownScatter').find('li').on('click', function(){
 
         var newFile = d3.select(this).attr("class");
@@ -96,7 +107,7 @@ function dashboard(filenames, varJSONS) {
 
             if (error) throw error;
 
-            updateScatter(d3.entries(data))
+            updateScatter(d3.entries(data), dataTable)
         })
     });
 }

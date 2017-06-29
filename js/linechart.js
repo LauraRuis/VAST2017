@@ -5,21 +5,23 @@
  * VAST Challenge 2017
  */
 
-/**
- * Function that draws empty line chart, ready to be filled with lines.
- * */
+
 function makeLineChart(data) {
+    /**
+     * Function that draws empty line chart, ready to be filled with lines.
+     * @param (object) data
+     * */
 
     // parse data
     var arrData = dateParser(data);
 
-    // initialize attributes of svg as constants
+    // set margins, height and width
     const margins = {top: 20, right: 350, bottom: 75, left: 50},
         height = (window.innerHeight / 2 + 80) - margins.top - margins.bottom,
         width = (window.innerWidth / 2 + 100) - margins.left - margins.right;
 
-    // append svg element for line chart
-    var lineContainer = version4.select("#lineChart    ").append("svg")
+    // append svg element and grouped eleent for line chart
+    var lineContainer = version4.select("#lineChart").append("svg")
         .attr("id", "lineSVG")
         .attr("height", height + margins.top + margins.bottom)
         .attr("width", width + margins.left + margins.right).append("g")
@@ -44,6 +46,7 @@ function makeLineChart(data) {
     var titleContainer = lineContainer.append("g")
         .attr("id", "titleContainer");
 
+    // add initial title to line chart
     titleContainer
         .append("text")
         .attr("x", (width / 2))
@@ -53,7 +56,7 @@ function makeLineChart(data) {
         .style("font-size", "12px")
         .text("For number of cars per gate per day, click node on graph.");
 
-    // set scales for lines
+    // set scales for axis
     var xLine = version4.scaleTime()
             .range([0, width]),
         yLine = version4.scaleLinear()
@@ -61,11 +64,11 @@ function makeLineChart(data) {
 
     // set domain
     var format = version4.timeFormat("%b %Y");
-    var period = version4.extent(arrData, function(d) {return d.key});
+    var period = version4.extent(arrData, function(d) {return d.key; });
     xLine.domain(period);
-    yLine.domain(version4.extent(arrData, function(d) {return d.value.total}));
+    yLine.domain(version4.extent(arrData, function(d) {return d.value.total; }));
 
-    // Add the X Axis
+    // add the X Axis
     lineContainer.append("g")
         .attr("class", "axis x")
         .attr("transform", "translate(0," + height + ")")
@@ -77,7 +80,7 @@ function makeLineChart(data) {
         .attr("dy", ".15em")
         .attr("transform", "rotate(-65)");
 
-    // Add the Y Axis
+    // add the Y Axis
     lineContainer.append("g")
         .attr("class", "axis y")
         .call(version4.axisLeft(yLine))
@@ -94,12 +97,17 @@ function makeLineChart(data) {
     }
 }
 
-/**
- * Function that adds or deletes lines and legend rects according to array of selected country.
- * @param {object} data
- * */
-function updateLines(data, lineObject, selected, gate) {
 
+function updateLines(data, lineObject, selected, gate) {
+    /**
+     * Function that adds or deletes lines and legend rects according to array of selected car-types.
+     * @param {object} data
+     * @param {object} lineObject
+     * @param {object} selected
+     * @param {string} gate
+     * */
+
+    // parse dates
     var arrData = dateParser(data);
 
     // get variables from lineObject
@@ -109,9 +117,9 @@ function updateLines(data, lineObject, selected, gate) {
         yLine = lineObject.yLine,
         titleContainer = version4.select("#titleContainer");
 
+    // update title with gate name
     var title = titleContainer.selectAll("text")
         .data(["Number of cars per day of " + gate]);
-
     title.attr("class", "update");
     title.enter().append("text")
         .attr("class", "enter")
@@ -120,13 +128,12 @@ function updateLines(data, lineObject, selected, gate) {
         .merge(title)
         .text(function(d) { return d; });
 
-    // EXIT
-    // Remove old elements as needed.
+    // remove old elements
     title.exit().remove();
 
+    // re-set domains with new min and max
     var period = version4.extent(arrData, function(d) {return d.key});
     xLine.domain(period);
-
     yLine.domain(version4.extent(arrData, function(d) {return d.value.total}));
 
     // get current max value for y axis scaling and put data per line in dict of arrays
@@ -176,13 +183,14 @@ function updateLines(data, lineObject, selected, gate) {
         .attr("id", function(d) { return "line" + d; })
         .transition()
         .duration(650)
-        .style("stroke", function(d, i) {  return legendDict[d]; })
+        .style("stroke", function(d) {  return legendDict[d]; })
         .attr("d", function(d) { return line(lineData[d]); });
 
     // draw (and update) legend
     var legend = legendContainer.selectAll("g")
         .data(selected, function(d) { return d; });
 
+    // remove old elements
     legend.exit().remove();
 
     // draw legend
@@ -209,7 +217,7 @@ function updateLines(data, lineObject, selected, gate) {
         .attr("dy", "0.32em")
         .text(function(d) { return d !== "total" ? "Car-type " + d : d; });
 
-    // add event listener to lines that highlights lines and legend items
+    // add event listener to lines that highlights lines
     lineContainer.selectAll(".line")
         .on("mouseover", function() {
             version4.select(this)
@@ -223,40 +231,60 @@ function updateLines(data, lineObject, selected, gate) {
 
 
 function updateFocus(lineObject, date) {
+    /**
+     * Function that draws focus area on correct week in line chart.
+     * @param {object} lineObject
+     * @param {object} date
+     */
+
+    // calculate one week in advance
     var year = date.getUTCFullYear();
     var month = date.getUTCMonth();
     var day = date.getUTCDate();
     var newDate = new Date(year, month, day);
     newDate.setDate(newDate.getDate() + 7);
 
+    // set area from beginning to end of week
     var areas = {
         x0: lineObject.xLine(date),
         x1: lineObject.xLine(newDate),
-        y0: lineObject.yLine(0),
-        y1: 0
+        y0: lineObject.yLine(0)
     };
-    var area = version4.area()
-        .x0( function(d) { return d.x0 } )
-        .x1( function(d) { return d.x1 } )
-        .y0( function(d) { return d.y0 } )
-        .y1(  function(d) { return d.y1 } );
 
+    // append to line chart
     var lineContainer = version4.select("#lineContainer");
 
+    // remove old
     lineContainer.selectAll(".area").remove();
 
-    lineContainer.append("path")
-        .datum([areas])
+    // draw new
+    lineContainer.append("rect")
+        .datum(areas)
         .attr("class", "area")
-        .attr("stroke", "red")
-        .attr("d", area);
+        .attr("x", function(d) { return d.x0; })
+        .attr("y", 0)
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .attr("height", function(d) { return d.y0; })
+        .style("fill", "grey")
+        .style("opacity", 0.5);
 }
 
 
 function nodeListener(node, lineObject, selected, currentData, currentID) {
+    /**
+     * Function that add's node listener to graph for drawing lines in line chart.
+     * @param {object} node
+     * @param {object} lineObject
+     * @param {object} selected
+     * @param {object} currentData
+     * @param {string} currentID
+     */
 
+    // add click listener
     node
         .on("click", function(d) {
+
+            // on click update line chart with new data
             var fileString = "../Data/data per gate/check-ins_day_" + d.id + ".json";
 
             version4.json(fileString, function (error, new_data) {
@@ -270,8 +298,11 @@ function nodeListener(node, lineObject, selected, currentData, currentID) {
             });
         });
 
+    // add change listener to toggle buttons for drawing lines for different car-types
     $('input:checkbox[name="mode"]').change(
         function(){
+
+            // only draw if not already drawn
             if (selected.indexOf(version4.select(this).data()[0]) === -1 && this.checked) {
                 selected.push(version4.select(this).data()[0])
             }

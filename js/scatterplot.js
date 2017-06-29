@@ -1,10 +1,25 @@
+/**
+ * Name: Laura Ruis
+ * Student number: 10158006
+ * Programmeerproject
+ * VAST Challenge 2017
+ */
+
+
+// global variable
 var tableDataGlobal;
 
-drawScatter = function(tableData) {
 
+drawScatter = function(tableData) {
+    /**
+     * Function that draws scatter plot.
+     * @param {object} tableData
+     */
+
+    // store table data globally
     tableDataGlobal = tableData;
 
-    // set the dimensions and margins of the graph
+    // set margins, height and width
     var margin = {top: 20, right: 100, bottom: 30, left: 50},
         width = 960 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
@@ -13,16 +28,18 @@ drawScatter = function(tableData) {
     var x = d3.scaleLinear().range([0, width]);
     var y = d3.scaleLinear().range([height, 0]);
 
+    // get car-type colors (so that they do not differ between visualizations)
     var legendArray = carTypeColors(d3);
     var color = legendArray[0];
     var legendDict = legendArray[1];
 
+    // make legend for car-type colors
     var legendOrdinal = d3.legendColor()
         .shape("path", d3.symbol().type(d3.symbolCircle).size(150)())
         .shapePadding(10)
         .scale(color);
 
-    // append the svg obgect to the body of the page
+    // append the svg object to the correct div
     var svg = d3.select("#scatter").append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
@@ -31,20 +48,21 @@ drawScatter = function(tableData) {
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
 
+    // append grouped element
     svg.append("g")
         .attr("class", "legendOrdinal")
         .attr("transform", "translate(" + (width + margin.right / 2) + ",20)");
 
-    // Get the data
+    // get initial data
     d3.json("../Data/tsne/vars_21-2016_vars_22-2016.json", function(error, data) {
 
         if (error) throw error;
 
-        // Scale the range of the data
+        // scale the range of the data
         x.domain(d3.extent(d3.entries(data), function(d) { return d.value.x; }));
         y.domain(d3.extent(d3.entries(data), function(d) { return d.value.y; }));
 
-        // Add the scatterplot
+        // add the scatterplot
         var circles = svg.selectAll("circle")
             .data(d3.entries(data))
             .enter().append("circle")
@@ -53,41 +71,45 @@ drawScatter = function(tableData) {
             .attr("cy", function(d) { return y(d.value.y); })
             .style("fill", function(d) { return legendDict[d.value.car_type]; });
 
-        // Add the X Axis
+        // add the X Axis
         svg.append("g")
             .attr("transform", "translate(0," + height + ")")
             .attr("class", "axis x")
             .call(d3.axisBottom(x));
 
-        // Add the Y Axis
+        // add the Y Axis
         svg.append("g")
             .attr("class", "axis y")
             .call(d3.axisLeft(y));
 
+        // make ordinal legend
         var legendOrdinal = d3.legendColor()
             .shape("path", d3.symbol().type(d3.symbolCircle).size(150)())
             .title("Car-type")
             .shapePadding(10)
             .scale(color);
 
+        // call ordinal legend and filter out 'total'
         svg.select(".legendOrdinal")
             .call(legendOrdinal);
-
         svg.selectAll(".cell")
             .filter(function(d) { console.log(d); return d === 0 })
                 .style("display", "none");
 
+        // set lasso
         var lasso = d3.lasso()
             .closePathSelect(true)
             .closePathDistance(100)
             .items(circles)
             .targetArea(svg);
 
+        // get lasso functions
         var lassos = lassoFunctions(tableData, lasso);
         var lasso_start = lassos[0];
         var lasso_draw = lassos[1];
         var lasso_end = lassos[2];
 
+        // add lasso event listeners
         lasso
             .on("start",lasso_start)
             .on("draw",lasso_draw)
@@ -98,9 +120,15 @@ drawScatter = function(tableData) {
 
 };
 
-function lassoFunctions(tableData, lasso) {
 
-    // Lasso functions
+function lassoFunctions(tableData, lasso) {
+    /**
+     * Makes lasso functions for event listeners.
+     * @param {object} tableData
+     * @param {function} lasso
+     */
+
+    // lasso functions
     var lasso_start = function() {
         lasso.items()
             .attr("r", 5) // reset size
@@ -122,12 +150,12 @@ function lassoFunctions(tableData, lasso) {
     };
 
     var lasso_end = function() {
-        // Reset the color of all dots
+        // reset the color of all dots
         lasso.items()
             .classed("not_possible",false)
             .classed("possible",false);
 
-        // Style the selected dots
+        // style the selected dots
         lasso.selectedItems()
             .classed("selected",true)
             .attr("r", 10);
@@ -142,7 +170,7 @@ function lassoFunctions(tableData, lasso) {
         });
         fillTable(newTableData);
 
-        // Reset the style of the not selected dots
+        // reset the style of the not selected dots
         lasso.notSelectedItems()
             .attr("r", 5);
     };
@@ -150,23 +178,30 @@ function lassoFunctions(tableData, lasso) {
     return [lasso_start, lasso_draw, lasso_end]
 }
 
-function updateScatter(data) {
 
-    // set the dimensions and margins of the graph
+function updateScatter(data, dt) {
+    /**
+     * Update scatter plot with new data.
+     * @param {object} data
+     * @param {object} dt
+     */
+
+        // set margins, height and width
     var margin = {top: 20, right: 50, bottom: 30, left: 50},
         width = 960 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
 
-    // set the ranges
+    // set the ranges and get car-type colors for dict
     var x = d3.scaleLinear().range([0, width]);
     var y = d3.scaleLinear().range([height, 0]);
     var legendArray = carTypeColors(d3);
     var legendDict = legendArray[1];
 
-    // Scale the range of the data
+    // re-scale the range of the data
     x.domain(d3.extent((data), function(d) { return d.value.x; }));
     y.domain(d3.extent((data), function(d) { return d.value.y; }));
 
+    // get svg
     var svg = d3.select("#scatterSVG");
 
     // update axis
@@ -175,6 +210,7 @@ function updateScatter(data) {
     svg.selectAll(".axis.x")
         .call(d3.axisLeft(y));
 
+    // append new data to circles
     var circles = svg.selectAll("circle")
         .data(data);
 
@@ -203,7 +239,7 @@ function updateScatter(data) {
         .style("fill", function(d) { return legendDict[d.value.car_type]; });
 
     circles.exit().remove();
-    console.log(d3.selectAll("circle"))
+
     // update lasso function
     var lasso = d3.lasso()
         .closePathSelect(true)
@@ -222,4 +258,7 @@ function updateScatter(data) {
         .on("end", lasso_end);
 
     svg.call(lasso);
+
+    // add option to open details per row in table
+    return highlightRoute(false, dt, false, d3)
 }
