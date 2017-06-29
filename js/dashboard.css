@@ -64,10 +64,6 @@ td {
     stroke-width: 0.5px;
 }
 
-/*.area {*/
-    /*fill: lightsteelblue;*/
-/*}*/
-
 /* style force directed graph */
 .nodes {
     fill: #ccc;
