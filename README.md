@@ -38,6 +38,8 @@ This visualization shows a t-SNE plot for each month of the data (sometimes 2 or
 - d3-lasso
 - d3-queue
 - DataTables
+- jQuery
+- blockUI
 - w3.css Analytics template
 
 ### External data
